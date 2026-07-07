@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science Syllabus &mdash; Mrs. Bekers Grade 4</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #eef2fa 0%, #f8f9fa 100%);
+  color: #253a77;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+.back-index-btn {
+  position: fixed; top: 20px; left: 20px;
+  background: #253a77; color: #fff; text-decoration: none;
+  padding: 10px 16px; border-radius: 8px;
+  font-size: 14px; font-weight: 700;
+  box-shadow: 0 3px 10px rgba(37,58,119,0.25);
+  z-index: 10;
+}
+.back-index-btn:hover { background: #1a2a4a; }
+.print-btn {
+  position: fixed; top: 20px; right: 20px;
+  background: #B45309; color: #fff; text-decoration: none;
+  padding: 10px 16px; border-radius: 8px;
+  font-size: 14px; font-weight: 700; border: none; cursor: pointer;
+  box-shadow: 0 3px 10px rgba(180,83,9,0.25);
+  z-index: 10;
+}
+.print-btn:hover { background: #92400e; }
+.syllabus-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 28px rgba(37,58,119,0.12);
+  padding: 40px 44px;
+  border-top: 6px solid #FFD100;
+}
+.header-top {
+  display: flex; gap: 24px; align-items: center;
+  border-bottom: 2px solid #e2e8f0; padding-bottom: 22px; margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.header-logo {
+  width: 90px; height: 90px; border-radius: 50%;
+  background: #1a2a4a;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; overflow: hidden;
+}
+.header-logo img { width: 100%; height: auto; }
+.header-info { flex: 1 1 260px; }
+.header-info h1 { color: #253a77; font-size: 1.5rem; font-weight: 800; margin-bottom: 4px; }
+.header-info .role { color: #7a5f00; font-style: italic; font-size: 0.95rem; margin-bottom: 6px; }
+.header-info .contact { font-size: 0.88rem; line-height: 1.6; color: #444; }
+.header-info .contact strong { color: #253a77; }
+.header-info .contact a { color: #253a77; text-decoration: none; }
+.header-info .contact a:hover { text-decoration: underline; }
+
+.subject-banner {
+  background: linear-gradient(135deg, #0f5132 0%, #14b8a6 100%);
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.subject-banner .eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; opacity: 0.85; margin-bottom: 4px; }
+.subject-banner h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 4px; }
+.subject-banner .sub { font-size: 0.95rem; opacity: 0.92; }
+
+section { margin-top: 28px; }
+section h2 {
+  color: #0f5132;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #FFD100;
+  display: flex; align-items: center; gap: 8px;
+}
+section p { color: #2d3748; font-size: 0.98rem; line-height: 1.7; margin-bottom: 12px; }
+section ul { margin: 10px 0 12px 22px; }
+section ul li { padding: 4px 0; color: #2d3748; font-size: 0.95rem; line-height: 1.5; }
+section ul li strong { color: #0f5132; }
+section ol { margin: 10px 0 12px 26px; }
+section ol li { padding: 4px 0; color: #2d3748; font-size: 0.95rem; line-height: 1.5; }
+
+.welcome-box {
+  background: #f0f4fc;
+  border-left: 4px solid #0f5132;
+  padding: 16px 20px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.welcome-box p { font-style: italic; color: #2d3748; }
+
+.mission-box {
+  background: #fff8e1;
+  border-left: 4px solid #FFD100;
+  padding: 14px 20px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+.textbooks { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.book-card {
+  background: #f8fafc;
+  border-left: 3px solid #0f5132;
+  padding: 12px 16px;
+  border-radius: 6px;
+}
+.book-card .book-title { color: #253a77; font-weight: 700; font-size: 0.98rem; }
+.book-card .book-author { color: #7a5f00; font-style: italic; font-size: 0.85rem; margin-top: 3px; }
+
+.grade-desc { color: #64748b; font-size: 0.9rem; font-weight: normal; margin-left: 6px; }
+
+.parent-note {
+  background: #fef3c7;
+  border-left: 4px solid #d97706;
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin-top: 18px;
+  font-size: 0.93rem;
+  color: #78350f;
+  line-height: 1.6;
+}
+.parent-note strong { color: #78350f; }
+
+.dates-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+.dates-table td { padding: 8px 10px; border-bottom: 1px dashed #d8dee9; font-size: 0.93rem; }
+.dates-table .date-name { font-weight: 700; color: #0f5132; width: 60%; }
+.dates-table .date-value { color: #444; }
+.dates-table tr:last-child td { border-bottom: none; }
+
+footer {
+  margin-top: 32px;
+  text-align: center;
+  color: #7a5f00;
+  font-style: italic;
+  font-size: 0.95rem;
+  padding: 20px 0 10px;
+  border-top: 2px solid #e2e8f0;
+}
+
+@media print {
+  body { background: #fff; padding: 0; }
+  .back-index-btn, .print-btn { display: none; }
+  .syllabus-card { box-shadow: none; border-top: none; padding: 20px; }
+  section { page-break-inside: avoid; }
+}
+@media (max-width: 640px) {
+  .syllabus-card { padding: 24px 20px; }
+  .header-info h1 { font-size: 1.2rem; }
+  .subject-banner h2 { font-size: 1.25rem; }
+}
+</style>
+</head>
+<body>
+<a href="4a-bekers.html" class="back-index-btn" title="Back to Mrs. Bekers&#39; Class">&larr; Back to Class</a>
+<button onclick="window.print()" class="print-btn" title="Print or save as PDF">🖨️ Print</button>
+
+<div class="container">
+  <div class="syllabus-card">
+    <div class="header-top">
+      <div class="header-logo"><img src="msos-logo.svg" alt="Mary, Star of the Sea Logo"></div>
+      <div class="header-info">
+        <h1>Nicolle Bekers, M.A.</h1>
+        <div class="role">Intermediate Team Faculty &middot; Grade 4 &middot; SY 2026&ndash;2027</div>
+        <div class="contact">
+          <strong>Email:</strong> <a href="mailto:nbekers@starofthesea.org">nbekers@starofthesea.org</a><br>
+          <strong>All 4th Grade Teachers:</strong> <a href="mailto:4thgradeteachers@starofthesea.org">4thgradeteachers@starofthesea.org</a><br>
+          <strong>Phone:</strong> 808.734.0208 &middot; <strong>Office Hours:</strong> 2:45pm&ndash;3:15pm (M&ndash;F)<br>
+          <strong>Address:</strong> 4469 Malia Street Honolulu, Hawai&rsquo;i 96821
+        </div>
+      </div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="eyebrow">Grade 4 Syllabus &middot; SY 2026&ndash;2027</div>
+      <h2>🔬 Science</h2>
+      <div class="sub">Physical &middot; Life &middot; Earth Sciences</div>
+    </div>
+
+    <div class="welcome-box"><p>Welcome to Grade 4. This syllabus is intended for you, the student, to develop a greater understanding of what we will cover, what is expected of you, and what you can expect from me. For English, my primary focus will be to complete this year with all students developing a love for and grade-level understanding of books, writing, language and grammar. For Religion, my hope is that students further develop their faith in God, the church and its teaching and finally, to develop moral reasoning and decision making. And for Science, that students build confidence and mastery through study and hands-on labs and experiments that will make the transition to 5th grade Science seamless.</p></div>
+
+    <section>
+      <h2>🎯 Course Overview</h2>
+      <p>Students will explore foundational concepts in physical, life, and earth sciences through hands-on experiments, projects, and inquiry-based learning.</p>
+    </section>
+
+    <section>
+      <h2>🌟 Mary, Star of the Sea School Mission</h2>
+      <div class="mission-box"><strong>N</strong>urture, <strong>U</strong>nite, <strong>I</strong>nspire. We are committed to nurturing each child&rsquo;s curiosity, uniting our classroom in respect and collaboration, and inspiring every student to grow in knowledge, faith, and wonder for the world around them.</div>
+    </section>
+
+    <section><h2>📚 Textbook</h2><div class="textbooks"><div class="book-card"><div class="book-title">HMH Into Science</div><div class="book-author">Houghton Mifflin Harcourt</div></div></div></section>
+
+    <section>
+      <h2>📊 Grading Policy</h2>
+      <ul><li><strong>30% Tests</strong></li><li><strong>20% Quizzes</strong></li><li><strong>15% Homework and Projects</strong></li><li><strong>35% Classwork and Participation</strong></li></ul>
+      <div class="parent-note"><strong>Parents, please note:</strong> You will have access to my electronic grade book via your <strong>Beehively</strong> account, which will be a primary method of communicating your child&rsquo;s academic performance. <em style='color:#c62828;'>It will be assumed that you have seen all grades and missing assignments that are entered in Beehively.</em></div>
+    </section>
+
+    <section>
+      <h2>📝 Homework Policy</h2>
+      <p>Students are expected to <strong>read 20 minutes every day</strong>. In addition to the reading, other homework will be assigned. Your children&rsquo;s teachers will work together to ensure that the students receive a balanced homework regime aimed to create a positive learning environment that nurtures students&rsquo; intellectual growth. Assignments are expected to be written daily in a student&rsquo;s planner, and available on Google Calendar. Parents are expected to check the student&rsquo;s planners daily, support their child in time management and follow through. Late work will be accepted; however, late assignments will negatively affect students&rsquo; participation grades.</p>
+    </section>
+
+    <section>
+      <h2>🎒 Classroom Expectations</h2>
+      <ul><li>Students are expected to come to class prepared and ready to learn.</li><li>Homework should be completed daily and turned in. Should there be a reason that the homework cannot be completed on time, the teacher should be notified in advance and a plan should be made to complete the assignment.</li><li>Students are expected to always try their best and participate in class. Further, they are expected to ask questions, request clarification, and communicate via office hours or email as needed.</li><li>Students are expected to respect themselves, respect others, and respect all property.</li></ul>
+    </section>
+
+    <section>
+      <h2>🎨 Required Materials</h2>
+      <p>Students should be prepared on a daily basis with the following:</p>
+      <ul><li>English, Science, and Religion composition books</li><li>Core novel</li><li>Erasable pen, pencil, eraser and highlighter</li><li>Glue stick / scissors</li><li>Sticky notes</li><li>Index cards</li><li>Planner</li></ul>
+    </section>
+
+    <section>
+      <h2>📅 Important Dates &middot; 2026&ndash;2027</h2>
+      <table class="dates-table"><tr><td class="date-name">Orientation</td><td class="date-value">August 12, 2026</td></tr>
+<tr><td class="date-name">Parent-Teacher Conferences</td><td class="date-value">Fall 9/10&ndash;11, 2026 &middot; Spring 2/19/27 (optional)</td></tr>
+<tr><td class="date-name">Q1 Expedition &mdash; Coconut Island</td><td class="date-value">October 2, 2026</td></tr>
+<tr><td class="date-name">Q2 Expedition &mdash; Pearl Harbor &amp; Ice Palace</td><td class="date-value">December 11 (pending) and 14, 2026</td></tr>
+<tr><td class="date-name">Q3 Expedition &mdash; &lsquo;Iolani Palace</td><td class="date-value">March 5, 2027</td></tr>
+<tr><td class="date-name">Q4 Expedition &mdash; Sherwood Forest</td><td class="date-value">June 1, 2027</td></tr>
+<tr><td class="date-name">School Spelling Bee</td><td class="date-value">November 20, 2026</td></tr>
+<tr><td class="date-name">Christmas Performance</td><td class="date-value">December 18, 2026</td></tr>
+<tr><td class="date-name">End-of-Year Awards</td><td class="date-value">June 3, 2027</td></tr>
+</table>
+      <p style="font-size:0.85rem; color:#7a5f00; font-style:italic; margin-top:8px;">(All expedition dates and times subject to change.)</p>
+    </section>
+
+    <footer>Empowered to Succeed, Guided by Faith &nbsp;❤️!</footer>
+  </div>
+</div>
+</body>
+</html>
