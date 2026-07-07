@@ -13,6 +13,9 @@
     .sidebar-item { padding: 10px; margin: 5px 0; background: #111d35; border-radius: 4px; cursor: pointer; font-size: 13px; }
     .sidebar-item:hover { background: #1B3A8A; }
     .sidebar-item.active { background: #1B3A8A; }
+    .sidebar-quarter { margin: 20px 0 8px; padding: 6px 10px; color: #FFD100; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border-top: 1px solid #444; padding-top: 12px; }
+    .sidebar-quarter:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+
     .main { flex: 1; display: flex; flex-direction: column; }
     .summer-home-btn {
       background: #FFD100; color: #1a2a4a; border: 1px solid #b8860b;
@@ -341,7 +344,18 @@ function renderHome() {
 function renderSidebar() {
   const sidebar = document.getElementById('sidebar-content');
   sidebar.innerHTML = '';
+  const Q_MAP = { 'place-value': 1, 'add-sub-decimals': 1, 'mult-whole': 1, 'mult-decimals': 1, 'div-whole': 2, 'div-decimals': 2, 'add-sub-fractions': 2, 'mult-fractions': 2, 'div-fractions': 3, 'data': 3, 'volume': 3, 'measurement': 3, 'expressions': 4, 'coordinate-plane': 4, 'patterns': 4, 'geometry-2d': 4 };
+  const Q_LABELS = { 1: 'Q1 · Place Value · Decimals · Multiplication', 2: 'Q2 · Division · Fraction Operations', 3: 'Q3 · Fraction Division · Data · Volume · Measurement', 4: 'Q4 · Expressions · Coord Plane · Patterns · Geometry' };
+  let lastQ = 0;
   UNITS.forEach((unit, idx) => {
+    const q = Q_MAP[unit.id] || 0;
+    if (q !== lastQ && Q_LABELS[q]) {
+      const hdr = document.createElement('div');
+      hdr.className = 'sidebar-quarter';
+      hdr.textContent = Q_LABELS[q];
+      sidebar.appendChild(hdr);
+      lastQ = q;
+    }
     const item = document.createElement('div');
     item.className = 'sidebar-item' + (currentUnit === unit.id ? ' active' : '');
     item.textContent = `${idx + 1}. ${unit.title}${completedUnits[unit.id]?' ✅':''}`;

@@ -13,6 +13,9 @@
     .sidebar-item { padding: 10px; margin: 5px 0; background: #111d35; border-radius: 4px; cursor: pointer; font-size: 13px; }
     .sidebar-item:hover { background: #1B3A8A; }
     .sidebar-item.active { background: #1B3A8A; }
+    .sidebar-quarter { margin: 20px 0 8px; padding: 6px 10px; color: #FFD100; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border-top: 1px solid #444; padding-top: 12px; }
+    .sidebar-quarter:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+
     .main { flex: 1; display: flex; flex-direction: column; }
     .summer-home-btn {
       background: #FFD100; color: #1a2a4a; border: 1px solid #b8860b;
@@ -108,7 +111,7 @@
     <div class="main">
       <div class="topbar">
         <div style="display:flex;align-items:center;flex-wrap:wrap;gap:10px;">
-          <a href="rising-stars-math-adventures.html" class="summer-home-btn" title="Back to Rising Stars Math Adventures">🏠 Home</a>
+          <a href="4b-glavan.html" class="summer-home-btn" title="Back to Ms. Glavan&apos;s Class">← All Classes</a>
           <a href="msos-math-4-curriculum-map.html" class="summer-home-btn" style="background:#B45309;" title="Curriculum Map &amp; Unit Calendar">📅 Curriculum Map</a>
           <div class="topbar-logos">
             <span class="logo-circle msos" title="Mary, Star of the Sea"><img src="msos-logo.svg" alt="Mary, Star of the Sea Logo"></span>
@@ -2058,7 +2061,18 @@ function renderHome() {
 function renderSidebar() {
   const sidebar = document.getElementById('sidebar-content');
   sidebar.innerHTML = '';
+  const Q_MAP = { 't01-place-value': 1, 't02-add-sub-multi-digit': 1, 't03-multiply-1digit': 1, 't04-multiply-2digit': 1, 't05-divide-1digit': 2, 't06-operations-word-problems': 2, 't07-factors-multiples': 2, 't08-10-fractions': 3, 't11-data-line-plots': 3, 't12-decimals': 3, 't13-measurement': 4, 't14-patterns': 4, 't15-16-angles-shapes': 4, 'bonus-roman-numerals': 5 };
+  const Q_LABELS = { 1: 'Q1 · Whole-Number Operations', 2: 'Q2 · Division · Word Problems · Factors', 3: 'Q3 · Fractions · Data · Decimals', 4: 'Q4 · Measurement · Patterns · Geometry', 5: 'Bonus · Heritage' };
+  let lastQ = 0;
   UNITS.forEach((unit, idx) => {
+    const q = Q_MAP[unit.id] || 0;
+    if (q !== lastQ && Q_LABELS[q]) {
+      const hdr = document.createElement('div');
+      hdr.className = 'sidebar-quarter';
+      hdr.textContent = Q_LABELS[q];
+      sidebar.appendChild(hdr);
+      lastQ = q;
+    }
     const item = document.createElement('div');
     item.className = 'sidebar-item' + (currentUnit === unit.id ? ' active' : '');
     item.textContent = `${idx + 1}. ${unit.title}${completedUnits[unit.id]?' ✅':''}`;
