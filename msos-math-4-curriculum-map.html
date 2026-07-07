@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSOS Math 4 · Curriculum Map 2026–2027</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background:#F1F5F9; color:#1F2937; line-height:1.5; padding:20px; }
+    .container { max-width: 1400px; margin: 0 auto; background:#fff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); overflow:hidden; }
+    .header { background:linear-gradient(135deg,#1F4E78 0%,#2E6BA8 100%); color:#fff; padding:24px 28px; position:relative; }
+    .header h1 { font-size:1.6rem; margin-bottom:6px; }
+    .header .sub { font-size:0.95rem; opacity:0.92; }
+    .header .back-btn { position:absolute; top:20px; right:24px; background:rgba(255,255,255,0.18); color:#fff; border:1.5px solid rgba(255,255,255,0.4); padding:8px 16px; border-radius:6px; text-decoration:none; font-weight:600; font-size:0.85rem; cursor:pointer; }
+    .header .back-btn:hover { background:rgba(255,255,255,0.28); }
+    .tabs { display:flex; background:#F8FAFC; border-bottom:2px solid #E2E8F0; padding:0 28px; }
+    .tab { background:transparent; border:none; padding:14px 22px; font-size:0.95rem; font-weight:600; color:#64748B; cursor:pointer; border-bottom:3px solid transparent; transition:all 0.15s; }
+    .tab:hover { color:#1F4E78; }
+    .tab.active { color:#1F4E78; border-bottom-color:#1F4E78; }
+    .panel { display:none; padding:24px 28px; }
+    .panel.active { display:block; }
+    .panel h2 { font-size:1.25rem; color:#1F4E78; margin-bottom:18px; }
+    .panel .note { font-size:0.85rem; color:#64748B; margin-bottom:14px; font-style:italic; }
+    .map-table { width:100%; border-collapse:collapse; font-size:0.82rem; }
+    .map-table th { background:#1F4E78; color:#fff; padding:10px 8px; text-align:left; font-weight:600; border:1px solid #1F4E78; }
+    .map-table td { padding:10px 8px; border:1px solid #CBD5E1; vertical-align:top; }
+    .map-table .unit-name { font-weight:700; color:#1F4E78; width:170px; }
+    .map-table .standards { width:60px; text-align:center; font-weight:600; }
+    .map-table .cc-codes { font-size:0.82rem; color:#0c4a6e; font-weight:600; width:200px; }
+    .map-table .pacing { font-weight:600; color:#5B21B6; width:150px; }
+    .gantt-wrap { overflow-x:auto; }
+    .gantt-table { border-collapse:collapse; font-size:0.72rem; }
+    .gantt-table th, .gantt-table td { border:1px solid #CBD5E1; padding:4px 6px; }
+    .gantt-table .unit-cell { width:240px; font-weight:600; color:#1F4E78; background:#F8FAFC; padding:8px; font-size:0.85rem; }
+    .gantt-table .weeks-cell { width:50px; text-align:center; font-weight:600; background:#F8FAFC; font-size:0.85rem; }
+    .gantt-table .week-th { width:28px; text-align:center; background:#1F4E78; color:#fff; font-weight:600; font-size:0.7rem; }
+    .gantt-table .qtr-banner { padding:8px; text-align:center; font-weight:700; font-size:0.85rem; }
+    .gantt-table .qtr-1 { background:#BDD7EE; color:#1F4E78; }
+    .gantt-table .qtr-2 { background:#C6E0B4; color:#365B27; }
+    .gantt-table .qtr-3 { background:#FFE699; color:#7A5F00; }
+    .gantt-table .qtr-4 { background:#F4B084; color:#7B3D14; }
+    .gantt-table .gantt-cell { width:28px; height:32px; background:#fff; }
+    .gantt-table .corner-cell { background:#F1F5F9; }
+    .notes-box { margin-top:24px; padding:16px 20px; background:#FFF8E1; border-left:4px solid #FFD100; border-radius:6px; }
+    .notes-box h3 { font-size:1rem; color:#7A5F00; margin-bottom:10px; }
+    .notes-box ul { list-style:none; padding:0; }
+    .notes-box li { padding:4px 0; font-size:0.9rem; color:#4A4A4A; }
+    .notes-box li::before { content:"📌  "; }
+    @media (max-width:768px) {
+      .header h1 { font-size:1.2rem; }
+      .map-table { font-size:0.72rem; }
+      .tab { padding:10px 14px; font-size:0.85rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📅 Grade 4 Math · Curriculum Map 2026–2027</h1>
+      <div class="sub">Mary, Star of the Sea School · Teacher: Ms. Glavan · Grade 4 Math · enVisionMATH 2.0</div>
+      <a class="back-btn" href="msos-math-4.html">← Back to Math 4</a>
+    </div>
+    <div class="tabs">
+      <button class="tab active" data-tab="map">📚 Curriculum Map</button>
+      <button class="tab" data-tab="calendar">📅 Unit Calendar (Gantt)</button>
+    </div>
+    <div id="map" class="panel active">
+      <h2>Curriculum Map by Quarter</h2>
+      <p class="note">enVisionMATH 2.0 Grade 4 · 16 topics grouped into 8 quarterly units. Each row lists Common Core standards, learning objectives, essential content, pacing, assessments, and resources.</p>
+      <div style="overflow-x:auto">
+        <table class="map-table">
+          <thead>
+            <tr>
+              <th>Unit</th>
+              <th>Standards</th>
+              <th>Standards Reference</th>
+              <th>Learning Objectives</th>
+              <th>Essential Content &amp; Skills</th>
+              <th>Sequencing &amp; Pacing</th>
+              <th>Assessments</th>
+              <th>Resources Used</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="unit-name" style="background:#DBEAFE"><strong>Topic 1-2: Place Value &amp; Add/Subtract Multi-Digit</strong></td>
+              <td class="standards">CCSS</td>
+              <td class="cc-codes">4.NBT.A.1 (Place value); 4.NBT.A.2 (Read/write, compare); 4.NBT.A.3 (Round); 4.NBT.B.4 (Fluently add/subtract)</td>
+              <td>1. Generalize place-value understanding for multi-digit whole numbers; 2. Read, write, and compare whole numbers using base-ten numerals, number names, and expanded form; 3. Round to any place; 4. Fluently add and subtract multi-digit whole numbers using the standard algorithm.</td>
+              <td>Place-value chart to millions; base-ten blocks; expanded form; comparing and rounding; standard algorithms for addition and subtraction with regrouping.</td>
+              <td class="pacing">Q1: 4 weeks (8/3-8/28)</td>
+              <td>Topic 1 quiz; Topic 2 quiz; Place-value diagnostic.</td>
+              <td>enVisionMATH 2.0 Vol. 1; Khan Academy 4th grade place value; PhET: Arithmetic.</td>
+            </tr>
+            <tr>
+              <td class="unit-name" style="background:#DBEAFE"><strong>Topic 3-4: Multiplication (1-Digit &amp; 2-Digit)</strong></td>
+              <td class="standards">CCSS</td>
+              <td class="cc-codes">4.NBT.B.5 (Multi-digit multiplication); 4.OA.A.1-3 (Multiplication concepts &amp; word problems); 4.OA.A.2 (Multiplicative comparison)</td>
+              <td>1. Use strategies and properties (place-value, distributive, area models) to multiply by 1-digit numbers; 2. Multiply two-digit by two-digit whole numbers; 3. Solve multiplicative-comparison word problems.</td>
+              <td>Area models; partial products; expanded algorithm; standard algorithm; strategies for facts × 10, × 100; comparison problems ('how many times as many').</td>
+              <td class="pacing">Q1: 5 weeks (8/31-10/2)</td>
+              <td>Topic 3 quiz; Topic 4 quiz; Multiplication fluency test; Q1 test.</td>
+              <td>enVisionMATH 2.0; Khan Academy multiplication; PhET: Area Model Multiplication.</td>
+            </tr>
+            <tr>
+              <td class="unit-name" style="background:#DCFCE7"><strong>Topic 5-6: Division &amp; Operations Word Problems</strong></td>
+              <td class="standards">CCSS</td>
+              <td class="cc-codes">4.NBT.B.6 (Divide up to 4-digit by 1-digit); 4.OA.A.3 (Multi-step word problems); 4.OA.A.2 (Comparison); 4.OA.A.1 (Equations)</td>
+              <td>1. Use strategies and properties to divide 4-digit numbers by 1-digit divisors; 2. Interpret remainders in context; 3. Solve multi-step word problems using all four operations.</td>
+              <td>Partial quotients; area models for division; standard long division algorithm; interpreting remainders; multi-step problems with equations; estimation for reasonableness.</td>
+              <td class="pacing">Q2: 4 weeks (10/19-11/13)</td>
+              <td>Topic 5 quiz; Topic 6 quiz; Division fluency check.</td>
+              <td>enVisionMATH 2.0; Khan Academy long division; base-ten blocks.</td>
+            </tr>
+            <tr>
+              <td class="unit-name" style="background:#DCFCE7"><strong>Topic 7-8: Factors, Multiples &amp; Fraction Equivalence</strong></td>
+              <td class="standards">CCSS</td>
+              <td class="cc-codes">4.OA.B.4 (Factors, multiples, prime/composite); 4.NF.A.1 (Fraction equivalence); 4.NF.A.2 (Compare fractions)</td>
+              <td>1. Find factor pairs, multiples, prime and composite numbers; 2. Recognize and generate equivalent fractions using visual models and multiplication; 3. Compare fractions with unlike denominators using benchmark and equivalent fractions.</td>
+              <td>Factor pairs; multiples; prime and composite numbers; equivalent fractions with area and set models; benchmark fractions (½); comparing using like denominators or numerators.</td>
+              <td class="pacing">Q2: 5 weeks (11/16-12/18)</td>
+              <td>Topic 7 quiz; Topic 8 quiz; Fraction diagnostic; Q2 test.</td>
+              <td>enVisionMATH 2.0; PhET: Build a Fraction, Fractions: Equality.</td>
+            </tr>
+            <tr>
+              <td class="unit-name" style="background:#FEF3C7"><strong>Topic 9-10: Fraction Add/Sub &amp; Multiply Fractions</strong></td>
+              <td class="standards">CCSS</td>
+              <td class="cc-codes">4.NF.B.3 (Add/subtract fractions with like denominators); 4.NF.B.3b (Decompose); 4.NF.B.3c (Mixed numbers); 4.NF.B.4 (Multiply fraction by whole number)</td>
+              <td>1. Add and subtract fractions with like denominators, including mixed numbers; 2. Decompose fractions in multiple ways; 3. Multiply a fraction by a whole number using models and repeated addition.</td>
+              <td>Adding and subtracting like fractions; renaming mixed numbers; decomposing fractions (3/8 = 1/8 + 2/8); fraction × whole-number multiplication; word problems.</td>
+              <td class="pacing">Q3: 5 weeks (1/7-2/12)</td>
+              <td>Topic 9 quiz; Topic 10 quiz; Fraction operations project.</td>
+              <td>enVisionMATH 2.0; PhET: Fractions: Mixed Numbers, Build a Fraction.</td>
+            </tr>
+            <tr>
+              <td class="unit-name" style="background:#FEF3C7"><strong>Topic 11-12: Line Plot Data &amp; Decimals</strong></td>
+              <td class="standards">CCSS</td>
+              <td class="cc-codes">4.MD.B.4 (Line plots with fractions); 4.NF.C.6 (Fraction/decimal notation); 4.NF.C.7 (Compare decimals to hundredths); 4.NF.C.5 (Denominators 10 and 100)</td>
+              <td>1. Represent and interpret data on a line plot using fractional measurements; 2. Understand decimal notation for fractions with denominators 10 and 100; 3. Compare decimals to hundredths.</td>
+              <td>Line plots with 1/2, 1/4, 1/8 measurements; solving problems using data; decimal notation; comparing decimals using place-value understanding; equivalent fractions and decimals.</td>
+              <td class="pacing">Q3: 4 weeks (2/15-3/12)</td>
+              <td>Topic 11 quiz; Topic 12 quiz; Line-plot data project; Q3 test.</td>
+              <td>enVisionMATH 2.0; PhET: Number Line: Distance; rulers, tape measures.</td>
+            </tr>
+            <tr>
+              <td class="unit-name" style="background:#FCE7F3"><strong>Topic 13-14: Measurement Equivalence &amp; Patterns</strong></td>
+              <td class="standards">CCSS</td>
+              <td class="cc-codes">4.MD.A.1 (Convert measurements); 4.MD.A.2 (Word problems); 4.MD.A.3 (Area &amp; perimeter formulas); 4.OA.C.5 (Generate and analyze patterns)</td>
+              <td>1. Convert measurement units within the same system (in/ft, cm/m, g/kg, mL/L, min/hr); 2. Solve real-world measurement problems including area and perimeter of rectangles; 3. Generate a number or shape pattern from a given rule and analyze its features.</td>
+              <td>Metric and customary conversions; area and perimeter formulas for rectangles; multi-step measurement problems; input-output tables; shape and number patterns.</td>
+              <td class="pacing">Q4: 4 weeks (3/29-4/23)</td>
+              <td>Topic 13 quiz; Topic 14 quiz; Measurement lab project.</td>
+              <td>enVisionMATH 2.0; measurement tools (rulers, balances); NCTM Illuminations patterns.</td>
+            </tr>
+            <tr>
+              <td class="unit-name" style="background:#FCE7F3"><strong>Topic 15-16: Angles, Lines &amp; Two-Dimensional Shapes</strong></td>
+              <td class="standards">CCSS</td>
+              <td class="cc-codes">4.MD.C.5-6 (Angle concepts and measurement); 4.MD.C.7 (Angle addition); 4.G.A.1-3 (Points, lines, rays, angles; classify 2-D shapes; symmetry)</td>
+              <td>1. Recognize angles as a rotation and measure using a protractor; 2. Solve for unknown angles using addition and subtraction; 3. Draw points, lines, line segments, rays, and angles; 4. Classify 2-D figures by their properties and identify lines of symmetry.</td>
+              <td>Angle types (acute, right, obtuse, straight); measuring with a protractor; unknown-angle problems; classifying triangles and quadrilaterals; parallel and perpendicular lines; lines of symmetry.</td>
+              <td class="pacing">Q4: 5 weeks (4/26-6/3)</td>
+              <td>Topic 15 quiz; Topic 16 quiz; Symmetry art project; Year-end capstone.</td>
+              <td>enVisionMATH 2.0; protractors; PhET: Area Builder; NCTM Illuminations.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="calendar" class="panel">
+      <h2>Week-by-Week Unit Calendar</h2>
+      <p class="note">Color-coded bars show which weeks each unit occupies. Quarter blocks: Q1 blue · Q2 green · Q3 gold · Q4 orange.</p>
+      <div class="gantt-wrap">
+        <table class="gantt-table">
+          <thead>
+            <tr>
+              <th class="corner-cell" rowspan="2" style="background:#F1F5F9;">Unit</th>
+              <th class="corner-cell" rowspan="2" style="background:#F1F5F9;">Wks</th>
+              <th class="qtr-banner qtr-1" colspan="9">1st Qtr 8/3-10/2</th>
+              <th class="qtr-banner qtr-2" colspan="9">2nd Qtr 10/19-12/18</th>
+              <th class="qtr-banner qtr-3" colspan="9">3rd Qtr 1/7-3/12</th>
+              <th class="qtr-banner qtr-4" colspan="9">4th Qtr 3/29-6/3</th>
+            </tr>
+            <tr><th class="week-th">W1</th><th class="week-th">W2</th><th class="week-th">W3</th><th class="week-th">W4</th><th class="week-th">W5</th><th class="week-th">W6</th><th class="week-th">W7</th><th class="week-th">W8</th><th class="week-th">W9</th><th class="week-th">W10</th><th class="week-th">W11</th><th class="week-th">W12</th><th class="week-th">W13</th><th class="week-th">W14</th><th class="week-th">W15</th><th class="week-th">W16</th><th class="week-th">W17</th><th class="week-th">W18</th><th class="week-th">W19</th><th class="week-th">W20</th><th class="week-th">W21</th><th class="week-th">W22</th><th class="week-th">W23</th><th class="week-th">W24</th><th class="week-th">W25</th><th class="week-th">W26</th><th class="week-th">W27</th><th class="week-th">W28</th><th class="week-th">W29</th><th class="week-th">W30</th><th class="week-th">W31</th><th class="week-th">W32</th><th class="week-th">W33</th><th class="week-th">W34</th><th class="week-th">W35</th><th class="week-th">W36</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="unit-cell"><strong>Topic 1-2: Place Value &amp; Add/Subtract Multi-Digit</strong></td>
+              <td class="weeks-cell">4</td>
+              <td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td>
+            </tr>
+            <tr>
+              <td class="unit-cell"><strong>Topic 3-4: Multiplication (1-Digit &amp; 2-Digit)</strong></td>
+              <td class="weeks-cell">5</td>
+              <td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td>
+            </tr>
+            <tr>
+              <td class="unit-cell"><strong>Topic 5-6: Division &amp; Operations Word Problems</strong></td>
+              <td class="weeks-cell">4</td>
+              <td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td>
+            </tr>
+            <tr>
+              <td class="unit-cell"><strong>Topic 7-8: Factors, Multiples &amp; Fraction Equivalence</strong></td>
+              <td class="weeks-cell">5</td>
+              <td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td>
+            </tr>
+            <tr>
+              <td class="unit-cell"><strong>Topic 9-10: Fraction Add/Sub &amp; Multiply Fractions</strong></td>
+              <td class="weeks-cell">5</td>
+              <td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td>
+            </tr>
+            <tr>
+              <td class="unit-cell"><strong>Topic 11-12: Line Plot Data &amp; Decimals</strong></td>
+              <td class="weeks-cell">4</td>
+              <td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td>
+            </tr>
+            <tr>
+              <td class="unit-cell"><strong>Topic 13-14: Measurement Equivalence &amp; Patterns</strong></td>
+              <td class="weeks-cell">4</td>
+              <td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td>
+            </tr>
+            <tr>
+              <td class="unit-cell"><strong>Topic 15-16: Angles, Lines &amp; Two-Dimensional Shapes</strong></td>
+              <td class="weeks-cell">5</td>
+              <td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notes-box">
+        <h3>📌 Key Calendar Dates (2026–2027)</h3>
+        <ul>
+          <li>First Day of School: Aug. 3, 2026</li>
+          <li>Fall Break: Oct. 5 – Oct. 16, 2026 (two-week intersession)</li>
+          <li>Winter Break: Dec. 21, 2026 – Jan. 6, 2027</li>
+          <li>Spring Break: Mar. 15 – Mar. 26, 2027 (two-week intersession)</li>
+          <li>Grade 4 Recognition Day: May 28, 2027</li>
+          <li>Last Day of School: Jun. 3, 2027</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
