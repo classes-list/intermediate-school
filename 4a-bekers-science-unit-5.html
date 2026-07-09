@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 5: Earth&#39;s Features and Resources — Bekers Grade 4 Science</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --navy:#1a2a4a; --gold:#FFD100; --gold-deep:#b8860b;
+  --paper:#fef3c7; --cream:#fffdf2; --ink:#1f2937; --dim:#64748b;
+  --accent:#7c2d12; --accent-deep:#431407;
+}
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:linear-gradient(135deg, #fed7aa 0%, #fef3c7 60%, #f0f9ff 100%);
+  color:var(--ink); min-height:100vh; padding:24px 16px; line-height:1.6;
+}
+.container { max-width:1000px; margin:0 auto; }
+header { text-align:center; margin-bottom:26px; position:relative; }
+.back-btn {
+  position:absolute; left:0; top:6px;
+  background:var(--gold); color:var(--navy);
+  border:1px solid var(--gold-deep); padding:8px 16px;
+  border-radius:8px; font-weight:800; font-size:.9rem;
+  text-decoration:none; box-shadow:0 2px 6px rgba(184,134,11,0.25);
+}
+.back-btn:hover { background:var(--gold-deep); color:#fff; }
+@media (max-width:640px) { .back-btn { position:static; margin-bottom:10px; display:inline-flex; } }
+.eyebrow { display:inline-block; background:var(--accent); color:#fff; font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.14em; padding:4px 12px; border-radius:999px; margin-bottom:10px; }
+h1 { font-size:2.2rem; font-weight:900; color:var(--navy); margin-bottom:6px; }
+.tagline { color:var(--dim); font-size:1rem; max-width:720px; margin:0 auto; font-style:italic; }
+main { display:flex; flex-direction:column; gap:20px; }
+section.card {
+  background:#fff; border-radius:14px; padding:22px 26px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.08);
+  border-top:4px solid var(--accent);
+}
+section.card h2 { color:var(--accent-deep); font-size:1.3rem; font-weight:800; margin-bottom:12px; }
+section.card h3 { color:var(--navy); font-size:1.05rem; font-weight:800; margin:16px 0 6px; }
+section.card p { margin-bottom:10px; color:var(--ink); }
+section.card ul, section.card ol { margin:6px 0 12px 24px; }
+section.card li { margin-bottom:4px; color:var(--ink); }
+section.card li strong { color:var(--accent-deep); }
+.callout {
+  background:var(--paper); border-left:4px solid var(--gold-deep);
+  padding:14px 18px; border-radius:6px; margin:12px 0; font-size:.98rem;
+}
+.callout strong { color:var(--navy); }
+.grid-2 { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:14px; margin-top:10px; }
+.tile { background:var(--cream); border:2px solid var(--accent); border-radius:10px; padding:14px 16px; }
+.tile h4 { color:var(--accent-deep); font-size:1rem; font-weight:800; margin-bottom:6px; }
+.tile p { font-size:.9rem; margin:0; }
+.vocab-list { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0; }
+.vocab-list .term {
+  background:var(--accent); color:#fff; padding:4px 10px;
+  border-radius:14px; font-size:.8rem; font-weight:700;
+}
+.ngss-badges { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+.ngss-badge { background:#e0f2fe; color:#0c4a6e; padding:3px 10px; border-radius:8px; font-size:.72rem; font-weight:800; letter-spacing:.05em; }
+.lesson-block {
+  background:#fff; border-radius:14px; padding:22px 26px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.08);
+  border-left:5px solid var(--accent);
+}
+.lesson-header { display:flex; align-items:baseline; gap:12px; margin-bottom:8px; flex-wrap:wrap; }
+.lesson-num { background:var(--accent); color:#fff; font-weight:900; font-size:.9rem; padding:5px 12px; border-radius:999px; }
+.lesson-title { color:var(--accent-deep); font-size:1.15rem; font-weight:800; }
+
+/* Quiz/Worksheet interactivity */
+.quiz-q { background:var(--cream); border:1px solid #e2e8f0; border-radius:10px; padding:14px 16px; margin-bottom:12px; }
+.quiz-q .q-num { font-weight:900; color:var(--accent-deep); margin-right:8px; }
+.quiz-q .q-text { font-weight:700; color:var(--ink); margin-bottom:8px; display:inline; }
+.quiz-q label { display:block; padding:6px 10px; border-radius:6px; cursor:pointer; margin-bottom:4px; transition:all .12s; }
+.quiz-q label:hover { background:#f1f5f9; }
+.quiz-q label.correct { background:#d1fae5; border-left:3px solid #059669; font-weight:600; }
+.quiz-q label.wrong { background:#fee2e2; border-left:3px solid #dc2626; }
+.quiz-btn {
+  background:var(--accent); color:#fff; border:none; padding:10px 22px;
+  border-radius:8px; font-weight:800; font-size:.95rem; cursor:pointer;
+  margin-top:6px;
+}
+.quiz-btn:hover { background:var(--accent-deep); }
+.quiz-result { margin-top:12px; padding:12px 16px; border-radius:8px; font-weight:800; display:none; }
+.quiz-result.pass { background:#d1fae5; color:#065f46; }
+.quiz-result.fail { background:#fef3c7; color:#7c2d12; }
+footer { text-align:center; margin-top:36px; color:var(--dim); font-size:.85rem; padding-top:20px; border-top:1px dashed #cbd5e1; }
+</style>
+<script>
+function checkQuiz(id) {
+  const block = document.getElementById(id);
+  const qs = block.querySelectorAll('.quiz-q');
+  let correct = 0, total = qs.length;
+  qs.forEach(q => {
+    const ans = parseInt(q.dataset.answer);
+    const chosen = q.querySelector('input:checked');
+    q.querySelectorAll('label').forEach(l => l.classList.remove('correct','wrong'));
+    q.querySelectorAll('label')[ans].classList.add('correct');
+    if (chosen) {
+      const v = parseInt(chosen.value);
+      if (v === ans) correct++;
+      else chosen.parentElement.classList.add('wrong');
+    }
+  });
+  const result = block.querySelector('.quiz-result');
+  const pct = Math.round(100*correct/total);
+  result.textContent = `You got ${correct}/${total} correct (${pct}%).` + (pct>=80 ? ' Great work!' : ' Review the highlighted answers and try again.');
+  result.className = 'quiz-result ' + (pct>=80 ? 'pass' : 'fail');
+  result.style.display = 'block';
+}
+</script>
+</head>
+<body>
+<div class="container">
+<header>
+  <a class="back-btn" href="4a-bekers-science.html">&larr; Back to Science Home</a>
+  <div class="eyebrow">Unit 5 &middot; Grade 4 Science &middot; Q4</div>
+  <h1>🌍 Earth&#39;s Features and Resources</h1>
+  <p class="tagline">Essential Question: Where are Earth&#39;s features, hazards, and resources located, and how do we use them wisely?</p>
+</header>
+
+<main>
+<section class="card">
+  <h2>📖 Unit Storyline</h2>
+  <p>Students use maps to identify patterns in where natural hazards occur, explore ways to reduce their impact, and learn how technology is changing how we use Earth&#39;s natural resources.</p>
+  <h3>🎯 Standards Covered (NGSS)</h3>
+  <div class="ngss-badges"><span class="ngss-badge">4-ESS2-2</span><span class="ngss-badge">4-ESS3-1</span><span class="ngss-badge">4-ESS3-2</span></div>
+  <h3>📝 Key Vocabulary</h3>
+  <div class="vocab-list"><span class="term">natural hazard</span><span class="term">natural resource</span><span class="term">renewable</span><span class="term">nonrenewable</span><span class="term">seismograph</span><span class="term">topographic map</span><span class="term">sustainability</span></div>
+  <div class="callout"><strong>Source Guide:</strong> <a href="https://drive.google.com/file/d/1Oo3_qgnkE6wjHB_Q8YklvgD-8r9JdcBl/view?usp=sharing" target="_blank" rel="noopener" style="color:var(--accent-deep);font-weight:800;">Open the full HMH Into Science teacher guide →</a></div>
+</section>
+
+
+<div class="lesson-block">
+  <div class="lesson-header">
+    <span class="lesson-num">LESSON 1</span>
+    <span class="lesson-title">Patterns on Earth</span>
+  </div>
+  <div class="ngss-badges"><span class="ngss-badge">NGSS: 4-ESS2-2</span></div>
+  <h3>🎯 Objective</h3>
+  <p>Analyze and interpret data from maps to describe patterns of Earth&#39;s features.</p>
+  <div class="callout"><strong>Anchoring Phenomenon:</strong> Maps of earthquakes and volcanoes show they appear along the same lines all over the world.</div>
+  <h3>🧪 Activities</h3>
+  <ul><li>Hands-On: Tracking Quakes — students plot real earthquake data on a world map.</li><li>Discussion: Volcanic Eruptions — students compare the Pacific &quot;Ring of Fire&quot; to earthquake maps.</li><li>Investigation: By Land or By Sea — students look at ocean-floor maps and identify mid-ocean ridges.</li><li>Analysis: Finding Patterns — students describe how mountain ranges follow plate boundaries.</li></ul>
+  <h3>💡 Key Ideas</h3>
+  <ul><li>Earthquakes and volcanoes cluster along the boundaries of Earth&#39;s tectonic plates.</li><li>The <strong>Ring of Fire</strong> surrounds the Pacific Ocean and is a hotspot for volcanoes and earthquakes.</li><li><strong>Topographic maps</strong> show elevation using contour lines &mdash; mountains, valleys, and plains.</li><li>By looking at patterns on maps, scientists predict where hazards are likely.</li></ul>
+  <h3>📖 Vocabulary</h3>
+  <div class="vocab-list"><span class="term">tectonic plate</span><span class="term">Ring of Fire</span><span class="term">topographic map</span><span class="term">contour line</span><span class="term">pattern</span></div>
+  <h3>📋 Worksheet — Check Your Understanding</h3>
+  <div class="quiz-block" id="l1-quiz">
+    <div class="quiz-q" data-answer="1"><span class="q-num">1.</span> <span class="q-text">Most volcanoes and earthquakes happen along:</span><div style="margin-top:8px"><label><input type="radio" name="l1-q0" value="0"> <span>The equator only</span></label><label><input type="radio" name="l1-q0" value="1"> <span>Tectonic plate boundaries</span></label><label><input type="radio" name="l1-q0" value="2"> <span>Random locations</span></label><label><input type="radio" name="l1-q0" value="3"> <span>Only in the ocean</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">2.</span> <span class="q-text">The Ring of Fire is located around the:</span><div style="margin-top:8px"><label><input type="radio" name="l1-q1" value="0"> <span>Atlantic Ocean</span></label><label><input type="radio" name="l1-q1" value="1"> <span>Pacific Ocean</span></label><label><input type="radio" name="l1-q1" value="2"> <span>Indian Ocean</span></label><label><input type="radio" name="l1-q1" value="3"> <span>Arctic Circle</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">3.</span> <span class="q-text">Contour lines on a topographic map show:</span><div style="margin-top:8px"><label><input type="radio" name="l1-q2" value="0"> <span>Temperature</span></label><label><input type="radio" name="l1-q2" value="1"> <span>Elevation (height)</span></label><label><input type="radio" name="l1-q2" value="2"> <span>Ocean currents</span></label><label><input type="radio" name="l1-q2" value="3"> <span>Population</span></label></div></div><div class="quiz-q" data-answer="0"><span class="q-num">4.</span> <span class="q-text">What can we use maps to predict?</span><div style="margin-top:8px"><label><input type="radio" name="l1-q3" value="0"> <span>Where hazards may occur</span></label><label><input type="radio" name="l1-q3" value="1"> <span>The weather next year</span></label><label><input type="radio" name="l1-q3" value="2"> <span>How many stars</span></label><label><input type="radio" name="l1-q3" value="3"> <span>What people ate</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">5.</span> <span class="q-text">The Pacific Ring of Fire is famous for:</span><div style="margin-top:8px"><label><input type="radio" name="l1-q4" value="0"> <span>Beautiful beaches only</span></label><label><input type="radio" name="l1-q4" value="1"> <span>Many earthquakes and volcanoes</span></label><label><input type="radio" name="l1-q4" value="2"> <span>Deserts</span></label><label><input type="radio" name="l1-q4" value="3"> <span>Snowfall</span></label></div></div>
+    <button class="quiz-btn" onclick="checkQuiz('l1-quiz')">Check My Answers</button>
+    <div class="quiz-result"></div>
+  </div>
+</div>
+
+<div class="lesson-block">
+  <div class="lesson-header">
+    <span class="lesson-num">LESSON 2</span>
+    <span class="lesson-title">Natural Hazards</span>
+  </div>
+  <div class="ngss-badges"><span class="ngss-badge">NGSS: 4-ESS3-2, 3-5-ETS1-1</span></div>
+  <h3>🎯 Objective</h3>
+  <p>Generate and compare multiple solutions to reduce the impact of natural Earth processes on humans.</p>
+  <div class="callout"><strong>Anchoring Phenomenon:</strong> After a hurricane, some houses stand strong while others are destroyed. Why?</div>
+  <h3>🧪 Activities</h3>
+  <ul><li>Investigation: Structures — students test how different building shapes withstand wind (a fan).</li><li>Hands-On: Make Your Own Seismograph — students build a simple seismograph from paper and a marker.</li><li>Discussion: Natural Hazards — students compare hurricanes, tornadoes, wildfires, floods, and earthquakes.</li><li>Engineering Challenge: Natural Hazard Solutions — students design a solution to protect a town from one hazard.</li></ul>
+  <h3>💡 Key Ideas</h3>
+  <ul><li><strong>Natural hazards</strong> include earthquakes, volcanic eruptions, hurricanes, tornadoes, floods, tsunamis, and wildfires.</li><li>We can&#39;t stop natural hazards but engineering can reduce their impact.</li><li>Examples: earthquake-safe buildings, flood levees, hurricane shutters, tsunami warning systems.</li><li>Preparation and early warning save lives.</li></ul>
+  <h3>📖 Vocabulary</h3>
+  <div class="vocab-list"><span class="term">natural hazard</span><span class="term">seismograph</span><span class="term">levee</span><span class="term">tsunami</span><span class="term">warning system</span></div>
+  <h3>📋 Worksheet — Check Your Understanding</h3>
+  <div class="quiz-block" id="l2-quiz">
+    <div class="quiz-q" data-answer="1"><span class="q-num">1.</span> <span class="q-text">Which of the following is a natural hazard?</span><div style="margin-top:8px"><label><input type="radio" name="l2-q0" value="0"> <span>Traffic jam</span></label><label><input type="radio" name="l2-q0" value="1"> <span>Earthquake</span></label><label><input type="radio" name="l2-q0" value="2"> <span>Homework</span></label><label><input type="radio" name="l2-q0" value="3"> <span>Grocery shopping</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">2.</span> <span class="q-text">Which invention warns people about earthquakes?</span><div style="margin-top:8px"><label><input type="radio" name="l2-q1" value="0"> <span>Traffic light</span></label><label><input type="radio" name="l2-q1" value="1"> <span>Seismograph and alert system</span></label><label><input type="radio" name="l2-q1" value="2"> <span>Refrigerator</span></label><label><input type="radio" name="l2-q1" value="3"> <span>Alarm clock only</span></label></div></div><div class="quiz-q" data-answer="0"><span class="q-num">3.</span> <span class="q-text">A levee is used to:</span><div style="margin-top:8px"><label><input type="radio" name="l2-q2" value="0"> <span>Prevent floods</span></label><label><input type="radio" name="l2-q2" value="1"> <span>Cool the ocean</span></label><label><input type="radio" name="l2-q2" value="2"> <span>Create earthquakes</span></label><label><input type="radio" name="l2-q2" value="3"> <span>Grow crops</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">4.</span> <span class="q-text">The best defense against tsunamis is:</span><div style="margin-top:8px"><label><input type="radio" name="l2-q3" value="0"> <span>Ignoring them</span></label><label><input type="radio" name="l2-q3" value="1"> <span>Early warning systems + evacuation</span></label><label><input type="radio" name="l2-q3" value="2"> <span>Boating out to sea</span></label><label><input type="radio" name="l2-q3" value="3"> <span>Doing nothing</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">5.</span> <span class="q-text">An earthquake-safe building uses:</span><div style="margin-top:8px"><label><input type="radio" name="l2-q4" value="0"> <span>Only wood</span></label><label><input type="radio" name="l2-q4" value="1"> <span>Flexible materials and strong foundations</span></label><label><input type="radio" name="l2-q4" value="2"> <span>No rules</span></label><label><input type="radio" name="l2-q4" value="3"> <span>Only tall walls</span></label></div></div>
+    <button class="quiz-btn" onclick="checkQuiz('l2-quiz')">Check My Answers</button>
+    <div class="quiz-result"></div>
+  </div>
+</div>
+
+<div class="lesson-block">
+  <div class="lesson-header">
+    <span class="lesson-num">LESSON 3</span>
+    <span class="lesson-title">Earth&#39;s Resources</span>
+  </div>
+  <div class="ngss-badges"><span class="ngss-badge">NGSS: 4-ESS3-1</span></div>
+  <h3>🎯 Objective</h3>
+  <p>Obtain and combine information to describe that energy and fuels are derived from natural resources, and their uses affect the environment.</p>
+  <div class="callout"><strong>Anchoring Phenomenon:</strong> Solar panels and wind turbines are appearing on more roofs and hillsides. Why now?</div>
+  <h3>🧪 Activities</h3>
+  <ul><li>Investigation: Modeling Energy Resource Use — students track energy sources used in a day.</li><li>Engineering: Running on Sunshine — students build a mini solar oven.</li><li>Hands-On: Materials We Use — students categorize items around them by resource type.</li><li>Investigation: Exploring Renewable Resources — students research one renewable resource (solar, wind, geothermal, hydro).</li><li>Debate: Pros and Cons — students compare renewable vs. nonrenewable resources.</li></ul>
+  <h3>💡 Key Ideas</h3>
+  <ul><li><strong>Natural resources</strong> come from Earth: water, soil, minerals, forests, sunlight, wind.</li><li><strong>Renewable</strong> resources (sun, wind, water, wood) can be replaced within a human lifetime.</li><li><strong>Nonrenewable</strong> resources (coal, oil, natural gas) take millions of years to form.</li><li>Using resources affects the environment; sustainable practices help protect it for the future.</li></ul>
+  <h3>📖 Vocabulary</h3>
+  <div class="vocab-list"><span class="term">natural resource</span><span class="term">renewable</span><span class="term">nonrenewable</span><span class="term">sustainability</span><span class="term">solar</span><span class="term">wind</span></div>
+  <h3>📋 Worksheet — Check Your Understanding</h3>
+  <div class="quiz-block" id="l3-quiz">
+    <div class="quiz-q" data-answer="2"><span class="q-num">1.</span> <span class="q-text">Which is a renewable resource?</span><div style="margin-top:8px"><label><input type="radio" name="l3-q0" value="0"> <span>Coal</span></label><label><input type="radio" name="l3-q0" value="1"> <span>Oil</span></label><label><input type="radio" name="l3-q0" value="2"> <span>Sunlight</span></label><label><input type="radio" name="l3-q0" value="3"> <span>Natural gas</span></label></div></div><div class="quiz-q" data-answer="2"><span class="q-num">2.</span> <span class="q-text">Nonrenewable resources take how long to form?</span><div style="margin-top:8px"><label><input type="radio" name="l3-q1" value="0"> <span>A few weeks</span></label><label><input type="radio" name="l3-q1" value="1"> <span>A few years</span></label><label><input type="radio" name="l3-q1" value="2"> <span>Millions of years</span></label><label><input type="radio" name="l3-q1" value="3"> <span>Instantly</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">3.</span> <span class="q-text">Solar panels convert what into electricity?</span><div style="margin-top:8px"><label><input type="radio" name="l3-q2" value="0"> <span>Water</span></label><label><input type="radio" name="l3-q2" value="1"> <span>Sunlight</span></label><label><input type="radio" name="l3-q2" value="2"> <span>Sound</span></label><label><input type="radio" name="l3-q2" value="3"> <span>Wind</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">4.</span> <span class="q-text">Using less water and turning off lights are examples of:</span><div style="margin-top:8px"><label><input type="radio" name="l3-q3" value="0"> <span>Waste</span></label><label><input type="radio" name="l3-q3" value="1"> <span>Sustainability</span></label><label><input type="radio" name="l3-q3" value="2"> <span>Pollution</span></label><label><input type="radio" name="l3-q3" value="3"> <span>Nothing important</span></label></div></div><div class="quiz-q" data-answer="2"><span class="q-num">5.</span> <span class="q-text">Which of these is a nonrenewable resource?</span><div style="margin-top:8px"><label><input type="radio" name="l3-q4" value="0"> <span>Wind</span></label><label><input type="radio" name="l3-q4" value="1"> <span>Trees</span></label><label><input type="radio" name="l3-q4" value="2"> <span>Coal</span></label><label><input type="radio" name="l3-q4" value="3"> <span>Water</span></label></div></div>
+    <button class="quiz-btn" onclick="checkQuiz('l3-quiz')">Check My Answers</button>
+    <div class="quiz-result"></div>
+  </div>
+</div>
+
+
+<section class="card">
+  <h2>📅 Unit Timeline</h2>
+  <p>This unit is scheduled for approximately <strong>8 weeks</strong> in <strong>Q4</strong> of the 2026-2027 school year. See the full <a href="4a-bekers-science-unit-calendar.html" style="color:var(--accent-deep);font-weight:800;">Unit Calendar</a> for day-by-day pacing.</p>
+</section>
+</main>
+
+<footer>Mary, Star of the Sea School &middot; Grade 4A Science &middot; Mrs. Bekers &middot; SY 2026-2027</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 4: Shaping Landforms — Bekers Grade 4 Science</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --navy:#1a2a4a; --gold:#FFD100; --gold-deep:#b8860b;
+  --paper:#fef3c7; --cream:#fffdf2; --ink:#1f2937; --dim:#64748b;
+  --accent:#b45309; --accent-deep:#7c2d12;
+}
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:linear-gradient(135deg, #ffedd5 0%, #fef3c7 60%, #f0f9ff 100%);
+  color:var(--ink); min-height:100vh; padding:24px 16px; line-height:1.6;
+}
+.container { max-width:1000px; margin:0 auto; }
+header { text-align:center; margin-bottom:26px; position:relative; }
+.back-btn {
+  position:absolute; left:0; top:6px;
+  background:var(--gold); color:var(--navy);
+  border:1px solid var(--gold-deep); padding:8px 16px;
+  border-radius:8px; font-weight:800; font-size:.9rem;
+  text-decoration:none; box-shadow:0 2px 6px rgba(184,134,11,0.25);
+}
+.back-btn:hover { background:var(--gold-deep); color:#fff; }
+@media (max-width:640px) { .back-btn { position:static; margin-bottom:10px; display:inline-flex; } }
+.eyebrow { display:inline-block; background:var(--accent); color:#fff; font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.14em; padding:4px 12px; border-radius:999px; margin-bottom:10px; }
+h1 { font-size:2.2rem; font-weight:900; color:var(--navy); margin-bottom:6px; }
+.tagline { color:var(--dim); font-size:1rem; max-width:720px; margin:0 auto; font-style:italic; }
+main { display:flex; flex-direction:column; gap:20px; }
+section.card {
+  background:#fff; border-radius:14px; padding:22px 26px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.08);
+  border-top:4px solid var(--accent);
+}
+section.card h2 { color:var(--accent-deep); font-size:1.3rem; font-weight:800; margin-bottom:12px; }
+section.card h3 { color:var(--navy); font-size:1.05rem; font-weight:800; margin:16px 0 6px; }
+section.card p { margin-bottom:10px; color:var(--ink); }
+section.card ul, section.card ol { margin:6px 0 12px 24px; }
+section.card li { margin-bottom:4px; color:var(--ink); }
+section.card li strong { color:var(--accent-deep); }
+.callout {
+  background:var(--paper); border-left:4px solid var(--gold-deep);
+  padding:14px 18px; border-radius:6px; margin:12px 0; font-size:.98rem;
+}
+.callout strong { color:var(--navy); }
+.grid-2 { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:14px; margin-top:10px; }
+.tile { background:var(--cream); border:2px solid var(--accent); border-radius:10px; padding:14px 16px; }
+.tile h4 { color:var(--accent-deep); font-size:1rem; font-weight:800; margin-bottom:6px; }
+.tile p { font-size:.9rem; margin:0; }
+.vocab-list { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0; }
+.vocab-list .term {
+  background:var(--accent); color:#fff; padding:4px 10px;
+  border-radius:14px; font-size:.8rem; font-weight:700;
+}
+.ngss-badges { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+.ngss-badge { background:#e0f2fe; color:#0c4a6e; padding:3px 10px; border-radius:8px; font-size:.72rem; font-weight:800; letter-spacing:.05em; }
+.lesson-block {
+  background:#fff; border-radius:14px; padding:22px 26px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.08);
+  border-left:5px solid var(--accent);
+}
+.lesson-header { display:flex; align-items:baseline; gap:12px; margin-bottom:8px; flex-wrap:wrap; }
+.lesson-num { background:var(--accent); color:#fff; font-weight:900; font-size:.9rem; padding:5px 12px; border-radius:999px; }
+.lesson-title { color:var(--accent-deep); font-size:1.15rem; font-weight:800; }
+
+/* Quiz/Worksheet interactivity */
+.quiz-q { background:var(--cream); border:1px solid #e2e8f0; border-radius:10px; padding:14px 16px; margin-bottom:12px; }
+.quiz-q .q-num { font-weight:900; color:var(--accent-deep); margin-right:8px; }
+.quiz-q .q-text { font-weight:700; color:var(--ink); margin-bottom:8px; display:inline; }
+.quiz-q label { display:block; padding:6px 10px; border-radius:6px; cursor:pointer; margin-bottom:4px; transition:all .12s; }
+.quiz-q label:hover { background:#f1f5f9; }
+.quiz-q label.correct { background:#d1fae5; border-left:3px solid #059669; font-weight:600; }
+.quiz-q label.wrong { background:#fee2e2; border-left:3px solid #dc2626; }
+.quiz-btn {
+  background:var(--accent); color:#fff; border:none; padding:10px 22px;
+  border-radius:8px; font-weight:800; font-size:.95rem; cursor:pointer;
+  margin-top:6px;
+}
+.quiz-btn:hover { background:var(--accent-deep); }
+.quiz-result { margin-top:12px; padding:12px 16px; border-radius:8px; font-weight:800; display:none; }
+.quiz-result.pass { background:#d1fae5; color:#065f46; }
+.quiz-result.fail { background:#fef3c7; color:#7c2d12; }
+footer { text-align:center; margin-top:36px; color:var(--dim); font-size:.85rem; padding-top:20px; border-top:1px dashed #cbd5e1; }
+</style>
+<script>
+function checkQuiz(id) {
+  const block = document.getElementById(id);
+  const qs = block.querySelectorAll('.quiz-q');
+  let correct = 0, total = qs.length;
+  qs.forEach(q => {
+    const ans = parseInt(q.dataset.answer);
+    const chosen = q.querySelector('input:checked');
+    q.querySelectorAll('label').forEach(l => l.classList.remove('correct','wrong'));
+    q.querySelectorAll('label')[ans].classList.add('correct');
+    if (chosen) {
+      const v = parseInt(chosen.value);
+      if (v === ans) correct++;
+      else chosen.parentElement.classList.add('wrong');
+    }
+  });
+  const result = block.querySelector('.quiz-result');
+  const pct = Math.round(100*correct/total);
+  result.textContent = `You got ${correct}/${total} correct (${pct}%).` + (pct>=80 ? ' Great work!' : ' Review the highlighted answers and try again.');
+  result.className = 'quiz-result ' + (pct>=80 ? 'pass' : 'fail');
+  result.style.display = 'block';
+}
+</script>
+</head>
+<body>
+<div class="container">
+<header>
+  <a class="back-btn" href="4a-bekers-science.html">&larr; Back to Science Home</a>
+  <div class="eyebrow">Unit 4 &middot; Grade 4 Science &middot; Q3</div>
+  <h1>🏔️ Shaping Landforms</h1>
+  <p class="tagline">Essential Question: How does Earth&#39;s surface change over time, and what evidence do we have?</p>
+</header>
+
+<main>
+<section class="card">
+  <h2>📖 Unit Storyline</h2>
+  <p>Students explore how landscapes change over time. They use models to examine the factors and processes that transform land, then construct explanations from patterns in their observations.</p>
+  <h3>🎯 Standards Covered (NGSS)</h3>
+  <div class="ngss-badges"><span class="ngss-badge">4-ESS1-1</span><span class="ngss-badge">4-ESS2-1</span></div>
+  <h3>📝 Key Vocabulary</h3>
+  <div class="vocab-list"><span class="term">erosion</span><span class="term">weathering</span><span class="term">deposition</span><span class="term">landform</span><span class="term">sediment</span><span class="term">glacier</span><span class="term">canyon</span><span class="term">delta</span></div>
+  <div class="callout"><strong>Source Guide:</strong> <a href="https://drive.google.com/file/d/13munsTdGYvOKFnpE7c8C1dNk2GnJtVAo/view?usp=sharing" target="_blank" rel="noopener" style="color:var(--accent-deep);font-weight:800;">Open the full HMH Into Science teacher guide →</a></div>
+</section>
+
+
+<div class="lesson-block">
+  <div class="lesson-header">
+    <span class="lesson-num">LESSON 1</span>
+    <span class="lesson-title">Factors That Shape Earth&#39;s Surface</span>
+  </div>
+  <div class="ngss-badges"><span class="ngss-badge">NGSS: 4-ESS2-1</span></div>
+  <h3>🎯 Objective</h3>
+  <p>Plan and carry out investigations to make observations of the effects of water, ice, wind, and vegetation on landforms.</p>
+  <div class="callout"><strong>Anchoring Phenomenon:</strong> A canyon formed in the middle of flat land. What could have made it?</div>
+  <h3>🧪 Activities</h3>
+  <ul><li>Anchoring Phenomenon: Disappearing Beach — students observe how a beach changes over months.</li><li>Investigation: Modeling How Far Sediment Travels — students pour water down a tray of sand at different slopes and measure how far sand moves.</li><li>Hands-On: A Sweet Test — students use sugar cubes and shaking to model rock weathering.</li><li>Comparison: Earth&#39;s Surface — students compare pictures of the same location over decades.</li></ul>
+  <h3>💡 Key Ideas</h3>
+  <ul><li><strong>Weathering</strong> breaks rocks into smaller pieces.</li><li><strong>Erosion</strong> moves those pieces (sediment) to new places via water, wind, ice, or gravity.</li><li><strong>Deposition</strong> lays sediment down in a new location, sometimes building landforms like deltas.</li><li>Living things &mdash; roots, burrowing animals &mdash; also shape the land.</li></ul>
+  <h3>📖 Vocabulary</h3>
+  <div class="vocab-list"><span class="term">weathering</span><span class="term">erosion</span><span class="term">deposition</span><span class="term">sediment</span><span class="term">landform</span></div>
+  <h3>📋 Worksheet — Check Your Understanding</h3>
+  <div class="quiz-block" id="l1-quiz">
+    <div class="quiz-q" data-answer="1"><span class="q-num">1.</span> <span class="q-text">Breaking rocks into smaller pieces is called:</span><div style="margin-top:8px"><label><input type="radio" name="l1-q0" value="0"> <span>Deposition</span></label><label><input type="radio" name="l1-q0" value="1"> <span>Weathering</span></label><label><input type="radio" name="l1-q0" value="2"> <span>Absorption</span></label><label><input type="radio" name="l1-q0" value="3"> <span>Growing</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">2.</span> <span class="q-text">Which is the main cause of most erosion on Earth&#39;s surface?</span><div style="margin-top:8px"><label><input type="radio" name="l1-q1" value="0"> <span>Fire</span></label><label><input type="radio" name="l1-q1" value="1"> <span>Water</span></label><label><input type="radio" name="l1-q1" value="2"> <span>Sound</span></label><label><input type="radio" name="l1-q1" value="3"> <span>Gravity alone</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">3.</span> <span class="q-text">The Grand Canyon was mostly formed by:</span><div style="margin-top:8px"><label><input type="radio" name="l1-q2" value="0"> <span>Volcanoes</span></label><label><input type="radio" name="l1-q2" value="1"> <span>River erosion over millions of years</span></label><label><input type="radio" name="l1-q2" value="2"> <span>An earthquake</span></label><label><input type="radio" name="l1-q2" value="3"> <span>Wind alone</span></label></div></div><div class="quiz-q" data-answer="2"><span class="q-num">4.</span> <span class="q-text">Sediment settling in a new place is called:</span><div style="margin-top:8px"><label><input type="radio" name="l1-q3" value="0"> <span>Weathering</span></label><label><input type="radio" name="l1-q3" value="1"> <span>Erosion</span></label><label><input type="radio" name="l1-q3" value="2"> <span>Deposition</span></label><label><input type="radio" name="l1-q3" value="3"> <span>Sublimation</span></label></div></div><div class="quiz-q" data-answer="3"><span class="q-num">5.</span> <span class="q-text">Which of these can shape landforms?</span><div style="margin-top:8px"><label><input type="radio" name="l1-q4" value="0"> <span>Water</span></label><label><input type="radio" name="l1-q4" value="1"> <span>Wind</span></label><label><input type="radio" name="l1-q4" value="2"> <span>Ice</span></label><label><input type="radio" name="l1-q4" value="3"> <span>All of the above</span></label></div></div>
+    <button class="quiz-btn" onclick="checkQuiz('l1-quiz')">Check My Answers</button>
+    <div class="quiz-result"></div>
+  </div>
+</div>
+
+<div class="lesson-block">
+  <div class="lesson-header">
+    <span class="lesson-num">LESSON 2</span>
+    <span class="lesson-title">Fast and Slow Changes</span>
+  </div>
+  <div class="ngss-badges"><span class="ngss-badge">NGSS: 4-ESS2-1</span></div>
+  <h3>🎯 Objective</h3>
+  <p>Compare fast and slow processes that change Earth&#39;s surface.</p>
+  <div class="callout"><strong>Anchoring Phenomenon:</strong> A rockslide can happen in seconds &mdash; but the mountain that produced it took millions of years to form.</div>
+  <h3>🧪 Activities</h3>
+  <ul><li>Investigation: The Rate of Change — students categorize processes (rockfall, glacier, earthquake, canyon carving) as fast or slow.</li><li>Modeling: Glaciers on the Move — students use ice cubes and sand to model glacier scraping.</li><li>Video/Discussion: Fast Changes — students watch videos of volcanoes, landslides, and floods.</li><li>Compare: Slow Changes — students compare glaciers and rivers to see how slow processes still shape huge features.</li></ul>
+  <h3>💡 Key Ideas</h3>
+  <ul><li><strong>Fast changes</strong> include earthquakes, landslides, volcanoes, and floods.</li><li><strong>Slow changes</strong> include glaciers moving, rivers carving valleys, wind eroding rocks.</li><li>Both kinds of change can create dramatic landforms.</li><li>By observing patterns, we can predict what changes might happen in a place.</li></ul>
+  <h3>📖 Vocabulary</h3>
+  <div class="vocab-list"><span class="term">fast change</span><span class="term">slow change</span><span class="term">glacier</span><span class="term">landslide</span><span class="term">volcano</span></div>
+  <h3>📋 Worksheet — Check Your Understanding</h3>
+  <div class="quiz-block" id="l2-quiz">
+    <div class="quiz-q" data-answer="1"><span class="q-num">1.</span> <span class="q-text">Which of these is a FAST change to Earth&#39;s surface?</span><div style="margin-top:8px"><label><input type="radio" name="l2-q0" value="0"> <span>Glacier movement</span></label><label><input type="radio" name="l2-q0" value="1"> <span>Landslide</span></label><label><input type="radio" name="l2-q0" value="2"> <span>River carving a valley</span></label><label><input type="radio" name="l2-q0" value="3"> <span>Wind eroding rock</span></label></div></div><div class="quiz-q" data-answer="2"><span class="q-num">2.</span> <span class="q-text">Which of these is a SLOW change?</span><div style="margin-top:8px"><label><input type="radio" name="l2-q1" value="0"> <span>Volcanic eruption</span></label><label><input type="radio" name="l2-q1" value="1"> <span>Earthquake</span></label><label><input type="radio" name="l2-q1" value="2"> <span>Glacier scraping the land</span></label><label><input type="radio" name="l2-q1" value="3"> <span>Rockfall</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">3.</span> <span class="q-text">A canyon is carved by a river through:</span><div style="margin-top:8px"><label><input type="radio" name="l2-q2" value="0"> <span>A single day</span></label><label><input type="radio" name="l2-q2" value="1"> <span>Millions of years</span></label><label><input type="radio" name="l2-q2" value="2"> <span>One season</span></label><label><input type="radio" name="l2-q2" value="3"> <span>A month</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">4.</span> <span class="q-text">Which is TRUE about glaciers?</span><div style="margin-top:8px"><label><input type="radio" name="l2-q3" value="0"> <span>They move too slowly to change the land</span></label><label><input type="radio" name="l2-q3" value="1"> <span>They can slowly carve deep valleys</span></label><label><input type="radio" name="l2-q3" value="2"> <span>They only cause fast changes</span></label><label><input type="radio" name="l2-q3" value="3"> <span>They melt everything they touch</span></label></div></div><div class="quiz-q" data-answer="0"><span class="q-num">5.</span> <span class="q-text">A landslide is fast because:</span><div style="margin-top:8px"><label><input type="radio" name="l2-q4" value="0"> <span>Gravity pulls loose rock down quickly</span></label><label><input type="radio" name="l2-q4" value="1"> <span>It takes millions of years</span></label><label><input type="radio" name="l2-q4" value="2"> <span>It happens underwater</span></label><label><input type="radio" name="l2-q4" value="3"> <span>The rocks warm up</span></label></div></div>
+    <button class="quiz-btn" onclick="checkQuiz('l2-quiz')">Check My Answers</button>
+    <div class="quiz-result"></div>
+  </div>
+</div>
+
+<div class="lesson-block">
+  <div class="lesson-header">
+    <span class="lesson-num">LESSON 3</span>
+    <span class="lesson-title">Rock Layers Record Landform Changes</span>
+  </div>
+  <div class="ngss-badges"><span class="ngss-badge">NGSS: 4-ESS1-1</span></div>
+  <h3>🎯 Objective</h3>
+  <p>Identify evidence from patterns in rock formations and fossils in rock layers to support an explanation for changes in a landscape over time.</p>
+  <div class="callout"><strong>Anchoring Phenomenon:</strong> A cliff shows many horizontal layers of rock, each a different color. What does each layer tell us?</div>
+  <h3>🧪 Activities</h3>
+  <ul><li>Modeling: Layered Landforms — students build layered rock models using different-colored clay.</li><li>Hands-On: Layer by Layer — students press &quot;fossils&quot; (small objects) into modeling clay layers.</li><li>Investigation: Layers of Rock — students order rock strata by age based on which is on top.</li><li>Discussion: Evidence of Environments — students look at fossil pictures and infer what the environment was like when the fossil was buried.</li></ul>
+  <h3>💡 Key Ideas</h3>
+  <ul><li>Older rock layers are usually on the BOTTOM; newer layers are on TOP.</li><li>Fossils in rock layers show what plants and animals lived there in the past.</li><li>A layer of ocean fossils in the desert is evidence that the desert was once underwater.</li><li>By studying rock layers, geologists can piece together Earth&#39;s history.</li></ul>
+  <h3>📖 Vocabulary</h3>
+  <div class="vocab-list"><span class="term">rock layer</span><span class="term">fossil</span><span class="term">sediment</span><span class="term">geologist</span><span class="term">evidence</span></div>
+  <h3>📋 Worksheet — Check Your Understanding</h3>
+  <div class="quiz-block" id="l3-quiz">
+    <div class="quiz-q" data-answer="1"><span class="q-num">1.</span> <span class="q-text">The oldest rock layer is usually found:</span><div style="margin-top:8px"><label><input type="radio" name="l3-q0" value="0"> <span>At the top</span></label><label><input type="radio" name="l3-q0" value="1"> <span>At the bottom</span></label><label><input type="radio" name="l3-q0" value="2"> <span>In the middle</span></label><label><input type="radio" name="l3-q0" value="3"> <span>Cannot be told</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">2.</span> <span class="q-text">A fossil of a fish found in a mountain most likely means:</span><div style="margin-top:8px"><label><input type="radio" name="l3-q1" value="0"> <span>Someone left it there</span></label><label><input type="radio" name="l3-q1" value="1"> <span>The area was once underwater</span></label><label><input type="radio" name="l3-q1" value="2"> <span>Fish once flew</span></label><label><input type="radio" name="l3-q1" value="3"> <span>The rock is very new</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">3.</span> <span class="q-text">Fossils are:</span><div style="margin-top:8px"><label><input type="radio" name="l3-q2" value="0"> <span>Only shells</span></label><label><input type="radio" name="l3-q2" value="1"> <span>Preserved traces of past life</span></label><label><input type="radio" name="l3-q2" value="2"> <span>Living creatures</span></label><label><input type="radio" name="l3-q2" value="3"> <span>Made of plastic</span></label></div></div><div class="quiz-q" data-answer="1"><span class="q-num">4.</span> <span class="q-text">Studying rock layers is like reading:</span><div style="margin-top:8px"><label><input type="radio" name="l3-q3" value="0"> <span>A modern novel</span></label><label><input type="radio" name="l3-q3" value="1"> <span>A history book of Earth&#39;s past</span></label><label><input type="radio" name="l3-q3" value="2"> <span>The newspaper</span></label><label><input type="radio" name="l3-q3" value="3"> <span>A math book</span></label></div></div><div class="quiz-q" data-answer="2"><span class="q-num">5.</span> <span class="q-text">Which layer would contain fossils of the oldest plants and animals?</span><div style="margin-top:8px"><label><input type="radio" name="l3-q4" value="0"> <span>Top</span></label><label><input type="radio" name="l3-q4" value="1"> <span>Middle</span></label><label><input type="radio" name="l3-q4" value="2"> <span>Bottom</span></label><label><input type="radio" name="l3-q4" value="3"> <span>It varies randomly</span></label></div></div>
+    <button class="quiz-btn" onclick="checkQuiz('l3-quiz')">Check My Answers</button>
+    <div class="quiz-result"></div>
+  </div>
+</div>
+
+
+<section class="card">
+  <h2>📅 Unit Timeline</h2>
+  <p>This unit is scheduled for approximately <strong>6 weeks</strong> in <strong>Q3</strong> of the 2026-2027 school year. See the full <a href="4a-bekers-science-unit-calendar.html" style="color:var(--accent-deep);font-weight:800;">Unit Calendar</a> for day-by-day pacing.</p>
+</section>
+</main>
+
+<footer>Mary, Star of the Sea School &middot; Grade 4A Science &middot; Mrs. Bekers &middot; SY 2026-2027</footer>
+</div>
+</body>
+</html>
