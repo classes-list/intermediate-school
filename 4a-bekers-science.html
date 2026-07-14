@@ -109,32 +109,45 @@ h1 { font-size:2.6rem; font-weight:900; color:#1a2a4a; margin-bottom:6px; line-h
   padding:6px 14px; background:#f8fafc; border-radius:6px;
 }
 footer { text-align:center; margin-top:44px; color:#64748b; font-size:.85rem; padding-top:20px; border-top:1px dashed #cbd5e1; }
+
+:root { --tb-dark: #065F46; }
+
+  .g-topbar { border-bottom: 4px solid #FFD100; background: var(--tb-dark); color: white; padding: 15px 30px; font-size: 18px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; position: relative; z-index: 5; }
+  .g-topbar-left { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .g-topbar-right { font-size: 14px; opacity: 0.9; font-weight: 600; }
+  .g-nav-btn { background: #6b7280; color: white !important; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 700; transition: all 0.18s; display: inline-block; border: none; cursor: pointer; }
+  .g-nav-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,0.2); }
+  .g-topbar-logos { display: flex; gap: 8px; align-items: center; }
+  .g-logo-circle { width: 44px; height: 44px; border-radius: 50%; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.25); overflow: hidden; display: inline-flex; align-items: center; justify-content: flex-start; flex-shrink: 0; }
+  .g-logo-circle img { display: block; }
+  .g-logo-circle.msos img { height: 100%; width: auto; }
+  .g-logo-circle.nui img { width: 100%; height: 100%; object-fit: cover; }
+  .g-logo-circle.msos { background: #1a2a4a; }
+  @media (max-width: 800px) { .g-logo-circle { width: 38px; height: 38px; } .g-topbar { font-size: 15px; padding: 12px 18px; } }
 </style>
 </head>
 <body>
+<div class="g-topbar">
+    <div class="g-topbar-left">
+      <a href="4a-bekers.html" class="g-nav-btn">← All Classes</a>
+      <a href="4a-bekers-science-syllabus.html" class="g-nav-btn" style="background:#FFD100;color:#1a2a4a !important;" title="View Syllabus">📓 Syllabus</a>
+      <a href="4a-bekers-science-syllabus.pdf" class="g-nav-btn" target="_blank" rel="noopener" style="background:#065F46;color:#FFD100 !important;border:1.5px solid #FFD100;" title="Open printable syllabus PDF">🖨️ Print Syllabus</a>
+      <a href="4a-bekers-science-curriculum-map.html" class="g-nav-btn" style="background:#B45309;" title="Curriculum Map &amp; Unit Calendar">📅 Curriculum Map</a>
+      <div class="g-topbar-logos">
+        <span class="g-logo-circle msos" title="Mary, Star of the Sea"><img src="msos-logo.svg" alt="Mary, Star of the Sea Logo"></span>
+        <span class="g-logo-circle nui" title="Nurture · Unite · Inspire"><img src="nui-logo.png" alt="Nurture-Unite-Inspire Logo"></span>
+      </div>
+      <span>Science</span>
+    </div>
+    <div class="g-topbar-right">Science &middot; Grade 4</div>
+  </div>
+
 <div class="container">
 <header>
-  <a class="back-btn" href="4a-bekers.html">&larr; Back to Class</a>
   <div class="eyebrow">Grade 4A &middot; Science &middot; HMH Into Science</div>
   <h1>🔬 Mrs. Bekers Science Class</h1>
   <p class="tagline">A year of inquiry, engineering, and Earth exploration &mdash; NGSS-aligned units, hands-on activities, and quizzes.</p>
 </header>
-
-<div class="mission-banner">
-  <h3>🌟 Mary, Star of the Sea School Mission</h3>
-  <p><strong>N</strong>urture, <strong>U</strong>nite, <strong>I</strong>nspire. We are committed to nurturing each child&rsquo;s curiosity, uniting our classroom in respect and collaboration, and inspiring every student to grow in knowledge, faith, and wonder for the world around them.</p>
-</div>
-
-<div class="syllabus-banner">
-  <div>
-    <div class="sb-label">📋 Syllabus &amp; Curriculum Map &middot; SY 2026-2027</div>
-    <div class="sb-sub">Full-year Grade 4 Science plan &mdash; HMH Into Science, NGSS-aligned</div>
-  </div>
-  <div class="sb-btns">
-    <a class="sb-btn" href="4a-bekers-science-syllabus.html">📋 Syllabus</a>
-    <a class="sb-btn" href="4a-bekers-science-curriculum-map.html">📅 Curriculum Map</a>
-  </div>
-</div>
 
 <div class="units-grid">
 
