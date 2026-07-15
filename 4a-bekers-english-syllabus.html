@@ -3,229 +3,189 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>English Language Arts Syllabus &mdash; Mrs. Bekers Grade 4</title>
+<title>English Language Arts &mdash; Grade 4 — Course Syllabus · Mrs. Bekers</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #eef2fa 0%, #f8f9fa 100%);
-  color: #253a77;
-  min-height: 100vh;
-  padding: 40px 20px;
-}
-.container { max-width: 900px; margin: 0 auto; }
-.back-index-btn {
-  position: fixed; top: 20px; left: 20px;
-  background: #253a77; color: #fff; text-decoration: none;
-  padding: 10px 16px; border-radius: 8px;
-  font-size: 14px; font-weight: 700;
-  box-shadow: 0 3px 10px rgba(37,58,119,0.25);
-  z-index: 10;
-}
-.back-index-btn:hover { background: #1a2a4a; }
-.print-btn {
-  position: fixed; top: 20px; right: 20px;
-  background: #B45309; color: #fff; text-decoration: none;
-  padding: 10px 16px; border-radius: 8px;
-  font-size: 14px; font-weight: 700; border: none; cursor: pointer;
-  box-shadow: 0 3px 10px rgba(180,83,9,0.25);
-  z-index: 10;
-}
-.print-btn:hover { background: #92400e; }
-.syllabus-card {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 6px 28px rgba(37,58,119,0.12);
-  padding: 40px 44px;
-  border-top: 6px solid #FFD100;
-}
-.header-top {
-  display: flex; gap: 24px; align-items: center;
-  border-bottom: 2px solid #e2e8f0; padding-bottom: 22px; margin-bottom: 24px;
-  flex-wrap: wrap;
-}
-.header-info { flex: 1 1 260px; }
-.header-info h1 { color: #253a77; font-size: 1.5rem; font-weight: 800; margin-bottom: 4px; }
-.header-info .role { color: #7a5f00; font-style: italic; font-size: 0.95rem; margin-bottom: 6px; }
-.header-info .contact { font-size: 0.88rem; line-height: 1.6; color: #444; }
-.header-info .contact strong { color: #253a77; }
-.header-info .contact a { color: #253a77; text-decoration: none; }
-.header-info .contact a:hover { text-decoration: underline; }
+:root { --hero-light: #b91c1c; --hero-dark: #7f1d1d; }
 
-.subject-banner {
-  background: linear-gradient(135deg, #6b21a8 0%, #8b5cf6 100%);
-  color: #fff;
-  border-radius: 10px;
-  padding: 20px 24px;
-  margin-bottom: 24px;
-  text-align: center;
-}
-.subject-banner .eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; opacity: 0.85; margin-bottom: 4px; }
-.subject-banner h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 4px; }
-.subject-banner .sub { font-size: 0.95rem; opacity: 0.92; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; background: #F1F5F9; color: #1F2937; line-height: 1.55; }
+.topbar { border-bottom: 4px solid #FFD100; background: var(--hero-dark); color: white; padding: 15px 30px; font-size: 18px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.topbar-left { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.topbar-right { font-size: 14px; opacity: 0.9; font-weight: 600; }
+.nav-btn { background: #6b7280; color: white; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 700; transition: all 0.18s; display: inline-block; }
+.nav-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,0.2); }
+.topbar-logos { display: flex; gap: 8px; align-items: center; }
+.logo-circle { width: 44px; height: 44px; border-radius: 50%; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.25); overflow: hidden; display: inline-flex; align-items: center; justify-content: flex-start; flex-shrink: 0; }
+.logo-circle img { display: block; }
+.logo-circle.msos img { height: 100%; width: auto; }
+.logo-circle.nui img { width: 100%; height: 100%; object-fit: cover; }
+.logo-circle.msos { background: #1a2a4a; }
+.wrap { max-width: 1000px; margin: 24px auto; padding: 0 20px 40px; }
+.syl-hero { background: linear-gradient(135deg, var(--hero-light) 0%, var(--hero-dark) 100%); color: white; border-radius: 16px; padding: 28px 32px; margin-bottom: 22px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+.syl-hero .icon { font-size: 2.4rem; margin-bottom: 8px; }
+.syl-hero h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 6px; color: white; }
+.syl-hero p { opacity: 0.92; font-size: 0.95rem; }
+.syl-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 18px; }
+.syl-card { background: white; border-radius: 12px; padding: 20px 22px; box-shadow: 0 2px 10px rgba(0,0,0,0.07); flex: 1 1 300px; border-top: 4px solid var(--hero-dark); }
+.syl-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--hero-dark); margin-bottom: 10px; }
+.syl-card p { font-size: 0.92rem; color: #374151; line-height: 1.6; margin-bottom: 6px; }
+.syl-card ul { padding-left: 18px; margin: 6px 0 0; }
+.syl-card li { font-size: 0.9rem; color: #374151; margin-bottom: 4px; line-height: 1.55; }
+.syl-card a { color: var(--hero-dark); }
+.syl-grade-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.syl-grade-pill { background: #f1f5f9; border-radius: 8px; padding: 8px 12px; font-size: 0.82rem; font-weight: 600; color: #374151; text-align: center; flex: 1 1 110px; }
+.syl-grade-pill span { display: block; font-size: 1.3rem; font-weight: 800; color: var(--hero-dark); }
+.syl-grade-pill small { display: block; font-size: 0.72rem; font-weight: 500; color: #64748b; margin-top: 4px; line-height: 1.35; }
+.syl-quarter { background: #f8fafc; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; border-left: 4px solid var(--hero-dark); }
+.syl-quarter h4 { font-size: 0.95rem; color: var(--hero-dark); margin-bottom: 6px; }
+.syl-quarter ul { margin: 4px 0 0 22px; }
+.syl-quarter li { font-size: 0.88rem; color: #374151; margin-bottom: 3px; }
+footer { text-align: center; margin-top: 30px; padding: 20px; color: #64748b; font-size: 0.85rem; }
+@media (max-width: 800px) { .logo-circle { width: 38px; height: 38px; } .topbar { font-size: 15px; padding: 12px 18px; } }
 
-section { margin-top: 28px; }
-section h2 {
-  color: #6b21a8;
-  font-size: 1.15rem;
-  font-weight: 800;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #FFD100;
-  display: flex; align-items: center; gap: 8px;
-}
-section p { color: #2d3748; font-size: 0.98rem; line-height: 1.7; margin-bottom: 12px; }
-section ul { margin: 10px 0 12px 22px; }
-section ul li { padding: 4px 0; color: #2d3748; font-size: 0.95rem; line-height: 1.5; }
-section ul li strong { color: #6b21a8; }
-section ol { margin: 10px 0 12px 26px; }
-section ol li { padding: 4px 0; color: #2d3748; font-size: 0.95rem; line-height: 1.5; }
-
-.welcome-box {
-  background: #f0f4fc;
-  border-left: 4px solid #6b21a8;
-  padding: 16px 20px;
-  border-radius: 6px;
-  margin-bottom: 8px;
-}
-.welcome-box p { font-style: italic; color: #2d3748; }
-
-.mission-box {
-  background: #fff8e1;
-  border-left: 4px solid #FFD100;
-  padding: 14px 20px;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  color: #2d3748;
-  line-height: 1.6;
-}
-
-.textbooks { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-.book-card {
-  background: #f8fafc;
-  border-left: 3px solid #6b21a8;
-  padding: 12px 16px;
-  border-radius: 6px;
-}
-.book-card .book-title { color: #253a77; font-weight: 700; font-size: 0.98rem; }
-.book-card .book-author { color: #7a5f00; font-style: italic; font-size: 0.85rem; margin-top: 3px; }
-
-.grade-desc { color: #64748b; font-size: 0.9rem; font-weight: normal; margin-left: 6px; }
-
-.parent-note {
-  background: #fef3c7;
-  border-left: 4px solid #d97706;
-  padding: 14px 18px;
-  border-radius: 6px;
-  margin-top: 18px;
-  font-size: 0.93rem;
-  color: #78350f;
-  line-height: 1.6;
-}
-.parent-note strong { color: #78350f; }
-
-.dates-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
-.dates-table td { padding: 8px 10px; border-bottom: 1px dashed #d8dee9; font-size: 0.93rem; }
-.dates-table .date-name { font-weight: 700; color: #6b21a8; width: 60%; }
-.dates-table .date-value { color: #444; }
-.dates-table tr:last-child td { border-bottom: none; }
-
-footer {
-  margin-top: 32px;
-  text-align: center;
-  color: #7a5f00;
-  font-style: italic;
-  font-size: 0.95rem;
-  padding: 20px 0 10px;
-  border-top: 2px solid #e2e8f0;
-}
-
-@media print {
-  body { background: #fff; padding: 0; }
-  .back-index-btn, .print-btn { display: none; }
-  .syllabus-card { box-shadow: none; border-top: none; padding: 20px; }
-  section { page-break-inside: avoid; }
-}
-@media (max-width: 640px) {
-  .syllabus-card { padding: 24px 20px; }
-  .header-info h1 { font-size: 1.2rem; }
-  .subject-banner h2 { font-size: 1.25rem; }
-}
 </style>
 </head>
 <body>
-<a href="4a-bekers.html" class="back-index-btn" title="Back to Mrs. Bekers&#39; Class">&larr; Back to Class</a>
-<button onclick="window.print()" class="print-btn" title="Print or save as PDF">🖨️ Print</button>
-
-<div class="container">
-  <div class="syllabus-card">
-    <div class="header-top">
-      <div class="header-info">
-        <h1>Nicolle Bekers, M.A.</h1>
-        <div class="role">Intermediate Team Faculty &middot; Grade 4 &middot; SY 2026&ndash;2027</div>
-        <div class="contact">
-          <strong>Email:</strong> <a href="mailto:nbekers@starofthesea.org">nbekers@starofthesea.org</a><br>
-          <strong>All 4th Grade Teachers:</strong> <a href="mailto:4thgradeteachers@starofthesea.org">4thgradeteachers@starofthesea.org</a><br>
-          <strong>Phone:</strong> 808.734.0208 &middot; <strong>Office Hours:</strong> 2:45pm&ndash;3:15pm (M&ndash;F)<br>
-          <strong>Address:</strong> 4469 Malia Street Honolulu, Hawai&rsquo;i 96821
-        </div>
-      </div>
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="4a-bekers-english.html" class="nav-btn">← Back to Units</a>
+    <a href="4a-bekers-english-syllabus.pdf" class="nav-btn" target="_blank" rel="noopener" style="background:#FFD100;color:#1a2a4a;">🖨️ Print Syllabus</a>
+    <div class="topbar-logos">
+      <span class="logo-circle msos" title="Mary, Star of the Sea"><img src="msos-logo.svg" alt="Mary, Star of the Sea Logo"></span>
+      <span class="logo-circle nui" title="Nurture · Unite · Inspire"><img src="nui-logo.png" alt="Nurture-Unite-Inspire Logo"></span>
     </div>
-
-    <div class="subject-banner">
-      <div class="eyebrow">Grade 4 Syllabus &middot; SY 2026&ndash;2027</div>
-      <h2>📖 English Language Arts</h2>
-      <div class="sub">Reading &middot; Writing &middot; Grammar &middot; Vocabulary</div>
-    </div>
-
-    <div class="welcome-box"><p>Welcome to Grade 4 English. This syllabus is intended for you, the student, to develop a greater understanding of what we will cover, what is expected of you, and what you can expect from me. My primary focus this year is that all students develop a love for &mdash; and grade-level understanding of &mdash; books, writing, language, and grammar.</p></div>
-
-    <section>
-      <h2>🎯 Course Overview</h2>
-      <p>This course focuses on developing reading, writing, speaking, and listening skills. Students will engage with classic and modern literature, explore grammar and vocabulary, and practice various forms of writing.</p>
-    </section>
-
-    <section><h2>📚 Class Novels</h2><p>This school year, students will read four core novels as a class, along with supplemental material that will be provided. Some are classic novels that parents might recognize; others are likely unfamiliar. The novels will be provided by the school, unless otherwise specified, at a later time.</p><div class="textbooks"><div class="book-card"><div class="book-title">Wonder</div><div class="book-author">by R.J. Palacio</div></div><div class="book-card"><div class="book-title">The Tale of Despereaux</div><div class="book-author">by Kate DiCamillo</div></div><div class="book-card"><div class="book-title">Inside Out and Back Again</div><div class="book-author">by Thanhh&agrave; Lại</div></div><div class="book-card"><div class="book-title">Holes</div><div class="book-author">by Louis Sachar</div></div></div></section>
-
-    <section>
-      <h2>📊 Grading Policy</h2>
-      <ul><li><strong>45% Assessments</strong> <span class="grade-desc">(Oral / Written Tests and Quizzes)</span></li><li><strong>45% Written Work</strong> <span class="grade-desc">(e.g., journals, reports, projects)</span></li><li><strong>10% Classwork and Participation</strong></li></ul>
-      <div class="parent-note"><strong>Parents, please note:</strong> You will have access to my electronic grade book via your <strong>Beehively</strong> account, which will be a primary method of communicating your child&rsquo;s academic performance. <em style='color:#c62828;'>It will be assumed that you have seen all grades and missing assignments that are entered in Beehively.</em></div>
-    </section>
-
-    <section>
-      <h2>📝 Homework Policy</h2>
-      <p>Students are expected to <strong>read 20 minutes every day</strong>. In addition to the reading, other homework will be assigned. Your children&rsquo;s teachers will work together to ensure that the students receive a balanced homework regime aimed to create a positive learning environment that nurtures students&rsquo; intellectual growth. Assignments are expected to be written daily in a student&rsquo;s planner, and available on Google Calendar. Parents are expected to check the student&rsquo;s planners daily, support their child in time management and follow through. Late work will be accepted; however, late assignments will negatively affect students&rsquo; participation grades.</p>
-    </section>
-
-    <section>
-      <h2>🎒 Classroom Expectations</h2>
-      <ul><li>Students are expected to come to class prepared and ready to learn.</li><li>Homework should be completed daily and turned in. Should there be a reason that the homework cannot be completed on time, the teacher should be notified in advance and a plan should be made to complete the assignment.</li><li>Students are expected to always try their best and participate in class. Further, they are expected to ask questions, request clarification, and communicate via office hours or email as needed.</li><li>Students are expected to respect themselves, respect others, and respect all property.</li></ul>
-    </section>
-
-    <section>
-      <h2>🎨 Required Materials</h2>
-      <p>Students should be prepared on a daily basis with the following:</p>
-      <ul><li>English composition book</li><li>Current core novel</li><li>Erasable pen, pencil, eraser and highlighter</li><li>Sticky notes</li><li>Index cards</li><li>Planner</li></ul>
-    </section>
-
-    <section>
-      <h2>📅 Important Dates &middot; 2026&ndash;2027</h2>
-      <table class="dates-table"><tr><td class="date-name">Orientation</td><td class="date-value">August 12, 2026</td></tr>
-<tr><td class="date-name">Parent-Teacher Conferences</td><td class="date-value">Fall 9/10&ndash;11, 2026 &middot; Spring 2/19/27 (optional)</td></tr>
-<tr><td class="date-name">Q1 Expedition &mdash; Coconut Island</td><td class="date-value">October 2, 2026</td></tr>
-<tr><td class="date-name">Q2 Expedition &mdash; Pearl Harbor &amp; Ice Palace</td><td class="date-value">December 11 (pending) and 14, 2026</td></tr>
-<tr><td class="date-name">Q3 Expedition &mdash; &lsquo;Iolani Palace</td><td class="date-value">March 5, 2027</td></tr>
-<tr><td class="date-name">Q4 Expedition &mdash; Sherwood Forest</td><td class="date-value">June 1, 2027</td></tr>
-<tr><td class="date-name">School Spelling Bee</td><td class="date-value">November 20, 2026</td></tr>
-<tr><td class="date-name">Christmas Performance</td><td class="date-value">December 18, 2026</td></tr>
-<tr><td class="date-name">End-of-Year Awards</td><td class="date-value">June 3, 2027</td></tr>
-</table>
-      <p style="font-size:0.85rem; color:#7a5f00; font-style:italic; margin-top:8px;">(All expedition dates and times subject to change.)</p>
-    </section>
-
-    <footer>Empowered to Succeed, Guided by Faith &nbsp;❤️!</footer>
+    <span>Course Syllabus</span>
   </div>
+  <div class="topbar-right">English Language Arts &middot; Grade 4</div>
 </div>
+
+<div class="wrap">
+  <div class="syl-hero">
+    <div class="icon">📖</div>
+    <h2>English Language Arts &mdash; Grade 4 &mdash; Course Syllabus</h2>
+    <p>Mary, Star of the Sea School &middot; Mrs. Nicolle Bekers &middot; SY 2026-2027</p>
+  </div>
+
+  <div class="syl-grid">
+    <div class="syl-card" style="flex:1 1 100%">
+      <h3>📋 Course Description</h3>
+      <p>This course focuses on developing <strong>reading, writing, speaking, and listening skills</strong>. Students engage with classic and modern literature, explore grammar and vocabulary, and practice various forms of writing. Our primary focus is that every student develops a love for &mdash; and grade-level understanding of &mdash; books, writing, language, and grammar.</p>
+      <p style="margin-top:8px"><strong>Textbook:</strong> <strong>Core novels:</strong> <em>Wonder</em> (R.J. Palacio) &middot; <em>The Tale of Despereaux</em> (Kate DiCamillo) &middot; <em>Inside Out and Back Again</em> (Thanhh&agrave; L&#7841;i) &middot; <em>Holes</em> (Louis Sachar)</p>
+    </div>
+  </div>
+
+  <div class="syl-card" style="margin-bottom:18px">
+    <h3>📊 Grading Policy</h3>
+    <div class="syl-grade-row">
+      
+      <div class="syl-grade-pill"><span>30%</span>Assessments<small>Oral / written tests and quizzes</small></div>
+      <div class="syl-grade-pill"><span>25%</span>Classwork<small>Daily reading &amp; writing practice</small></div>
+      <div class="syl-grade-pill"><span>20%</span>Writing Portfolio<small>Published pieces &amp; workshop drafts</small></div>
+      <div class="syl-grade-pill"><span>15%</span>Participation / HW<small>Novel discussion, reading log</small></div>
+      <div class="syl-grade-pill"><span>10%</span>Projects &amp; Presentations<small></small></div>
+
+    </div>
+  </div>
+
+  <div class="syl-card" style="margin-bottom:18px">
+    <h3>📚 Course Outline by Quarter</h3>
+    
+    <div class="syl-quarter"><h4>Q1 &mdash; Novel 1: <em>Wonder</em> by R.J. Palacio</h4>
+      <ul><li>Reading comprehension: character analysis, multiple perspectives, theme</li><li>Writing: personal narrative &mdash; drafting, revising, publishing</li><li>Grammar: nouns, verbs, adjectives, adverbs; sentence structure</li><li>Vocabulary: novel-based words + word study</li></ul>
+    </div>
+    <div class="syl-quarter"><h4>Q2 &mdash; Novel 2: <em>The Tale of Despereaux</em> by Kate DiCamillo</h4>
+      <ul><li>Plot structure, hero&rsquo;s journey, fantasy elements</li><li>Writing: creative narrative with sensory detail &amp; dialogue</li><li>Grammar: pronouns, verb tenses, subject-verb agreement</li><li>Vocabulary: precise word choice; context clues</li></ul>
+    </div>
+    <div class="syl-quarter"><h4>Q3 &mdash; Novel 3: <em>Inside Out and Back Again</em> by Thanhh&agrave; L&#7841;i</h4>
+      <ul><li>Novel in verse: free-verse poetry &amp; figurative language</li><li>Writing: opinion &amp; argument with reasons and evidence</li><li>Grammar: possessives, commas, quotations</li><li>Vocabulary: Greek &amp; Latin roots; shades of meaning</li></ul>
+    </div>
+    <div class="syl-quarter"><h4>Q4 &mdash; Novel 4: <em>Holes</em> by Louis Sachar</h4>
+      <ul><li>Interwoven plots, cause and effect, symbolism</li><li>Writing: informative / explanatory research report</li><li>Grammar: comparative &amp; superlative; prefixes &amp; suffixes</li><li>Vocabulary: multiple-meaning words; dictionary skills</li></ul>
+    </div>
+
+  </div>
+
+
+  <div class="syl-card" style="margin-bottom:18px">
+    <h3>📚 Required Materials</h3>
+    <p><strong>Daily:</strong></p>
+    <ul>
+      
+      <li>Composition or spiral notebook (Reader&rsquo;s / Writer&rsquo;s Notebook)</li>
+      <li>Erasable pen, pencil, eraser and highlighter</li>
+      <li>Sticky notes for annotating novels</li>
+      <li>School-issued iPad (with Google Classroom access)</li>
+      <li>School planner</li>
+
+    </ul>
+    <p style="margin-top:8px"><strong>Supplemental Textbook:</strong> <strong>Core novels:</strong> <em>Wonder</em> (R.J. Palacio) &middot; <em>The Tale of Despereaux</em> (Kate DiCamillo) &middot; <em>Inside Out and Back Again</em> (Thanhh&agrave; L&#7841;i) &middot; <em>Holes</em> (Louis Sachar)</p>
+  </div>
+
+  <div class="syl-card" style="margin-bottom:18px">
+    <h3>🏠 Homework Policy</h3>
+    <p>Per school policy, students are expected to allocate up to <strong>40 minutes of homework per night</strong>. The 4th grade teachers coordinate to balance homework across subjects. Students record assignments in their planner and check Google Classroom for reminders. Parents are expected to check planners daily and support time management.</p>
+    <p style="margin-top:8px">Late work is accepted, but submitting on time is important for developing responsibility. Late submissions may affect the participation grade.</p>
+  </div>
+
+  <div class="syl-card" style="margin-bottom:18px">
+    <h3>🧑‍🏫 Classroom Expectations</h3>
+    <ul>
+      <li>Come to class prepared and ready to learn each day.</li>
+      <li>Complete homework on time; communicate in advance if circumstances prevent completion.</li>
+      <li>Participate by asking questions, contributing ideas, and seeking clarification.</li>
+      <li>Treat ourselves, one another, and school property with respect and responsibility.</li>
+    </ul>
+  </div>
+
+  <div class="syl-card" style="margin-bottom:18px">
+    <h3>📅 Important Dates (SY 2026-2027)</h3>
+    <ul>
+      <li><strong>Parent Orientation Night:</strong> August 12, 2026</li>
+      <li><strong>Parent-Teacher Conferences:</strong> Fall &mdash; Sept. 10–11, 2026 &middot; Spring &mdash; Feb. 19, 2027 (optional)</li>
+      <li><strong>Expeditions:</strong> Q1 Coconut Island (10/2), Q2 Pearl Harbor (11/16 pending) &amp; Ice Palace (12/14), Q3 ʻIolani Palace (3/5), Q4 Sherwood Forest (6/1)</li>
+      <li><strong>School Spelling Bee:</strong> Nov. 20, 2026</li>
+      <li><strong>Christmas Performance:</strong> Dec. 18, 2026</li>
+      <li><strong>End-of-Year Awards:</strong> June 3, 2027</li>
+    </ul>
+    <p style="margin-top:6px;font-size:0.85rem;color:#6b7280;font-style:italic;">*All expeditions are subject to change.</p>
+  </div>
+
+  <div class="syl-grid" style="margin-bottom:18px">
+    <div class="syl-card" style="flex:1 1 300px;">
+      <h3>🎓 Academic Integrity</h3>
+      <p><strong>Teachers</strong> will structure testing to alleviate the possibility of cheating, specify allowed collaboration, and teach the difference between summarizing and copying.</p>
+      <p style="margin-top:6px"><strong>Students</strong> avoid situations that contribute to cheating or plagiarizing, avoid unauthorized assistance, and use sources as directed.</p>
+    </div>
+    <div class="syl-card" style="flex:1 1 300px;">
+      <h3>🕘 Absences &amp; Tardiness</h3>
+      <p>Students may stay home for illness, accident, quarantine, or a death in the family. For extended absences, families notify the teacher so a make-up plan can be arranged. Students are tardy after the 7:45 a.m. bell.</p>
+    </div>
+    <div class="syl-card" style="flex:1 1 300px;">
+      <h3>🍎 Food &amp; Drink</h3>
+      <p>Food is prohibited unless specified by the teacher. Only sealed water bottles allowed. Sharing food is not permitted (dietary restrictions).</p>
+    </div>
+    <div class="syl-card" style="flex:1 1 300px;">
+      <h3>📱 Technology</h3>
+      <p>Cell phones and smart watches must be off and in backpacks during the school day. 1st offense = warning; 2nd = phone to office; 3rd = parent notified.</p>
+    </div>
+  </div>
+
+  <div class="syl-card" style="margin-bottom:18px;background:#fffbea;border-top-color:#FFD100;">
+    <h3>📩 Teacher Contact</h3>
+    <p><strong>Nicolle Bekers, M.A.</strong> &mdash; Intermediate Team Faculty</p>
+    <p>📧 <a href="mailto:nbekers@starofthesea.org">nbekers@starofthesea.org</a> (please allow up to 24 hours for a response on school days)</p>
+    <p>📧 4th Grade Team: <a href="mailto:4thgradeteachers@starofthesea.org">4thgradeteachers@starofthesea.org</a></p>
+    <p>📞 Office phone: 808-734-0208</p>
+    <p>🕒 Office hours: 2:45–3:15 p.m. (M-F) in Room B23</p>
+  </div>
+
+  <div class="syl-card" style="background:#eef2ff;border-top-color:#4c1d95;">
+    <h3 style="color:#4c1d95;">💻 Beehively Gradebook</h3>
+    <p>Parents access the electronic gradebook via <strong>Beehively</strong>. Beehively is the primary source for monitoring grades, missing assignments, and academic progress throughout the school year.</p>
+  </div>
+
+
+</div>
+<footer>Mary, Star of the Sea School &middot; Mrs. Bekers &middot; Religion &middot; Grade 4 &middot; SY 2026-2027</footer>
 </body>
 </html>

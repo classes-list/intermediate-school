@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Mrs. Bekers &mdash; Mary, Star of the Sea</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #eef2fa 0%, #f8f9fa 100%);
+      color: #253a77;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .container { max-width: 860px; width: 100%; }
+    .back-index-btn {
+      position: fixed;
+      top: 20px; left: 20px;
+      background: #253a77; color: #fff; text-decoration: none;
+      padding: 10px 16px; border-radius: 8px;
+      font-size: 14px; font-weight: 700;
+      box-shadow: 0 3px 10px rgba(37,58,119,0.25);
+      transition: all 0.18s; z-index: 10;
+    }
+    .back-index-btn:hover { background: #1a2a4a; transform: translateX(-2px); box-shadow: 0 5px 14px rgba(37,58,119,0.35); }
+
+    .bio-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 28px rgba(37,58,119,0.12);
+      padding: 36px 40px;
+      border-top: 6px solid #FFD100;
+    }
+    .header-row {
+      display: flex; gap: 28px; align-items: center; justify-content: center;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .photo {
+      flex: 0 0 150px;
+      width: 150px; height: 150px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background: #1a2a4a;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(37,58,119,0.25);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+    .photo .initials {
+      color: #FFD100;
+      font-size: 4rem; font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+    .id { flex: 1 1 260px; }
+    .id h1 {
+      color: #253a77;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .id .role {
+      color: #7a5f00;
+      font-size: 1.05rem;
+      font-style: italic;
+      margin-bottom: 14px;
+    }
+    .id .contact {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.7;
+    }
+    .id .contact strong { color: #253a77; }
+    .id .contact a { color: #253a77; text-decoration: none; }
+    .id .contact a:hover { text-decoration: underline; }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #d8dee9, transparent);
+      margin: 12px 0 24px;
+    }
+
+    .bio-section h2 {
+      color: #253a77;
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    .bio-section p {
+      color: #2d3748;
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .bio-section p:last-child { margin-bottom: 0; }
+    .bio-section a {
+      color: #253a77;
+      font-weight: inherit;
+      text-decoration: none;
+      border-bottom: 2px solid #FFD100;
+      transition: all 0.18s;
+    }
+    .bio-section a:hover {
+      color: #1a2a4a;
+      background: #fff7ed;
+    }
+
+    .quick-facts {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+    }
+    .fact {
+      background: #f0f4fc;
+      border-left: 3px solid #253a77;
+      padding: 12px 14px;
+      border-radius: 6px;
+    }
+    .fact .label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .fact .value {
+      font-size: 0.92rem;
+      color: #253a77;
+      font-weight: 600;
+    }
+
+    .education {
+      margin-top: 30px;
+      padding: 22px 24px;
+      background: #f8fafc;
+      border-radius: 10px;
+      border-left: 4px solid #FFD100;
+    }
+    .education h2 {
+      color: #253a77;
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .edu-list { list-style: none; padding: 0; margin: 0; }
+    .edu-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px dashed #d8dee9;
+    }
+    .edu-list li:last-child { border-bottom: none; }
+    .edu-degree {
+      flex: 0 0 240px;
+      font-weight: 700;
+      color: #253a77;
+      font-size: 0.95rem;
+    }
+    .edu-school {
+      flex: 1 1 auto;
+      color: #444;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 640px) {
+      .bio-card { padding: 24px 22px; }
+      .id h1 { font-size: 1.55rem; }
+      .photo { flex: 0 0 140px; width: 140px; height: 140px; }
+      .photo .initials { font-size: 2.8rem; }
+      .edu-list li { flex-direction: column; align-items: flex-start; gap: 4px; padding: 8px 0; }
+      .edu-degree { flex: 0 0 auto; }
+    }
+  </style>
+</head>
+<body>
+  <a href="4a-bekers.html" class="back-index-btn" title="Back to Mrs. Bekers&apos;s Class">&larr; All Classes</a>
+  <div class="container">
+    <div class="bio-card">
+      <div class="header-row">
+        <div class="photo">
+          <img src="mrs-bekers.jpg" alt="Mrs. Bekers" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="initials" style="display:none; width:100%; height:100%; align-items:center; justify-content:center;">NB</div>
+        </div>
+        <div class="id">
+          <h1>Mrs. Nicolle Bekers</h1>
+          <div class="role">Intermediate Team Faculty &middot; Mary, Star of the Sea</div>
+        </div>
+      </div>
+      <div class="divider"></div>
+
+      <div class="bio-section">
+        <h2>About Mrs. Bekers</h2>
+        <p>Mrs. Nicolle Bekers brings extensive teaching experience to the intermediate school faculty. She holds an undergraduate degree in Liberal Studies from the University of Hawai&#699;i at M&#257;noa and a Master&rsquo;s Degree in Education from Loyola Marymount University.</p>
+        <p>Mrs. Bekers&rsquo; teaching philosophy seamlessly connects scientific curiosity with literary exploration, inspired by her deep appreciation for nature and books. As a lifelong yoga practitioner, she integrates community building and mindfulness into her daily classroom culture.</p>
+        <p>Mrs. Bekers is a mother of two sons and an avid collector of seashells from around the globe.</p>
+      </div>
+
+      <div class="education">
+        <h2>🎓 Education</h2>
+        <ul class="edu-list">
+          <li>
+            <div class="edu-degree">B.A., Liberal Studies</div>
+            <div class="edu-school">University of Hawai&#699;i at M&#257;noa</div>
+          </li>
+          <li>
+            <div class="edu-degree">M.A., Education</div>
+            <div class="edu-school">Loyola Marymount University</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
