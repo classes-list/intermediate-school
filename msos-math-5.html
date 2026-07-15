@@ -113,6 +113,7 @@
         <div style="display:flex;align-items:center;flex-wrap:wrap;gap:10px;">
           <a href="5a-soto.html" class="summer-home-btn" title="Back to Ms. Soto's Class">← All Classes</a>
           <a href="msos-math-5-syllabus.html" class="summer-home-btn" style="background:#FFD100;color:#1a2a4a;" title="View Syllabus">📓 Syllabus</a>
+          <a href="msos-math-5-syllabus.pdf" class="summer-home-btn" target="_blank" rel="noopener" style="background:#1B3A8A;color:#FFD100;border:1.5px solid #FFD100;" title="Open printable syllabus PDF">🖨️ Print Syllabus</a>
           <a href="msos-math-5-curriculum-map.html" class="summer-home-btn" style="background:#B45309;" title="Curriculum Map &amp; Unit Calendar">📅 Curriculum Map</a>
           <div class="topbar-logos">
             <span class="logo-circle msos" title="Mary, Star of the Sea"><img src="msos-logo.svg" alt="Mary, Star of the Sea Logo"></span>
@@ -215,41 +216,393 @@ const LESSONS = {
 };
 
 const WORKSHEETS = {
-  "place-value": [{"q": "Write 24.508 in expanded form.", "answer": "20 + 4 + 0.5 + 0.008 (or 2×10 + 4×1 + 5×0.1 + 8×0.001)"}, {"q": "What is the value of the 7 in 3.478?", "answer": "0.07 (seven hundredths)"}, {"q": "Round 6.284 to the nearest hundredth.", "answer": "6.28 (the thousandths digit 4 &lt; 5, so round down)"}, {"q": "Compare: 5.62 ___ 5.6", "answer": "5.62 &gt; 5.6 (5.6 = 5.60; 62 &gt; 60 in hundredths)"}, {"q": "What is 3.45 × 10³?", "answer": "3,450 (decimal moves 3 places right)"}],
-  "add-sub-decimals": [{"q": "12.7 + 3.45 = ?", "answer": "16.15"}, {"q": "8.3 − 1.457 = ?", "answer": "6.843"}, {"q": "Add: 0.9 + 0.08 + 0.007", "answer": "0.987"}, {"q": "You have $20.00. You spend $12.65. How much is left?", "answer": "$7.35"}, {"q": "Estimate, then find exact: 4.79 + 2.15", "answer": "Estimate ≈ 5 + 2 = 7. Exact = 6.94."}],
-  "mult-whole": [{"q": "234 × 6 = ?", "answer": "1,404"}, {"q": "48 × 25 = ?", "answer": "1,200"}, {"q": "137 × 42 = ?", "answer": "5,754"}, {"q": "A stadium has 24 rows of 156 seats. How many seats total?", "answer": "3,744 seats"}, {"q": "Estimate then find exact: 389 × 27", "answer": "Estimate ≈ 400 × 30 = 12,000. Exact = 10,503."}],
-  "mult-decimals": [{"q": "0.7 × 0.3 = ?", "answer": "0.21 (7 × 3 = 21, then 2 decimal places)"}, {"q": "4.5 × 2.6 = ?", "answer": "11.7"}, {"q": "0.8 × 100 = ?", "answer": "80"}, {"q": "A juice bottle costs $2.35. How much do 6 bottles cost?", "answer": "$14.10"}, {"q": "Estimate: 5.9 × 3.1", "answer": "≈ 6 × 3 = 18. Exact = 18.29."}],
-  "div-whole": [{"q": "728 ÷ 8 = ?", "answer": "91"}, {"q": "1,296 ÷ 24 = ?", "answer": "54"}, {"q": "A crate of 480 apples is packed into boxes of 15. How many boxes?", "answer": "32 boxes"}, {"q": "Estimate then find exact: 953 ÷ 47", "answer": "Estimate ≈ 1,000 ÷ 50 = 20. Exact = 20 R 13."}, {"q": "924 ÷ 12 = ? (show your work)", "answer": "77 (12 × 77 = 924)"}],
-  "div-decimals": [{"q": "6.4 ÷ 8 = ?", "answer": "0.8"}, {"q": "12.5 ÷ 5 = ?", "answer": "2.5"}, {"q": "4.8 ÷ 0.6 = ?", "answer": "8 (move decimals: 48 ÷ 6 = 8)"}, {"q": "A ribbon is 7.5 m long. Cut into pieces 0.5 m each. How many pieces?", "answer": "15 pieces"}, {"q": "What is 0.036 ÷ 0.4?", "answer": "0.09"}],
-  "add-sub-fractions": [{"q": "1/3 + 1/4 = ?", "answer": "7/12 (common denom 12)"}, {"q": "2/5 + 1/2 = ?", "answer": "9/10"}, {"q": "3/4 − 1/6 = ?", "answer": "7/12"}, {"q": "2 1/3 + 1 3/4 = ?", "answer": "4 1/12"}, {"q": "5 − 2 3/8 = ?", "answer": "2 5/8"}],
-  "mult-fractions": [{"q": "2/3 × 4/5 = ?", "answer": "8/15"}, {"q": "6 × 2/3 = ?", "answer": "4 (or 12/3)"}, {"q": "What is 1/2 of 3/4?", "answer": "3/8 (1/2 × 3/4)"}, {"q": "1 1/2 × 2 1/3 = ?", "answer": "3 1/2 (3/2 × 7/3 = 21/6)"}, {"q": "A recipe needs 3/4 cup of flour. You make 2/3 of the recipe. How much flour?", "answer": "1/2 cup (3/4 × 2/3 = 6/12 = 1/2)"}],
-  "div-fractions": [{"q": "3 ÷ 1/4 = ?", "answer": "12"}, {"q": "1/2 ÷ 4 = ?", "answer": "1/8"}, {"q": "6 ÷ 1/3 = ?", "answer": "18"}, {"q": "You have 4 cups of soup. Each bowl uses 1/2 cup. How many bowls?", "answer": "8 bowls (4 ÷ 1/2 = 8)"}, {"q": "1/5 ÷ 2 = ?", "answer": "1/10"}],
-  "data": [{"q": "Data: 3, 5, 5, 7, 8, 8, 8, 10. What is the mode?", "answer": "8 (appears 3 times)"}, {"q": "Range of 12, 4, 9, 15, 6?", "answer": "11 (15 − 4)"}, {"q": "Line plot pencils (in.): 4 at 5, 3 at 5 1/2, 2 at 6. Total pencils?", "answer": "9 pencils"}, {"q": "Sum of all pencil lengths above?", "answer": "4×5 + 3×5.5 + 2×6 = 20 + 16.5 + 12 = 48.5 inches"}, {"q": "Mean length: total ÷ count", "answer": "48.5 ÷ 9 ≈ 5.4 inches"}],
-  "volume": [{"q": "V of a 4×5×6 rectangular prism = ?", "answer": "120 cubic units"}, {"q": "V of a cube with side 3 = ?", "answer": "27 units³"}, {"q": "A box is 8 in × 4 in × 3 in. Volume?", "answer": "96 in³"}, {"q": "An L-shape solid = 5×2×3 + 4×2×3. Volume?", "answer": "30 + 24 = 54 units³"}, {"q": "A prism has volume 60 units³, base area 12 units². Find the height.", "answer": "5 units (60 ÷ 12)"}],
-  "measurement": [{"q": "6 ft = ? in", "answer": "72 in (6 × 12)"}, {"q": "2,500 g = ? kg", "answer": "2.5 kg"}, {"q": "3 gal = ? qt", "answer": "12 qt"}, {"q": "450 cm = ? m", "answer": "4.5 m"}, {"q": "Convert 3 pounds to ounces.", "answer": "48 oz (3 × 16)"}],
-  "expressions": [{"q": "Evaluate: 6 + 2 × 5", "answer": "16 (multiply first: 2×5=10, then 6+10)"}, {"q": "Evaluate: (6 + 2) × 5", "answer": "40 (parentheses first: 8, then 8×5)"}, {"q": "Evaluate: 20 − [3 + (2 × 4)]", "answer": "9 (inner: 2×4=8; 3+8=11; 20−11=9)"}, {"q": "Write: \"twice the sum of 8 and 3\"", "answer": "2 × (8 + 3) = 22"}, {"q": "Evaluate: 48 ÷ (4 + 4)", "answer": "6 (parentheses: 8; 48÷8=6)"}],
-  "coordinate-plane": [{"q": "What ordered pair describes 4 right, 7 up from origin?", "answer": "(4, 7)"}, {"q": "A point is at (5, 0). Where is it?", "answer": "On the x-axis, 5 units right of origin"}, {"q": "Distance from (3, 2) to (3, 9)?", "answer": "7 units (vertical)"}, {"q": "Distance from (2, 5) to (8, 5)?", "answer": "6 units (horizontal)"}, {"q": "Plot: (1, 4), (5, 4), (5, 1), (1, 1). What shape?", "answer": "A rectangle (4 by 3)"}],
-  "patterns": [{"q": "Rule: start at 0, add 5. First 6 terms?", "answer": "0, 5, 10, 15, 20, 25"}, {"q": "Rule A: +2. Rule B: +6. If A gives 0,2,4,6, what does B give?", "answer": "0, 6, 12, 18"}, {"q": "Compare: for the same term number, B is __ times A above?", "answer": "3 times (B = 3 × A)"}, {"q": "Sequence: 1, 4, 7, 10, ___", "answer": "13 (add 3)"}, {"q": "Ordered pairs from Rule A (+3) and Rule B (+6): first 3 pairs?", "answer": "(0,0), (3,6), (6,12)"}],
-  "geometry-2d": [{"q": "A triangle with all sides equal is called ___.", "answer": "equilateral"}, {"q": "Name the quadrilateral: 4 right angles, opposite sides equal but not all 4 equal.", "answer": "rectangle"}, {"q": "A rhombus has how many pairs of parallel sides?", "answer": "2 pairs (opposite sides are parallel)"}, {"q": "True or false: All squares are rectangles.", "answer": "True"}, {"q": "True or false: All rectangles are squares.", "answer": "False (rectangles don't need 4 equal sides)"}],
+  "place-value": [
+    {"q": "[Guided Practice] What is the value of the 3 in 0.34?", "answer": "0.3 (Hint: the tenths place is right after the decimal.)"},
+    {"q": "[Guided Practice] Write 0.5 as tenths.", "answer": "5 tenths (Hint: one digit after the decimal = tenths.)"},
+    {"q": "[Guided Practice] Which is greater: 0.7 or 0.65?", "answer": "0.7 (Hint: line up decimal points — 0.70 vs 0.65.)"},
+    {"q": "[Guided Practice] Round 4.28 to the nearest tenth.", "answer": "4.3 (Hint: hundredths digit is 8, so round up.)"},
+    {"q": "[Independent Practice] Write 6.42 in expanded form.", "answer": "6 + 0.4 + 0.02"},
+    {"q": "[Independent Practice] What is 3.5 × 10?", "answer": "35"},
+    {"q": "[Independent Practice] Round 7.56 to the nearest whole number.", "answer": "8"},
+    {"q": "[Independent Practice] Order least to greatest: 0.6, 0.16, 0.61", "answer": "0.16, 0.6, 0.61"},
+    {"q": "[Problem Solving] A runner's time is 12.47 seconds. Round to the nearest tenth.", "answer": "12.5 seconds"},
+    {"q": "[Problem Solving] A recipe uses 0.75 cup sugar. Write that as a decimal in tenths (round).", "answer": "0.8 cup (rounded to tenth)"}
+  ],
+  "add-sub-decimals": [
+    {"q": "[Guided Practice] 0.5 + 0.3 = ?", "answer": "0.8 (Hint: same as 5 tenths + 3 tenths.)"},
+    {"q": "[Guided Practice] 0.75 − 0.25 = ?", "answer": "0.50 (Hint: line up decimals, then subtract.)"},
+    {"q": "[Guided Practice] 2.4 + 1.5 = ?", "answer": "3.9 (Hint: line up decimals and add.)"},
+    {"q": "[Guided Practice] $5.00 − $2.75 = ?", "answer": "$2.25 (Hint: subtract from top to bottom.)"},
+    {"q": "[Independent Practice] 3.2 + 1.7 = ?", "answer": "4.9"},
+    {"q": "[Independent Practice] 0.9 − 0.4 = ?", "answer": "0.5"},
+    {"q": "[Independent Practice] 12.5 + 3.25 = ?", "answer": "15.75"},
+    {"q": "[Independent Practice] 8.00 − 3.45 = ?", "answer": "4.55"},
+    {"q": "[Problem Solving] Kai bought pens for $2.50 and paper for $1.25. Total?", "answer": "$3.75"},
+    {"q": "[Problem Solving] A jug had 4.5 L. You poured out 1.8 L. How much left?", "answer": "2.7 L"}
+  ],
+  "mult-whole": [
+    {"q": "[Guided Practice] 10 × 10 = ?", "answer": "100 (Hint: 1 × 1 = 1, then two zeros.)"},
+    {"q": "[Guided Practice] 20 × 30 = ?", "answer": "600 (Hint: 2 × 3 = 6, then two zeros.)"},
+    {"q": "[Guided Practice] 23 × 10 = ?", "answer": "230 (Hint: multiplying by 10 adds a zero.)"},
+    {"q": "[Guided Practice] 14 × 5 = ?", "answer": "70 (Hint: 10 × 5 + 4 × 5 = 50 + 20.)"},
+    {"q": "[Independent Practice] 25 × 4 = ?", "answer": "100"},
+    {"q": "[Independent Practice] 12 × 12 = ?", "answer": "144"},
+    {"q": "[Independent Practice] 35 × 20 = ?", "answer": "700"},
+    {"q": "[Independent Practice] 123 × 3 = ?", "answer": "369"},
+    {"q": "[Problem Solving] A classroom has 24 seats and 3 classrooms. Total seats?", "answer": "72 seats"},
+    {"q": "[Problem Solving] A store sells shirts at $12 each. Cost of 15 shirts?", "answer": "$180"}
+  ],
+  "mult-decimals": [
+    {"q": "[Guided Practice] 0.5 × 10 = ?", "answer": "5 (Hint: × 10 moves the decimal 1 place right.)"},
+    {"q": "[Guided Practice] 0.3 × 100 = ?", "answer": "30 (Hint: × 100 moves the decimal 2 places right.)"},
+    {"q": "[Guided Practice] 2 × 0.4 = ?", "answer": "0.8 (Hint: 2 × 4 = 8, then 1 decimal place.)"},
+    {"q": "[Guided Practice] 0.2 × 0.3 = ?", "answer": "0.06 (Hint: 2 × 3 = 6, then 2 decimal places.)"},
+    {"q": "[Independent Practice] 0.7 × 10 = ?", "answer": "7"},
+    {"q": "[Independent Practice] 5 × 0.6 = ?", "answer": "3.0"},
+    {"q": "[Independent Practice] 0.4 × 0.5 = ?", "answer": "0.20"},
+    {"q": "[Independent Practice] 1.2 × 3 = ?", "answer": "3.6"},
+    {"q": "[Problem Solving] One apple costs $0.75. How much for 4 apples?", "answer": "$3.00"},
+    {"q": "[Problem Solving] A ribbon is 0.5 m. You need 6 of them. Total length?", "answer": "3.0 m"}
+  ],
+  "div-whole": [
+    {"q": "[Guided Practice] 24 ÷ 4 = ?", "answer": "6 (Hint: think 4 × ? = 24.)"},
+    {"q": "[Guided Practice] 40 ÷ 5 = ?", "answer": "8 (Hint: use your times tables.)"},
+    {"q": "[Guided Practice] 80 ÷ 10 = ?", "answer": "8 (Hint: ÷ 10 removes one zero.)"},
+    {"q": "[Guided Practice] 120 ÷ 6 = ?", "answer": "20 (Hint: 12 ÷ 6 = 2, then add a zero.)"},
+    {"q": "[Independent Practice] 72 ÷ 8 = ?", "answer": "9"},
+    {"q": "[Independent Practice] 96 ÷ 4 = ?", "answer": "24"},
+    {"q": "[Independent Practice] 150 ÷ 5 = ?", "answer": "30"},
+    {"q": "[Independent Practice] 200 ÷ 10 = ?", "answer": "20"},
+    {"q": "[Problem Solving] Share 48 cookies equally among 6 friends. Each gets:", "answer": "8 cookies"},
+    {"q": "[Problem Solving] A crate holds 15 fruit. 90 fruit fill how many crates?", "answer": "6 crates"}
+  ],
+  "div-decimals": [
+    {"q": "[Guided Practice] 0.6 ÷ 2 = ?", "answer": "0.3 (Hint: 6 ÷ 2 = 3, keep the decimal.)"},
+    {"q": "[Guided Practice] 0.8 ÷ 4 = ?", "answer": "0.2 (Hint: 8 ÷ 4 = 2, keep the decimal.)"},
+    {"q": "[Guided Practice] 1.5 ÷ 5 = ?", "answer": "0.3 (Hint: 15 ÷ 5 = 3, then 1 decimal place.)"},
+    {"q": "[Guided Practice] 2.4 ÷ 6 = ?", "answer": "0.4 (Hint: 24 ÷ 6 = 4, then 1 decimal place.)"},
+    {"q": "[Independent Practice] 4.5 ÷ 9 = ?", "answer": "0.5"},
+    {"q": "[Independent Practice] 6.0 ÷ 3 = ?", "answer": "2.0"},
+    {"q": "[Independent Practice] 3.6 ÷ 4 = ?", "answer": "0.9"},
+    {"q": "[Independent Practice] 5.0 ÷ 10 = ?", "answer": "0.5"},
+    {"q": "[Problem Solving] A 6.4 m rope is cut into 8 equal pieces. Each piece?", "answer": "0.8 m"},
+    {"q": "[Problem Solving] Split $9.00 equally among 3 friends. Each gets:", "answer": "$3.00"}
+  ],
+  "add-sub-fractions": [
+    {"q": "[Guided Practice] 1/2 + 1/4 = ?", "answer": "3/4 (Hint: rewrite 1/2 as 2/4, then add.)"},
+    {"q": "[Guided Practice] 1/3 + 1/6 = ?", "answer": "3/6 = 1/2 (Hint: rewrite 1/3 as 2/6.)"},
+    {"q": "[Guided Practice] 3/4 − 1/2 = ?", "answer": "1/4 (Hint: rewrite 1/2 as 2/4, then subtract.)"},
+    {"q": "[Guided Practice] 5/6 − 1/3 = ?", "answer": "3/6 = 1/2 (Hint: rewrite 1/3 as 2/6.)"},
+    {"q": "[Independent Practice] 1/2 + 1/3 = ?", "answer": "5/6"},
+    {"q": "[Independent Practice] 2/5 + 1/2 = ?", "answer": "9/10"},
+    {"q": "[Independent Practice] 3/4 − 1/8 = ?", "answer": "5/8"},
+    {"q": "[Independent Practice] 2/3 − 1/4 = ?", "answer": "5/12"},
+    {"q": "[Problem Solving] You ate 1/4 of a pizza and your friend ate 1/8. How much was eaten?", "answer": "3/8 of the pizza"},
+    {"q": "[Problem Solving] A ribbon is 3/4 yd. You cut off 1/4 yd. How much remains?", "answer": "1/2 yd"}
+  ],
+  "mult-fractions": [
+    {"q": "[Guided Practice] 1/2 × 4 = ?", "answer": "2 (Hint: 1/2 of 4 = 2.)"},
+    {"q": "[Guided Practice] 1/3 × 6 = ?", "answer": "2 (Hint: 1/3 of 6 = 2.)"},
+    {"q": "[Guided Practice] 1/2 × 1/2 = ?", "answer": "1/4 (Hint: tops times tops, bottoms times bottoms.)"},
+    {"q": "[Guided Practice] 1/4 × 8 = ?", "answer": "2 (Hint: 1/4 of 8 = 2.)"},
+    {"q": "[Independent Practice] 2/3 × 6 = ?", "answer": "4"},
+    {"q": "[Independent Practice] 3/4 × 8 = ?", "answer": "6"},
+    {"q": "[Independent Practice] 1/3 × 3/4 = ?", "answer": "3/12 = 1/4"},
+    {"q": "[Independent Practice] 2/5 × 1/2 = ?", "answer": "2/10 = 1/5"},
+    {"q": "[Problem Solving] You need 1/2 of 6 cups of milk. How many cups?", "answer": "3 cups"},
+    {"q": "[Problem Solving] A pizza has 8 slices. You eat 1/4 of it. How many slices?", "answer": "2 slices"}
+  ],
+  "div-fractions": [
+    {"q": "[Guided Practice] How many 1/2's are in 3?", "answer": "6 (Hint: 3 ÷ 1/2 = 6.)"},
+    {"q": "[Guided Practice] 1 ÷ 1/4 = ?", "answer": "4 (Hint: how many quarters in 1?)"},
+    {"q": "[Guided Practice] 2 ÷ 1/2 = ?", "answer": "4 (Hint: two halves in each whole.)"},
+    {"q": "[Guided Practice] 1/2 ÷ 2 = ?", "answer": "1/4 (Hint: half of a half is a quarter.)"},
+    {"q": "[Independent Practice] 4 ÷ 1/2 = ?", "answer": "8"},
+    {"q": "[Independent Practice] 6 ÷ 1/3 = ?", "answer": "18"},
+    {"q": "[Independent Practice] 1/3 ÷ 2 = ?", "answer": "1/6"},
+    {"q": "[Independent Practice] 1/4 ÷ 2 = ?", "answer": "1/8"},
+    {"q": "[Problem Solving] You have 3 cups of soup. Each bowl uses 1/2 cup. How many bowls?", "answer": "6 bowls"},
+    {"q": "[Problem Solving] A ribbon is 1/2 m. Cut into 4 equal pieces. Each piece?", "answer": "1/8 m"}
+  ],
+  "data": [
+    {"q": "[Guided Practice] On a line plot, X's above 3 mean:", "answer": "how many items measure 3 (Hint: each X is one data point.)"},
+    {"q": "[Guided Practice] Data 2, 3, 3, 5. How many X's above 3?", "answer": "2 X's (Hint: count how many 3's.)"},
+    {"q": "[Guided Practice] Which value appears most in 5, 5, 5, 7, 9?", "answer": "5 (Hint: mode = most frequent.)"},
+    {"q": "[Guided Practice] Find the range of 4, 8, 12.", "answer": "8 (Hint: largest − smallest.)"},
+    {"q": "[Independent Practice] Mode of 2, 4, 4, 4, 6, 8?", "answer": "4"},
+    {"q": "[Independent Practice] Range of 15, 10, 25, 5?", "answer": "20 (25 − 5)"},
+    {"q": "[Independent Practice] Total data points in 1, 2, 2, 3, 3, 3?", "answer": "6"},
+    {"q": "[Independent Practice] On a line plot, 4 X's at value 5. How many students measured 5?", "answer": "4"},
+    {"q": "[Problem Solving] Class measured pencils: 3 pencils at 4 in, 2 at 5 in. What was the total length?", "answer": "22 inches"},
+    {"q": "[Problem Solving] A survey: apples 8, bananas 5, oranges 3. Which was most chosen?", "answer": "Apples"}
+  ],
+  "volume": [
+    {"q": "[Guided Practice] Volume of a 2×3×4 rectangular prism?", "answer": "24 cubic units (Hint: V = L × W × H.)"},
+    {"q": "[Guided Practice] Volume of a cube with side 3?", "answer": "27 (Hint: 3 × 3 × 3.)"},
+    {"q": "[Guided Practice] Volume is measured in:", "answer": "cubic units (Hint: for 3-D space.)"},
+    {"q": "[Guided Practice] Volume of a 5×2×1 box?", "answer": "10 cubic units"},
+    {"q": "[Independent Practice] V of 4×5×2 box?", "answer": "40 cubic units"},
+    {"q": "[Independent Practice] V of a cube side 4?", "answer": "64"},
+    {"q": "[Independent Practice] V of 6×3×2 box?", "answer": "36 cubic units"},
+    {"q": "[Independent Practice] V = base area × height. If base = 10 and h = 4, V = ?", "answer": "40"},
+    {"q": "[Problem Solving] A shoebox is 12 × 5 × 4 inches. Find its volume.", "answer": "240 cubic inches"},
+    {"q": "[Problem Solving] Two boxes stacked: 4×3×2 + 4×3×3. Total volume?", "answer": "24 + 36 = 60 cubic units"}
+  ],
+  "measurement": [
+    {"q": "[Guided Practice] 1 m = ? cm", "answer": "100 (Hint: cent- = 100.)"},
+    {"q": "[Guided Practice] 1 kg = ? g", "answer": "1,000 (Hint: kilo- = 1,000.)"},
+    {"q": "[Guided Practice] 1 ft = ? in", "answer": "12"},
+    {"q": "[Guided Practice] 1 hour = ? min", "answer": "60"},
+    {"q": "[Independent Practice] 3 m = ___ cm", "answer": "300"},
+    {"q": "[Independent Practice] 2 kg = ___ g", "answer": "2,000"},
+    {"q": "[Independent Practice] 4 ft = ___ in", "answer": "48"},
+    {"q": "[Independent Practice] 2 gallons = ___ quarts", "answer": "8 (1 gal = 4 qt)"},
+    {"q": "[Problem Solving] A movie is 90 min. How many hours and minutes?", "answer": "1 hr 30 min"},
+    {"q": "[Problem Solving] A recipe calls for 500 mL of water. How many L is that?", "answer": "0.5 L"}
+  ],
+  "expressions": [
+    {"q": "[Guided Practice] 3 + 2 × 4 = ?", "answer": "11 (Hint: multiply first: 2×4=8, then add.)"},
+    {"q": "[Guided Practice] (3 + 2) × 4 = ?", "answer": "20 (Hint: parentheses first: 5×4.)"},
+    {"q": "[Guided Practice] 10 − 6 ÷ 2 = ?", "answer": "7 (Hint: divide first: 6÷2=3, then subtract.)"},
+    {"q": "[Guided Practice] 6 + 2 × 3 = ?", "answer": "12 (Hint: multiply first: 2×3=6, then add 6.)"},
+    {"q": "[Independent Practice] 20 − (4 + 6) = ?", "answer": "10"},
+    {"q": "[Independent Practice] 3 × (5 − 2) = ?", "answer": "9"},
+    {"q": "[Independent Practice] (8 + 4) ÷ 3 = ?", "answer": "4"},
+    {"q": "[Independent Practice] 5 + 3 × 2 = ?", "answer": "11"},
+    {"q": "[Problem Solving] Write: '2 times the sum of 3 and 4.'", "answer": "2 × (3 + 4) = 14"},
+    {"q": "[Problem Solving] You buy 3 books at $5 each and 1 pen at $2. Total cost?", "answer": "3 × 5 + 2 = $17"}
+  ],
+  "coordinate-plane": [
+    {"q": "[Guided Practice] Where is the origin?", "answer": "(0, 0) (Hint: it's where the axes cross.)"},
+    {"q": "[Guided Practice] Plot (3, 2). What direction do you go?", "answer": "3 right, 2 up (Hint: x first, then y.)"},
+    {"q": "[Guided Practice] In (5, 2), the 5 is the ___ coordinate.", "answer": "x (Hint: x comes first in an ordered pair.)"},
+    {"q": "[Guided Practice] How many units up from origin is (0, 4)?", "answer": "4 (Hint: 4 straight up on the y-axis.)"},
+    {"q": "[Independent Practice] In (2, 7), the 7 tells you to move ___.", "answer": "7 up"},
+    {"q": "[Independent Practice] Distance from (0,0) to (5,0)?", "answer": "5 units"},
+    {"q": "[Independent Practice] The x-axis is:", "answer": "horizontal"},
+    {"q": "[Independent Practice] Which point is on the y-axis? (0,4) or (4,0)?", "answer": "(0,4)"},
+    {"q": "[Problem Solving] Plot (1,1), (5,1), (5,4), (1,4). Name the shape.", "answer": "Rectangle (4 by 3)"},
+    {"q": "[Problem Solving] A treasure map has treasure at (6, 3). Describe how to walk there from origin.", "answer": "6 right, then 3 up"}
+  ],
+  "patterns": [
+    {"q": "[Guided Practice] Pattern: 2, 4, 6, 8, ___", "answer": "10 (Hint: add 2.)"},
+    {"q": "[Guided Practice] Rule: add 5. Start at 0. First 4 terms?", "answer": "0, 5, 10, 15"},
+    {"q": "[Guided Practice] Pattern: 10, 20, 30, 40, ___", "answer": "50 (Hint: add 10.)"},
+    {"q": "[Guided Practice] Rule: add 3. Start at 2. Third term?", "answer": "8 (2, 5, 8)"},
+    {"q": "[Independent Practice] What comes next: 4, 8, 12, 16, ___?", "answer": "20"},
+    {"q": "[Independent Practice] Rule: subtract 2. Start at 20. First 4 terms?", "answer": "20, 18, 16, 14"},
+    {"q": "[Independent Practice] Rule A: +3. Rule B: +6. If A: 0,3,6, what is B?", "answer": "0, 6, 12"},
+    {"q": "[Independent Practice] How does Rule B compare to Rule A above?", "answer": "B is 2 × A"},
+    {"q": "[Problem Solving] Mia saves $5 each week. How much after 4 weeks?", "answer": "$20"},
+    {"q": "[Problem Solving] Rows of seats: 4, 8, 12, 16. What's the rule and what comes next?", "answer": "Add 4 → 20"}
+  ],
+  "geometry-2d": [
+    {"q": "[Guided Practice] A triangle with all sides equal is a ___.", "answer": "equilateral triangle"},
+    {"q": "[Guided Practice] A square has ___ right angles.", "answer": "4"},
+    {"q": "[Guided Practice] A shape with 4 sides is a ___.", "answer": "quadrilateral"},
+    {"q": "[Guided Practice] A rectangle has ___ pairs of parallel sides.", "answer": "2"},
+    {"q": "[Independent Practice] Name a shape with 4 equal sides and 4 right angles.", "answer": "Square"},
+    {"q": "[Independent Practice] Is a square also a rectangle?", "answer": "Yes (all squares are rectangles)"},
+    {"q": "[Independent Practice] A shape with 5 sides is a ___.", "answer": "pentagon"},
+    {"q": "[Independent Practice] A right angle measures ___°.", "answer": "90"},
+    {"q": "[Problem Solving] A stop sign has 8 sides. What is it called?", "answer": "Octagon"},
+    {"q": "[Problem Solving] True or false: All rectangles are squares.", "answer": "False (rectangles don't need 4 equal sides)"}
+  ]
 };
 
 const QUIZZES = {
-  "place-value": [{"q": "The 4 in 8.472 has value ___.", "opts": ["4", "0.4", "0.04", "0.004"], "ans": 1}, {"q": "Round 3.657 to the nearest tenth.", "opts": ["3.6", "3.65", "3.7", "3.66"], "ans": 2}, {"q": "Which is largest?", "opts": ["0.72", "0.702", "0.7", "0.75"], "ans": 3}, {"q": "6.3 × 10² = ?", "opts": ["63", "630", "6,300", "0.063"], "ans": 1}, {"q": "Expanded form of 0.462:", "opts": ["0.4 + 0.06 + 0.002", "4 + 6 + 2", "0.04 + 0.6 + 0.002", "0.4 + 0.06 + 0.02"], "ans": 0}],
-  "add-sub-decimals": [{"q": "2.75 + 1.4 = ?", "opts": ["4.15", "2.79", "4.05", "3.15"], "ans": 0}, {"q": "When adding decimals, first ___.", "opts": ["line up decimal points", "multiply", "estimate", "ignore decimals"], "ans": 0}, {"q": "8.5 − 3.27 = ?", "opts": ["5.23", "5.33", "5.22", "4.23"], "ans": 0}, {"q": "Estimate 4.89 + 2.13 to nearest whole.", "opts": ["6", "7", "8", "5"], "ans": 1}, {"q": "$10 − $6.42 = ?", "opts": ["$3.58", "$4.58", "$3.68", "$4.42"], "ans": 0}],
-  "mult-whole": [{"q": "23 × 45 = ?", "opts": ["1,035", "1,045", "935", "1,015"], "ans": 0}, {"q": "Best estimate for 296 × 41:", "opts": ["1,200", "12,000", "120,000", "120"], "ans": 1}, {"q": "207 × 4 = ?", "opts": ["808", "828", "848", "8,028"], "ans": 1}, {"q": "When multiplying by tens digit, write ___ in ones place first.", "opts": ["1", "a decimal", "a 0", "nothing"], "ans": 2}, {"q": "156 × 12 = ?", "opts": ["1,872", "1,772", "1,672", "1,882"], "ans": 0}],
-  "mult-decimals": [{"q": "0.4 × 0.6 = ?", "opts": ["0.24", "2.4", "0.024", "24"], "ans": 0}, {"q": "3.2 × 100 = ?", "opts": ["32", "3,200", "320", "0.032"], "ans": 2}, {"q": "Number of decimal places in the product of 1.25 × 0.3:", "opts": ["1", "2", "3", "4"], "ans": 2}, {"q": "2.5 × 0.4 = ?", "opts": ["1.0", "10", "0.10", "0.01"], "ans": 0}, {"q": "A pencil costs $0.75. Cost of 8 pencils?", "opts": ["$5.00", "$6.00", "$6.50", "$7.50"], "ans": 1}],
-  "div-whole": [{"q": "864 ÷ 8 = ?", "opts": ["108", "118", "98", "208"], "ans": 0}, {"q": "Estimate 3,478 ÷ 6:", "opts": ["5", "60", "500", "5,000"], "ans": 2}, {"q": "Long division steps in order:", "opts": ["DMSB", "MDSB", "SBDM", "DBMS"], "ans": 0}, {"q": "936 ÷ 24 = ?", "opts": ["39", "29", "49", "40"], "ans": 0}, {"q": "240 ÷ 15 = ?", "opts": ["15", "16", "17", "14"], "ans": 1}],
-  "div-decimals": [{"q": "12.6 ÷ 6 = ?", "opts": ["2.1", "21", "0.21", "2.6"], "ans": 0}, {"q": "To divide by 0.5, first ___.", "opts": ["move both decimals 1 place right", "flip", "add", "subtract"], "ans": 0}, {"q": "6 ÷ 0.2 = ?", "opts": ["3", "30", "0.3", "300"], "ans": 1}, {"q": "0.72 ÷ 8 = ?", "opts": ["0.09", "0.9", "9", "0.009"], "ans": 0}, {"q": "A 3.6 m rope cut into 0.4 m pieces gives ___ pieces.", "opts": ["9", "10", "8", "12"], "ans": 0}],
-  "add-sub-fractions": [{"q": "1/2 + 1/3 = ?", "opts": ["2/5", "5/6", "1/6", "3/6"], "ans": 1}, {"q": "5/8 − 1/4 = ?", "opts": ["3/8", "4/8", "1/2", "1/8"], "ans": 0}, {"q": "Common denominator of 1/3 and 1/4?", "opts": ["7", "12", "4", "3"], "ans": 1}, {"q": "2 1/2 + 1 1/4 = ?", "opts": ["3 1/4", "3 3/4", "4 1/4", "3 1/2"], "ans": 1}, {"q": "5 − 1 2/3 = ?", "opts": ["3 1/3", "3 2/3", "4 1/3", "2 2/3"], "ans": 0}],
-  "mult-fractions": [{"q": "3/4 × 2/3 = ?", "opts": ["5/7", "6/12 = 1/2", "1/2", "both B and C"], "ans": 3}, {"q": "4 × 1/2 = ?", "opts": ["2", "4/2", "1/8", "both A and B"], "ans": 3}, {"q": "1/2 of 10 = ?", "opts": ["5", "20", "2", "1/20"], "ans": 0}, {"q": "2/3 × 3/4 = ?", "opts": ["1/2", "5/7", "6/7", "1/12"], "ans": 0}, {"q": "When you multiply by 1/2, the number gets ___.", "opts": ["bigger", "smaller", "stays the same", "doubles"], "ans": 1}],
-  "div-fractions": [{"q": "4 ÷ 1/2 = ?", "opts": ["2", "8", "1/8", "4/2"], "ans": 1}, {"q": "Keep-Change-Flip means:", "opts": ["keep first, change ÷ to ×, flip second", "keep bottom, change sign, flip top", "keep top, change, flip", "none"], "ans": 0}, {"q": "1/3 ÷ 2 = ?", "opts": ["2/3", "1/6", "1/5", "6"], "ans": 1}, {"q": "How many 1/4 cups fit in 3 cups?", "opts": ["12", "7", "3/4", "1/12"], "ans": 0}, {"q": "1/2 ÷ 1/4 = ?", "opts": ["1/8", "1/2", "2", "8"], "ans": 2}],
-  "data": [{"q": "A line plot uses ___ to show data.", "opts": ["bars", "Xs above a number line", "circles", "dots on a graph"], "ans": 1}, {"q": "Mode of 2, 3, 3, 5, 7?", "opts": ["2", "3", "5", "7"], "ans": 1}, {"q": "Range of 4, 8, 12, 20?", "opts": ["4", "16", "20", "12"], "ans": 1}, {"q": "Line plot: 3 Xs at 2, 2 Xs at 3. Total data points?", "opts": ["5", "2", "3", "6"], "ans": 0}, {"q": "Best display for measurement fractions:", "opts": ["bar graph", "line plot", "pie chart", "pictograph"], "ans": 1}],
-  "volume": [{"q": "Volume of a 5×3×2 prism = ?", "opts": ["10", "30", "15", "60"], "ans": 1}, {"q": "Volume is measured in ___.", "opts": ["units", "square units", "cubic units", "pounds"], "ans": 2}, {"q": "A cube with side 4 has volume ___.", "opts": ["16", "12", "64", "8"], "ans": 2}, {"q": "A box is 6×4×2. Volume?", "opts": ["24", "48", "12", "36"], "ans": 1}, {"q": "For composite solids, find each piece's volume and ___.", "opts": ["multiply", "add", "subtract", "average"], "ans": 1}],
-  "measurement": [{"q": "4 ft = ___ in", "opts": ["12", "24", "36", "48"], "ans": 3}, {"q": "3,500 mL = ___ L", "opts": ["3.5", "35", "350", "0.35"], "ans": 0}, {"q": "Which is heaviest?", "opts": ["32 oz", "2 lb", "1 lb 15 oz", "30 oz"], "ans": 1}, {"q": "2 miles = ___ ft", "opts": ["1,760", "5,280", "10,560", "1,320"], "ans": 2}, {"q": "To convert cm to m, ___.", "opts": ["× 100", "÷ 100", "× 10", "÷ 10"], "ans": 1}],
-  "expressions": [{"q": "6 + 3 × 2 = ?", "opts": ["18", "12", "9", "15"], "ans": 1}, {"q": "(4 + 2) × 5 = ?", "opts": ["14", "22", "30", "20"], "ans": 2}, {"q": "In PEMDAS, which comes first?", "opts": ["M", "D", "P", "A"], "ans": 2}, {"q": "Evaluate: 24 ÷ (2 + 4)", "opts": ["4", "8", "2", "6"], "ans": 0}, {"q": "\"Twice the sum of 5 and 3\" is:", "opts": ["2 × 5 + 3", "2 + (5 × 3)", "2 × (5 + 3)", "5 + 3 × 2"], "ans": 2}],
-  "coordinate-plane": [{"q": "The origin is at ___.", "opts": ["(1, 1)", "(0, 0)", "(x, y)", "the top right"], "ans": 1}, {"q": "In (3, 7), the 3 tells you ___.", "opts": ["how far up", "how far right", "a value", "the y-value"], "ans": 1}, {"q": "Distance from (2, 4) to (7, 4)?", "opts": ["5", "2", "7", "11"], "ans": 0}, {"q": "The x-axis is ___.", "opts": ["vertical", "horizontal", "diagonal", "a curve"], "ans": 1}, {"q": "Which point is 5 up from origin?", "opts": ["(0, 5)", "(5, 0)", "(5, 5)", "(0, 0)"], "ans": 0}],
-  "patterns": [{"q": "Rule: start at 0, add 4. Fourth term?", "opts": ["4", "8", "12", "16"], "ans": 2}, {"q": "If A: +3 and B: +9, then B = ___ × A.", "opts": ["2", "3", "6", "9"], "ans": 1}, {"q": "Next in: 2, 6, 18, 54, ...", "opts": ["108", "162", "216", "72"], "ans": 1}, {"q": "Ordered pair from A(+2) and B(+4): first non-zero pair?", "opts": ["(0, 0)", "(2, 4)", "(4, 2)", "(1, 2)"], "ans": 1}, {"q": "Rule: subtract 5, start at 30. Third term?", "opts": ["25", "20", "15", "10"], "ans": 1}],
-  "geometry-2d": [{"q": "A shape with 3 equal sides is ___.", "opts": ["isosceles", "scalene", "equilateral", "right"], "ans": 2}, {"q": "A rectangle has ___ right angles.", "opts": ["2", "3", "4", "0"], "ans": 2}, {"q": "A square is also a ___.", "opts": ["rectangle", "rhombus", "parallelogram", "all of these"], "ans": 3}, {"q": "A quadrilateral with exactly 1 pair of parallel sides is a ___.", "opts": ["trapezoid", "parallelogram", "rhombus", "square"], "ans": 0}, {"q": "True or false: All rhombuses are squares.", "opts": ["True", "False", "Sometimes", "Only if right angles"], "ans": 1}],
+  "place-value": [
+    {"q": "The 4 in 8.472 has the value:", "opts": ["4", "0.4", "0.04", "0.004"], "ans": 1},
+    {"q": "Round 3.657 to the nearest tenth.", "opts": ["3.6", "3.65", "3.7", "3.66"], "ans": 2},
+    {"q": "Which is largest?", "opts": ["0.72", "0.702", "0.7", "0.75"], "ans": 3},
+    {"q": "6.3 × 10 = ?", "opts": ["6.3", "63", "630", "0.63"], "ans": 1},
+    {"q": "Expanded form of 0.42:", "opts": ["0.4 + 0.02", "4 + 2", "0.04 + 0.2", "0.4 + 0.2"], "ans": 0},
+    {"q": "Which is 5 hundredths?", "opts": ["0.05", "0.5", "5.0", "0.005"], "ans": 0},
+    {"q": "Compare: 0.9 ___ 0.90", "opts": ["=", "<", ">", "cannot tell"], "ans": 0},
+    {"q": "Round 2.34 to the nearest whole.", "opts": ["2", "3", "4", "2.3"], "ans": 0},
+    {"q": "What is 4.2 × 100?", "opts": ["42", "420", "0.042", "4,200"], "ans": 1},
+    {"q": "Which digit is in the hundredths place in 1.276?", "opts": ["7", "2", "6", "1"], "ans": 0}
+  ],
+  "add-sub-decimals": [
+    {"q": "0.6 + 0.3 = ?", "opts": ["0.9", "0.63", "0.03", "3.6"], "ans": 0},
+    {"q": "0.8 − 0.5 = ?", "opts": ["0.3", "0.35", "3", "1.3"], "ans": 0},
+    {"q": "2.7 + 1.5 = ?", "opts": ["4.2", "3.2", "4.5", "3.5"], "ans": 0},
+    {"q": "$10.00 − $6.50 = ?", "opts": ["$3.50", "$4.50", "$6.00", "$3.00"], "ans": 0},
+    {"q": "First step in adding decimals:", "opts": ["line up decimal points", "multiply", "estimate", "carry"], "ans": 0},
+    {"q": "Estimate 4.8 + 3.2 to the nearest whole.", "opts": ["7", "8", "9", "6"], "ans": 1},
+    {"q": "5.6 − 2.3 = ?", "opts": ["3.3", "3.9", "2.3", "7.9"], "ans": 0},
+    {"q": "What is 0.45 + 0.55?", "opts": ["1.00", "0.90", "0.10", "1.10"], "ans": 0},
+    {"q": "Ana had $20. Spent $12.50. Left?", "opts": ["$7.50", "$8.50", "$12.50", "$32.50"], "ans": 0},
+    {"q": "6.75 − 2.25 = ?", "opts": ["4.50", "4.00", "4.55", "9.00"], "ans": 0}
+  ],
+  "mult-whole": [
+    {"q": "23 × 4 = ?", "opts": ["92", "82", "102", "93"], "ans": 0},
+    {"q": "Estimate 296 × 41:", "opts": ["1,200", "12,000", "120,000", "120"], "ans": 1},
+    {"q": "11 × 11 = ?", "opts": ["121", "111", "112", "132"], "ans": 0},
+    {"q": "30 × 40 = ?", "opts": ["1,200", "120", "12,000", "1,020"], "ans": 0},
+    {"q": "156 × 2 = ?", "opts": ["312", "302", "310", "322"], "ans": 0},
+    {"q": "What is 25 × 8?", "opts": ["200", "150", "250", "180"], "ans": 0},
+    {"q": "50 × 6 = ?", "opts": ["300", "30", "600", "250"], "ans": 0},
+    {"q": "A dozen = 12. How many in 5 dozen?", "opts": ["60", "50", "120", "55"], "ans": 0},
+    {"q": "18 × 5 = ?", "opts": ["90", "95", "85", "80"], "ans": 0},
+    {"q": "A pack has 24 pens. 3 packs = ___ pens.", "opts": ["72", "24", "48", "96"], "ans": 0}
+  ],
+  "mult-decimals": [
+    {"q": "0.4 × 10 = ?", "opts": ["4", "0.4", "40", "0.04"], "ans": 0},
+    {"q": "2 × 0.5 = ?", "opts": ["1", "2.5", "0.1", "10"], "ans": 0},
+    {"q": "0.3 × 0.2 = ?", "opts": ["0.06", "0.6", "6", "0.006"], "ans": 0},
+    {"q": "3.5 × 100 = ?", "opts": ["350", "35", "3,500", "0.35"], "ans": 0},
+    {"q": "Number of decimal places in 0.4 × 0.5:", "opts": ["1", "2", "3", "0"], "ans": 1},
+    {"q": "What is 0.9 × 10?", "opts": ["9", "0.9", "90", "0.09"], "ans": 0},
+    {"q": "$0.50 × 4 = ?", "opts": ["$2.00", "$0.20", "$4.00", "$2.50"], "ans": 0},
+    {"q": "1.5 × 2 = ?", "opts": ["3", "1.5", "3.5", "2.5"], "ans": 0},
+    {"q": "If a bag weighs 0.8 kg, 3 bags weigh:", "opts": ["2.4 kg", "0.24 kg", "24 kg", "1.6 kg"], "ans": 0},
+    {"q": "0.6 × 5 = ?", "opts": ["3.0", "30", "0.30", "6"], "ans": 0}
+  ],
+  "div-whole": [
+    {"q": "36 ÷ 6 = ?", "opts": ["6", "5", "7", "8"], "ans": 0},
+    {"q": "60 ÷ 5 = ?", "opts": ["12", "10", "15", "6"], "ans": 0},
+    {"q": "100 ÷ 10 = ?", "opts": ["10", "1", "100", "1,000"], "ans": 0},
+    {"q": "Estimate 385 ÷ 6:", "opts": ["6", "60", "600", "6,000"], "ans": 1},
+    {"q": "140 ÷ 7 = ?", "opts": ["20", "14", "10", "7"], "ans": 0},
+    {"q": "Long division steps in order:", "opts": ["Divide, Multiply, Subtract, Bring down", "Multiply, Divide, Bring down, Subtract", "Add, Divide, Multiply, Subtract", "Subtract, Divide, Multiply, Bring"], "ans": 0},
+    {"q": "Share 45 apples among 9 kids. Each gets:", "opts": ["5", "4", "6", "9"], "ans": 0},
+    {"q": "81 ÷ 9 = ?", "opts": ["9", "8", "7", "10"], "ans": 0},
+    {"q": "A ribbon is 60 cm. Cut into 5 equal pieces. Each piece?", "opts": ["12 cm", "10 cm", "15 cm", "6 cm"], "ans": 0},
+    {"q": "125 ÷ 5 = ?", "opts": ["25", "20", "30", "15"], "ans": 0}
+  ],
+  "div-decimals": [
+    {"q": "0.6 ÷ 3 = ?", "opts": ["0.2", "2", "6", "0.02"], "ans": 0},
+    {"q": "2.4 ÷ 4 = ?", "opts": ["0.6", "6", "0.06", "2.4"], "ans": 0},
+    {"q": "1.0 ÷ 2 = ?", "opts": ["0.5", "1", "2", "0.05"], "ans": 0},
+    {"q": "0.9 ÷ 3 = ?", "opts": ["0.3", "3", "0.03", "9"], "ans": 0},
+    {"q": "$6.00 ÷ 2 = ?", "opts": ["$3.00", "$4.00", "$2.00", "$1.50"], "ans": 0},
+    {"q": "8.4 ÷ 4 = ?", "opts": ["2.1", "21", "0.21", "4.4"], "ans": 0},
+    {"q": "A candy bar is $1.20. Split cost equally between 4 kids. Each pays:", "opts": ["$0.30", "$0.40", "$0.20", "$0.10"], "ans": 0},
+    {"q": "0.24 ÷ 6 = ?", "opts": ["0.04", "0.4", "4", "0.004"], "ans": 0},
+    {"q": "When you divide 3.6 by 2, the decimal in the answer is:", "opts": ["1 place", "2 places", "0 places", "3 places"], "ans": 0},
+    {"q": "5.5 ÷ 5 = ?", "opts": ["1.1", "11", "0.11", "1.5"], "ans": 0}
+  ],
+  "add-sub-fractions": [
+    {"q": "1/2 + 1/4 = ?", "opts": ["3/4", "2/6", "1/6", "3/6"], "ans": 0},
+    {"q": "2/3 + 1/6 = ?", "opts": ["5/6", "3/9", "3/6", "1/2"], "ans": 0},
+    {"q": "5/8 − 1/4 = ?", "opts": ["3/8", "4/8", "1/8", "2/4"], "ans": 0},
+    {"q": "Common denominator of 1/3 and 1/4:", "opts": ["12", "7", "4", "3"], "ans": 0},
+    {"q": "1/2 + 1/2 = ?", "opts": ["1", "1/4", "2/4", "1/2"], "ans": 0},
+    {"q": "3/4 − 1/4 = ?", "opts": ["1/2", "2/4", "4/8", "1/8"], "ans": 0},
+    {"q": "1/3 + 1/3 = ?", "opts": ["2/3", "2/6", "1/6", "1/3"], "ans": 0},
+    {"q": "A recipe uses 1/2 cup and 1/4 cup flour. Total?", "opts": ["3/4 cup", "1 cup", "1/2 cup", "1/8 cup"], "ans": 0},
+    {"q": "1 − 1/2 = ?", "opts": ["1/2", "2/1", "0", "1/4"], "ans": 0},
+    {"q": "2/5 + 2/5 = ?", "opts": ["4/5", "2/10", "4/10", "1"], "ans": 0}
+  ],
+  "mult-fractions": [
+    {"q": "1/2 × 4 = ?", "opts": ["2", "1/8", "4/2", "6"], "ans": 0},
+    {"q": "1/3 × 9 = ?", "opts": ["3", "1/27", "27", "6"], "ans": 0},
+    {"q": "1/2 × 1/2 = ?", "opts": ["1/4", "1", "2", "1/2"], "ans": 0},
+    {"q": "What is 1/4 of 20?", "opts": ["5", "4", "20", "25"], "ans": 0},
+    {"q": "1/2 × 6 = ?", "opts": ["3", "12", "1/12", "6/2"], "ans": 0},
+    {"q": "2/3 × 3 = ?", "opts": ["2", "5", "6", "1"], "ans": 0},
+    {"q": "When you multiply by 1/2, the number gets:", "opts": ["smaller", "bigger", "the same", "doubled"], "ans": 0},
+    {"q": "1/4 × 1/2 = ?", "opts": ["1/8", "1/6", "1/2", "1"], "ans": 0},
+    {"q": "What is 1/3 of 12?", "opts": ["4", "3", "12", "36"], "ans": 0},
+    {"q": "2/5 × 5 = ?", "opts": ["2", "1/2", "10", "5"], "ans": 0}
+  ],
+  "div-fractions": [
+    {"q": "How many 1/2's are in 2?", "opts": ["4", "2", "1", "6"], "ans": 0},
+    {"q": "3 ÷ 1/3 = ?", "opts": ["9", "1", "3", "1/9"], "ans": 0},
+    {"q": "1 ÷ 1/2 = ?", "opts": ["2", "1/2", "1", "4"], "ans": 0},
+    {"q": "1/2 ÷ 4 = ?", "opts": ["1/8", "2", "4", "1/2"], "ans": 0},
+    {"q": "How many 1/4-cup servings in 2 cups?", "opts": ["8", "4", "2", "6"], "ans": 0},
+    {"q": "4 ÷ 1/4 = ?", "opts": ["16", "1", "4", "1/16"], "ans": 0},
+    {"q": "Keep-Change-Flip means:", "opts": ["keep first, ÷ becomes ×, flip second", "keep bottom, add tops", "flip both", "subtract"], "ans": 0},
+    {"q": "1/3 ÷ 3 = ?", "opts": ["1/9", "1", "3", "1/3"], "ans": 0},
+    {"q": "5 ÷ 1/2 = ?", "opts": ["10", "2", "5", "1/10"], "ans": 0},
+    {"q": "If 1 pizza has 8 slices, how many 1/8 slices are in 2 pizzas?", "opts": ["16", "8", "4", "2"], "ans": 0}
+  ],
+  "data": [
+    {"q": "A line plot uses:", "opts": ["X marks above a number line", "bars", "pie slices", "dots on a graph"], "ans": 0},
+    {"q": "Mode of 3, 3, 3, 5, 7:", "opts": ["3", "5", "7", "4"], "ans": 0},
+    {"q": "Range of 2, 8, 12?", "opts": ["10", "8", "12", "6"], "ans": 0},
+    {"q": "Line plot: 3 X's at 2, 2 at 4. Total data points?", "opts": ["5", "2", "3", "6"], "ans": 0},
+    {"q": "Which value has the most X's in a line plot?", "opts": ["the mode", "the range", "the sum", "the count"], "ans": 0},
+    {"q": "Best display for measurement fractions:", "opts": ["line plot", "bar graph", "pie chart", "calendar"], "ans": 0},
+    {"q": "A tally: dogs=4, cats=6. Total pets?", "opts": ["10", "2", "24", "4"], "ans": 0},
+    {"q": "Data: 8, 10, 12, 14. Range?", "opts": ["6", "10", "14", "4"], "ans": 0},
+    {"q": "How many items in the data set 1, 2, 2, 3, 4?", "opts": ["5", "4", "3", "6"], "ans": 0},
+    {"q": "A bar shows 8 votes for pizza. That means:", "opts": ["8 people voted pizza", "8 kinds of pizza", "8th place", "8 slices"], "ans": 0}
+  ],
+  "volume": [
+    {"q": "Volume of a 3×2×5 prism = ?", "opts": ["30", "10", "15", "60"], "ans": 0},
+    {"q": "Volume is measured in:", "opts": ["cubic units", "units", "square units", "pounds"], "ans": 0},
+    {"q": "A cube with side 2 has volume:", "opts": ["8", "4", "6", "2"], "ans": 0},
+    {"q": "A box is 4×5×2. Volume?", "opts": ["40", "20", "10", "80"], "ans": 0},
+    {"q": "For composite solids, ___ each piece's volume.", "opts": ["add", "subtract", "multiply", "divide"], "ans": 0},
+    {"q": "V of a 10×10×10 cube = ?", "opts": ["1,000", "100", "300", "10"], "ans": 0},
+    {"q": "What formula? V = L × ___ × H", "opts": ["W", "2", "10", "0"], "ans": 0},
+    {"q": "A prism has base area 20 and height 3. Volume?", "opts": ["60", "23", "17", "10"], "ans": 0},
+    {"q": "V of a 1×2×3 box = ?", "opts": ["6", "5", "4", "10"], "ans": 0},
+    {"q": "Volume tells us how much ___ a shape holds.", "opts": ["space", "weight", "time", "color"], "ans": 0}
+  ],
+  "measurement": [
+    {"q": "1 km = ___ m", "opts": ["1,000", "100", "10", "10,000"], "ans": 0},
+    {"q": "2 h = ___ min", "opts": ["120", "60", "100", "180"], "ans": 0},
+    {"q": "3 kg = ___ g", "opts": ["3,000", "300", "30", "30,000"], "ans": 0},
+    {"q": "5 m = ___ cm", "opts": ["500", "50", "5,000", "5"], "ans": 0},
+    {"q": "Which is best to measure a pencil?", "opts": ["cm", "km", "kg", "gal"], "ans": 0},
+    {"q": "2 ft = ___ in", "opts": ["24", "12", "20", "30"], "ans": 0},
+    {"q": "1 L = ___ mL", "opts": ["1,000", "100", "10", "10,000"], "ans": 0},
+    {"q": "A dog weighs 5 kg. In grams?", "opts": ["5,000", "500", "50", "50,000"], "ans": 0},
+    {"q": "500 cm = ___ m", "opts": ["5", "50", "500", "0.5"], "ans": 0},
+    {"q": "Convert bigger unit to smaller: you ___.", "opts": ["multiply", "divide", "add", "subtract"], "ans": 0}
+  ],
+  "expressions": [
+    {"q": "6 + 2 × 3 = ?", "opts": ["12", "24", "18", "10"], "ans": 0},
+    {"q": "(4 + 2) × 5 = ?", "opts": ["30", "14", "22", "20"], "ans": 0},
+    {"q": "First step in PEMDAS:", "opts": ["Parentheses", "Exponents", "Multiply", "Add"], "ans": 0},
+    {"q": "24 ÷ (2 + 4) = ?", "opts": ["4", "8", "6", "3"], "ans": 0},
+    {"q": "10 − 3 × 2 = ?", "opts": ["4", "14", "5", "1"], "ans": 0},
+    {"q": "(5 + 3) × 2 = ?", "opts": ["16", "13", "8", "10"], "ans": 0},
+    {"q": "6 × (2 + 1) = ?", "opts": ["18", "9", "13", "24"], "ans": 0},
+    {"q": "Write: 'the sum of 4 and 6, times 2'", "opts": ["(4+6) × 2", "4 + 6 × 2", "4 × 6 + 2", "4 + 6 + 2"], "ans": 0},
+    {"q": "(10 − 2) ÷ 4 = ?", "opts": ["2", "3", "1", "8"], "ans": 0},
+    {"q": "2 + 3 × 4 = ?", "opts": ["14", "20", "11", "24"], "ans": 0}
+  ],
+  "coordinate-plane": [
+    {"q": "The origin is at:", "opts": ["(0,0)", "(1,1)", "(x,y)", "(0,1)"], "ans": 0},
+    {"q": "In (3,7), the 3 tells you:", "opts": ["how far right", "how far up", "the y-value", "a distance"], "ans": 0},
+    {"q": "Distance from (2,4) to (7,4)?", "opts": ["5", "2", "7", "11"], "ans": 0},
+    {"q": "The x-axis is:", "opts": ["horizontal", "vertical", "diagonal", "a curve"], "ans": 0},
+    {"q": "Which point is 5 up from origin?", "opts": ["(0,5)", "(5,0)", "(5,5)", "(1,5)"], "ans": 0},
+    {"q": "Order to write coords is:", "opts": ["(x, y)", "(y, x)", "alphabetical", "larger first"], "ans": 0},
+    {"q": "Plot (2, 3): move right 2, then ___.", "opts": ["up 3", "down 3", "right 3", "left 3"], "ans": 0},
+    {"q": "(0, 0) is called:", "opts": ["origin", "first quadrant", "y-intercept", "corner"], "ans": 0},
+    {"q": "Which coordinate is the y-coordinate in (4, 8)?", "opts": ["8", "4", "0", "12"], "ans": 0},
+    {"q": "Distance from (3,2) to (3,10)?", "opts": ["8", "7", "10", "3"], "ans": 0}
+  ],
+  "patterns": [
+    {"q": "Next in 3, 6, 9, 12, ___?", "opts": ["15", "10", "18", "13"], "ans": 0},
+    {"q": "Pattern rule for 5, 10, 15, 20:", "opts": ["add 5", "add 10", "multiply by 2", "subtract 5"], "ans": 0},
+    {"q": "Next in 40, 35, 30, 25, ___?", "opts": ["20", "30", "15", "10"], "ans": 0},
+    {"q": "Rule: add 4. Start at 2. Third term?", "opts": ["10", "6", "8", "12"], "ans": 0},
+    {"q": "If A: +2 and B: +4, then B = ___ × A.", "opts": ["2", "3", "4", "1"], "ans": 0},
+    {"q": "Next in 2, 4, 6, 8, ___?", "opts": ["10", "9", "12", "5"], "ans": 0},
+    {"q": "Ordered pair from A(+1) and B(+3): first non-zero pair?", "opts": ["(1,3)", "(3,1)", "(1,1)", "(3,3)"], "ans": 0},
+    {"q": "Rule: subtract 5, start at 30. Second term?", "opts": ["25", "20", "35", "5"], "ans": 0},
+    {"q": "Which pattern shows only even numbers?", "opts": ["2, 4, 6, 8", "1, 3, 5, 7", "5, 10, 15, 20", "1, 2, 3, 4"], "ans": 0},
+    {"q": "Missing in 7, 14, ___, 28?", "opts": ["21", "20", "22", "24"], "ans": 0}
+  ],
+  "geometry-2d": [
+    {"q": "A shape with 3 equal sides is:", "opts": ["equilateral", "isosceles", "scalene", "right"], "ans": 0},
+    {"q": "A square has ___ right angles.", "opts": ["4", "2", "1", "0"], "ans": 0},
+    {"q": "A square is also a:", "opts": ["rectangle", "triangle", "pentagon", "hexagon"], "ans": 0},
+    {"q": "A quadrilateral has ___ sides.", "opts": ["4", "3", "5", "6"], "ans": 0},
+    {"q": "A shape with 6 sides:", "opts": ["hexagon", "pentagon", "octagon", "triangle"], "ans": 0},
+    {"q": "A right angle measures:", "opts": ["90°", "180°", "45°", "60°"], "ans": 0},
+    {"q": "Which is NOT a quadrilateral?", "opts": ["triangle", "square", "rectangle", "rhombus"], "ans": 0},
+    {"q": "Perpendicular lines form a ___ angle.", "opts": ["right", "acute", "obtuse", "straight"], "ans": 0},
+    {"q": "A shape with 2 pairs of parallel sides is a ___.", "opts": ["parallelogram", "triangle", "pentagon", "circle"], "ans": 0},
+    {"q": "A pentagon has ___ sides.", "opts": ["5", "4", "6", "7"], "ans": 0}
+  ]
 };
 
 const HANDOUTS_5 = {
@@ -511,7 +864,7 @@ function emailResults() {
 
   const subject = `Grade 5 Math Quiz Result — ${r.studentName || 'Student'} — ${r.unitTitle} — ${r.pct}%`;
   const body = lines.join('\n');
-  const to = 'ppark@starofthesea.org';
+  const to = 'asoto-gelacio@starofthesea.org';
 
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&tf=1`
     + `&to=${encodeURIComponent(to)}`
