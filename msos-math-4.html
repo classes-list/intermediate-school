@@ -351,1417 +351,319 @@ const LESSONS = {
 
 const WORKSHEETS = {
   "t01-place-value": [
-    {
-      "q": "Write 45,078 in expanded form.",
-      "answer": "40,000 + 5,000 + 70 + 8"
-    },
-    {
-      "q": "What is the value of the digit 7 in 3,741,280?",
-      "answer": "700,000 (seven hundred thousand)"
-    },
-    {
-      "q": "Round 58,492 to the nearest thousand.",
-      "answer": "58,000"
-    },
-    {
-      "q": "Round 294,506 to the nearest hundred-thousand.",
-      "answer": "300,000"
-    },
-    {
-      "q": "Order from least to greatest: 9,852; 9,258; 9,825; 9,528.",
-      "answer": "9,258; 9,528; 9,825; 9,852"
-    }
+    {"q": "[Guided Practice] In 4,382, which digit is in the hundreds place?", "answer": "3 (Hint: count from the right — ones, tens, hundreds.)"},
+    {"q": "[Guided Practice] Write 6,000 + 400 + 20 + 5 in standard form.", "answer": "6,425 (Hint: line up each place value.)"},
+    {"q": "[Guided Practice] What is the value of the 7 in 8,712?", "answer": "700 (Hint: the 7 sits in the hundreds place.)"},
+    {"q": "[Guided Practice] Round 43 to the nearest ten.", "answer": "40 (Hint: 3 is less than 5, so round down.)"},
+    {"q": "[Independent Practice] Write 2,380 in expanded form.", "answer": "2,000 + 300 + 80"},
+    {"q": "[Independent Practice] What is the value of the 5 in 5,240?", "answer": "5,000"},
+    {"q": "[Independent Practice] Round 268 to the nearest hundred.", "answer": "300"},
+    {"q": "[Independent Practice] Order least to greatest: 512, 152, 521, 125", "answer": "125, 152, 512, 521"},
+    {"q": "[Problem Solving] A school library has 3,405 books. Write this number in expanded form.", "answer": "3,000 + 400 + 5"},
+    {"q": "[Problem Solving] The store had 748 shells. Round to the nearest hundred to estimate.", "answer": "700 shells"}
   ],
   "t02-add-sub-multi-digit": [
-    {
-      "q": "4,876 + 2,389 = ?",
-      "answer": "7,265"
-    },
-    {
-      "q": "12,457 + 8,963 = ?",
-      "answer": "21,420"
-    },
-    {
-      "q": "Add: 305,721 + 98,406",
-      "answer": "404,127"
-    },
-    {
-      "q": "The library had 6,482 books. The school donated 1,975 more. How many books now?",
-      "answer": "8,457 books"
-    },
-    {
-      "q": "Estimate then find exact: 6,238 + 2,981",
-      "answer": "Estimate ≈ 9,000 (6,000 + 3,000). Exact = 9,219"
-    },
-    {
-      "q": "8,402 − 3,657 = ?",
-      "answer": "4,745"
-    },
-    {
-      "q": "50,003 − 27,429 = ?",
-      "answer": "22,574"
-    },
-    {
-      "q": "A farmer had 5,000 kg of taro. He sold 1,842 kg. How much remains?",
-      "answer": "3,158 kg"
-    },
-    {
-      "q": "Check 9,412 − 3,796 = 5,616 by adding back.",
-      "answer": "5,616 + 3,796 = 9,412 ✓ (answer is correct)"
-    },
-    {
-      "q": "Find the difference: 63,200 − 47,865",
-      "answer": "15,335"
-    }
+    {"q": "[Guided Practice] 245 + 132 = ?", "answer": "377 (Hint: add ones, then tens, then hundreds.)"},
+    {"q": "[Guided Practice] 456 − 123 = ?", "answer": "333 (Hint: subtract column by column, right to left.)"},
+    {"q": "[Guided Practice] 1,250 + 340 = ?", "answer": "1,590 (Hint: no regrouping needed.)"},
+    {"q": "[Guided Practice] 608 − 245 = ?", "answer": "363 (Hint: you'll need to regroup once.)"},
+    {"q": "[Independent Practice] 2,315 + 1,472 = ?", "answer": "3,787"},
+    {"q": "[Independent Practice] 3,600 − 1,250 = ?", "answer": "2,350"},
+    {"q": "[Independent Practice] 4,208 + 2,391 = ?", "answer": "6,599"},
+    {"q": "[Independent Practice] 5,000 − 2,347 = ?", "answer": "2,653"},
+    {"q": "[Problem Solving] Kai read 245 pages in July and 132 pages in August. How many pages total?", "answer": "377 pages"},
+    {"q": "[Problem Solving] A shop had 500 shell necklaces. They sold 235. How many are left?", "answer": "265 necklaces"}
   ],
   "t03-multiply-1digit": [
-    {
-      "q": "60 × 70 = ?",
-      "answer": "4,200 (6 × 7 = 42, add two zeros)"
-    },
-    {
-      "q": "25 × 8 = ? (use the ×8 = double 3 times trick)",
-      "answer": "200 (25→50→100→200)"
-    },
-    {
-      "q": "9 × 14 = ? (use the ×9 trick)",
-      "answer": "126 (14 × 10 = 140; 140 − 14 = 126)"
-    },
-    {
-      "q": "50 × 36 = ? (half-and-double trick)",
-      "answer": "1,800 (36 × 5 = 180; ×10 = 1,800)"
-    },
-    {
-      "q": "15 × 12 = ? (break apart)",
-      "answer": "180 (15 × 10 + 15 × 2 = 150 + 30)"
-    }
+    {"q": "[Guided Practice] 3 × 4 = ?", "answer": "12 (Hint: 3 groups of 4.)"},
+    {"q": "[Guided Practice] 20 × 5 = ?", "answer": "100 (Hint: 2 × 5 = 10, then add a zero.)"},
+    {"q": "[Guided Practice] 6 × 30 = ?", "answer": "180 (Hint: 6 × 3 = 18, then add a zero.)"},
+    {"q": "[Guided Practice] 4 × 25 = ?", "answer": "100 (Hint: think 25 + 25 + 25 + 25 = 100.)"},
+    {"q": "[Independent Practice] 8 × 6 = ?", "answer": "48"},
+    {"q": "[Independent Practice] 5 × 40 = ?", "answer": "200"},
+    {"q": "[Independent Practice] 7 × 12 = ?", "answer": "84"},
+    {"q": "[Independent Practice] 3 × 145 = ?", "answer": "435"},
+    {"q": "[Problem Solving] A box holds 6 crayons. How many crayons in 4 boxes?", "answer": "24 crayons"},
+    {"q": "[Problem Solving] Mia walks 3 miles each day for 7 days. Total miles?", "answer": "21 miles"}
   ],
   "t04-multiply-2digit": [
-    {
-      "q": "237 × 6 = ?",
-      "answer": "1,422"
-    },
-    {
-      "q": "48 × 35 = ?",
-      "answer": "1,680"
-    },
-    {
-      "q": "126 × 24 = ?",
-      "answer": "3,024"
-    },
-    {
-      "q": "A classroom has 24 rows of 18 seats. Total seats?",
-      "answer": "432 seats"
-    },
-    {
-      "q": "Estimate 492 × 21, then find exact.",
-      "answer": "Estimate ≈ 500 × 20 = 10,000. Exact = 10,332."
-    }
+    {"q": "[Guided Practice] 10 × 10 = ?", "answer": "100 (Hint: 1 × 1 = 1, then add two zeros.)"},
+    {"q": "[Guided Practice] 20 × 30 = ?", "answer": "600 (Hint: 2 × 3 = 6, then add two zeros.)"},
+    {"q": "[Guided Practice] 12 × 10 = ?", "answer": "120 (Hint: multiplying by 10 adds one zero.)"},
+    {"q": "[Guided Practice] 15 × 4 = ?", "answer": "60 (Hint: 10 × 4 + 5 × 4 = 40 + 20 = 60.)"},
+    {"q": "[Independent Practice] 23 × 10 = ?", "answer": "230"},
+    {"q": "[Independent Practice] 40 × 20 = ?", "answer": "800"},
+    {"q": "[Independent Practice] 18 × 5 = ?", "answer": "90"},
+    {"q": "[Independent Practice] 24 × 12 = ?", "answer": "288"},
+    {"q": "[Problem Solving] A class has 12 rows of desks with 5 desks each. Total desks?", "answer": "60 desks"},
+    {"q": "[Problem Solving] A bakery makes 20 loaves each day. In 15 days, how many loaves?", "answer": "300 loaves"}
   ],
   "t05-divide-1digit": [
-    {
-      "q": "480 ÷ 6 = ?",
-      "answer": "80"
-    },
-    {
-      "q": "720 ÷ 9 = ?",
-      "answer": "80"
-    },
-    {
-      "q": "5,600 ÷ 7 = ?",
-      "answer": "800"
-    },
-    {
-      "q": "Is 342 divisible by 3? (Hint: digit sum rule.)",
-      "answer": "Yes — 3+4+2 = 9, and 9 is divisible by 3"
-    },
-    {
-      "q": "Divide 360 by 4 using halving twice.",
-      "answer": "90 (360 → 180 → 90)"
-    },
-    {
-      "q": "852 ÷ 6 = ?",
-      "answer": "142"
-    },
-    {
-      "q": "967 ÷ 7 = ? (state remainder if any)",
-      "answer": "138 R 1"
-    },
-    {
-      "q": "3,456 ÷ 8 = ?",
-      "answer": "432"
-    },
-    {
-      "q": "A teacher shares 845 pencils among 5 classrooms. How many per classroom?",
-      "answer": "169 pencils"
-    },
-    {
-      "q": "1,250 ÷ 9 = ? (quotient and remainder)",
-      "answer": "138 R 8"
-    }
+    {"q": "[Guided Practice] 12 ÷ 3 = ?", "answer": "4 (Hint: how many 3s in 12?)"},
+    {"q": "[Guided Practice] 20 ÷ 5 = ?", "answer": "4 (Hint: think 5 × ? = 20.)"},
+    {"q": "[Guided Practice] 36 ÷ 6 = ?", "answer": "6 (Hint: use your 6-times table.)"},
+    {"q": "[Guided Practice] 40 ÷ 8 = ?", "answer": "5 (Hint: 8 × 5 = 40.)"},
+    {"q": "[Independent Practice] 24 ÷ 4 = ?", "answer": "6"},
+    {"q": "[Independent Practice] 63 ÷ 9 = ?", "answer": "7"},
+    {"q": "[Independent Practice] 84 ÷ 7 = ?", "answer": "12"},
+    {"q": "[Independent Practice] 120 ÷ 4 = ?", "answer": "30"},
+    {"q": "[Problem Solving] Share 18 shells equally among 3 friends. Each gets ___ shells.", "answer": "6 shells"},
+    {"q": "[Problem Solving] A row can hold 8 books. If you have 32 books, how many rows?", "answer": "4 rows"}
   ],
   "t06-operations-word-problems": [
-    {
-      "q": "Evaluate: 5 + 3 × 4",
-      "answer": "17 (multiply first: 3×4=12, then 5+12)"
-    },
-    {
-      "q": "Evaluate: (5 + 3) × 4",
-      "answer": "32 (parentheses first: 8, then 8×4)"
-    },
-    {
-      "q": "Evaluate: 20 − 6 ÷ 2",
-      "answer": "17 (divide first: 6÷2=3, then 20−3)"
-    },
-    {
-      "q": "Evaluate: 2 × (9 − 4) + 5",
-      "answer": "15 (parentheses 5, then 2×5=10, then 10+5)"
-    },
-    {
-      "q": "Insert parentheses to make it true: 3 + 5 × 2 = 16",
-      "answer": "(3 + 5) × 2 = 16"
-    },
-    {
-      "q": "A surfboard rental costs $12 per hour. Pele rents for 4 hours and tips $5. Total cost?",
-      "answer": "$53 (12 × 4 = 48; 48 + 5)"
-    },
-    {
-      "q": "A container holds 672 mL of juice. How many 8-mL servings can be poured?",
-      "answer": "84 servings"
-    },
-    {
-      "q": "Hikers walked 3 miles in the morning and 2.5 miles in the afternoon. What was their total distance?",
-      "answer": "5.5 miles"
-    },
-    {
-      "q": "25 students each bring 6 shells to class. After losing 18 shells, how many remain?",
-      "answer": "132 shells (25 × 6 = 150; 150 − 18)"
-    },
-    {
-      "q": "A pizza is cut into 8 slices. 3 friends each eat 2 slices. What fraction of the pizza is left?",
-      "answer": "2/8 = 1/4"
-    }
+    {"q": "[Guided Practice] Kai has 12 stickers. Mia has 8. How many total?", "answer": "20 stickers (Hint: add)."},
+    {"q": "[Guided Practice] A jar had 25 candies. 7 were eaten. How many left?", "answer": "18 candies (Hint: subtract)."},
+    {"q": "[Guided Practice] 5 friends each get 4 shells. Total shells?", "answer": "20 shells (Hint: multiply)."},
+    {"q": "[Guided Practice] 18 cookies shared equally among 3 kids. Each gets?", "answer": "6 cookies (Hint: divide)."},
+    {"q": "[Independent Practice] A class has 6 tables with 4 chairs each. Total chairs?", "answer": "24 chairs"},
+    {"q": "[Independent Practice] Ann had $30. She spent $12. Money left?", "answer": "$18"},
+    {"q": "[Independent Practice] 3 vans carry 8 kids each. Total kids?", "answer": "24 kids"},
+    {"q": "[Independent Practice] 60 pencils divided into boxes of 10. Number of boxes?", "answer": "6 boxes"},
+    {"q": "[Problem Solving] A store has 4 shelves. Each shelf has 15 books. How many books total?", "answer": "60 books"},
+    {"q": "[Problem Solving] Sam saved $8 each week. After 5 weeks how much saved? Then he spent $12. How much left?", "answer": "$28 (saved $40, spent $12)"}
   ],
   "t07-factors-multiples": [
-    {
-      "q": "List all factors of 18.",
-      "answer": "1, 2, 3, 6, 9, 18"
-    },
-    {
-      "q": "Is 29 prime or composite?",
-      "answer": "prime"
-    },
-    {
-      "q": "Find the prime factorization of 36.",
-      "answer": "2 × 2 × 3 × 3 = 2² × 3²"
-    },
-    {
-      "q": "List the first five multiples of 7.",
-      "answer": "7, 14, 21, 28, 35"
-    },
-    {
-      "q": "Name a factor pair of 48 other than 1 × 48.",
-      "answer": "2 × 24 (or 3 × 16, 4 × 12, 6 × 8)"
-    }
+    {"q": "[Guided Practice] List the factors of 6.", "answer": "1, 2, 3, 6 (Hint: pairs that multiply to 6.)"},
+    {"q": "[Guided Practice] List the first 5 multiples of 4.", "answer": "4, 8, 12, 16, 20 (Hint: skip-count by 4.)"},
+    {"q": "[Guided Practice] Is 7 prime or composite?", "answer": "Prime (Hint: only 1 and 7 divide it evenly.)"},
+    {"q": "[Guided Practice] Is 12 a multiple of 3?", "answer": "Yes (Hint: 3 × 4 = 12.)"},
+    {"q": "[Independent Practice] List all factors of 10.", "answer": "1, 2, 5, 10"},
+    {"q": "[Independent Practice] List the first 5 multiples of 5.", "answer": "5, 10, 15, 20, 25"},
+    {"q": "[Independent Practice] Is 15 prime or composite?", "answer": "Composite (factors 1, 3, 5, 15)"},
+    {"q": "[Independent Practice] Name a common multiple of 2 and 3.", "answer": "6 (or 12, 18, ...)"},
+    {"q": "[Problem Solving] A baker has 24 rolls. Can she pack them equally into groups of 6? How many groups?", "answer": "Yes — 4 groups"},
+    {"q": "[Problem Solving] You want to arrange 12 chairs into equal rows. List two ways.", "answer": "e.g., 3 rows of 4, or 2 rows of 6, or 4 rows of 3"}
   ],
   "t08-10-fractions": [
-    {
-      "q": "Give an equivalent fraction to 3/4.",
-      "answer": "6/8 (or 9/12, 12/16, etc.)"
-    },
-    {
-      "q": "Compare: 2/5 vs 3/7. (use common denominator)",
-      "answer": "2/5 = 14/35; 3/7 = 15/35. So 2/5 < 3/7"
-    },
-    {
-      "q": "2/9 + 4/9 = ?",
-      "answer": "6/9 (or simplified: 2/3)"
-    },
-    {
-      "q": "Convert 11/4 to a mixed number.",
-      "answer": "2 3/4"
-    },
-    {
-      "q": "Write 1/2 + 1/4 with a common denominator.",
-      "answer": "2/4 + 1/4 = 3/4"
-    }
+    {"q": "[Guided Practice] What fraction is shaded? ▢▢▣▢ (3 of 4 shaded)", "answer": "3/4 (Hint: shaded parts over total parts.)"},
+    {"q": "[Guided Practice] Which is bigger: 1/2 or 1/4?", "answer": "1/2 (Hint: fewer equal pieces = bigger piece.)"},
+    {"q": "[Guided Practice] Write a fraction equivalent to 1/2.", "answer": "2/4 (or 3/6, 4/8, ...) (Hint: multiply top & bottom by same #.)"},
+    {"q": "[Guided Practice] 1/4 + 2/4 = ?", "answer": "3/4 (Hint: same bottom, add tops.)"},
+    {"q": "[Independent Practice] Is 2/3 equal to 4/6?", "answer": "Yes (both simplify to 2/3)"},
+    {"q": "[Independent Practice] 3/5 + 1/5 = ?", "answer": "4/5"},
+    {"q": "[Independent Practice] 5/8 − 2/8 = ?", "answer": "3/8"},
+    {"q": "[Independent Practice] 3 × 1/4 = ?", "answer": "3/4"},
+    {"q": "[Problem Solving] A pizza is cut into 8 slices. Ana ate 3 slices. What fraction did she eat?", "answer": "3/8"},
+    {"q": "[Problem Solving] Ben's ribbon is 5/6 of a meter. He cuts off 2/6. How much ribbon remains?", "answer": "3/6 (or 1/2) meter"}
   ],
   "t11-data-line-plots": [
-    {
-      "q": "Find the mean of 4, 7, 8, 9, 12.",
-      "answer": "8 (sum 40 ÷ 5)"
-    },
-    {
-      "q": "Find the range of 12, 5, 8, 20, 15.",
-      "answer": "15 (20 − 5)"
-    },
-    {
-      "q": "On a line plot with Xs at 1, 1, 2, 3, 3, 3, 4, what number is the mode?",
-      "answer": "3"
-    },
-    {
-      "q": "A pictograph uses 🌺 = 5 flowers. Anna has 4 🌺🌺🌺🌺. How many flowers?",
-      "answer": "20 flowers"
-    },
-    {
-      "q": "If a bar graph shows 8 cats, 6 dogs, 4 fish, how many pets total?",
-      "answer": "18 pets"
-    }
+    {"q": "[Guided Practice] A tally shows: red=5, blue=3, green=2. How many total?", "answer": "10 (Hint: add.)"},
+    {"q": "[Guided Practice] On a line plot, X's mark values. If 4 X's are above 2, what does that mean?", "answer": "4 items measured 2 (Hint: each X = 1 data point.)"},
+    {"q": "[Guided Practice] In a bar graph, which bar shows the greatest value?", "answer": "The tallest bar (Hint: taller = bigger.)"},
+    {"q": "[Guided Practice] How many students voted for pizza if the bar rises to 6?", "answer": "6 students"},
+    {"q": "[Independent Practice] Data: 1, 2, 2, 3, 4. On a line plot, how many X's above 2?", "answer": "2 X's"},
+    {"q": "[Independent Practice] How many total items in the data set 1, 2, 2, 3, 4?", "answer": "5 items"},
+    {"q": "[Independent Practice] Which value shows up the most in: 3, 5, 5, 5, 7?", "answer": "5"},
+    {"q": "[Independent Practice] Find the range of 8, 10, 5, 12, 6.", "answer": "12 − 5 = 7"},
+    {"q": "[Problem Solving] The class measured pencils to nearest 1/2 inch: 3, 3, 3.5, 4, 4. Draw the line plot idea — how many X's above 3?", "answer": "2 X's above 3"},
+    {"q": "[Problem Solving] In a survey: apples 6, bananas 4, oranges 3. Which was most chosen?", "answer": "Apples (6)"}
   ],
   "t12-decimals": [
-    {
-      "q": "Write 3/10 as a decimal.",
-      "answer": "0.3"
-    },
-    {
-      "q": "Write 47/100 as a decimal.",
-      "answer": "0.47"
-    },
-    {
-      "q": "Which is larger: 0.6 or 0.56?",
-      "answer": "0.6 (0.6 = 0.60, which is greater than 0.56)"
-    },
-    {
-      "q": "Write 0.25 as a fraction in simplest form.",
-      "answer": "1/4"
-    },
-    {
-      "q": "Order from smallest to largest: 0.8, 0.08, 0.88, 0.08.",
-      "answer": "0.08, 0.08, 0.8, 0.88"
-    }
+    {"q": "[Guided Practice] Write 3 tenths as a decimal.", "answer": "0.3 (Hint: tenths go one place after the decimal.)"},
+    {"q": "[Guided Practice] Write 25 hundredths as a decimal.", "answer": "0.25 (Hint: hundredths go two places.)"},
+    {"q": "[Guided Practice] Which is bigger: 0.5 or 0.3?", "answer": "0.5 (Hint: line them up by the decimal point.)"},
+    {"q": "[Guided Practice] Write 7/10 as a decimal.", "answer": "0.7 (Hint: tenths.)"},
+    {"q": "[Independent Practice] Write 4/10 as a decimal.", "answer": "0.4"},
+    {"q": "[Independent Practice] Write 0.6 as a fraction.", "answer": "6/10 (or 3/5)"},
+    {"q": "[Independent Practice] Compare: 0.45 ___ 0.54", "answer": "<"},
+    {"q": "[Independent Practice] Order: 0.2, 0.5, 0.1 from least to greatest.", "answer": "0.1, 0.2, 0.5"},
+    {"q": "[Problem Solving] A ribbon is 0.7 meters long. Write that as a fraction of a meter.", "answer": "7/10 meter"},
+    {"q": "[Problem Solving] Ana's plant grew 0.3 m; Ben's grew 0.5 m. Whose grew more?", "answer": "Ben's (0.5 > 0.3)"}
   ],
   "t13-measurement": [
-    {
-      "q": "How many feet in 5 yards?",
-      "answer": "15 feet (5 × 3)"
-    },
-    {
-      "q": "Convert 2,500 m to kilometers.",
-      "answer": "2.5 km"
-    },
-    {
-      "q": "A rectangle is 9 cm by 4 cm. Find area and perimeter.",
-      "answer": "Area = 36 cm²; Perimeter = 26 cm"
-    },
-    {
-      "q": "Convert 4 lb to ounces.",
-      "answer": "64 oz (4 × 16)"
-    },
-    {
-      "q": "A garden is 12 m long and 7 m wide. What is its perimeter?",
-      "answer": "38 m"
-    },
-    {
-      "q": "A square room has sides of 8 ft. What is the area? What is the perimeter?",
-      "answer": "Area = 64 ft²; Perimeter = 32 ft"
-    },
-    {
-      "q": "A rectangle has an area of 56 m² and a width of 7 m. What is its length?",
-      "answer": "8 m (56 ÷ 7)"
-    },
-    {
-      "q": "Find the perimeter of a rectangle 14 cm long and 6 cm wide.",
-      "answer": "P = 2(14 + 6) = 2 × 20 = 40 cm"
-    },
-    {
-      "q": "Find the area of a rectangle 9 m by 12 m.",
-      "answer": "A = 9 × 12 = 108 m²"
-    },
-    {
-      "q": "A square has a side of 7 ft. Find its perimeter AND area.",
-      "answer": "Perimeter = 4 × 7 = 28 ft; Area = 7 × 7 = 49 ft²"
-    },
-    {
-      "q": "Mr. Park wants to fence a rectangular garden 15 m by 9 m. How many meters of fencing does he need?",
-      "answer": "Perimeter: 2(15 + 9) = 48 m"
-    },
-    {
-      "q": "A classroom floor is 24 ft by 18 ft. How many square feet of carpet are needed?",
-      "answer": "Area: 24 × 18 = 432 ft²"
-    },
-    {
-      "q": "A rectangle has area 72 cm² and length 9 cm. Find the width.",
-      "answer": "Width = 72 ÷ 9 = 8 cm"
-    },
-    {
-      "q": "An L-shaped room is made of a 10 ft × 6 ft rectangle joined to a 4 ft × 6 ft rectangle. What is the total area?",
-      "answer": "10 × 6 + 4 × 6 = 60 + 24 = 84 ft²"
-    },
-    {
-      "q": "Sam needs ribbon to wrap around a square box with side 12 in. How many inches of ribbon (perimeter)?",
-      "answer": "4 × 12 = 48 in"
-    },
-    {
-      "q": "Two rectangles both have a perimeter of 20 cm. One is 6 by 4, the other is 8 by 2. Compare their areas.",
-      "answer": "6 × 4 = 24 cm²; 8 × 2 = 16 cm². The 6×4 has a bigger area, even though their perimeters are equal."
-    },
-    {
-      "q": "A vegetable plot is 5 m by 3 m. The gardener doubles each side to 10 m by 6 m. How does the area change?",
-      "answer": "Old area = 15 m²; new area = 60 m². Area is 4 times larger (not 2×!) because each side was doubled."
-    }
+    {"q": "[Guided Practice] How many centimeters are in 1 meter?", "answer": "100 cm (Hint: cent- means hundred.)"},
+    {"q": "[Guided Practice] How many minutes are in 1 hour?", "answer": "60 minutes"},
+    {"q": "[Guided Practice] Find the perimeter of a rectangle 4 cm by 3 cm.", "answer": "14 cm (Hint: P = 2(L+W) = 2(4+3) = 14.)"},
+    {"q": "[Guided Practice] Find the area of a rectangle 4 cm by 3 cm.", "answer": "12 sq cm (Hint: A = L × W.)"},
+    {"q": "[Independent Practice] 2 m = ___ cm", "answer": "200 cm"},
+    {"q": "[Independent Practice] 3 hours = ___ minutes", "answer": "180 minutes"},
+    {"q": "[Independent Practice] Perimeter of a square with side 5 cm.", "answer": "20 cm"},
+    {"q": "[Independent Practice] Area of a rectangle 6 m by 2 m.", "answer": "12 sq m"},
+    {"q": "[Problem Solving] A garden is 8 m long and 3 m wide. Find its perimeter and area.", "answer": "Perimeter = 22 m, Area = 24 sq m"},
+    {"q": "[Problem Solving] A movie is 90 minutes. How many hours and minutes?", "answer": "1 hour 30 minutes"}
   ],
   "t14-patterns": [
-    {
-      "q": "Rule: add 4. Start at 3. Next 5 terms?",
-      "answer": "3, 7, 11, 15, 19, 23"
-    },
-    {
-      "q": "Rule: subtract 2. Start at 30. Next 5 terms?",
-      "answer": "30, 28, 26, 24, 22, 20"
-    },
-    {
-      "q": "Rule: multiply by 3. Start at 1. Next 4 terms?",
-      "answer": "1, 3, 9, 27, 81"
-    },
-    {
-      "q": "Pattern: 5, 10, 15, 20, ___. Next?",
-      "answer": "25"
-    },
-    {
-      "q": "Pattern: 100, 90, 80, 70, ___. Next?",
-      "answer": "60"
-    },
-    {
-      "q": "Pattern: 2, 4, 8, 16, ___. Next?",
-      "answer": "32"
-    },
-    {
-      "q": "Pattern: 1, 4, 9, 16, ___. Next?",
-      "answer": "25 (squares)"
-    },
-    {
-      "q": "In the pattern &ldquo;add 5 starting at 2&rdquo;, are all terms even?",
-      "answer": "No &mdash; they alternate odd/even (2, 7, 12, 17, 22, ...)"
-    },
-    {
-      "q": "Rule y = 3x. If x = 4, y = ?",
-      "answer": "12"
-    },
-    {
-      "q": "Rule y = x + 7. If x = 5, y = ?",
-      "answer": "12"
-    }
+    {"q": "[Guided Practice] Pattern: 2, 4, 6, 8, ___. Next number?", "answer": "10 (Hint: add 2 each time.)"},
+    {"q": "[Guided Practice] Pattern rule: add 5. Start at 3. First 4 terms:", "answer": "3, 8, 13, 18"},
+    {"q": "[Guided Practice] Pattern: 20, 18, 16, ___. Next number?", "answer": "14 (Hint: subtract 2.)"},
+    {"q": "[Guided Practice] Shape pattern: ▲ ● ▲ ● ▲ ___. Next shape?", "answer": "● (Hint: alternating.)"},
+    {"q": "[Independent Practice] What comes next: 5, 10, 15, 20, ___?", "answer": "25"},
+    {"q": "[Independent Practice] Pattern: 100, 90, 80, ___. Next?", "answer": "70"},
+    {"q": "[Independent Practice] Rule: add 4. Start at 2. First 5 terms:", "answer": "2, 6, 10, 14, 18"},
+    {"q": "[Independent Practice] Pattern: 3, 6, 12, 24. Rule?", "answer": "double each time (multiply by 2)"},
+    {"q": "[Problem Solving] Mia saves $3 the first week, $6 the next, $9 the next. If the pattern continues, how much in week 5?", "answer": "$15"},
+    {"q": "[Problem Solving] Rows of chairs: 4, 8, 12, 16. What's the rule and what comes next?", "answer": "Add 4 each row → 20"}
   ],
   "t15-16-angles-shapes": [
-    {
-      "q": "Name: two rays that share one endpoint form a __.",
-      "answer": "angle"
-    },
-    {
-      "q": "A triangle with sides 5 cm, 5 cm, 5 cm is __.",
-      "answer": "equilateral"
-    },
-    {
-      "q": "How many lines of symmetry does a square have?",
-      "answer": "4"
-    },
-    {
-      "q": "Which has an angle greater than 90°: acute, obtuse, or right?",
-      "answer": "obtuse"
-    },
-    {
-      "q": "Classify: a quadrilateral with 4 equal sides and 4 right angles.",
-      "answer": "square"
-    }
+    {"q": "[Guided Practice] How many degrees are in a right angle?", "answer": "90° (Hint: it's the corner of a square.)"},
+    {"q": "[Guided Practice] How many sides does a triangle have?", "answer": "3 sides"},
+    {"q": "[Guided Practice] How many sides does a quadrilateral have?", "answer": "4 sides (Hint: 'quad-' = 4.)"},
+    {"q": "[Guided Practice] Are perpendicular lines meeting at a right angle?", "answer": "Yes (Hint: they form 90°.)"},
+    {"q": "[Independent Practice] A straight angle measures ___°.", "answer": "180°"},
+    {"q": "[Independent Practice] Name a shape with 4 equal sides and 4 right angles.", "answer": "Square"},
+    {"q": "[Independent Practice] How many sides does a hexagon have?", "answer": "6 sides"},
+    {"q": "[Independent Practice] Are these lines parallel or perpendicular? = (two horizontal lines).", "answer": "Parallel"},
+    {"q": "[Problem Solving] The corner of a book forms what kind of angle?", "answer": "Right angle (90°)"},
+    {"q": "[Problem Solving] A stop sign has 8 sides. What is its shape called?", "answer": "Octagon"}
   ]
 };
 
 const QUIZZES = {
   "t01-place-value": [
-    {
-      "q": "In 58,342, the digit 5 is in the ___ place.",
-      "opts": [
-        "tens",
-        "hundreds",
-        "ten-thousands",
-        "thousands"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Round 64,789 to the nearest hundred.",
-      "opts": [
-        "64,700",
-        "64,800",
-        "64,900",
-        "65,000"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Which number has a 6 in the hundred-thousands place?",
-      "opts": [
-        "6,245,900",
-        "462,380",
-        "60,125",
-        "642,100"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Write 700,000 + 20,000 + 3 in standard form.",
-      "opts": [
-        "720,003",
-        "702,003",
-        "72,003",
-        "700,203"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Which is greatest?",
-      "opts": [
-        "48,912",
-        "48,901",
-        "49,102",
-        "48,990"
-      ],
-      "ans": 2
-    }
+    {"q": "In 542, the digit 5 is in the ___ place.", "opts": ["ones", "tens", "hundreds", "thousands"], "ans": 2},
+    {"q": "Round 76 to the nearest ten.", "opts": ["70", "80", "100", "60"], "ans": 1},
+    {"q": "Which number is 4,000 + 300 + 20 + 9?", "opts": ["4,329", "4,392", "4,239", "4,932"], "ans": 0},
+    {"q": "What is the value of the 3 in 435?", "opts": ["30", "300", "3", "3,000"], "ans": 0},
+    {"q": "Which number is the greatest?", "opts": ["568", "692", "324", "587"], "ans": 1},
+    {"q": "Round 218 to the nearest hundred.", "opts": ["100", "200", "300", "220"], "ans": 1},
+    {"q": "Write 1,050 in expanded form.", "opts": ["1,000 + 50", "100 + 50", "1,000 + 500", "1,000 + 5"], "ans": 0},
+    {"q": "Which digit is in the thousands place in 2,468?", "opts": ["2", "4", "6", "8"], "ans": 0},
+    {"q": "Round 84 to the nearest ten.", "opts": ["70", "80", "90", "100"], "ans": 2},
+    {"q": "Order least to greatest: 320, 302, 230", "opts": ["230, 302, 320", "320, 302, 230", "302, 230, 320", "230, 320, 302"], "ans": 0}
   ],
   "t02-add-sub-multi-digit": [
-    {
-      "q": "3,458 + 2,797 = ?",
-      "opts": [
-        "6,155",
-        "6,245",
-        "6,255",
-        "5,355"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "12,100 + 8,999 = ?",
-      "opts": [
-        "21,099",
-        "20,199",
-        "21,099",
-        "21,009"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Estimate 4,892 + 3,106 to the nearest thousand.",
-      "opts": [
-        "7,000",
-        "7,900",
-        "8,000",
-        "9,000"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "A sum of 10 ones equals 1 ___.",
-      "opts": [
-        "ten",
-        "hundred",
-        "thousand",
-        "ten-thousand"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "The town had 24,812 residents. 3,560 more moved in. New population?",
-      "opts": [
-        "27,372",
-        "28,372",
-        "21,252",
-        "28,272"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "7,200 − 3,485 = ?",
-      "opts": [
-        "3,715",
-        "3,815",
-        "3,725",
-        "3,735"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "When we can't subtract, we ___ from the next place.",
-      "opts": [
-        "carry",
-        "regroup (borrow)",
-        "subtract",
-        "multiply"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "50,000 − 23,461 = ?",
-      "opts": [
-        "26,539",
-        "27,539",
-        "26,441",
-        "27,441"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "To check 9,412 − 3,796 = 5,616, we can ___.",
-      "opts": [
-        "add 5,616 + 3,796",
-        "subtract 9,412 − 5,616",
-        "both A and B",
-        "neither"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Find the difference: 804 − 259.",
-      "opts": [
-        "555",
-        "545",
-        "565",
-        "455"
-      ],
-      "ans": 1
-    }
+    {"q": "324 + 251 = ?", "opts": ["575", "565", "475", "585"], "ans": 0},
+    {"q": "689 − 342 = ?", "opts": ["347", "247", "357", "337"], "ans": 0},
+    {"q": "1,204 + 356 = ?", "opts": ["1,560", "1,650", "1,460", "1,540"], "ans": 0},
+    {"q": "2,000 − 750 = ?", "opts": ["1,250", "1,350", "1,150", "1,050"], "ans": 0},
+    {"q": "4,321 + 1,278 = ?", "opts": ["5,599", "5,499", "5,600", "5,589"], "ans": 0},
+    {"q": "Estimate 498 + 302 by rounding to the nearest hundred.", "opts": ["800", "700", "900", "600"], "ans": 0},
+    {"q": "A store had 3,500 pens. It sold 1,200. Pens left?", "opts": ["2,300", "2,200", "2,500", "2,000"], "ans": 0},
+    {"q": "Which is a check for 850 − 250 = 600?", "opts": ["600 + 250 = 850", "600 − 250 = 350", "250 − 600 = 350", "600 × 250"], "ans": 0},
+    {"q": "6,432 + 1,205 = ?", "opts": ["7,637", "7,547", "6,637", "7,737"], "ans": 0},
+    {"q": "Lin has 425 stickers. She gets 175 more. How many now?", "opts": ["600", "500", "625", "550"], "ans": 0}
   ],
   "t03-multiply-1digit": [
-    {
-      "q": "40 × 50 = ?",
-      "opts": [
-        "200",
-        "2,000",
-        "20",
-        "20,000"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Quickest way to multiply 48 × 5?",
-      "opts": [
-        "Half of 48, then ×10",
-        "48 × 10, then /5",
-        "Guess",
-        "Break into 40+8"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "9 × 17 = ? (use ×9 trick)",
-      "opts": [
-        "153",
-        "163",
-        "143",
-        "159"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "25 × 16 = ?",
-      "opts": [
-        "400",
-        "425",
-        "250",
-        "160"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "×10 applied to 73 equals ___.",
-      "opts": [
-        "7,300",
-        "730",
-        "73",
-        "7.3"
-      ],
-      "ans": 1
-    }
+    {"q": "5 × 8 = ?", "opts": ["40", "45", "35", "48"], "ans": 0},
+    {"q": "6 × 20 = ?", "opts": ["120", "60", "1,200", "100"], "ans": 0},
+    {"q": "4 × 9 = ?", "opts": ["36", "32", "40", "28"], "ans": 0},
+    {"q": "3 × 50 = ?", "opts": ["150", "15", "1,500", "500"], "ans": 0},
+    {"q": "7 × 11 = ?", "opts": ["77", "78", "70", "66"], "ans": 0},
+    {"q": "A crate holds 8 fruit. How many in 5 crates?", "opts": ["40", "45", "35", "30"], "ans": 0},
+    {"q": "2 × 300 = ?", "opts": ["600", "60", "6,000", "300"], "ans": 0},
+    {"q": "What is 9 × 4?", "opts": ["36", "32", "40", "30"], "ans": 0},
+    {"q": "5 × 25 = ?", "opts": ["125", "100", "150", "250"], "ans": 0},
+    {"q": "A team wins 6 games. Each is worth 2 points. Total?", "opts": ["12", "8", "10", "14"], "ans": 0}
   ],
   "t04-multiply-2digit": [
-    {
-      "q": "156 × 4 = ?",
-      "opts": [
-        "604",
-        "624",
-        "626",
-        "624"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "23 × 45 = ?",
-      "opts": [
-        "1,035",
-        "1,045",
-        "1,135",
-        "1,145"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "412 × 15 = ?",
-      "opts": [
-        "6,180",
-        "6,180",
-        "5,180",
-        "7,180"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A gym has 28 rows of 22 mats. Total mats?",
-      "opts": [
-        "560",
-        "616",
-        "606",
-        "622"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Which is a reasonable estimate for 387 × 19?",
-      "opts": [
-        "40",
-        "400",
-        "4,000",
-        "40,000"
-      ],
-      "ans": 2
-    }
+    {"q": "10 × 10 = ?", "opts": ["100", "10", "1,000", "20"], "ans": 0},
+    {"q": "30 × 20 = ?", "opts": ["600", "60", "6,000", "500"], "ans": 0},
+    {"q": "14 × 10 = ?", "opts": ["140", "14", "1,400", "104"], "ans": 0},
+    {"q": "11 × 5 = ?", "opts": ["55", "50", "60", "45"], "ans": 0},
+    {"q": "16 × 4 = ?", "opts": ["64", "60", "54", "44"], "ans": 0},
+    {"q": "A box of 12 shells sold at 3 boxes. Total shells?", "opts": ["36", "24", "30", "32"], "ans": 0},
+    {"q": "25 × 4 = ?", "opts": ["100", "80", "90", "110"], "ans": 0},
+    {"q": "A month has 4 weeks. How many days in 4 weeks?", "opts": ["28", "30", "24", "31"], "ans": 0},
+    {"q": "13 × 20 = ?", "opts": ["260", "230", "240", "250"], "ans": 0},
+    {"q": "15 × 10 = ?", "opts": ["150", "15", "1,500", "105"], "ans": 0}
   ],
   "t05-divide-1digit": [
-    {
-      "q": "560 ÷ 8 = ?",
-      "opts": [
-        "60",
-        "70",
-        "80",
-        "90"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Divisibility by 5 — a number ends in ___.",
-      "opts": [
-        "0 or 5",
-        "2 or 4",
-        "3 or 6",
-        "7 or 9"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "900 ÷ 3 = ?",
-      "opts": [
-        "300",
-        "30",
-        "3,000",
-        "33"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Halving trick: 640 ÷ 4 = ?",
-      "opts": [
-        "120",
-        "140",
-        "160",
-        "180"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Is 128 divisible by 8?",
-      "opts": [
-        "Yes",
-        "No",
-        "Only sometimes",
-        "Not enough info"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "672 ÷ 4 = ?",
-      "opts": [
-        "158",
-        "168",
-        "166",
-        "158"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "945 ÷ 7 = ?",
-      "opts": [
-        "135",
-        "145",
-        "125",
-        "155"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "836 ÷ 6 = ? (state remainder)",
-      "opts": [
-        "139 R 2",
-        "140 R 2",
-        "139 R 4",
-        "138 R 8"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Long-division steps, in order, are ___.",
-      "opts": [
-        "Subtract, Divide, Multiply, Bring down",
-        "Divide, Multiply, Subtract, Bring down",
-        "Multiply, Divide, Subtract, Bring down",
-        "Bring down, Divide, Multiply, Subtract"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "2,310 ÷ 6 = ?",
-      "opts": [
-        "385",
-        "405",
-        "395",
-        "375"
-      ],
-      "ans": 0
-    }
+    {"q": "15 ÷ 3 = ?", "opts": ["5", "3", "4", "6"], "ans": 0},
+    {"q": "42 ÷ 6 = ?", "opts": ["7", "6", "8", "5"], "ans": 0},
+    {"q": "36 ÷ 4 = ?", "opts": ["9", "8", "6", "7"], "ans": 0},
+    {"q": "50 ÷ 5 = ?", "opts": ["10", "5", "15", "20"], "ans": 0},
+    {"q": "28 ÷ 7 = ?", "opts": ["4", "3", "5", "6"], "ans": 0},
+    {"q": "Share 20 apples equally among 4 kids. Each gets:", "opts": ["5", "4", "6", "3"], "ans": 0},
+    {"q": "81 ÷ 9 = ?", "opts": ["9", "8", "7", "10"], "ans": 0},
+    {"q": "64 ÷ 8 = ?", "opts": ["8", "7", "9", "6"], "ans": 0},
+    {"q": "48 ÷ 6 = ?", "opts": ["8", "7", "6", "9"], "ans": 0},
+    {"q": "A pack has 6 pens. 24 pens fill how many packs?", "opts": ["4", "3", "5", "6"], "ans": 0}
   ],
   "t06-operations-word-problems": [
-    {
-      "q": "4 + 2 × 3 = ?",
-      "opts": [
-        "10",
-        "18",
-        "12",
-        "14"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "(4 + 2) × 3 = ?",
-      "opts": [
-        "10",
-        "12",
-        "18",
-        "14"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "36 ÷ (2 + 4) = ?",
-      "opts": [
-        "6",
-        "12",
-        "9",
-        "18"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "In PEMDAS, which comes first?",
-      "opts": [
-        "E",
-        "P",
-        "M",
-        "A"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Evaluate: 2 × 3² + 1",
-      "opts": [
-        "12",
-        "19",
-        "13",
-        "37"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Maya bought 3 books at $8 each and 1 magazine at $5. Total?",
-      "opts": [
-        "$29",
-        "$24",
-        "$27",
-        "$32"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "72 ÷ 5 = 14 R ___.",
-      "opts": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "If 4 apples cost $1.20, one apple costs ___.",
-      "opts": [
-        "$0.20",
-        "$0.30",
-        "$0.40",
-        "$0.50"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Sam read 135 pages in 3 days. Daily average?",
-      "opts": [
-        "35",
-        "40",
-        "45",
-        "50"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "A van holds 8 passengers. To carry 54 people, how many vans?",
-      "opts": [
-        "6",
-        "7",
-        "8",
-        "6 R 6"
-      ],
-      "ans": 1
-    }
+    {"q": "Lily has 15 marbles. She gets 9 more. Total marbles?", "opts": ["24", "6", "23", "25"], "ans": 0},
+    {"q": "40 candies shared among 5 kids. Each gets:", "opts": ["8", "7", "10", "9"], "ans": 0},
+    {"q": "A book has 8 chapters. Each chapter is 12 pages. Total pages?", "opts": ["96", "20", "80", "100"], "ans": 0},
+    {"q": "James had 50 stickers. He gave away 18. Left?", "opts": ["32", "28", "33", "30"], "ans": 0},
+    {"q": "6 rows of 7 seats. Total seats?", "opts": ["42", "13", "36", "48"], "ans": 0},
+    {"q": "Ali has $25. He wants a $40 game. How much more needed?", "opts": ["$15", "$10", "$20", "$5"], "ans": 0},
+    {"q": "4 boxes with 6 balls each. Total balls?", "opts": ["24", "10", "20", "28"], "ans": 0},
+    {"q": "36 apples in 6 bags. Apples per bag?", "opts": ["6", "5", "7", "8"], "ans": 0},
+    {"q": "A team scored 12 points, then 8 more, then 5. Total?", "opts": ["25", "20", "28", "30"], "ans": 0},
+    {"q": "A book cost $9. If Sam buys 3 books, total cost?", "opts": ["$27", "$12", "$30", "$18"], "ans": 0}
   ],
   "t07-factors-multiples": [
-    {
-      "q": "Which is prime?",
-      "opts": [
-        "9",
-        "21",
-        "11",
-        "15"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Which is composite?",
-      "opts": [
-        "7",
-        "13",
-        "25",
-        "19"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Factors of 20 are ___.",
-      "opts": [
-        "1, 2, 4, 5, 10, 20",
-        "1, 2, 4, 20",
-        "1, 5, 10, 20",
-        "1, 2, 5, 20"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Prime factorization of 30 is ___.",
-      "opts": [
-        "2·3·5",
-        "2·15",
-        "3·10",
-        "5·6"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "The number 1 is ___.",
-      "opts": [
-        "prime",
-        "composite",
-        "neither",
-        "both"
-      ],
-      "ans": 2
-    }
+    {"q": "Which is a factor of 8?", "opts": ["4", "3", "5", "6"], "ans": 0},
+    {"q": "Which is a multiple of 5?", "opts": ["25", "6", "12", "19"], "ans": 0},
+    {"q": "Is 11 prime or composite?", "opts": ["prime", "composite", "neither", "both"], "ans": 0},
+    {"q": "How many factors does 6 have?", "opts": ["4", "3", "2", "5"], "ans": 0},
+    {"q": "The first 3 multiples of 7 are:", "opts": ["7, 14, 21", "7, 8, 9", "1, 7, 14", "14, 21, 28"], "ans": 0},
+    {"q": "Which number is composite?", "opts": ["9", "5", "2", "3"], "ans": 0},
+    {"q": "Which of these is a factor of 20?", "opts": ["5", "6", "7", "9"], "ans": 0},
+    {"q": "Which is NOT a multiple of 3?", "opts": ["10", "6", "9", "12"], "ans": 0},
+    {"q": "Prime numbers less than 10:", "opts": ["2, 3, 5, 7", "1, 3, 5, 7", "2, 4, 6, 8", "3, 5, 7, 9"], "ans": 0},
+    {"q": "A common factor of 6 and 9 is:", "opts": ["3", "2", "4", "6"], "ans": 0}
   ],
   "t08-10-fractions": [
-    {
-      "q": "Which is equivalent to 2/3?",
-      "opts": [
-        "4/6",
-        "3/4",
-        "2/4",
-        "3/5"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "1/4 + 2/4 = ?",
-      "opts": [
-        "2/8",
-        "3/8",
-        "3/4",
-        "2/4"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Compare: 3/5 vs 1/2.",
-      "opts": [
-        "3/5 > 1/2",
-        "3/5 < 1/2",
-        "equal",
-        "cannot tell"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Write 9/4 as a mixed number.",
-      "opts": [
-        "2 1/4",
-        "2 1/2",
-        "1 9/4",
-        "2 2/4"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Simplify 6/8.",
-      "opts": [
-        "1/2",
-        "3/4",
-        "2/3",
-        "5/6"
-      ],
-      "ans": 1
-    }
+    {"q": "Which fraction is equal to 1/2?", "opts": ["2/4", "3/8", "1/3", "2/6"], "ans": 0},
+    {"q": "Which is greater: 3/4 or 1/4?", "opts": ["3/4", "1/4", "equal", "cannot tell"], "ans": 0},
+    {"q": "2/5 + 1/5 = ?", "opts": ["3/5", "3/10", "1/5", "2/10"], "ans": 0},
+    {"q": "6/8 − 2/8 = ?", "opts": ["4/8", "4/16", "8/8", "2/8"], "ans": 0},
+    {"q": "4 × 1/3 = ?", "opts": ["4/3", "1/12", "4/12", "1/3"], "ans": 0},
+    {"q": "Ana had 3/4 of a pizza. She ate 1/4. How much left?", "opts": ["2/4", "1/2", "4/8", "1/4"], "ans": 0},
+    {"q": "Which is equivalent to 2/4?", "opts": ["1/2", "2/8", "3/4", "4/6"], "ans": 0},
+    {"q": "Order: 1/2, 1/4, 1/8 from largest to smallest.", "opts": ["1/2, 1/4, 1/8", "1/8, 1/4, 1/2", "1/4, 1/2, 1/8", "1/2, 1/8, 1/4"], "ans": 0},
+    {"q": "5/6 − 3/6 = ?", "opts": ["2/6", "3/6", "5/6", "8/6"], "ans": 0},
+    {"q": "Which is greater: 5/8 or 3/8?", "opts": ["5/8", "3/8", "equal", "cannot tell"], "ans": 0}
   ],
   "t11-data-line-plots": [
-    {
-      "q": "The mean of 2, 4, 6 is ___.",
-      "opts": [
-        "3",
-        "4",
-        "5",
-        "12"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Range of 10, 14, 22, 6 is ___.",
-      "opts": [
-        "6",
-        "14",
-        "16",
-        "22"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Mode of 3, 5, 5, 7, 9 is ___.",
-      "opts": [
-        "3",
-        "5",
-        "6",
-        "7"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "A pictograph key is 🐠 = 4 fish. Tank A has 🐠🐠🐠 — that's ___ fish.",
-      "opts": [
-        "3",
-        "4",
-        "7",
-        "12"
-      ],
-      "ans": 3
-    },
-    {
-      "q": "Best graph for showing category counts?",
-      "opts": [
-        "line plot",
-        "bar graph",
-        "scatter plot",
-        "coordinate grid"
-      ],
-      "ans": 1
-    }
+    {"q": "A tally: dogs=4, cats=6. Total pets?", "opts": ["10", "2", "24", "4"], "ans": 0},
+    {"q": "On a line plot, X's above a value show:", "opts": ["how many times it appears", "the sum", "the average", "the difference"], "ans": 0},
+    {"q": "Data: 2, 3, 3, 5. How many X's above 3?", "opts": ["2", "1", "3", "5"], "ans": 0},
+    {"q": "Which is the range of 4, 8, 12?", "opts": ["8", "4", "12", "16"], "ans": 0},
+    {"q": "A bar graph shows 3 red, 5 blue, 2 green. Total?", "opts": ["10", "3", "5", "15"], "ans": 0},
+    {"q": "In 1, 4, 4, 4, 7 — which appears most?", "opts": ["4", "1", "7", "3"], "ans": 0},
+    {"q": "If a line plot has an X above 5 six times, how many students measured 5?", "opts": ["6", "5", "1", "11"], "ans": 0},
+    {"q": "Data: 8, 10, 12, 14. Range?", "opts": ["6", "10", "14", "4"], "ans": 0},
+    {"q": "A picture graph shows 🐟🐟🐟 for 6 fish (each 🐟=2). How many fish?", "opts": ["6", "3", "2", "8"], "ans": 0},
+    {"q": "Which is the best display to compare categories?", "opts": ["bar graph", "line plot", "tally only", "calendar"], "ans": 0}
   ],
   "t12-decimals": [
-    {
-      "q": "0.4 means ___.",
-      "opts": [
-        "4/10",
-        "4/100",
-        "40/10",
-        "4"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Which is largest?",
-      "opts": [
-        "0.7",
-        "0.07",
-        "0.71",
-        "0.17"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Write 2/5 as a decimal.",
-      "opts": [
-        "0.25",
-        "0.4",
-        "0.5",
-        "0.2"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Read: 3.09.",
-      "opts": [
-        "three and nine tenths",
-        "three and nine hundredths",
-        "three and nine",
-        "three point nine"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Order smallest to largest: 0.5, 0.55, 0.05, 0.505.",
-      "opts": [
-        "0.05, 0.5, 0.505, 0.55",
-        "0.05, 0.5, 0.55, 0.505",
-        "0.5, 0.05, 0.505, 0.55",
-        "0.505, 0.55, 0.5, 0.05"
-      ],
-      "ans": 0
-    }
+    {"q": "Write 6/10 as a decimal.", "opts": ["0.6", "0.06", "6.0", "0.60"], "ans": 0},
+    {"q": "Which is greater: 0.4 or 0.3?", "opts": ["0.4", "0.3", "equal", "cannot tell"], "ans": 0},
+    {"q": "Write 0.25 as a fraction.", "opts": ["25/100", "25/10", "2.5/100", "0.25/1"], "ans": 0},
+    {"q": "Write 8 tenths as a decimal.", "opts": ["0.8", "0.08", "8.0", "80"], "ans": 0},
+    {"q": "Which is smallest?", "opts": ["0.09", "0.9", "0.19", "0.90"], "ans": 0},
+    {"q": "0.5 = ?/10", "opts": ["5", "50", "1", "10"], "ans": 0},
+    {"q": "Order 0.6, 0.1, 0.4 from least to greatest:", "opts": ["0.1, 0.4, 0.6", "0.6, 0.4, 0.1", "0.4, 0.1, 0.6", "0.1, 0.6, 0.4"], "ans": 0},
+    {"q": "Which is equal to 0.50?", "opts": ["0.5", "0.05", "0.005", "5.0"], "ans": 0},
+    {"q": "Write 3/10 as a decimal.", "opts": ["0.3", "0.03", "3.0", "30"], "ans": 0},
+    {"q": "Compare: 0.7 ___ 0.70", "opts": ["=", "<", ">", "cannot tell"], "ans": 0}
   ],
   "t13-measurement": [
-    {
-      "q": "How many inches in 3 feet?",
-      "opts": [
-        "12",
-        "24",
-        "36",
-        "48"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Convert 4.5 km to meters.",
-      "opts": [
-        "450",
-        "4,500",
-        "45,000",
-        "45"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "A rectangle 7 m × 3 m has area ___.",
-      "opts": [
-        "10 m²",
-        "14 m²",
-        "21 m²",
-        "24 m²"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "The perimeter of a rectangle with sides 5 and 8 is ___.",
-      "opts": [
-        "13",
-        "26",
-        "40",
-        "20"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Which is heaviest?",
-      "opts": [
-        "3 lb",
-        "40 oz",
-        "2 lb 14 oz",
-        "50 oz"
-      ],
-      "ans": 3
-    },
-    {
-      "q": "A square room has 6-ft sides. Its area is ___.",
-      "opts": [
-        "12 ft²",
-        "24 ft²",
-        "36 ft²",
-        "30 ft²"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "To fence a rectangular yard, do you need its perimeter or area?",
-      "opts": [
-        "Perimeter",
-        "Area",
-        "Both",
-        "Neither"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "Perimeter of a rectangle 9 cm × 5 cm = ___.",
-      "opts": [
-        "14 cm",
-        "28 cm",
-        "45 cm",
-        "20 cm"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Area of a rectangle 9 cm × 5 cm = ___.",
-      "opts": [
-        "14 cm²",
-        "28 cm²",
-        "45 cm²",
-        "90 cm²"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "A square has a side of 8 m. Its area = ___.",
-      "opts": [
-        "16 m²",
-        "32 m²",
-        "64 m²",
-        "48 m²"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "A square has a side of 8 m. Its perimeter = ___.",
-      "opts": [
-        "16 m",
-        "24 m",
-        "32 m",
-        "64 m"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "A rectangle has area 48 m² and length 8 m. Its width = ___.",
-      "opts": [
-        "4 m",
-        "5 m",
-        "6 m",
-        "8 m"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Which task uses AREA, not perimeter?",
-      "opts": [
-        "Putting a fence around a yard",
-        "Wrapping ribbon around a box",
-        "Carpeting a floor",
-        "Hanging trim around a window"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "An L-shape is built from a 6×3 rectangle and a 4×3 rectangle. Total area = ___.",
-      "opts": [
-        "18 sq units",
-        "12 sq units",
-        "30 sq units",
-        "24 sq units"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Area is measured in ___.",
-      "opts": [
-        "units",
-        "square units",
-        "cubic units",
-        "no units"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Perimeter is measured in ___.",
-      "opts": [
-        "units",
-        "square units",
-        "cubic units",
-        "no units"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "A 10 ft by 8 ft room. How many square feet of carpet?",
-      "opts": [
-        "18 ft²",
-        "36 ft²",
-        "80 ft²",
-        "100 ft²"
-      ],
-      "ans": 2
-    }
+    {"q": "1 kilometer = ___ meters", "opts": ["1,000", "100", "10", "10,000"], "ans": 0},
+    {"q": "Perimeter of a 5 by 5 square?", "opts": ["20", "10", "25", "15"], "ans": 0},
+    {"q": "Area of a 4 by 6 rectangle?", "opts": ["24", "10", "20", "28"], "ans": 0},
+    {"q": "2 hours = ___ minutes", "opts": ["120", "60", "100", "180"], "ans": 0},
+    {"q": "5 m = ___ cm", "opts": ["500", "50", "5,000", "5"], "ans": 0},
+    {"q": "Which unit is best for measuring a pencil?", "opts": ["cm", "km", "m", "liter"], "ans": 0},
+    {"q": "A room is 10 ft by 8 ft. Area?", "opts": ["80 sq ft", "18 sq ft", "36 sq ft", "800 sq ft"], "ans": 0},
+    {"q": "3 kg = ___ g", "opts": ["3,000", "300", "30", "30,000"], "ans": 0},
+    {"q": "Perimeter of a rectangle 7 by 3?", "opts": ["20", "10", "21", "24"], "ans": 0},
+    {"q": "How many minutes between 2:15 and 3:00?", "opts": ["45", "30", "60", "15"], "ans": 0}
   ],
   "t14-patterns": [
-    {
-      "q": "Add 4, start at 3. Third term?",
-      "opts": [
-        "7",
-        "9",
-        "11",
-        "13"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Multiply by 2, start at 1. Fourth term?",
-      "opts": [
-        "4",
-        "6",
-        "8",
-        "12"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Pattern 5, 10, 15, 20, ___. Next?",
-      "opts": [
-        "21",
-        "25",
-        "30",
-        "35"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Rule y = x + 5. When x = 8, y = ?",
-      "opts": [
-        "3",
-        "13",
-        "40",
-        "58"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Which is a shape pattern rule?",
-      "opts": [
-        "Add 2",
-        "Add a side",
-        "Divide by 3",
-        "Multiply"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Pattern 1, 4, 9, 16, 25. Pattern rule?",
-      "opts": [
-        "Squares",
-        "Odds",
-        "Doubles",
-        "Triples"
-      ],
-      "ans": 0
-    },
-    {
-      "q": "y = 2x. When x = 6, y = ?",
-      "opts": [
-        "4",
-        "8",
-        "12",
-        "16"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Rule: multiply by 5, start at 2. Third term?",
-      "opts": [
-        "10",
-        "25",
-        "50",
-        "125"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "Pattern 40, 32, 24, 16, ___. Next?",
-      "opts": [
-        "0",
-        "8",
-        "10",
-        "12"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "y = 3x + 1. When x = 2, y = ?",
-      "opts": [
-        "6",
-        "7",
-        "8",
-        "10"
-      ],
-      "ans": 1
-    }
+    {"q": "Next in 3, 6, 9, 12, ___?", "opts": ["15", "13", "18", "10"], "ans": 0},
+    {"q": "Pattern rule for 5, 10, 15, 20:", "opts": ["add 5", "add 10", "multiply by 2", "subtract 5"], "ans": 0},
+    {"q": "Next in 40, 35, 30, 25, ___?", "opts": ["20", "30", "15", "10"], "ans": 0},
+    {"q": "Rule: add 3. Start at 1. Third term?", "opts": ["7", "4", "6", "10"], "ans": 0},
+    {"q": "Which follows ▲■▲■?", "opts": ["▲", "■", "●", "◇"], "ans": 0},
+    {"q": "Next in 2, 4, 8, 16, ___?", "opts": ["32", "20", "24", "18"], "ans": 0},
+    {"q": "What rule makes 6, 12, 18, 24?", "opts": ["add 6", "add 12", "multiply by 2", "subtract 6"], "ans": 0},
+    {"q": "Missing: 7, 14, ___, 28", "opts": ["21", "20", "22", "24"], "ans": 0},
+    {"q": "Start at 10, add 5. First 4 terms:", "opts": ["10, 15, 20, 25", "10, 5, 15, 25", "15, 20, 25, 30", "10, 20, 30, 40"], "ans": 0},
+    {"q": "Which pattern shows only even numbers?", "opts": ["2, 4, 6, 8", "1, 2, 3, 4", "1, 3, 5, 7", "5, 10, 15, 20"], "ans": 0}
   ],
   "t15-16-angles-shapes": [
-    {
-      "q": "An angle that measures 180° is ___.",
-      "opts": [
-        "acute",
-        "right",
-        "obtuse",
-        "straight"
-      ],
-      "ans": 3
-    },
-    {
-      "q": "A triangle with one 90° angle is ___.",
-      "opts": [
-        "acute",
-        "obtuse",
-        "right",
-        "equilateral"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "An equilateral triangle has ___ lines of symmetry.",
-      "opts": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "ans": 2
-    },
-    {
-      "q": "A quadrilateral with 4 right angles but not all sides equal is ___.",
-      "opts": [
-        "rhombus",
-        "rectangle",
-        "square",
-        "trapezoid"
-      ],
-      "ans": 1
-    },
-    {
-      "q": "Two lines that never meet are ___.",
-      "opts": [
-        "parallel",
-        "perpendicular",
-        "intersecting",
-        "curved"
-      ],
-      "ans": 0
-    }
+    {"q": "A right angle is exactly ___°.", "opts": ["90", "180", "45", "60"], "ans": 0},
+    {"q": "A triangle has ___ sides.", "opts": ["3", "4", "5", "6"], "ans": 0},
+    {"q": "Which shape has 4 equal sides and 4 right angles?", "opts": ["square", "rectangle", "rhombus", "trapezoid"], "ans": 0},
+    {"q": "A straight angle equals ___°.", "opts": ["180", "90", "360", "45"], "ans": 0},
+    {"q": "Two lines that never cross are:", "opts": ["parallel", "perpendicular", "curved", "zigzag"], "ans": 0},
+    {"q": "Perpendicular lines form a ___ angle.", "opts": ["right", "acute", "obtuse", "straight"], "ans": 0},
+    {"q": "A hexagon has ___ sides.", "opts": ["6", "5", "7", "8"], "ans": 0},
+    {"q": "An acute angle measures:", "opts": ["less than 90°", "exactly 90°", "more than 90°", "exactly 180°"], "ans": 0},
+    {"q": "Which is NOT a quadrilateral?", "opts": ["triangle", "square", "rectangle", "trapezoid"], "ans": 0},
+    {"q": "A pentagon has ___ sides.", "opts": ["5", "4", "6", "7"], "ans": 0}
   ]
 };
 
