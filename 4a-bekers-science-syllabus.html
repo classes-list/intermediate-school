@@ -32,6 +32,15 @@ body {
   z-index: 10;
 }
 .print-btn:hover { background: #92400e; }
+.pdf-btn {
+  position: fixed; top: 20px; right: 130px;
+  background: #0f5132; color: #fff; text-decoration: none;
+  padding: 10px 16px; border-radius: 8px;
+  font-size: 14px; font-weight: 700;
+  box-shadow: 0 3px 10px rgba(15,81,50,0.25);
+  z-index: 10;
+}
+.pdf-btn:hover { background: #0a3d24; }
 .syllabus-card {
   background: #fff;
   border-radius: 14px;
@@ -54,51 +63,42 @@ body {
 
 .subject-banner {
   background: linear-gradient(135deg, #0f5132 0%, #14b8a6 100%);
-  color: #fff;
-  border-radius: 10px;
-  padding: 20px 24px;
-  margin-bottom: 24px;
-  text-align: center;
+  color: #fff; border-radius: 10px;
+  padding: 20px 24px; margin-bottom: 24px; text-align: center;
 }
-.subject-banner .eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; opacity: 0.85; margin-bottom: 4px; }
-.subject-banner h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 4px; }
+.subject-banner .eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; opacity: 0.88; margin-bottom: 4px; }
+.subject-banner h2 { font-size: 1.55rem; font-weight: 800; margin-bottom: 4px; color: #fff; }
 .subject-banner .sub { font-size: 0.95rem; opacity: 0.92; }
 
-section { margin-top: 28px; }
-section h2 {
+section { margin-top: 26px; }
+section > h2 {
   color: #0f5132;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 800;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
   border-bottom: 2px solid #FFD100;
   display: flex; align-items: center; gap: 8px;
 }
-section p { color: #2d3748; font-size: 0.98rem; line-height: 1.7; margin-bottom: 12px; }
-section ul { margin: 10px 0 12px 22px; }
-section ul li { padding: 4px 0; color: #2d3748; font-size: 0.95rem; line-height: 1.5; }
-section ul li strong { color: #0f5132; }
-section ol { margin: 10px 0 12px 26px; }
-section ol li { padding: 4px 0; color: #2d3748; font-size: 0.95rem; line-height: 1.5; }
+section p { color: #2d3748; font-size: 0.96rem; line-height: 1.7; margin-bottom: 10px; }
+section ul, section ol { margin: 8px 0 12px 22px; }
+section li { padding: 3px 0; color: #2d3748; font-size: 0.93rem; line-height: 1.6; }
+section li strong { color: #0f5132; }
 
 .welcome-box {
-  background: #f0f4fc;
-  border-left: 4px solid #0f5132;
-  padding: 16px 20px;
-  border-radius: 6px;
-  margin-bottom: 8px;
-}
-.welcome-box p { font-style: italic; color: #2d3748; }
-
-.mission-box {
-  background: #fff8e1;
-  border-left: 4px solid #FFD100;
-  padding: 14px 20px;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  color: #2d3748;
+  background: #f0f4fc; border-left: 4px solid #253a77;
+  padding: 16px 20px; border-radius: 6px; margin-bottom: 12px;
   line-height: 1.6;
 }
+.welcome-box p { font-style: italic; color: #2d3748; margin-bottom: 0; }
+
+.mission-quote {
+  background: #eef2ff; border-left: 4px solid #4c1d95;
+  padding: 14px 18px; border-radius: 8px; margin: 12px 0;
+  font-style: italic; color: #4c1d95;
+  line-height: 1.6;
+}
+.mission-quote p { color: #4c1d95; font-style: italic; margin-bottom: 0; }
 
 .textbooks { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
 .book-card {
@@ -110,17 +110,11 @@ section ol li { padding: 4px 0; color: #2d3748; font-size: 0.95rem; line-height:
 .book-card .book-title { color: #253a77; font-weight: 700; font-size: 0.98rem; }
 .book-card .book-author { color: #7a5f00; font-style: italic; font-size: 0.85rem; margin-top: 3px; }
 
-.grade-desc { color: #64748b; font-size: 0.9rem; font-weight: normal; margin-left: 6px; }
-
 .parent-note {
-  background: #fef3c7;
-  border-left: 4px solid #d97706;
-  padding: 14px 18px;
-  border-radius: 6px;
-  margin-top: 18px;
-  font-size: 0.93rem;
-  color: #78350f;
-  line-height: 1.6;
+  background: #fef3c7; border-left: 4px solid #d97706;
+  padding: 14px 18px; border-radius: 6px;
+  margin-top: 12px; font-size: 0.93rem;
+  color: #78350f; line-height: 1.6;
 }
 .parent-note strong { color: #78350f; }
 
@@ -130,19 +124,32 @@ section ol li { padding: 4px 0; color: #2d3748; font-size: 0.95rem; line-height:
 .dates-table .date-value { color: #444; }
 .dates-table tr:last-child td { border-bottom: none; }
 
+.grade-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.grade-pill {
+  background: #f1f5f9; border-radius: 8px; padding: 8px 12px;
+  font-size: 0.82rem; font-weight: 600; color: #374151;
+  text-align: center; flex: 1 1 120px;
+}
+.grade-pill span { display: block; font-size: 1.3rem; font-weight: 800; color: #0f5132; }
+.grade-pill small { display: block; font-size: 0.72rem; font-weight: 500; color: #64748b; margin-top: 4px; line-height: 1.3; }
+
+.two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.two-col section { margin-top: 0; }
+
 footer {
   margin-top: 32px;
   text-align: center;
   color: #7a5f00;
   font-style: italic;
-  font-size: 0.95rem;
+  font-weight: 700;
+  font-size: 1.05rem;
   padding: 20px 0 10px;
   border-top: 2px solid #e2e8f0;
 }
 
 @media print {
   body { background: #fff; padding: 0; }
-  .back-index-btn, .print-btn { display: none; }
+  .back-index-btn, .print-btn, .pdf-btn { display: none; }
   .syllabus-card { box-shadow: none; border-top: none; padding: 20px; }
   section { page-break-inside: avoid; }
 }
@@ -150,12 +157,14 @@ footer {
   .syllabus-card { padding: 24px 20px; }
   .header-info h1 { font-size: 1.2rem; }
   .subject-banner h2 { font-size: 1.25rem; }
+  .pdf-btn { right: 20px; top: 66px; }
 }
 </style>
 </head>
 <body>
 <a href="4a-bekers-science.html" class="back-index-btn" title="Back to Science Class">&larr; Back to Science Class</a>
-<button onclick="window.print()" class="print-btn" title="Print or save as PDF">🖨️ Print</button>
+<a href="4a-bekers-science-syllabus.pdf" class="pdf-btn" target="_blank" rel="noopener" title="Open printable syllabus PDF">🖨️ Print Syllabus (PDF)</a>
+<button onclick="window.print()" class="print-btn" title="Print this page">🖨️ Print Page</button>
 
 <div class="container">
   <div class="syllabus-card">
@@ -166,8 +175,8 @@ footer {
         <div class="contact">
           <strong>Email:</strong> <a href="mailto:nbekers@starofthesea.org">nbekers@starofthesea.org</a><br>
           <strong>All 4th Grade Teachers:</strong> <a href="mailto:4thgradeteachers@starofthesea.org">4thgradeteachers@starofthesea.org</a><br>
-          <strong>Phone:</strong> 808.734.0208 &middot; <strong>Office Hours:</strong> 2:45pm&ndash;3:15pm (M&ndash;F)<br>
-          <strong>Address:</strong> 4469 Malia Street Honolulu, Hawai&rsquo;i 96821
+          <strong>Phone:</strong> 808-734-0208 &middot; <strong>Office Hours:</strong> 2:45&ndash;3:15 p.m. (M-F) in Room B23<br>
+          <strong>Address:</strong> 4469 Malia Street, Honolulu, Hawai&rsquo;i 96821
         </div>
       </div>
     </div>
@@ -178,52 +187,134 @@ footer {
       <div class="sub">Physical &middot; Life &middot; Earth Sciences</div>
     </div>
 
-    <div class="welcome-box"><p>Welcome to Grade 4 Science. This syllabus is intended for you, the student, to develop a greater understanding of what we will cover, what is expected of you, and what you can expect from me. My hope this year is that students build confidence and mastery through study and hands-on labs and experiments that make the transition to 5th grade Science seamless.</p></div>
-
     <section>
-      <h2>🎯 Course Overview</h2>
-      <p>Students will explore foundational concepts in physical, life, and earth sciences through hands-on experiments, projects, and inquiry-based learning.</p>
-      <p>The 2026-2027 course follows <strong>HMH Into Science Grade 4</strong>, organized around five NGSS-aligned units:</p>
-      <ol><li><strong>Unit 1: Engineering and Technology</strong> &mdash; Students learn how engineers ask questions, define problems, and plan investigations to develop solutions. They discover how technology changes to meet the needs of people and the problems they face.</li><li><strong>Unit 2: Plant and Animal Structure and Function</strong> &mdash; Students explore how plant and animal structures support survival, growth, and reproduction. They develop and use models, then argue from evidence to explain how organisms&#39; senses help them survive.</li><li><strong>Unit 3: Energy and Communication</strong> &mdash; Students explore how waves show that energy is transferred and how energy and information travel through waves. They investigate devices &mdash; from cell phones to satellites &mdash; that enable humans to transmit information across vast distances.</li><li><strong>Unit 4: Shaping Landforms</strong> &mdash; Students explore how landscapes change over time. They use models to examine the factors and processes that transform land, then construct explanations from patterns in their observations.</li><li><strong>Unit 5: Earth&#39;s Features and Resources</strong> &mdash; Students use maps to identify patterns in where natural hazards occur, explore ways to reduce their impact, and learn how technology is changing how we use Earth&#39;s natural resources.</li></ol>
+      <h2>👋 Welcome</h2>
+      <div class="welcome-box">
+        <p>Welcome to Grade 4! I am excited to partner with you this school year. This syllabus provides an outline of what we will learn, classroom expectations, grading policies, and the support you can expect throughout the school year. We will work together to create a class community where every student is encouraged, challenged, and inspired to grow academically and spiritually.</p>
+      </div>
+      <div class="mission-quote">
+        <p><strong>Mary, Star of the Sea School Mission Statement:</strong> Nurture, Unite, Inspire. We are committed to nurturing each child&rsquo;s curiosity, uniting our classroom in respect and collaboration, and inspiring every student to grow in knowledge, faith, and wonder for the world around them.</p>
+      </div>
+      <p><strong>Schoolwide Learning Expectations (SLEs):</strong> Self-Aware, Confident Individuals; Teachable Life-Long Learners; Active Christians; Responsible Citizens.</p>
     </section>
 
-    <section><h2>📚 Textbook</h2><div class="textbooks"><div class="book-card"><div class="book-title">HMH Into Science</div><div class="book-author">Houghton Mifflin Harcourt</div></div></div></section>
+    <section>
+      <h2>🎯 Science Course Overview</h2>
+      <p>Students will build confidence and mastery in <strong>physical, life, and earth science</strong> through hands-on labs, engineering-design challenges, and inquiry-based learning aligned to the <strong>Next Generation Science Standards (NGSS)</strong>.</p>
+      <p>The 2026-2027 course follows <strong>HMH Into Science Grade 4</strong>, organized around five NGSS-aligned units:</p>
+      <ol>
+        <li><strong>Unit 1: Engineering and Technology</strong> &mdash; Students learn how engineers ask questions, define problems, and plan investigations to develop solutions. They discover how technology changes to meet the needs of people and the problems they face.</li>
+        <li><strong>Unit 2: Plant and Animal Structure and Function</strong> &mdash; Students explore how plant and animal structures support survival, growth, and reproduction. They develop and use models, then argue from evidence to explain how organisms&rsquo; senses help them survive.</li>
+        <li><strong>Unit 3: Energy and Communication</strong> &mdash; Students explore how waves show that energy is transferred and how energy and information travel through waves. They investigate devices &mdash; from cell phones to satellites &mdash; that enable humans to transmit information across vast distances.</li>
+        <li><strong>Unit 4: Shaping Landforms</strong> &mdash; Students explore how landscapes change over time. They use models to examine the factors and processes that transform land, then construct explanations from patterns in their observations.</li>
+        <li><strong>Unit 5: Earth&rsquo;s Features and Resources</strong> &mdash; Students use maps to identify patterns in where natural hazards occur, explore ways to reduce their impact, and learn how technology is changing how we use Earth&rsquo;s natural resources.</li>
+      </ol>
+    </section>
 
     <section>
-      <h2>📊 Grading Policy</h2>
-      <ul><li><strong>30% Tests</strong></li><li><strong>20% Quizzes</strong></li><li><strong>15% Homework and Projects</strong></li><li><strong>35% Classwork and Participation</strong></li></ul>
-      <div class="parent-note"><strong>Parents, please note:</strong> You will have access to my electronic grade book via your <strong>Beehively</strong> account, which will be a primary method of communicating your child&rsquo;s academic performance. <em style='color:#c62828;'>It will be assumed that you have seen all grades and missing assignments that are entered in Beehively.</em></div>
+      <h2>📚 Textbook</h2>
+      <div class="textbooks">
+        <div class="book-card">
+          <div class="book-title">HMH Into Science &middot; Grade 4</div>
+          <div class="book-author">Houghton Mifflin Harcourt (NGSS-aligned)</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>📊 Science Grading Policy</h2>
+      <div class="grade-row">
+        <div class="grade-pill"><span>30%</span>Assessments<small>Unit tests &amp; quizzes</small></div>
+        <div class="grade-pill"><span>30%</span>Classwork / Lab Work<small>Daily science notebook &amp; lab activities</small></div>
+        <div class="grade-pill"><span>20%</span>Projects / Investigations<small>Engineering design &amp; hands-on labs</small></div>
+        <div class="grade-pill"><span>10%</span>Homework</div>
+        <div class="grade-pill"><span>10%</span>Participation<small>Discussion, safe lab collaboration</small></div>
+      </div>
+      <div class="parent-note">
+        <strong>Parents, please note:</strong> You will have access to my electronic grade book via your <strong>Beehively</strong> account, which will be the method of communicating your child&rsquo;s academic performance. Beehively will serve as the primary source for monitoring grades, missing assignments, and academic progress throughout the school year.
+      </div>
+    </section>
+
+    <section>
+      <h2>🎒 Required Materials</h2>
+      <p><strong>Students should bring the following materials to Science each day:</strong></p>
+      <ul>
+        <li>Composition notebook (Science Notebook)</li>
+        <li>Erasable pen, pencil, eraser and highlighter</li>
+        <li>Colored pencils</li>
+        <li>School-issued iPad (with access to Google Classroom)</li>
+        <li>School planner</li>
+      </ul>
+      <p style="margin-top:8px"><strong>Supplemental Materials &mdash; Textbook:</strong> HMH Into Science &middot; Grade 4 (NGSS-aligned)</p>
     </section>
 
     <section>
       <h2>📝 Homework Policy</h2>
-      <p>Students are expected to <strong>read 20 minutes every day</strong>. In addition to the reading, other homework will be assigned. Your children&rsquo;s teachers will work together to ensure that the students receive a balanced homework regime aimed to create a positive learning environment that nurtures students&rsquo; intellectual growth. Assignments are expected to be written daily in a student&rsquo;s planner, and available on Google Calendar. Parents are expected to check the student&rsquo;s planners daily, support their child in time management and follow through. Late work will be accepted; however, late assignments will negatively affect students&rsquo; participation grades.</p>
+      <p>As per school policy, students are expected to allocate time for a maximum of <strong>40 minutes of homework per night</strong>. Your child&rsquo;s 4th grade teachers will work together to ensure that the students receive a balanced homework regime aimed to create a positive learning environment that nurtures students&rsquo; intellectual growth. Students are expected to record assignments daily in their school planner. Homework and important reminders will also be posted on Google Classroom for students and families. Parents are expected to check the student&rsquo;s planners daily, support their child in time management and follow through.</p>
+      <p>Late work will be accepted; however, submitting assignments on time is an important part of developing responsibility. Late submissions may affect a student&rsquo;s participation grade.</p>
     </section>
 
     <section>
-      <h2>🎒 Classroom Expectations</h2>
-      <ul><li>Students are expected to come to class prepared and ready to learn.</li><li>Homework should be completed daily and turned in. Should there be a reason that the homework cannot be completed on time, the teacher should be notified in advance and a plan should be made to complete the assignment.</li><li>Students are expected to always try their best and participate in class. Further, they are expected to ask questions, request clarification, and communicate via office hours or email as needed.</li><li>Students are expected to respect themselves, respect others, and respect all property.</li></ul>
-    </section>
-
-    <section>
-      <h2>🎨 Required Materials</h2>
-      <p>Students should be prepared on a daily basis with the following:</p>
-      <ul><li>Science composition book</li><li>HMH Into Science textbook</li><li>Erasable pen, pencil, eraser and highlighter</li><li>Glue stick and scissors</li><li>Sticky notes</li><li>Index cards</li><li>Planner</li></ul>
+      <h2>🧑‍🏫 Classroom Expectations</h2>
+      <ul>
+        <li>Students come to class prepared and ready to learn each day.</li>
+        <li>Homework should be completed on time. If circumstances prevent completion, students should communicate with the teacher in advance so that an appropriate plan can be made.</li>
+        <li>Everyone is encouraged to participate by asking questions, contributing ideas, and seeking clarification from the teacher when needed.</li>
+        <li>We will treat ourselves, one another, and school property with respect and responsibility.</li>
+      </ul>
     </section>
 
     <section>
       <h2>📅 Important Dates &middot; 2026&ndash;2027</h2>
-      <table class="dates-table"><tr><td class="date-name">Orientation</td><td class="date-value">August 12, 2026</td></tr>
-<tr><td class="date-name">Parent-Teacher Conferences</td><td class="date-value">Fall 9/10&ndash;11, 2026 &middot; Spring 2/19/27 (optional)</td></tr>
-<tr><td class="date-name">Q1 Expedition &mdash; Coconut Island</td><td class="date-value">October 2, 2026</td></tr>
-<tr><td class="date-name">Q2 Expedition &mdash; Pearl Harbor &amp; Ice Palace</td><td class="date-value">December 11 (pending) and 14, 2026</td></tr>
-<tr><td class="date-name">Q3 Expedition &mdash; &lsquo;Iolani Palace</td><td class="date-value">March 5, 2027</td></tr>
-<tr><td class="date-name">Q4 Expedition &mdash; Sherwood Forest</td><td class="date-value">June 1, 2027</td></tr>
-<tr><td class="date-name">School Spelling Bee</td><td class="date-value">November 20, 2026</td></tr>
-<tr><td class="date-name">Christmas Performance</td><td class="date-value">December 18, 2026</td></tr>
-<tr><td class="date-name">End-of-Year Awards</td><td class="date-value">June 3, 2027</td></tr>
-</table>
-      <p style="font-size:0.85rem; color:#7a5f00; font-style:italic; margin-top:8px;">(All expedition dates and times subject to change.)</p>
+      <table class="dates-table">
+        <tr><td class="date-name">Parent Orientation Night</td><td class="date-value">August 12, 2026</td></tr>
+        <tr><td class="date-name">Parent-Teacher Conferences</td><td class="date-value">Fall &mdash; Sept. 10&ndash;11, 2026 &middot; Spring &mdash; Feb. 19, 2027 (optional)</td></tr>
+        <tr><td class="date-name">Q1 Expedition &mdash; Coconut Island</td><td class="date-value">October 2, 2026</td></tr>
+        <tr><td class="date-name">Q2 Expedition &mdash; Pearl Harbor (pending)</td><td class="date-value">November 16, 2026</td></tr>
+        <tr><td class="date-name">Q2 Expedition &mdash; Ice Palace</td><td class="date-value">December 14, 2026</td></tr>
+        <tr><td class="date-name">Q3 Expedition &mdash; &lsquo;Iolani Palace</td><td class="date-value">March 5, 2027</td></tr>
+        <tr><td class="date-name">Q4 Expedition &mdash; Sherwood Forest (pending)</td><td class="date-value">June 1, 2027</td></tr>
+        <tr><td class="date-name">School Spelling Bee</td><td class="date-value">November 20, 2026</td></tr>
+        <tr><td class="date-name">Christmas Performance</td><td class="date-value">December 18, 2026</td></tr>
+        <tr><td class="date-name">End-of-Year Awards</td><td class="date-value">June 3, 2027</td></tr>
+      </table>
+      <p style="font-size:0.85rem; color:#7a5f00; font-style:italic; margin-top:8px;">*All expeditions are subject to change at this point in the school year :)</p>
+    </section>
+
+    <div class="two-col">
+      <section>
+        <h2>🎓 Academic Integrity</h2>
+        <p><strong>Teachers</strong> have the responsibility to structure conditions during testing to alleviate the possibility of cheating; specify the types of collaboration that are discouraged and those that are encouraged; and teach students summarization of material and the distinction between summarizing and copying straight from the text.</p>
+        <p><strong>Students</strong> have the responsibility to avoid situations that might contribute to cheating or plagiarizing, avoid unauthorized assistance, and use sources in the prescribed manner outlined by the teacher.</p>
+      </section>
+      <section>
+        <h2>🕘 Absences &amp; Tardiness</h2>
+        <p>Students may remain at home in the case of illness, accident, quarantine, or a death in the family. The teacher will help the student make up for missing assignments after a short absence. When the absence is expected to be prolonged, families must notify the teacher so a plan can be developed for completing missing work.</p>
+        <p>Students are marked <strong>tardy after the 7:45 a.m. bell</strong> rings. Explanatory notes from parents and conferences with parents may be advisable.</p>
+      </section>
+      <section>
+        <h2>🍎 Food &amp; Drink</h2>
+        <ul>
+          <li>Food is prohibited in the classroom unless otherwise specified by the teacher.</li>
+          <li>Drink in the classroom is limited to water in a bottle with a sealed lid.</li>
+          <li>Sharing food is not permitted to ensure adherence to dietary restrictions.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>📱 Technology</h2>
+        <p>To minimize distractions and maximize learning, communication with students during the school day should be limited to emergencies. Student cell phones must remain off and in backpacks for the duration of a school day (this policy also applies to smart watches).</p>
+        <p><strong>Violations:</strong> 1st offense &mdash; Warning; 2nd &mdash; Phone sent to office for pickup from Principal; 3rd &mdash; Phone sent to office and parent notified.</p>
+      </section>
+    </div>
+
+    <section>
+      <h2>📩 Teacher Contact</h2>
+      <p><strong>Mrs. Nicolle Bekers, M.A.</strong> &mdash; Intermediate Team Faculty</p>
+      <p>📧 <a href="mailto:nbekers@starofthesea.org">nbekers@starofthesea.org</a> &mdash; please allow up to 24 hours for a response on school days.</p>
+      <p>📧 4th Grade Team: <a href="mailto:4thgradeteachers@starofthesea.org">4thgradeteachers@starofthesea.org</a></p>
+      <p>📞 Office phone: 808-734-0208</p>
+      <p>🕒 In-person office hours: 2:45&ndash;3:15 p.m. (M-F) in Room B23</p>
+      <p>📍 Mary, Star of the Sea School, 4469 Malia Street, Honolulu, Hawai&rsquo;i 96821</p>
     </section>
 
     <footer>Empowered to Succeed, Guided by Faith &nbsp;❤️!</footer>
