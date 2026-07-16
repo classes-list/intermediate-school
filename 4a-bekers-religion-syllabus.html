@@ -3,188 +3,282 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Religion &mdash; Grade 4 — Course Syllabus · Mrs. Bekers</title>
+<title>Religion &mdash; Grade 4 &mdash; Course Syllabus &middot; Mrs. Bekers</title>
 <style>
-:root { --hero-light: #7c3aed; --hero-dark: #4c1d95; }
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; background: #F1F5F9; color: #1F2937; line-height: 1.55; }
-.topbar { border-bottom: 4px solid #FFD100; background: var(--hero-dark); color: white; padding: 15px 30px; font-size: 18px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-.topbar-left { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
-.topbar-right { font-size: 14px; opacity: 0.9; font-weight: 600; }
-.nav-btn { background: #6b7280; color: white; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 700; transition: all 0.18s; display: inline-block; }
-.nav-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,0.2); }
-.topbar-logos { display: flex; gap: 8px; align-items: center; }
-.logo-circle { width: 44px; height: 44px; border-radius: 50%; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.25); overflow: hidden; display: inline-flex; align-items: center; justify-content: flex-start; flex-shrink: 0; }
-.logo-circle img { display: block; }
-.logo-circle.msos img { height: 100%; width: auto; }
-.logo-circle.nui img { width: 100%; height: 100%; object-fit: cover; }
-.logo-circle.msos { background: #1a2a4a; }
-.wrap { max-width: 1000px; margin: 24px auto; padding: 0 20px 40px; }
-.syl-hero { background: linear-gradient(135deg, var(--hero-light) 0%, var(--hero-dark) 100%); color: white; border-radius: 16px; padding: 28px 32px; margin-bottom: 22px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
-.syl-hero .icon { font-size: 2.4rem; margin-bottom: 8px; }
-.syl-hero h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 6px; color: white; }
-.syl-hero p { opacity: 0.92; font-size: 0.95rem; }
-.syl-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 18px; }
-.syl-card { background: white; border-radius: 12px; padding: 20px 22px; box-shadow: 0 2px 10px rgba(0,0,0,0.07); flex: 1 1 300px; border-top: 4px solid var(--hero-dark); }
-.syl-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--hero-dark); margin-bottom: 10px; }
-.syl-card p { font-size: 0.92rem; color: #374151; line-height: 1.6; margin-bottom: 6px; }
-.syl-card ul { padding-left: 18px; margin: 6px 0 0; }
-.syl-card li { font-size: 0.9rem; color: #374151; margin-bottom: 4px; line-height: 1.55; }
-.syl-card a { color: var(--hero-dark); }
-.syl-grade-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
-.syl-grade-pill { background: #f1f5f9; border-radius: 8px; padding: 8px 12px; font-size: 0.82rem; font-weight: 600; color: #374151; text-align: center; flex: 1 1 110px; }
-.syl-grade-pill span { display: block; font-size: 1.3rem; font-weight: 800; color: var(--hero-dark); }
-.syl-grade-pill small { display: block; font-size: 0.72rem; font-weight: 500; color: #64748b; margin-top: 4px; line-height: 1.35; }
-.syl-quarter { background: #f8fafc; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; border-left: 4px solid var(--hero-dark); }
-.syl-quarter h4 { font-size: 0.95rem; color: var(--hero-dark); margin-bottom: 6px; }
-.syl-quarter ul { margin: 4px 0 0 22px; }
-.syl-quarter li { font-size: 0.88rem; color: #374151; margin-bottom: 3px; }
-footer { text-align: center; margin-top: 30px; padding: 20px; color: #64748b; font-size: 0.85rem; }
-@media (max-width: 800px) { .logo-circle { width: 38px; height: 38px; } .topbar { font-size: 15px; padding: 12px 18px; } }
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #eef2fa 0%, #f8f9fa 100%);
+  color: #253a77; min-height: 100vh; padding: 40px 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.back-index-btn { position: fixed; top: 20px; left: 20px; background: #253a77; color: #fff;
+  text-decoration: none; padding: 10px 16px; border-radius: 8px; font-size: 14px; font-weight: 700;
+  box-shadow: 0 3px 10px rgba(37,58,119,0.25); z-index: 10; }
+.back-index-btn:hover { background: #1a2a4a; }
+.syllabus-card { background: #fff; border-radius: 14px;
+  box-shadow: 0 6px 28px rgba(37,58,119,0.12); padding: 40px 44px; border-top: 6px solid #FFD100; }
+.header-top { display: flex; gap: 24px; align-items: center;
+  border-bottom: 2px solid #e2e8f0; padding-bottom: 22px; margin-bottom: 24px; flex-wrap: wrap; }
+.header-info { flex: 1 1 260px; }
+.header-info h1 { color: #253a77; font-size: 1.5rem; font-weight: 800; margin-bottom: 4px; }
+.header-info .role { color: #7a5f00; font-style: italic; font-size: 0.95rem; margin-bottom: 6px; }
+.header-info .contact { font-size: 0.88rem; line-height: 1.6; color: #444; }
+.header-info .contact strong { color: #253a77; }
+.header-info .contact a { color: #253a77; text-decoration: none; }
+.header-info .contact a:hover { text-decoration: underline; }
+.subject-banner { background: linear-gradient(135deg, #7c2d12 0%, #c2410c 100%);
+  color: #fff; border-radius: 10px; padding: 20px 24px; margin-bottom: 24px; text-align: center; }
+.subject-banner .eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em;
+  font-weight: 700; opacity: 0.88; margin-bottom: 4px; }
+.subject-banner h2 { font-size: 1.55rem; font-weight: 800; margin-bottom: 4px; color: #fff; }
+.subject-banner .sub { font-size: 0.95rem; opacity: 0.92; }
+section { margin-top: 26px; }
+section > h2 { color: #7c2d12; font-size: 1.2rem; font-weight: 800; margin-bottom: 12px;
+  padding-bottom: 6px; border-bottom: 2px solid #FFD100; display: flex; align-items: center; gap: 8px; }
+section p { color: #2d3748; font-size: 0.96rem; line-height: 1.7; margin-bottom: 10px; }
+section ul, section ol { margin: 8px 0 12px 22px; }
+section li { padding: 3px 0; color: #2d3748; font-size: 0.93rem; line-height: 1.6; }
+section li strong { color: #7c2d12; }
+.welcome-box { background: #f0f4fc; border-left: 4px solid #253a77;
+  padding: 16px 20px; border-radius: 6px; margin-bottom: 12px; line-height: 1.6; }
+.welcome-box p { font-style: italic; color: #2d3748; margin-bottom: 0; }
+.mission-quote { background: #eef2ff; border-left: 4px solid #4c1d95;
+  padding: 14px 18px; border-radius: 8px; margin: 12px 0;
+  font-style: italic; color: #4c1d95; line-height: 1.6; }
+.mission-quote p { color: #4c1d95; font-style: italic; margin-bottom: 0; }
+.textbooks { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.book-card { background: #f8fafc; border-left: 3px solid #7c2d12;
+  padding: 12px 16px; border-radius: 6px; }
+.book-card .book-title { color: #253a77; font-weight: 700; font-size: 0.98rem; }
+.book-card .book-author { color: #7a5f00; font-style: italic; font-size: 0.85rem; margin-top: 3px; }
+.parent-note { background: #fef3c7; border-left: 4px solid #d97706;
+  padding: 14px 18px; border-radius: 6px; margin-top: 12px; font-size: 0.93rem;
+  color: #78350f; line-height: 1.6; }
+.parent-note strong { color: #78350f; }
+.dates-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+.dates-table td { padding: 8px 10px; border-bottom: 1px dashed #d8dee9; font-size: 0.93rem; }
+.dates-table .date-name { font-weight: 700; color: #7c2d12; width: 60%; }
+.dates-table .date-value { color: #444; }
+.dates-table tr:last-child td { border-bottom: none; }
+.grade-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.grade-pill { background: #f1f5f9; border-radius: 8px; padding: 8px 12px;
+  font-size: 0.82rem; font-weight: 600; color: #374151; text-align: center; flex: 1 1 120px; }
+.grade-pill span { display: block; font-size: 1.3rem; font-weight: 800; color: #7c2d12; }
+.grade-pill small { display: block; font-size: 0.72rem; font-weight: 500; color: #64748b;
+  margin-top: 4px; line-height: 1.3; }
+.two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.two-col section { margin-top: 0; }
+footer { margin-top: 32px; text-align: center; color: #7a5f00;
+  font-style: italic; font-weight: 700; font-size: 1.05rem;
+  padding: 20px 0 10px; border-top: 2px solid #e2e8f0; }
+@media print {
+  body { background: #fff; padding: 0; }
+  .back-index-btn { display: none; }
+  .syllabus-card { box-shadow: none; border-top: none; padding: 20px; }
+  section { page-break-inside: avoid; }
+}
+@media (max-width: 640px) {
+  .syllabus-card { padding: 24px 20px; }
+  .header-info h1 { font-size: 1.2rem; }
+  .subject-banner h2 { font-size: 1.25rem; }
+}
 </style>
 </head>
 <body>
-<div class="topbar">
-  <div class="topbar-left">
-    <a href="4a-bekers-religion.html" class="nav-btn">← Back to Units</a>
-    <a href="4a-bekers-religion-syllabus.pdf" class="nav-btn" target="_blank" rel="noopener" style="background:#FFD100;color:#1a2a4a;">🖨️ Print Syllabus</a>
-    <div class="topbar-logos">
-      <span class="logo-circle msos" title="Mary, Star of the Sea"><img src="msos-logo.svg" alt="Mary, Star of the Sea Logo"></span>
-      <span class="logo-circle nui" title="Nurture · Unite · Inspire"><img src="nui-logo.png" alt="Nurture-Unite-Inspire Logo"></span>
+<a href="4a-bekers-religion.html" class="back-index-btn" title="Back to Religion Class">&larr; Back to Religion Class</a>
+
+<div class="container">
+  <div class="syllabus-card">
+    <div class="header-top">
+      <div class="header-info">
+        <h1>Nicolle Bekers, M.A.</h1>
+        <div class="role">Intermediate Team Faculty &middot; Grade 4 &middot; SY 2026&ndash;2027</div>
+        <div class="contact">
+          <strong>Email:</strong> <a href="mailto:nbekers@starofthesea.org">nbekers@starofthesea.org</a><br>
+          <strong>All 4th Grade Teachers:</strong> <a href="mailto:4thgradeteachers@starofthesea.org">4thgradeteachers@starofthesea.org</a><br>
+          <strong>Phone:</strong> 808-734-0208 &middot; <strong>Office Hours:</strong> 2:45&ndash;3:15 p.m. (M-F) in Room B23<br>
+          <strong>Address:</strong> 4469 Malia Street, Honolulu, Hawai&rsquo;i 96821
+        </div>
+      </div>
     </div>
-    <span>Course Syllabus</span>
+
+    <div class="subject-banner">
+      <div class="eyebrow">Grade 4 Syllabus &middot; SY 2026&ndash;2027</div>
+      <h2>✝️ Religion</h2>
+      <div class="sub">Scripture &middot; Sacraments &middot; Prayer &middot; Moral Formation</div>
+    </div>
+
+    <section>
+      <h2>👋 Welcome</h2>
+      <div class="welcome-box">
+        <p>Welcome to Grade 4! I am excited to partner with you this school year. This syllabus provides an outline of what we will learn, classroom expectations, grading policies, and the support you can expect throughout the school year. We will work together to create a class community where every student is encouraged, challenged, and inspired to grow academically and spiritually.</p>
+      </div>
+      <div class="mission-quote">
+        <p><strong>Mary, Star of the Sea School Mission Statement:</strong> Nurture, Unite, Inspire. We are committed to nurturing each child&rsquo;s curiosity, uniting our classroom in respect and collaboration, and inspiring every student to grow in knowledge, faith, and wonder for the world around them.</p>
+      </div>
+      <p><strong>Schoolwide Learning Expectations (SLEs):</strong> Self-Aware, Confident Individuals; Teachable Life-Long Learners; Active Christians; Responsible Citizens.</p>
+    </section>
+
+    <section>
+      <h2>🎯 Religion Course Overview</h2>
+      <p>Students will deepen their understanding of <strong>Scripture, Catholic teachings, prayer, and moral decision-making</strong> while growing in their relationship with God. Through daily prayer and reflection, we will actively live out our Schoolwide Learning Expectations by becoming <strong>Active Christians</strong> and <strong>Responsible Citizens</strong>. The Liturgical Calendar (Advent in Q2, Lent in Q3) anchors seasonal reflection and prayer alongside our content units.</p>
+      <p><strong>Standardized testing:</strong> Students take the <strong>STAR</strong> assessment in fall, winter, and spring to track growth. English-language learners take the <strong>WIDA</strong> assessment as required.</p>
+    </section>
+
+    <section>
+      <h2>📚 Textbooks</h2>
+      <div class="textbooks">
+        <div class="book-card"><div class="book-title">Blest Are We Second Edition</div><div class="book-author">Faith in Action</div></div>
+        <div class="book-card"><div class="book-title">The Catholic Children&rsquo;s Bible</div><div class="book-author">Saint Mary&rsquo;s Press</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>📊 Religion Grading Policy</h2>
+      <div class="grade-row">
+        <div class="grade-pill"><span>30%</span>Assessments<small>Oral / written tests and quizzes</small></div>
+        <div class="grade-pill"><span>30%</span>Classwork<small>Day-to-day practice &amp; reflections</small></div>
+        <div class="grade-pill"><span>15%</span>Prayer &amp; Reflection<small>In-class reflections and journals</small></div>
+        <div class="grade-pill"><span>15%</span>Participation / HW<small>Group prayer, open discussion</small></div>
+        <div class="grade-pill"><span>10%</span>Projects &amp; Presentations</div>
+      </div>
+      <div class="parent-note">
+        <strong>Parents, please note:</strong> You will have access to my electronic grade book via your <strong>Beehively</strong> account, which will be the method of communicating your child&rsquo;s academic performance. Beehively will serve as the primary source for monitoring grades, missing assignments, and academic progress throughout the school year.
+      </div>
+      <p style="margin-top:10px"><strong>Parent-teacher conferences:</strong> Formal conferences are held after Q1 and Q3 grades post. Additional conferences may be requested by email anytime.</p>
+    </section>
+
+    <section>
+      <h2>🎒 Required Materials</h2>
+      <p><strong>Students should bring the following materials to Religion each day:</strong></p>
+      <ul>
+        <li>Children&rsquo;s Bible</li>
+        <li>Erasable pen, pencil, eraser and highlighter</li>
+        <li>School-issued iPad (with access to Google Classroom)</li>
+        <li>School planner</li>
+      </ul>
+      <p style="margin-top:8px"><strong>Supplemental Materials &mdash; Textbooks:</strong> Blest Are We Second Edition: Faith in Action &middot; The Catholic Children&rsquo;s Bible</p>
+    </section>
+
+    <section>
+      <h2>🗓 Daily Schedule</h2>
+      <p>Please refer to the MSOS Grade 4 daily bell schedule (a hard copy is included in your first-week folder) for exact times. Specials (P.E., Music, Art, Library, and Chapel) rotate on specific days &mdash; please check the weekly schedule sent home.</p>
+      <p style="font-size:0.9rem;color:#4a5568">Pickup procedures and any late-start / early-release days are in the family handbook and the school calendar.</p>
+    </section>
+
+    <section>
+      <h2>📝 Homework Policy</h2>
+      <p>As per school policy, students are expected to allocate time for a maximum of <strong>40 minutes of homework per night</strong> (MSOS guideline: ~10 minutes per grade). Your child&rsquo;s 4th grade teachers work together to ensure a balanced homework regime. Students record assignments in their planner. Homework and reminders are also posted on Google Classroom.</p>
+      <p>Late work will be accepted; however, submitting on time is important. Late submissions may affect the participation grade.</p>
+      <p><strong>Tips for supporting homework at home:</strong></p>
+      <ul>
+        <li>Set a consistent, quiet study time and place.</li>
+        <li>Read directions together, then step back and let your child try.</li>
+        <li>Ask your child to explain the story or teaching back to you &mdash; teaching cements learning.</li>
+        <li>If a task takes much longer than expected, please note it and email me.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🤝 Classroom Procedures &amp; Behavior Expectations</h2>
+      <ul>
+        <li>Students come to class prepared and ready to learn each day.</li>
+        <li>Homework should be completed on time. If circumstances prevent completion, students should communicate with the teacher in advance so an appropriate plan can be made.</li>
+        <li>Everyone is encouraged to participate by asking questions, contributing ideas, and seeking clarification.</li>
+        <li>We will treat ourselves, one another, and school property with respect and responsibility.</li>
+      </ul>
+      <p style="margin-top:12px"><strong>Positive recognition:</strong> Students earn recognition through verbal praise, positive notes home, sticker/star acknowledgments, and class-wide rewards (extra recess, class read-aloud pick, review-day celebrations).</p>
+      <p><strong>When expectations are not met (supportive, restorative sequence):</strong></p>
+      <ol>
+        <li>Quiet private reminder and reset.</li>
+        <li>Reflection sheet / think-time in class.</li>
+        <li>Loss of a small privilege and a note home.</li>
+        <li>Phone call or email home; if needed, a family meeting with the principal.</li>
+      </ol>
+      <p style="font-size:0.9rem;color:#4a5568">The goal is always to help students re-choose kind, respectful, on-task behavior &mdash; not to punish.</p>
+    </section>
+
+    <section>
+      <h2>👨‍👩‍👧 Room Parent &amp; Parent Volunteers</h2>
+      <p><strong>Ways to help:</strong> chaperoning field trips, class parties (Halloween, Christmas, Valentine's, end-of-year), guest-reading, sharing your job or hobby, and providing occasional classroom supplies.</p>
+      <p><strong>How to sign up:</strong> Please email me if you'd like to help &mdash; I'll connect you with our room parent. <strong>All volunteers must have current safe-environment training on file with the school office</strong> before helping in the classroom or on field trips.</p>
+      <p><strong>Key dates to remember:</strong> Back-to-School Night, Parent-Teacher Conferences (Q1 &amp; Q3), All Saints Prayer Service, Christmas Program, Catholic Schools Week, STEM Fair, Field Day, and end-of-year Awards.</p>
+    </section>
+
+    <section>
+      <h2>🏡 How to Support Your Child at Home</h2>
+      <ul>
+        <li><strong>Routines:</strong> Build a consistent homework/prayer time and a distraction-free spot.</li>
+        <li><strong>Pray together</strong> as a family &mdash; mealtime and bedtime prayers are simple and powerful.</li>
+        <li><strong>Attend Mass together</strong> and talk about the Gospel reading afterward.</li>
+        <li><strong>Independence:</strong> Let your child pack their own backpack and check the assignment sheet.</li>
+        <li><strong>Growth mindset:</strong> Praise effort and strategy (&ldquo;I saw you keep trying&rdquo;) more than just results.</li>
+        <li><strong>Communication:</strong> Check Beehively weekly with your student.</li>
+        <li><strong>Contact me early</strong> if something at home or school is affecting learning.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📅 Important Dates &middot; 2026&ndash;2027</h2>
+      <table class="dates-table">
+        <tr><td class="date-name">Parent Orientation Night</td><td class="date-value">August 12, 2026</td></tr>
+        <tr><td class="date-name">Parent-Teacher Conferences</td><td class="date-value">Fall &mdash; Sept. 10&ndash;11, 2026 &middot; Spring &mdash; Feb. 19, 2027 (optional)</td></tr>
+        <tr><td class="date-name">Q1 Expedition &mdash; Coconut Island</td><td class="date-value">October 2, 2026</td></tr>
+        <tr><td class="date-name">Q2 Expedition &mdash; Pearl Harbor (pending)</td><td class="date-value">November 16, 2026</td></tr>
+        <tr><td class="date-name">Q2 Expedition &mdash; Ice Palace</td><td class="date-value">December 14, 2026</td></tr>
+        <tr><td class="date-name">Q3 Expedition &mdash; &lsquo;Iolani Palace</td><td class="date-value">March 5, 2027</td></tr>
+        <tr><td class="date-name">Q4 Expedition &mdash; Sherwood Forest (pending)</td><td class="date-value">June 1, 2027</td></tr>
+        <tr><td class="date-name">School Spelling Bee</td><td class="date-value">November 20, 2026</td></tr>
+        <tr><td class="date-name">Christmas Performance</td><td class="date-value">December 18, 2026</td></tr>
+        <tr><td class="date-name">End-of-Year Awards</td><td class="date-value">June 3, 2027</td></tr>
+      </table>
+      <p style="font-size:0.85rem; color:#7a5f00; font-style:italic; margin-top:8px;">*All expeditions are subject to change at this point in the school year :)</p>
+    </section>
+
+    <div class="two-col">
+      <section>
+        <h2>🎓 Academic Integrity</h2>
+        <p><strong>Teachers</strong> structure conditions during testing to alleviate the possibility of cheating; specify allowed collaboration; and teach summarization vs. copying.</p>
+        <p><strong>Students</strong> avoid situations that might contribute to cheating or plagiarizing, avoid unauthorized assistance, and use sources in the prescribed manner.</p>
+      </section>
+      <section>
+        <h2>🕘 Absences &amp; Tardiness</h2>
+        <p>Students may remain at home in the case of illness, accident, quarantine, or a death in the family. For prolonged absences, families must notify the teacher so a plan can be developed.</p>
+        <p>Students are marked <strong>tardy after the 7:45 a.m. bell</strong>. Explanatory notes from parents may be advisable.</p>
+      </section>
+      <section>
+        <h2>🍎 Food &amp; Drink</h2>
+        <ul>
+          <li>Food is prohibited in the classroom unless otherwise specified by the teacher.</li>
+          <li>Drink in the classroom is limited to water in a bottle with a sealed lid.</li>
+          <li>Sharing food is not permitted to ensure adherence to dietary restrictions.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>📱 Technology</h2>
+        <p>To minimize distractions and maximize learning, communication with students during the school day should be limited to emergencies. Student cell phones must remain off and in backpacks (this policy also applies to smart watches).</p>
+        <p style="margin-top:6px"><strong>Violations:</strong> 1st &mdash; Warning; 2nd &mdash; Phone sent to office for pickup from Principal; 3rd &mdash; Phone sent to office and parent notified.</p>
+      </section>
+    </div>
+
+    <section>
+      <h2>📩 Teacher Contact</h2>
+      <p><strong>Mrs. Nicolle Bekers, M.A.</strong> &mdash; Intermediate Team Faculty</p>
+      <p>📧 <a href="mailto:nbekers@starofthesea.org">nbekers@starofthesea.org</a> &mdash; please allow up to 24 hours for a response on school days.</p>
+      <p>📧 4th Grade Team: <a href="mailto:4thgradeteachers@starofthesea.org">4thgradeteachers@starofthesea.org</a></p>
+      <p>📞 Office phone: 808-734-0208</p>
+      <p>🕒 In-person office hours: 2:45&ndash;3:15 p.m. (M-F) in Room B23</p>
+      <p>📍 Mary, Star of the Sea School, 4469 Malia Street, Honolulu, Hawai&rsquo;i 96821</p>
+    </section>
+
+    <section>
+      <h2>💛 Final Notes &amp; Parent Acknowledgment</h2>
+      <p>Thank you for partnering with me this year. Your support at home is the single biggest factor in your child&rsquo;s confidence and success in religion. I am grateful for the trust you place in Mary, Star of the Sea and in this classroom.</p>
+      <p><strong>Class website:</strong> <a href="https://starofthesea.org/classes/" target="_blank" rel="noopener">starofthesea.org/classes</a></p>
+      <p><strong>Parent Acknowledgment:</strong> After reviewing this syllabus with your student, please email <a href="mailto:nbekers@starofthesea.org">nbekers@starofthesea.org</a> with the subject line &ldquo;Grade 4 Religion Syllabus Reviewed &mdash; [Student Name]&rdquo; so I know it has reached your family. Mahalo!</p>
+    </section>
+
+    <footer>Empowered to Succeed, Guided by Faith &nbsp;❤️!</footer>
   </div>
-  <div class="topbar-right">Religion &middot; Grade 4</div>
 </div>
-
-<div class="wrap">
-  <div class="syl-hero">
-    <div class="icon">✝️</div>
-    <h2>Religion &mdash; Grade 4 &mdash; Course Syllabus</h2>
-    <p>Mary, Star of the Sea School &middot; Mrs. Nicolle Bekers &middot; SY 2026-2027</p>
-  </div>
-
-  <div class="syl-grid">
-    <div class="syl-card" style="flex:1 1 100%">
-      <h3>📋 Course Description</h3>
-      <p>Students will deepen their understanding of <strong>Scripture, Catholic teachings, prayer, and moral decision-making</strong> while growing in their relationship with God. The Liturgical Calendar (Advent in Q2, Lent in Q3) anchors seasonal reflection and prayer alongside the content units.</p>
-      <p style="margin-top:8px"><strong>Textbook:</strong> <strong>Blest Are We Second Edition:</strong> Faith in Action &middot; <strong>The Catholic Children&rsquo;s Bible</strong></p>
-    </div>
-  </div>
-
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>📊 Grading Policy</h3>
-    <div class="syl-grade-row">
-      
-      <div class="syl-grade-pill"><span>30%</span>Assessments<small>Oral / written tests and quizzes</small></div>
-      <div class="syl-grade-pill"><span>30%</span>Classwork<small>Day-to-day practice &amp; reflections</small></div>
-      <div class="syl-grade-pill"><span>15%</span>Prayer &amp; Reflection<small>In-class reflections and journals</small></div>
-      <div class="syl-grade-pill"><span>15%</span>Participation / HW<small>Group prayer, open discussion</small></div>
-      <div class="syl-grade-pill"><span>10%</span>Projects &amp; Presentations<small></small></div>
-
-    </div>
-  </div>
-
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>📚 Course Outline by Quarter</h3>
-    
-    <div class="syl-quarter"><h4>Q1 &mdash; Scripture: God&rsquo;s Story</h4>
-      <ul><li>Introduction to the Bible &mdash; Old and New Testaments</li><li>Locating passages by book, chapter, verse</li><li>God&rsquo;s covenant with Abraham, Moses, and David</li><li>The Gospels &amp; parables of Jesus</li></ul>
-    </div>
-    <div class="syl-quarter"><h4>Q2 &mdash; The Church &amp; Sacraments &middot; 🕯️ Advent</h4>
-      <ul><li>The seven sacraments (focus: Baptism, Reconciliation, Eucharist)</li><li>Parts of the Mass &amp; roles at Mass</li><li>Liturgical Calendar &mdash; <strong>Advent:</strong> waiting, hope, and preparation for Christmas</li><li>Christmas season traditions</li></ul>
-    </div>
-    <div class="syl-quarter"><h4>Q3 &mdash; Prayer &amp; Moral Decision-Making &middot; ✝️ Lent</h4>
-      <ul><li>Types of prayer: adoration, contrition, thanksgiving, supplication</li><li>The Ten Commandments and the Beatitudes</li><li>Conscience and moral decision-making</li><li>Liturgical Calendar &mdash; <strong>Lent:</strong> prayer, fasting, almsgiving; Stations of the Cross; Holy Week</li></ul>
-    </div>
-    <div class="syl-quarter"><h4>Q4 &mdash; Discipleship &amp; Mission</h4>
-      <ul><li>Corporal and spiritual works of mercy</li><li>Hawaiian saints: St. Damien and St. Marianne</li><li>Vocations &amp; being a witness of God&rsquo;s love</li><li>Class service project reflection</li></ul>
-    </div>
-
-  </div>
-
-
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>📚 Required Materials</h3>
-    <p><strong>Daily:</strong></p>
-    <ul>
-      
-      <li>Children&rsquo;s Bible</li>
-      <li>Erasable pen, pencil, eraser and highlighter</li>
-      <li>School-issued iPad (with Google Classroom access)</li>
-      <li>School planner</li>
-
-    </ul>
-    <p style="margin-top:8px"><strong>Supplemental Textbook:</strong> <strong>Blest Are We Second Edition:</strong> Faith in Action &middot; <strong>The Catholic Children&rsquo;s Bible</strong></p>
-  </div>
-
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>🏠 Homework Policy</h3>
-    <p>Per school policy, students are expected to allocate up to <strong>40 minutes of homework per night</strong>. The 4th grade teachers coordinate to balance homework across subjects. Students record assignments in their planner and check Google Classroom for reminders. Parents are expected to check planners daily and support time management.</p>
-    <p style="margin-top:8px">Late work is accepted, but submitting on time is important for developing responsibility. Late submissions may affect the participation grade.</p>
-  </div>
-
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>🧑‍🏫 Classroom Expectations</h3>
-    <ul>
-      <li>Come to class prepared and ready to learn each day.</li>
-      <li>Complete homework on time; communicate in advance if circumstances prevent completion.</li>
-      <li>Participate by asking questions, contributing ideas, and seeking clarification.</li>
-      <li>Treat ourselves, one another, and school property with respect and responsibility.</li>
-    </ul>
-  </div>
-
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>📅 Important Dates (SY 2026-2027)</h3>
-    <ul>
-      <li><strong>Parent Orientation Night:</strong> August 12, 2026</li>
-      <li><strong>Parent-Teacher Conferences:</strong> Fall &mdash; Sept. 10–11, 2026 &middot; Spring &mdash; Feb. 19, 2027 (optional)</li>
-      <li><strong>Expeditions:</strong> Q1 Coconut Island (10/2), Q2 Pearl Harbor (11/16 pending) &amp; Ice Palace (12/14), Q3 ʻIolani Palace (3/5), Q4 Sherwood Forest (6/1)</li>
-      <li><strong>School Spelling Bee:</strong> Nov. 20, 2026</li>
-      <li><strong>Christmas Performance:</strong> Dec. 18, 2026</li>
-      <li><strong>End-of-Year Awards:</strong> June 3, 2027</li>
-    </ul>
-    <p style="margin-top:6px;font-size:0.85rem;color:#6b7280;font-style:italic;">*All expeditions are subject to change.</p>
-  </div>
-
-  <div class="syl-grid" style="margin-bottom:18px">
-    <div class="syl-card" style="flex:1 1 300px;">
-      <h3>🎓 Academic Integrity</h3>
-      <p><strong>Teachers</strong> will structure testing to alleviate the possibility of cheating, specify allowed collaboration, and teach the difference between summarizing and copying.</p>
-      <p style="margin-top:6px"><strong>Students</strong> avoid situations that contribute to cheating or plagiarizing, avoid unauthorized assistance, and use sources as directed.</p>
-    </div>
-    <div class="syl-card" style="flex:1 1 300px;">
-      <h3>🕘 Absences &amp; Tardiness</h3>
-      <p>Students may stay home for illness, accident, quarantine, or a death in the family. For extended absences, families notify the teacher so a make-up plan can be arranged. Students are tardy after the 7:45 a.m. bell.</p>
-    </div>
-    <div class="syl-card" style="flex:1 1 300px;">
-      <h3>🍎 Food &amp; Drink</h3>
-      <p>Food is prohibited unless specified by the teacher. Only sealed water bottles allowed. Sharing food is not permitted (dietary restrictions).</p>
-    </div>
-    <div class="syl-card" style="flex:1 1 300px;">
-      <h3>📱 Technology</h3>
-      <p>Cell phones and smart watches must be off and in backpacks during the school day. 1st offense = warning; 2nd = phone to office; 3rd = parent notified.</p>
-    </div>
-  </div>
-
-  <div class="syl-card" style="margin-bottom:18px;background:#fffbea;border-top-color:#FFD100;">
-    <h3>📩 Teacher Contact</h3>
-    <p><strong>Nicolle Bekers, M.A.</strong> &mdash; Intermediate Team Faculty</p>
-    <p>📧 <a href="mailto:nbekers@starofthesea.org">nbekers@starofthesea.org</a> (please allow up to 24 hours for a response on school days)</p>
-    <p>📧 4th Grade Team: <a href="mailto:4thgradeteachers@starofthesea.org">4thgradeteachers@starofthesea.org</a></p>
-    <p>📞 Office phone: 808-734-0208</p>
-    <p>🕒 Office hours: 2:45–3:15 p.m. (M-F) in Room B23</p>
-  </div>
-
-  <div class="syl-card" style="background:#eef2ff;border-top-color:#4c1d95;">
-    <h3 style="color:#4c1d95;">💻 Beehively Gradebook</h3>
-    <p>Parents access the electronic gradebook via <strong>Beehively</strong>. Beehively is the primary source for monitoring grades, missing assignments, and academic progress throughout the school year.</p>
-  </div>
-
-
-</div>
-<footer>Mary, Star of the Sea School &middot; Mrs. Bekers &middot; Religion &middot; Grade 4 &middot; SY 2026-2027</footer>
 </body>
 </html>
