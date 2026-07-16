@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Social Studies &mdash; Grade 4 — Course Syllabus · Ms. Glavan</title>
+<title>Social Studies 4 &mdash; Course Syllabus &middot; Ms. Glavan</title>
 <style>
-:root { --hero-light: #d97706; --hero-dark: #b45309; }
-
+:root { --hero-light: #d97706; --hero-dark: #7c2d12; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; background: #F1F5F9; color: #1F2937; line-height: 1.55; }
 .topbar { border-bottom: 4px solid #FFD100; background: var(--hero-dark); color: white; padding: 15px 30px; font-size: 18px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
 .topbar-left { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
 .topbar-right { font-size: 14px; opacity: 0.9; font-weight: 600; }
-.nav-btn { background: #6b7280; color: white; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 700; transition: all 0.18s; display: inline-block; }
+.nav-btn { background: #6b7280; color: white; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 700; transition: all 0.18s; display: inline-block; border: none; cursor: pointer; }
 .nav-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,0.2); }
 .topbar-logos { display: flex; gap: 8px; align-items: center; }
 .logo-circle { width: 44px; height: 44px; border-radius: 50%; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.25); overflow: hidden; display: inline-flex; align-items: center; justify-content: flex-start; flex-shrink: 0; }
@@ -29,30 +28,33 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial
 .syl-card { background: white; border-radius: 12px; padding: 20px 22px; box-shadow: 0 2px 10px rgba(0,0,0,0.07); flex: 1 1 300px; border-top: 4px solid var(--hero-dark); }
 .syl-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--hero-dark); margin-bottom: 10px; }
 .syl-card p { font-size: 0.92rem; color: #374151; line-height: 1.6; margin-bottom: 6px; }
-.syl-card ul { padding-left: 18px; margin: 6px 0 0; }
+.syl-card ul, .syl-card ol { padding-left: 22px; margin: 6px 0 0; }
 .syl-card li { font-size: 0.9rem; color: #374151; margin-bottom: 4px; line-height: 1.55; }
 .syl-card a { color: var(--hero-dark); }
 .syl-grade-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
-.syl-grade-pill { background: #f1f5f9; border-radius: 8px; padding: 8px 12px; font-size: 0.82rem; font-weight: 600; color: #374151; text-align: center; flex: 1 1 110px; }
+.syl-grade-pill { background: #f1f5f9; border-radius: 8px; padding: 8px 12px; font-size: 0.82rem; font-weight: 600; color: #374151; text-align: center; flex: 1 1 130px; }
 .syl-grade-pill span { display: block; font-size: 1.3rem; font-weight: 800; color: var(--hero-dark); }
 .syl-grade-pill small { display: block; font-size: 0.72rem; font-weight: 500; color: #64748b; margin-top: 4px; line-height: 1.35; }
-.syl-quarter { background: #f8fafc; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; border-left: 4px solid var(--hero-dark); }
-.syl-quarter h4 { font-size: 0.95rem; color: var(--hero-dark); margin-bottom: 6px; }
-.syl-quarter ul { margin: 4px 0 0 22px; }
-.syl-quarter li { font-size: 0.88rem; color: #374151; margin-bottom: 3px; }
+.callout { background: #fff8e1; border-left: 4px solid #FFD100; padding: 14px 18px; border-radius: 8px; margin: 12px 0; font-size: 0.92rem; color: #4a5568; }
+.mission-quote { background: #eef2ff; border-left: 4px solid #4c1d95; padding: 14px 18px; border-radius: 8px; margin: 12px 0; font-style: italic; color: #4c1d95; }
 footer { text-align: center; margin-top: 30px; padding: 20px; color: #64748b; font-size: 0.85rem; }
 @media (max-width: 800px) { .logo-circle { width: 38px; height: 38px; } .topbar { font-size: 15px; padding: 12px 18px; } }
-
+@media print {
+  body { background: #fff; }
+  .topbar, .no-print { display: none !important; }
+  .wrap { margin: 0; padding: 0 12px; max-width: 100%; }
+  .syl-card, .callout, .mission-quote { break-inside: avoid; box-shadow: none; }
+}
 </style>
 </head>
 <body>
-<div class="topbar">
+<div class="topbar no-print">
   <div class="topbar-left">
-    <a href="msos-social-studies-4.html" class="nav-btn">← Back to Units</a>
-    <a href="msos-social-studies-4-syllabus.pdf" class="nav-btn" target="_blank" rel="noopener" style="background:#FFD100;color:#1a2a4a;">🖨️ Print Syllabus</a>
+    <a href="msos-social-studies-4.html" class="nav-btn">&larr; Back to Units</a>
+    <button onclick="window.print()" class="nav-btn" style="background:#FFD100;color:#1a2a4a;">🖨️ Print Syllabus</button>
     <div class="topbar-logos">
       <span class="logo-circle msos" title="Mary, Star of the Sea"><img src="msos-logo.svg" alt="Mary, Star of the Sea Logo"></span>
-      <span class="logo-circle nui" title="Nurture · Unite · Inspire"><img src="nui-logo.png" alt="Nurture-Unite-Inspire Logo"></span>
+      <span class="logo-circle nui" title="Nurture &middot; Unite &middot; Inspire"><img src="nui-logo.png" alt="Nurture-Unite-Inspire Logo"></span>
     </div>
     <span>Course Syllabus</span>
   </div>
@@ -62,109 +64,116 @@ footer { text-align: center; margin-top: 30px; padding: 20px; color: #64748b; fo
 <div class="wrap">
   <div class="syl-hero">
     <div class="icon">🌍</div>
-    <h2>Social Studies &mdash; Grade 4 &mdash; Course Syllabus</h2>
+    <h2>Social Studies 4 &mdash; Course Syllabus</h2>
     <p>Mary, Star of the Sea School &middot; Ms. Lori Glavan &middot; SY 2026-2027</p>
   </div>
 
-  <div class="syl-grid">
-    <div class="syl-card" style="flex:1 1 100%">
-      <h3>📋 Course Description</h3>
-      <p>Students explore the <strong>history and geography of the five U.S. Regions</strong> &mdash; Northeast, Southeast, Midwest, Southwest, and West &mdash; through hands-on investigations, collaborative projects, and inquiry-based learning. Students also deepen their understanding of Hawaiian culture through our <strong>Hawaiiana</strong> unit.</p>
-      <p style="margin-top:8px"><strong>Textbook:</strong> <strong>myWorld Interactive</strong> (Savvas / Pearson)</p>
+  <div class="syl-card" style="margin-bottom:18px">
+    <h3>👋 Welcome</h3>
+    <p>Welcome to Grade 4! I am excited to partner with you this school year. This syllabus provides an outline of what we will learn, classroom expectations, grading policies, and the support you can expect throughout the school year. We will work together to create a class community where every student is encouraged, challenged, and inspired to grow academically and spiritually.</p>
+    <div class="mission-quote">
+      <strong>Mary, Star of the Sea School Mission Statement:</strong> Nurture, Unite, Inspire. We are committed to nurturing each child&rsquo;s curiosity, uniting our classroom in respect and collaboration, and inspiring every student to grow in knowledge, faith, and wonder for the world around them.
     </div>
   </div>
 
   <div class="syl-card" style="margin-bottom:18px">
-    <h3>📊 Grading Policy</h3>
+    <h3>📋 Social Studies Course Overview</h3>
+    <p>Students will explore the history and geography of the <strong>five U.S. Regions</strong> through hands-on investigations, collaborative projects, and inquiry-based learning. Students will also deepen their understanding of Hawaiian culture through our <strong>Hawaiiana unit</strong>. We nurture academic curiosity by encouraging students to think like historians and geographers, asking questions about the world around them.</p>
+    <p style="margin-top:8px"><strong>Textbook:</strong> myWorld Interactive</p>
+  </div>
+
+  <div class="syl-card" style="margin-bottom:18px">
+    <h3>📊 Social Studies Grading Policy</h3>
     <div class="syl-grade-row">
-      
-      <div class="syl-grade-pill"><span>30%</span>Classwork / Participation<small></small></div>
+      <div class="syl-grade-pill"><span>30%</span>Classwork / Participation</div>
       <div class="syl-grade-pill"><span>25%</span>Assessments<small>Oral / written unit tests</small></div>
       <div class="syl-grade-pill"><span>25%</span>Quizzes<small>Weekly check-ins</small></div>
-      <div class="syl-grade-pill"><span>20%</span>Homework / Projects<small></small></div>
-
+      <div class="syl-grade-pill"><span>20%</span>Homework / Projects</div>
+    </div>
+    <div class="callout" style="margin-top:12px">
+      <strong>Parents, please note:</strong> You will have access to my electronic grade book, via your Beehively account, which will be the method of communicating your child&rsquo;s academic performance. Beehively will serve as the primary source for monitoring grades, missing assignments, and academic progress throughout the school year.
     </div>
   </div>
 
   <div class="syl-card" style="margin-bottom:18px">
-    <h3>📚 Course Outline by Quarter</h3>
-    
-    <div class="syl-quarter"><h4>Q1 &mdash; U.S. Regions Overview + Northeast Region</h4>
-      <ul><li>The five U.S. regions &mdash; map skills and vocabulary</li><li>Landforms, climate, and resources of the Northeast</li><li>The 13 Colonies &amp; early American history</li><li>New England vs. Mid-Atlantic culture and industries</li></ul>
-    </div>
-    <div class="syl-quarter"><h4>Q2 &mdash; Southeast &amp; Midwest Regions</h4>
-      <ul><li>Southeast: Mississippi &amp; Ohio Rivers; Everglades; agriculture &amp; culture</li><li>Roots of the Civil War (age-appropriate)</li><li>Midwest: Great Plains, Great Lakes, farming and inventions</li><li>Regional food, music, and traditions</li></ul>
-    </div>
-    <div class="syl-quarter"><h4>Q3 &mdash; Southwest &amp; West Regions</h4>
-      <ul><li>Southwest: Grand Canyon, Rio Grande, deserts; Native peoples</li><li>Spanish colonial history in the Southwest</li><li>West: Rocky Mountains, Pacific Coast, national parks</li><li>Westward expansion &amp; the modern West</li></ul>
-    </div>
-    <div class="syl-quarter"><h4>Q4 &mdash; Hawaiiana</h4>
-      <ul><li>Polynesian voyaging and settlement</li><li>Hawaiian ali&lsquo;i, kapu system, and the kingdom era</li><li>Kamehameha I unifies the islands</li><li>Annexation and statehood; ʻōlelo Hawaiʻi vocabulary; hula, mele, mo&lsquo;olelo</li></ul>
-    </div>
-
-  </div>
-
-
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>📚 Required Materials</h3>
-    <p><strong>Daily:</strong></p>
+    <h3>🎒 Required Materials</h3>
+    <p><strong>Students should bring the following materials to Social Studies each day:</strong></p>
     <ul>
-      
-      <li>Spiral notebook (Math &amp; Social Studies)</li>
-      <li>Erasable pen, pencil, eraser and highlighter</li>
-      <li>School-issued iPad (with Google Classroom access)</li>
+      <li>Spiral notebook (used for Math and Social Studies)</li>
+      <li>Erasable pen, pencil, eraser, and highlighter</li>
+      <li>School-issued iPad (with access to Google Classroom)</li>
       <li>School planner</li>
-
     </ul>
-    <p style="margin-top:8px"><strong>Supplemental Textbook:</strong> <strong>myWorld Interactive</strong> (Savvas / Pearson)</p>
+    <p style="margin-top:8px"><strong>Supplemental Materials &mdash; Textbook:</strong> myWorld Interactive</p>
   </div>
 
   <div class="syl-card" style="margin-bottom:18px">
     <h3>🏠 Homework Policy</h3>
-    <p>Per school policy, students are expected to allocate up to <strong>40 minutes of homework per night</strong>. The 4th grade teachers coordinate to balance homework across subjects. Students record assignments in their planner and check Google Classroom for reminders. Parents are expected to check planners daily and support time management.</p>
-    <p style="margin-top:8px">Late work is accepted, but submitting on time is important for developing responsibility. Late submissions may affect the participation grade.</p>
+    <p>As per school policy, students are expected to allocate time for a maximum of <strong>40 minutes of homework per night</strong>. Your child&rsquo;s 4th grade teachers will work together to ensure that the students receive a balanced homework regime aimed to create a positive learning environment that nurtures students&rsquo; intellectual growth. Students are expected to record assignments daily in their school planner. Homework and important reminders will also be posted on Google Classroom for students and families. Parents are expected to check the student&rsquo;s planners daily, support their child in time management and follow through.</p>
+    <p style="margin-top:8px">Late work will be accepted; however, submitting assignments on time is an important part of developing responsibility. Late submissions may affect a student&rsquo;s participation grade.</p>
   </div>
 
   <div class="syl-card" style="margin-bottom:18px">
     <h3>🧑‍🏫 Classroom Expectations</h3>
     <ul>
-      <li>Come to class prepared and ready to learn each day.</li>
-      <li>Complete homework on time; communicate in advance if circumstances prevent completion.</li>
-      <li>Participate by asking questions, contributing ideas, and seeking clarification.</li>
-      <li>Treat ourselves, one another, and school property with respect and responsibility.</li>
+      <li>Students come to class prepared and ready to learn each day.</li>
+      <li>Homework should be completed on time. If circumstances prevent completion, students should communicate with the teacher in advance so that an appropriate plan can be made.</li>
+      <li>Everyone is encouraged to participate by asking questions, contributing ideas, and seeking clarification from the teacher when needed.</li>
+      <li>We will treat ourselves, one another, and school property with respect and responsibility.</li>
     </ul>
+    <p style="margin-top:12px"><strong>Class Incentives:</strong> GOTCHA Tickets, &ldquo;Glow from Glavan&rdquo; slips, class community rewards.</p>
+    <p style="margin-top:6px"><strong>Class Consequences:</strong></p>
+    <ol>
+      <li>Verbal reminder</li>
+      <li>One-on-one &ldquo;Think Paper&rdquo; reflection</li>
+      <li>Parent contact</li>
+    </ol>
   </div>
 
   <div class="syl-card" style="margin-bottom:18px">
     <h3>📅 Important Dates (SY 2026-2027)</h3>
     <ul>
       <li><strong>Parent Orientation Night:</strong> August 12, 2026</li>
-      <li><strong>Parent-Teacher Conferences:</strong> Fall &mdash; Sept. 10–11, 2026 &middot; Spring &mdash; Feb. 19, 2027 (optional)</li>
-      <li><strong>Expeditions:</strong> Q1 Coconut Island (10/2), Q2 Pearl Harbor (11/16 pending) &amp; Ice Palace (12/14), Q3 ʻIolani Palace (3/5), Q4 Sherwood Forest (6/1)</li>
-      <li><strong>School Spelling Bee:</strong> Nov. 20, 2026</li>
-      <li><strong>Christmas Performance:</strong> Dec. 18, 2026</li>
+      <li><strong>Parent-Teacher Conferences:</strong> Fall &mdash; September 10&ndash;11, 2026 &middot; Spring &mdash; February 19, 2027 (optional)</li>
+      <li><strong>Expeditions:</strong>
+        <ul>
+          <li>Q1 &mdash; Coconut Island: October 2, 2026</li>
+          <li>Q2 &mdash; Pearl Harbor: November 16, 2026 (pending)</li>
+          <li>Q2 &mdash; Ice Palace: December 14, 2026</li>
+          <li>Q3 &mdash; &lsquo;Iolani Palace: March 5, 2027</li>
+          <li>Q4 &mdash; Sherwood Forest: June 1, 2027</li>
+        </ul>
+      </li>
+      <li><strong>School Spelling Bee:</strong> November 20, 2026</li>
+      <li><strong>Christmas Performance:</strong> December 18, 2026</li>
       <li><strong>End-of-Year Awards:</strong> June 3, 2027</li>
     </ul>
-    <p style="margin-top:6px;font-size:0.85rem;color:#6b7280;font-style:italic;">*All expeditions are subject to change.</p>
+    <p style="margin-top:6px;font-size:0.85rem;color:#6b7280;font-style:italic;">*All expeditions are subject to change at this point in the school year :)</p>
   </div>
 
   <div class="syl-grid" style="margin-bottom:18px">
     <div class="syl-card" style="flex:1 1 300px;">
       <h3>🎓 Academic Integrity</h3>
-      <p><strong>Teachers</strong> will structure testing to alleviate the possibility of cheating, specify allowed collaboration, and teach the difference between summarizing and copying.</p>
-      <p style="margin-top:6px"><strong>Students</strong> avoid situations that contribute to cheating or plagiarizing, avoid unauthorized assistance, and use sources as directed.</p>
+      <p><strong>Teachers</strong> have the responsibility to structure conditions during testing to alleviate the possibility of cheating; specify the types of collaboration that are discouraged and those that are encouraged; and teach students summarization of material and the distinction between summarizing and copying straight from the text.</p>
+      <p style="margin-top:6px"><strong>Students</strong> have the responsibility to avoid situations that might contribute to cheating or plagiarizing, avoid unauthorized assistance, and use sources in the prescribed manner outlined by the teacher.</p>
     </div>
     <div class="syl-card" style="flex:1 1 300px;">
       <h3>🕘 Absences &amp; Tardiness</h3>
-      <p>Students may stay home for illness, accident, quarantine, or a death in the family. For extended absences, families notify the teacher so a make-up plan can be arranged. Students are tardy after the 7:45 a.m. bell.</p>
+      <p>Students may remain at home in the case of illness, accident, quarantine, or a death in the family. The teacher will help the student make up for missing assignments after a short absence. When the absence is expected to be prolonged, families must notify the teacher so a plan can be developed for completing missing work.</p>
+      <p style="margin-top:6px">Students are marked tardy after the 7:45 a.m. bell rings. Explanatory notes from parents and conferences with parents may be advisable.</p>
     </div>
     <div class="syl-card" style="flex:1 1 300px;">
       <h3>🍎 Food &amp; Drink</h3>
-      <p>Food is prohibited unless specified by the teacher. Only sealed water bottles allowed. Sharing food is not permitted (dietary restrictions).</p>
+      <ul>
+        <li>Food is prohibited in the classroom unless otherwise specified by the teacher.</li>
+        <li>Drink in the classroom is limited to water in a bottle with a sealed lid.</li>
+        <li>Sharing food is not permitted to ensure adherence to dietary restrictions.</li>
+      </ul>
     </div>
     <div class="syl-card" style="flex:1 1 300px;">
       <h3>📱 Technology</h3>
-      <p>Cell phones and smart watches must be off and in backpacks during the school day. 1st offense = warning; 2nd = phone to office; 3rd = parent notified.</p>
+      <p>To minimize distractions and maximize learning, communication with students during the school day should be limited to emergencies. Student cell phones must remain off and in backpacks for the duration of a school day (this policy also applies to smart watches).</p>
+      <p style="margin-top:6px"><strong>Violations:</strong> 1st offense &mdash; Warning; 2nd &mdash; Phone sent to office for pickup from Principal; 3rd &mdash; Phone sent to office and parent notified.</p>
     </div>
   </div>
 
@@ -174,7 +183,8 @@ footer { text-align: center; margin-top: 30px; padding: 20px; color: #64748b; fo
     <p>📧 <a href="mailto:lglavan@starofthesea.org">lglavan@starofthesea.org</a> (please allow up to 24 hours for a response on school days)</p>
     <p>📧 4th Grade Team: <a href="mailto:4thgradeteachers@starofthesea.org">4thgradeteachers@starofthesea.org</a></p>
     <p>📞 Office phone: 808-734-0208</p>
-    <p>🕒 Office hours: 2:45–3:15 p.m. (M-F) in Room B24</p>
+    <p>🕒 In-person office hours: 2:45&ndash;3:15 p.m. (M-F) in Room B24</p>
+    <p style="margin-top:6px">📍 Mary, Star of the Sea School, 4469 Malia Street, Honolulu, Hawai&lsquo;i 96821</p>
   </div>
 
   <div class="syl-card" style="background:#eef2ff;border-top-color:#4c1d95;">
@@ -182,8 +192,13 @@ footer { text-align: center; margin-top: 30px; padding: 20px; color: #64748b; fo
     <p>Parents access the electronic gradebook via <strong>Beehively</strong>. Beehively is the primary source for monitoring grades, missing assignments, and academic progress throughout the school year.</p>
   </div>
 
-
+  <p style="text-align:center;margin-top:24px;font-size:1.1rem;color:#4c1d95;font-weight:700;">Empowered to Succeed, Guided by Faith ❤!</p>
 </div>
 <footer>Mary, Star of the Sea School &middot; Ms. Glavan &middot; Social Studies &middot; Grade 4 &middot; SY 2026-2027</footer>
+<script>
+  if (window.location.search.includes('print=1')) {
+    window.addEventListener('load', function() { setTimeout(function(){ window.print(); }, 500); });
+  }
+</script>
 </body>
 </html>
