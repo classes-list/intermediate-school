@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade 5 Religion &middot; Curriculum Map 2025–2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background:#F1F5F9; color:#1F2937; line-height:1.5; padding:20px; }
+    .container { max-width: 1400px; margin: 0 auto; background:#fff; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); overflow:hidden; }
+    .header { background:linear-gradient(135deg,#7c2d12 0%,#a15c1d 100%); color:#fff; padding:24px 28px; position:relative; }
+    .header h1 { font-size:1.55rem; margin-bottom:6px; }
+    .header .sub { font-size:0.95rem; opacity:0.92; }
+    .header .back-btn { position:absolute; top:20px; right:24px; background:rgba(255,255,255,0.18); color:#fff; border:1.5px solid rgba(255,255,255,0.4); padding:8px 16px; border-radius:6px; text-decoration:none; font-weight:600; font-size:0.85rem; cursor:pointer; }
+    .header .back-btn:hover { background:rgba(255,255,255,0.28); }
+
+    .tabs { display:flex; background:#F8FAFC; border-bottom:2px solid #E2E8F0; padding:0 28px; }
+    .tab { background:transparent; border:none; padding:14px 22px; font-size:0.95rem; font-weight:600; color:#64748B; cursor:pointer; border-bottom:3px solid transparent; transition:all 0.15s; }
+    .tab:hover { color:#7c2d12; }
+    .tab.active { color:#7c2d12; border-bottom-color:#7c2d12; }
+    .panel { display:none; padding:24px 28px; }
+    .panel.active { display:block; }
+    .panel h2 { font-size:1.2rem; color:#7c2d12; margin-bottom:14px; }
+    .panel .note { font-size:0.85rem; color:#64748B; margin-bottom:14px; font-style:italic; }
+
+    .map-table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+    .map-table th { background:#7c2d12; color:#fff; padding:10px 12px; text-align:left; font-weight:600; border:1px solid #7c2d12; }
+    .map-table td { padding:12px; border:1px solid #CBD5E1; vertical-align:top; }
+    .map-table .unit-name { font-weight:700; color:#7c2d12; width:280px; }
+    .map-table .pacing { font-weight:600; color:#5B21B6; width:170px; white-space:nowrap; }
+
+    .gantt-wrap { overflow-x:auto; }
+    .gantt-table { border-collapse:collapse; font-size:0.72rem; }
+    .gantt-table th, .gantt-table td { border:1px solid #CBD5E1; padding:4px 6px; }
+    .gantt-table .unit-cell { width:280px; font-weight:600; color:#7c2d12; background:#F8FAFC; padding:8px; font-size:0.82rem; }
+    .gantt-table .weeks-cell { width:44px; text-align:center; font-weight:600; background:#F8FAFC; font-size:0.85rem; }
+    .gantt-table .week-th { width:26px; text-align:center; background:#7c2d12; color:#fff; font-weight:600; font-size:0.68rem; }
+    .gantt-table .qtr-banner { padding:8px; text-align:center; font-weight:700; font-size:0.82rem; }
+    .gantt-table .qtr-1 { background:#BDD7EE; color:#1F4E78; }
+    .gantt-table .qtr-2 { background:#C6E0B4; color:#365B27; }
+    .gantt-table .qtr-3 { background:#FFE699; color:#7A5F00; }
+    .gantt-table .qtr-4 { background:#F4B084; color:#7B3D14; }
+    .gantt-table .gantt-cell { width:26px; height:30px; background:#fff; }
+    .gantt-table .corner-cell { background:#F1F5F9; }
+
+    .notes-box { margin-top:22px; padding:16px 20px; background:#FFF8E1; border-left:4px solid #FFD100; border-radius:6px; }
+    .notes-box h3 { font-size:1rem; color:#7A5F00; margin-bottom:10px; }
+    .notes-box ul { list-style:none; padding:0; }
+    .notes-box li { padding:4px 0; font-size:0.9rem; color:#4A4A4A; }
+    .notes-box li::before { content:"📌  "; }
+
+    @media (max-width:768px) {
+      .header h1 { font-size:1.2rem; }
+      .map-table { font-size:0.78rem; }
+      .tab { padding:10px 14px; font-size:0.85rem; }
+      .header .back-btn { position:static; margin-top:12px; display:inline-block; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>✝️ Grade 5 Religion &middot; Curriculum Map 2025–2026</h1>
+      <div class="sub">Mary, Star of the Sea School &middot; Mr. John Terry &middot; 5th Grade B</div>
+      <a class="back-btn" href="5b-terry-religion.html">← Back to Religion</a>
+    </div>
+    <div class="tabs">
+      <button class="tab active" data-tab="calendar">📅 Unit Calendar (Gantt)</button>
+      <button class="tab" data-tab="map">📚 Curriculum Map</button>
+    </div>
+    <div id="calendar" class="panel active">
+      <h2>Week-by-Week Unit Calendar</h2>
+      <p class="note">Color-coded bars show which weeks each unit occupies. Q1 blue &middot; Q2 green &middot; Q3 gold &middot; Q4 orange.</p>
+      <div class="gantt-wrap">
+        <table class="gantt-table">
+          <thead>
+            <tr>
+              <th class="corner-cell" rowspan="2">Unit</th>
+              <th class="corner-cell" rowspan="2">Wks</th>
+              <th class="qtr-banner qtr-1" colspan="9">1st Qtr 8/3–10/2</th>
+              <th class="qtr-banner qtr-2" colspan="9">2nd Qtr 10/19–12/18</th>
+              <th class="qtr-banner qtr-3" colspan="9">3rd Qtr 1/7–3/12</th>
+              <th class="qtr-banner qtr-4" colspan="9">4th Qtr 3/29–6/3</th>
+            </tr>
+            <tr><th class="week-th">W1</th><th class="week-th">W2</th><th class="week-th">W3</th><th class="week-th">W4</th><th class="week-th">W5</th><th class="week-th">W6</th><th class="week-th">W7</th><th class="week-th">W8</th><th class="week-th">W9</th><th class="week-th">W10</th><th class="week-th">W11</th><th class="week-th">W12</th><th class="week-th">W13</th><th class="week-th">W14</th><th class="week-th">W15</th><th class="week-th">W16</th><th class="week-th">W17</th><th class="week-th">W18</th><th class="week-th">W19</th><th class="week-th">W20</th><th class="week-th">W21</th><th class="week-th">W22</th><th class="week-th">W23</th><th class="week-th">W24</th><th class="week-th">W25</th><th class="week-th">W26</th><th class="week-th">W27</th><th class="week-th">W28</th><th class="week-th">W29</th><th class="week-th">W30</th><th class="week-th">W31</th><th class="week-th">W32</th><th class="week-th">W33</th><th class="week-th">W34</th><th class="week-th">W35</th><th class="week-th">W36</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="unit-cell"><strong>Q1 &middot; Unit 1: The Sacraments</strong></td><td class="weeks-cell">9</td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell" style="background:#BDD7EE"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td></tr><tr><td class="unit-cell"><strong>Q2 &middot; Unit 2: Initiation & The Apostles&rsquo; Creed</strong></td><td class="weeks-cell">9</td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell" style="background:#C6E0B4"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td></tr><tr><td class="unit-cell"><strong>Q3 &middot; Unit 3: Eucharist & The Last Supper</strong></td><td class="weeks-cell">9</td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell" style="background:#FFE699"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td></tr><tr><td class="unit-cell"><strong>Q4 &middot; Unit 4: Forgiving & Living as Christians</strong></td><td class="weeks-cell">9</td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td><td class="gantt-cell" style="background:#F4B084"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="notes-box">
+        <h3>Key Calendar Dates (2025–2026)</h3>
+        <ul>
+          <li>First Day of School: Aug. 3, 2025</li>
+          <li>Fall Break: Oct. 5 – Oct. 16, 2025 (two-week intersession)</li>
+          <li>Winter Break: Dec. 21, 2025 – Jan. 6, 2026</li>
+          <li>Spring Break: Mar. 15 – Mar. 26, 2026 (two-week intersession)</li>
+          <li>Last Day of School: Jun. 3, 2026</li>
+        </ul>
+      </div>
+    </div>
+    <div id="map" class="panel">
+      <h2>Curriculum Map by Unit</h2>
+      <p class="note">Grade 5 Religion units, with dates, pacing, and topic detail.</p>
+      <div style="overflow-x:auto">
+        <table class="map-table">
+          <thead>
+            <tr>
+              <th>Unit</th>
+              <th>Sequencing &amp; Pacing</th>
+              <th>Description &amp; Topics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="unit-name">Q1 &middot; Unit 1: The Sacraments</td><td class="pacing">Q1 &middot; 9 weeks</td><td>Introduction to the seven sacraments and their meaning in Catholic life.<br><em style="color:#6b7280;">Topics: Overview of the 7 sacraments; sacred signs of God&rsquo;s grace; how sacraments shape our lives; sacramental symbols and rituals; Sacraments of Initiation, Healing, and Service (introduction).</em></td></tr><tr><td class="unit-name">Q2 &middot; Unit 2: Initiation &amp; The Apostles&rsquo; Creed</td><td class="pacing">Q2 &middot; 9 weeks</td><td>Sacraments of Initiation (Baptism, Confirmation, Eucharist) and the shared statement of faith.<br><em style="color:#6b7280;">Topics: Baptism, Confirmation, Eucharist as Initiation sacraments; the Apostles&rsquo; Creed line-by-line; what Catholics believe; Advent &amp; Christmas seasons. <br><em>🕯️ Liturgical Calendar: Advent</em></em></td></tr><tr><td class="unit-name">Q3 &middot; Unit 3: Eucharist &amp; The Last Supper</td><td class="pacing">Q3 &middot; 9 weeks</td><td>Deep dive into the Eucharist as the source and summit of Christian life.<br><em style="color:#6b7280;">Topics: The Last Supper and institution of the Eucharist; parts of the Mass in depth; Real Presence; preparing for and receiving Communion reverently; Lent &amp; Holy Week traditions. <br><em>✝️ Liturgical Calendar: Lent</em></em></td></tr><tr><td class="unit-name">Q4 &middot; Unit 4: Forgiving &amp; Living as Christians</td><td class="pacing">Q4 &middot; 9 weeks</td><td>The Sacrament of Reconciliation and applying Catholic teaching in daily life.<br><em style="color:#6b7280;">Topics: Reconciliation (Confession) &mdash; steps and importance; forgiveness in family, school, and community; the Beatitudes; corporal &amp; spiritual works of mercy; being a witness of Christ.</em></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
