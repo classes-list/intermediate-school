@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Studies Syllabus &mdash; Mr. Terry &middot; 5th Grade B &middot; SY 2025-2026</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #eef2fa 0%, #f8f9fa 100%);
+  color: #253a77;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+.container { max-width: 900px; margin: 0 auto; }
+.back-index-btn {
+  position: fixed; top: 20px; left: 20px;
+  background: #253a77; color: #fff; text-decoration: none;
+  padding: 10px 16px; border-radius: 8px;
+  font-size: 14px; font-weight: 700;
+  box-shadow: 0 3px 10px rgba(37,58,119,0.25);
+  z-index: 10; transition: all 0.18s;
+}
+.back-index-btn:hover { background: #1a2a4a; transform: translateX(-2px); }
+.print-btn {
+  position: fixed; top: 20px; right: 20px;
+  background: #B45309; color: #fff; text-decoration: none;
+  padding: 10px 16px; border-radius: 8px;
+  font-size: 14px; font-weight: 700;
+  box-shadow: 0 3px 10px rgba(180,83,9,0.25);
+  z-index: 10; transition: all 0.18s;
+}
+.print-btn:hover { background: #92400e; }
+
+.syllabus-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 28px rgba(37,58,119,0.12);
+  padding: 40px 44px;
+  border-top: 6px solid #FFD100;
+}
+.header-top {
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 22px; margin-bottom: 24px;
+}
+.header-top h1 { color: #253a77; font-size: 1.5rem; font-weight: 800; margin-bottom: 4px; }
+.header-top .role { color: #7a5f00; font-style: italic; font-size: 0.95rem; margin-bottom: 8px; }
+.header-top .contact { font-size: 0.9rem; line-height: 1.7; color: #444; }
+.header-top .contact strong { color: #253a77; }
+.header-top .contact a { color: #253a77; text-decoration: none; }
+.header-top .contact a:hover { text-decoration: underline; }
+
+.subject-banner {
+  background: linear-gradient(135deg, #b45309 0%, #f59e0b 100%);
+  color: #fff; border-radius: 10px;
+  padding: 24px 28px; margin-bottom: 24px; text-align: center;
+}
+.subject-banner .eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; opacity: 0.88; margin-bottom: 4px; }
+.subject-banner h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 4px; color: #fff; }
+.subject-banner .sub { font-size: 0.95rem; opacity: 0.92; }
+
+.mission-callout {
+  background: #fffbea; border-left: 4px solid #FFD100; padding: 16px 20px;
+  border-radius: 8px; margin-bottom: 24px;
+}
+.mission-callout h3 { color: #a16207; font-size: 0.95rem; margin-bottom: 6px; }
+.mission-callout p { font-size: 0.92rem; color: #1f2937; line-height: 1.55; margin: 0; }
+
+section { margin-top: 26px; }
+section > h2 {
+  color: #b45309; font-size: 1.2rem; font-weight: 800;
+  padding-bottom: 6px; margin-bottom: 12px;
+  border-bottom: 2px solid #FFD100;
+}
+section p { color: #2d3748; font-size: 0.96rem; line-height: 1.7; margin-bottom: 10px; }
+section ul { margin: 8px 0 12px 24px; }
+section li { padding: 3px 0; color: #2d3748; font-size: 0.95rem; line-height: 1.55; }
+
+.book-badge {
+  display: inline-block; background: #f0f4fc; border-left: 4px solid #253a77;
+  padding: 10px 16px; border-radius: 6px; margin: 8px 0 12px;
+  font-size: 0.95rem; color: #253a77;
+}
+.book-badge strong { color: #253a77; }
+
+.pct-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 10px; }
+.pct-item {
+  background: #f8fafc; border-left: 4px solid #b45309;
+  padding: 14px 16px; border-radius: 6px; text-align: center;
+}
+.pct-num { font-size: 1.7rem; font-weight: 800; color: #b45309; margin-bottom: 2px; }
+.pct-label { font-size: 0.88rem; color: #444; font-weight: 600; }
+
+.q-block {
+  background: #f8fafc; border-left: 4px solid #b45309;
+  padding: 16px 20px; margin-bottom: 12px; border-radius: 8px;
+}
+.q-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+.q-tag { display: inline-block; background: #b45309; color: #fff; padding: 4px 12px; border-radius: 12px; font-weight: 800; font-size: 0.8rem; letter-spacing: 0.06em; }
+.q-title { font-weight: 700; color: #b45309; font-size: 1rem; }
+.q-block p { font-size: 0.93rem; margin: 0; line-height: 1.6; }
+
+.materials { list-style: none; padding-left: 0; }
+.materials li { padding: 6px 12px; margin: 4px 0; background: #f8fafc; border-left: 3px solid #b45309; border-radius: 4px; }
+.materials li::before { content: "🖊 "; margin-right: 6px; }
+
+footer {
+  margin-top: 32px; padding-top: 20px;
+  border-top: 2px solid #e2e8f0;
+  text-align: center; color: #7a5f00;
+  font-style: italic; font-weight: 700; font-size: 1.05rem;
+}
+
+@media print {
+  body { background: #fff; padding: 0; }
+  .back-index-btn, .print-btn { display: none; }
+  .syllabus-card { box-shadow: none; padding: 20px; }
+}
+@media (max-width: 640px) {
+  .syllabus-card { padding: 24px 20px; }
+  .header-top h1 { font-size: 1.25rem; }
+}
+</style>
+</head>
+<body>
+<a href="5b-terry.html" class="back-index-btn" title="Back to Mr. Terry&rsquo;s Class">&larr; Back to Class</a>
+<a class="print-btn" href="5b-terry-social-studies-syllabus.pdf" target="_blank" rel="noopener" title="Open printable PDF">🖨️ Print Syllabus</a>
+
+<div class="container">
+  <div class="syllabus-card">
+
+    <div class="header-top">
+      <h1>John Terry</h1>
+      <div class="role">Intermediate Team Faculty &middot; Mary, Star of the Sea School</div>
+      <div class="contact">
+        4469 Malia Street, Honolulu, Hawai&rsquo;i 96821<br>
+        <strong>Office Hours:</strong> 2:45 pm &ndash; 3:15 pm (M&ndash;F)<br>
+        <strong>Email:</strong> <a href="mailto:jterry@starofthesea.org">jterry@starofthesea.org</a>
+      </div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="eyebrow">Syllabus &middot; SY 2025-2026 &middot; Grade 5 B</div>
+      <h2>🌍 Grade 5 Social Studies</h2>
+      <div class="sub">Mr. John Terry &middot; Mary, Star of the Sea School</div>
+    </div>
+
+    <div class="mission-callout">
+      <h3>🌟 MSOS Mission &amp; Essential Question</h3>
+      <p><strong>N</strong>urture, <strong>U</strong>nite, <strong>I</strong>nspire. At Mary, Star of the Sea School, we are committed to nurturing each child&rsquo;s curiosity, uniting our classrooms in respect and collaboration, and inspiring every student to grow in knowledge, faith, and wonder. In 2025&ndash;2026 we embrace our essential question: <strong><em>With Jesus, what makes my spirit soar?</em></strong></p>
+    </div>
+
+    <section>
+      <h2>👋 Welcome to Grade 5</h2>
+      <p>Welcome to Grade 5. This syllabus is intended for you, the student, to develop a greater understanding of what we will cover, what is expected of you, and what you can expect from me.</p>
+      <p><strong>Living our NUI Mission:</strong> A supportive environment is essential for student growth and achievement. Students are to act respectfully towards other students and to respond to each other&rsquo;s ideas and work with thoughtful comments, positive encouragement, and constructive feedback. Students are expected to be attentive, to work diligently during class, and to follow all classroom rules and directions.</p>
+    </section>
+
+    <section>
+      <h2>🌍 Social Studies Course Overview</h2>
+      <p>Students will be learning about the <strong>history of people in North America</strong> beginning with the first indigenous tribes and ending with Manifest Destiny and the expansion of the United States across the continent. Students will learn about important themes throughout our history, engage in research and analysis of historical events, and participate in cross-curricular projects using other subjects such as English and Art.</p>
+      <div class="book-badge"><strong>Textbook:</strong> MyWorld Interactive (Social Studies)</div>
+    </section>
+
+    <section>
+      <h2>📊 Assessment</h2>
+      <div class="pct-grid"><div class="pct-item"><div class="pct-num">20%</div><div class="pct-label">Homework</div></div><div class="pct-item"><div class="pct-num">20%</div><div class="pct-label">Quizzes</div></div><div class="pct-item"><div class="pct-num">30%</div><div class="pct-label">Classwork &amp; Participation</div></div><div class="pct-item"><div class="pct-num">30%</div><div class="pct-label">Tests</div></div></div>
+    </section>
+
+    <section>
+      <h2>📚 Curriculum by Quarter</h2>
+      <div class="q-block"><div class="q-header"><span class="q-tag">Q1</span><span class="q-title">Units 1–3 &middot; Colonization Begins</span></div><p><strong>Unit 1 &mdash; The First Americans</strong> &middot; <strong>Unit 2 &mdash; Age of Exploration</strong> &middot; <strong>Unit 3 &mdash; Settling the Colonies in North America</strong>.</p></div><div class="q-block"><div class="q-header"><span class="q-tag">Q2</span><span class="q-title">Units 4–5 &middot; Colonial Life &amp; Revolution</span></div><p><strong>Unit 4 &mdash; Life in the Colonies</strong> &middot; <strong>Unit 5 &mdash; The American Revolution</strong>.</p></div><div class="q-block"><div class="q-header"><span class="q-tag">Q3</span><span class="q-title">Units 6–7 &middot; Building a New Nation</span></div><p><strong>Unit 6 &mdash; A New Nation</strong> &middot; <strong>Unit 7 &mdash; Life in the Young Republic</strong>.</p></div><div class="q-block"><div class="q-header"><span class="q-tag">Q4</span><span class="q-title">Units 8–9 &middot; Expansion &amp; Civil War</span></div><p><strong>Unit 8 &mdash; Westward Expansion</strong> &middot; <strong>Unit 9 &mdash; Civil War and Reconstruction (Parts 1 &amp; 2)</strong>.</p></div>
+    </section>
+
+    
+    <section>
+      <h2>📊 Grading Note for Parents</h2>
+      <p>You will have access to my electronic gradebook via your <strong>Beehively</strong> account, which will be the primary method of communicating your child&rsquo;s academic performance. <em>It will be assumed that you have seen all grades and missing assignments that are entered in Beehively.</em></p>
+    </section>
+
+    <section>
+      <h2>📝 Homework Policy</h2>
+      <p>Homework that is given will not be for students to explore new concepts. Homework will strictly be to <strong>reinforce concepts</strong> that have already been taught in class, including research for projects. It is used as more of a &ldquo;completion&rdquo; grade. Your children&rsquo;s teachers will work together to ensure that the students receive a <strong>balanced homework regime</strong> aimed at creating a positive learning environment that nurtures students&rsquo; intellectual growth.</p>
+    </section>
+
+    <section>
+      <h2>💬 Communication</h2>
+      <p>The best way to communicate with a teacher is by <strong>email</strong>. Students will be sent home with a <strong>white envelope on Tuesdays</strong> that has updated work and various other documents regarding events at school.</p>
+      <p>Updates will also be sent out via <strong>Beehively</strong>, our electronic communication and grading portal. Announcements posted to Beehively will be sent directly to your email as well as important upcoming assignments and events.</p>
+    </section>
+
+    <section>
+      <h2>🎒 Materials</h2>
+      <ul class="materials">
+        <li>Composition Notebook (3)</li>
+        <li>Pencil (colored and regular)</li>
+        <li>Red Pen</li>
+        <li>Highlighter</li>
+        <li>HMH Textbook</li>
+        <li>Headphones, mouse</li>
+      </ul>
+      <p><em>Note:</em> There will be times we do <strong>STEM projects</strong> that will require additional materials to be brought in, such as soda bottles, construction paper, balloons, etc.</p>
+    </section>
+
+    <section>
+      <h2>⏱️ Late Work &amp; Extra Credit</h2>
+      <ul>
+        <li>All late work must be turned in within <strong>one week</strong> of when it was assigned.</li>
+        <li>Students will receive <strong>70%</strong> on late work turned in.</li>
+        <li>Extra credit is not offered. However, during the last week of each quarter, students may turn in any missing or incomplete work for <strong>partial credit (60%)</strong>.</li>
+        <li><strong>10%</strong> will be taken off of project grades for late submissions.</li>
+      </ul>
+    </section>
+
+
+    <footer>
+      Mahalo for a great year of learning &mdash; Mr. Terry
+    </footer>
+  </div>
+</div>
+</body>
+</html>
