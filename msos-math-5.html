@@ -666,8 +666,7 @@ let currentUnit = null;
 function resourceCardHTML(unit) {
   const phetBtn = unit.phetUrl ? `<a class="btn-phet" href="${unit.phetUrl}" target="_blank">🧪 PhET Simulation</a>` : '';
   const ytBtn = `<a class="btn-yt" href="https://www.youtube.com/results?search_query=${encodeURIComponent(unit.ytSearch)}" target="_blank">▶️ YouTube</a>`;
-  const ixlBtn = unit.ixlUrl ? `<a class="btn-ixl" href="${unit.ixlUrl}" target="_blank" rel="noopener">📚 IXL Practice</a>` : '';
-  return `<div class="resource-card"><h3>📚 Resources</h3><div class="resource-btns">${phetBtn}${ixlBtn}${ytBtn}</div></div>`;
+  return `<div class="resource-card"><h3>📚 Resources</h3><div class="resource-btns">${phetBtn}${ytBtn}</div></div>`;
 }
 
 function renderHome() {
