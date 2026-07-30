@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 4 Religion &middot; Q3 Worksheet &middot; The Church & Social Justice</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #faf5ff 0%, #f8f9fa 100%);
+  color: #1F2937; min-height: 100vh; padding: 40px 20px;
+}
+.container { max-width: 1000px; margin: 0 auto; }
+.back-btn, .print-btn {
+  position: fixed; top: 20px; text-decoration: none;
+  padding: 10px 16px; border-radius: 8px;
+  font-size: 14px; font-weight: 700;
+  box-shadow: 0 3px 10px rgba(37,58,119,0.25);
+  transition: all 0.18s; z-index: 10;
+}
+.back-btn { left: 20px; background: #253a77; color: #fff; }
+.back-btn:hover { background:#1a2a4a; }
+.print-btn { right: 20px; background: #b45309; color: #fff; }
+.print-btn:hover { opacity: 0.9; }
+
+.header {
+  text-align:center; margin-bottom: 24px; padding-bottom: 18px;
+  border-bottom: 3px solid #b45309;
+}
+.header .unit-icon { font-size: 3rem; line-height:1; }
+.header .eyebrow {
+  display:inline-block; background: #b45309; color:#fff;
+  padding: 4px 14px; border-radius: 999px; margin-top:6px;
+  font-size: 0.78rem; font-weight: 800; letter-spacing: 0.05em;
+}
+.header h1 { color:#b45309; font-size: 1.75rem; font-weight: 800; margin: 8px 0 4px; }
+.header .qtr { color:#5B21B6; font-style: italic; font-weight: 700; font-size: 0.95rem; }
+
+.essentialq {
+  background: linear-gradient(135deg, #fff8e1 0%, #fef3c7 100%);
+  border-left: 4px solid #FFD100;
+  padding: 12px 18px; border-radius: 8px;
+  margin: 16px 0 22px; font-size: 0.95rem; color:#1a2a4a; font-style: italic;
+}
+.essentialq strong { color:#7a5f00; font-style: normal; }
+
+.section {
+  background:#fff; border-radius: 12px;
+  padding: 22px 26px; margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(37,58,119,0.07);
+  border-top: 4px solid #b45309;
+  page-break-inside: avoid;
+}
+.section h2 {
+  color:#b45309; font-size: 1.2rem; font-weight: 800;
+  margin-bottom: 12px; padding-bottom: 6px;
+  border-bottom: 2px solid #f59e0b;
+  display:flex; align-items:center; gap:8px;
+}
+.section h3 { color:#b45309; font-size: 1rem; margin: 14px 0 6px; font-weight: 700; }
+.section p { color:#2d3748; line-height: 1.65; font-size: 0.95rem; margin-bottom: 8px; }
+
+.vocab-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px; margin-top: 8px;
+}
+.vocab-card {
+  background: #faf5ff; border-left: 3px solid #b45309;
+  padding: 10px 14px; border-radius: 6px;
+}
+.vocab-card .term { color:#b45309; font-weight: 800; font-size: 0.95rem; }
+.vocab-card .def { color:#2d3748; font-size: 0.88rem; margin-top: 3px; line-height: 1.5; }
+
+.match-instructions {
+  background:#ecfdf5; border-left:4px solid #10b981;
+  padding: 10px 14px; border-radius: 8px; margin-top:6px;
+  font-size: 0.9rem; color:#065f46;
+}
+
+.qs { margin: 6px 0 0 22px; }
+.qs li { padding: 6px 0; font-size: 0.94rem; color:#2d3748; }
+.qs li input.answer {
+  display:block; margin-top: 4px; width: 96%;
+  border: none; border-bottom: 1.5px solid #cbd5e1;
+  padding: 4px 6px; font-family: inherit; font-size: 0.94rem;
+  background: transparent;
+}
+.qs li textarea.answer {
+  display:block; margin-top: 4px; width: 96%;
+  border: 1.5px solid #cbd5e1; border-radius: 4px;
+  padding: 6px 8px; font-family: inherit; font-size: 0.94rem;
+  min-height: 48px; resize: vertical;
+}
+
+.scripture-box {
+  background:#f0f9ff; border-left: 4px solid #0ea5e9;
+  padding: 14px 18px; border-radius: 8px; margin-top: 8px;
+}
+.scripture-box .cite { color:#0369a1; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.scripture-box .verse { color:#0c4a6e; font-size: 1.05rem; font-style: italic; margin: 8px 0 12px; line-height: 1.6; }
+.scripture-box .reflect { color:#2d3748; font-size: 0.93rem; }
+.scripture-box textarea {
+  display:block; margin-top: 8px; width: 100%;
+  border: 1.5px solid #cbd5e1; border-radius: 4px;
+  padding: 8px 10px; font-family: inherit; font-size: 0.94rem;
+  min-height: 100px; resize: vertical;
+}
+
+.prayer-box {
+  background:#fdf4ff; border-left: 4px solid #b45309;
+  padding: 14px 18px; border-radius: 8px; margin-top: 10px;
+}
+.prayer-box .prayer-title { color:#b45309; font-weight: 800; font-size: 0.95rem; margin-bottom: 6px; }
+.prayer-box .prayer-text { color:#2d3748; font-size: 0.93rem; line-height: 1.7; font-style: italic; }
+.prayer-box .copy-space {
+  display:block; margin-top: 8px; width: 100%;
+  border: 1.5px dashed #cbd5e1; border-radius: 4px;
+  padding: 8px 10px; font-family: inherit; font-size: 0.94rem;
+  min-height: 80px; resize: vertical;
+  background: repeating-linear-gradient(transparent, transparent 22px, #f0eafa 22px, #f0eafa 23px);
+}
+
+.book-box {
+  background:#fef3c7; border-left: 4px solid #d97706;
+  padding: 14px 18px; border-radius: 8px; margin-top: 6px;
+}
+.book-box .book-title { color:#78350f; font-weight: 800; font-style: italic; margin-bottom: 8px; }
+.book-box ol { margin-left: 22px; }
+.book-box li { padding: 6px 0; font-size: 0.94rem; color:#78350f; }
+.book-box li textarea {
+  display:block; margin-top: 4px; width: 96%;
+  border: 1.5px solid #d97706; border-radius: 4px;
+  padding: 6px 8px; font-family: inherit; font-size: 0.94rem;
+  min-height: 44px; resize: vertical; background: #fffbeb;
+}
+
+.name-header {
+  background: #fff; border: 1.5px solid #cbd5e1; border-radius: 8px;
+  padding: 12px 18px; margin-bottom: 20px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  font-size: 0.9rem;
+}
+.name-header label { color:#b45309; font-weight: 700; }
+.name-header input {
+  display:block; margin-top: 4px; width: 100%;
+  border: none; border-bottom: 1.5px solid #cbd5e1;
+  padding: 4px 4px; font-family: inherit; font-size: 0.94rem;
+}
+
+footer { text-align:center; margin-top: 20px; padding-top: 16px;
+  color:#b45309; font-style: italic; font-weight: 700; font-size: 0.92rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+@media print {
+  body { background:#fff; padding:0; }
+  .back-btn, .print-btn { display: none; }
+  .section { box-shadow: none; break-inside: avoid; }
+  input, textarea { background: transparent !important; }
+}
+@media (max-width: 640px) {
+  .name-header { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<a href="4a-bekers-religion.html" class="back-btn">&larr; Back to Units</a>
+<a class="print-btn" href="#" onclick="window.print();return false;">🖨️ Print Worksheet</a>
+
+<div class="container">
+
+  <div class="header">
+    <div class="unit-icon">💒</div>
+    <div class="eyebrow">Q3 · Blest Are We Unit 4</div>
+    <h1>The Church & Social Justice</h1>
+    <div class="qtr">Blest Are We Chapters 13, 14, 15, 16, 17, 20 &middot; Grade 4 Religion Worksheet</div>
+  </div>
+
+  <div class="essentialq">
+    <strong>Essential Question:</strong> How can I fully experience Christ's presence — through Sacraments? Through the Church's mission?
+  </div>
+
+  <div class="name-header">
+    <div><label>Name</label><input type="text"></div>
+    <div><label>Date</label><input type="text"></div>
+    <div><label>Class</label><input type="text" value="Grade 4A &middot; Mrs. Bekers"></div>
+  </div>
+
+  <div class="section">
+    <h2>📚 Vocabulary</h2>
+    <div class="match-instructions">Read each term and its definition. Highlight or circle any that are new to you.</div>
+    <div class="vocab-grid">
+      <div class="vocab-card"><div class="term">Sacrament</div><div class="def">A visible sign given by Jesus that gives us God's grace.</div></div>
+      <div class="vocab-card"><div class="term">Social justice</div><div class="def">Working to make sure every person is treated fairly and with dignity.</div></div>
+      <div class="vocab-card"><div class="term">Reconciliation</div><div class="def">The sacrament of God's forgiveness; also called Confession or Penance.</div></div>
+      <div class="vocab-card"><div class="term">Vocation</div><div class="def">God's call to serve him in a special way (marriage, single life, ordained, religious).</div></div>
+      <div class="vocab-card"><div class="term">Lent</div><div class="def">The 40 days of prayer, fasting, and almsgiving before Easter.</div></div>
+      <div class="vocab-card"><div class="term">Triduum</div><div class="def">The three holiest days of the year: Holy Thursday, Good Friday, and the Easter Vigil.</div></div>
+      <div class="vocab-card"><div class="term">Catholic Schools Week</div><div class="def">A national celebration of Catholic education (usually late January).</div></div>
+      <div class="vocab-card"><div class="term">Almsgiving</div><div class="def">Giving to those in need, especially during Lent.</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>❓ Chapter Comprehension</h2>
+    <h3>Chapters 13-14 — The Church, Christ's Body</h3>
+    <ol class="qs">
+        <li>Who is the head of the Church?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Name two ways your parish serves the community.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>How is the Church like a family?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+    </ol>
+
+    <h3>Chapters 15-16 — Sacraments of Healing</h3>
+    <ol class="qs">
+        <li>Name the two sacraments of healing.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>What are the four parts of Reconciliation? (contrition, confession, ___________, and absolution)<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Why is forgiveness so important in our faith?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+    </ol>
+
+    <h3>Chapter 17 — Living Justly</h3>
+    <ol class="qs">
+        <li>What is social justice?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Name one saint or leader who worked for justice.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Describe one way our class can practice social justice this quarter.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+    </ol>
+
+    <h3>Chapter 20 — The Church's Mission</h3>
+    <ol class="qs">
+        <li>What is the mission of the Church? (Hint: the overall Essential Question is 'How do we live the mission of the Church?')<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>What are the four Marks of the Church? (one, ___________, catholic, apostolic)<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>How can a 4th grader help carry out the Church's mission?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>📖 Scripture Reflection</h2>
+    <div class="scripture-box">
+      <div class="cite">Micah 6:8</div>
+      <div class="verse">&ldquo;This is what the Lord asks of you: only this — to act justly, to love tenderly, and to walk humbly with your God.&rdquo;</div>
+      <div class="reflect">Choose ONE — 'act justly,' 'love tenderly,' or 'walk humbly' — and describe one way you can do this during Lent.</div>
+      <textarea placeholder="Write your reflection here..."></textarea>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🙏 Prayers to Learn</h2>
+    <p style="font-size:0.9rem;color:#4a5568;font-style:italic">Read each prayer aloud. Copy it in the space below to help commit it to memory.</p>
+    <div class="prayer-box">
+      <div class="prayer-title">Act of Contrition</div>
+      <div class="prayer-text">My God, I am sorry for my sins with all my heart. In choosing to do wrong and failing to do good, I have sinned against you whom I should love above all things. I firmly intend, with your help, to do penance, to sin no more, and to avoid whatever leads me to sin. Our Savior Jesus Christ suffered and died for us. In his name, my God, have mercy. Amen.</div>
+      <label style="font-size:0.82rem;color:#5b21b6;font-weight:700;margin-top:8px;display:block;">Copy this prayer in your best handwriting:</label>
+      <textarea class="copy-space" placeholder="Copy the prayer here..."></textarea>
+    </div>
+    <div class="prayer-box">
+      <div class="prayer-title">Vocation Prayer</div>
+      <div class="prayer-text">Loving God, you have created me for a purpose. Help me to listen for your voice and to say yes to the vocation you have planned for me — whether it is to marriage, single life, religious life, or the priesthood. Give me the courage to follow you. Amen.</div>
+      <label style="font-size:0.82rem;color:#5b21b6;font-weight:700;margin-top:8px;display:block;">Copy this prayer in your best handwriting:</label>
+      <textarea class="copy-space" placeholder="Copy the prayer here..."></textarea>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📕 Anchor Book &mdash; <em>The Giving Tree</em></h2>
+    <div class="book-box">
+      <div class="book-title">Reflect on The Giving Tree</div>
+      <ol>
+        <li>In <em>The Giving Tree</em>, how does the tree give to the boy?<textarea placeholder="Your thoughts..."></textarea></li>
+        <li>How is the tree's giving similar to how Jesus and the Church give to us?<textarea placeholder="Your thoughts..."></textarea></li>
+        <li>During Lent, what is one thing you can give (time, kindness, prayer, sacrifice) for someone else?<textarea placeholder="Your thoughts..."></textarea></li>
+      </ol>
+    </div>
+  </div>
+
+  <footer>Empowered to Succeed, Guided by Faith &nbsp;❤️!</footer>
+</div>
+</body>
+</html>
