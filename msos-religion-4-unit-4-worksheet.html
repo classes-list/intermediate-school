@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 4 Religion &middot; Q4 Worksheet &middot; Holy Spirit · Living Our Faith · Works of Mercy & Beatitudes</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #faf5ff 0%, #f8f9fa 100%);
+  color: #1F2937; min-height: 100vh; padding: 40px 20px;
+}
+.container { max-width: 1000px; margin: 0 auto; }
+.back-btn, .print-btn {
+  position: fixed; top: 20px; text-decoration: none;
+  padding: 10px 16px; border-radius: 8px;
+  font-size: 14px; font-weight: 700;
+  box-shadow: 0 3px 10px rgba(37,58,119,0.25);
+  transition: all 0.18s; z-index: 10;
+}
+.back-btn { left: 20px; background: #253a77; color: #fff; }
+.back-btn:hover { background:#1a2a4a; }
+.print-btn { right: 20px; background: #a21caf; color: #fff; }
+.print-btn:hover { opacity: 0.9; }
+
+.header {
+  text-align:center; margin-bottom: 24px; padding-bottom: 18px;
+  border-bottom: 3px solid #a21caf;
+}
+.header .unit-icon { font-size: 3rem; line-height:1; }
+.header .eyebrow {
+  display:inline-block; background: #a21caf; color:#fff;
+  padding: 4px 14px; border-radius: 999px; margin-top:6px;
+  font-size: 0.78rem; font-weight: 800; letter-spacing: 0.05em;
+}
+.header h1 { color:#a21caf; font-size: 1.75rem; font-weight: 800; margin: 8px 0 4px; }
+.header .qtr { color:#5B21B6; font-style: italic; font-weight: 700; font-size: 0.95rem; }
+
+.essentialq {
+  background: linear-gradient(135deg, #fff8e1 0%, #fef3c7 100%);
+  border-left: 4px solid #FFD100;
+  padding: 12px 18px; border-radius: 8px;
+  margin: 16px 0 22px; font-size: 0.95rem; color:#1a2a4a; font-style: italic;
+}
+.essentialq strong { color:#7a5f00; font-style: normal; }
+
+.section {
+  background:#fff; border-radius: 12px;
+  padding: 22px 26px; margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(37,58,119,0.07);
+  border-top: 4px solid #a21caf;
+  page-break-inside: avoid;
+}
+.section h2 {
+  color:#a21caf; font-size: 1.2rem; font-weight: 800;
+  margin-bottom: 12px; padding-bottom: 6px;
+  border-bottom: 2px solid #ec4899;
+  display:flex; align-items:center; gap:8px;
+}
+.section h3 { color:#a21caf; font-size: 1rem; margin: 14px 0 6px; font-weight: 700; }
+.section p { color:#2d3748; line-height: 1.65; font-size: 0.95rem; margin-bottom: 8px; }
+
+.vocab-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px; margin-top: 8px;
+}
+.vocab-card {
+  background: #faf5ff; border-left: 3px solid #a21caf;
+  padding: 10px 14px; border-radius: 6px;
+}
+.vocab-card .term { color:#a21caf; font-weight: 800; font-size: 0.95rem; }
+.vocab-card .def { color:#2d3748; font-size: 0.88rem; margin-top: 3px; line-height: 1.5; }
+
+.match-instructions {
+  background:#ecfdf5; border-left:4px solid #10b981;
+  padding: 10px 14px; border-radius: 8px; margin-top:6px;
+  font-size: 0.9rem; color:#065f46;
+}
+
+.qs { margin: 6px 0 0 22px; }
+.qs li { padding: 6px 0; font-size: 0.94rem; color:#2d3748; }
+.qs li input.answer {
+  display:block; margin-top: 4px; width: 96%;
+  border: none; border-bottom: 1.5px solid #cbd5e1;
+  padding: 4px 6px; font-family: inherit; font-size: 0.94rem;
+  background: transparent;
+}
+.qs li textarea.answer {
+  display:block; margin-top: 4px; width: 96%;
+  border: 1.5px solid #cbd5e1; border-radius: 4px;
+  padding: 6px 8px; font-family: inherit; font-size: 0.94rem;
+  min-height: 48px; resize: vertical;
+}
+
+.scripture-box {
+  background:#f0f9ff; border-left: 4px solid #0ea5e9;
+  padding: 14px 18px; border-radius: 8px; margin-top: 8px;
+}
+.scripture-box .cite { color:#0369a1; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.scripture-box .verse { color:#0c4a6e; font-size: 1.05rem; font-style: italic; margin: 8px 0 12px; line-height: 1.6; }
+.scripture-box .reflect { color:#2d3748; font-size: 0.93rem; }
+.scripture-box textarea {
+  display:block; margin-top: 8px; width: 100%;
+  border: 1.5px solid #cbd5e1; border-radius: 4px;
+  padding: 8px 10px; font-family: inherit; font-size: 0.94rem;
+  min-height: 100px; resize: vertical;
+}
+
+.prayer-box {
+  background:#fdf4ff; border-left: 4px solid #a21caf;
+  padding: 14px 18px; border-radius: 8px; margin-top: 10px;
+}
+.prayer-box .prayer-title { color:#a21caf; font-weight: 800; font-size: 0.95rem; margin-bottom: 6px; }
+.prayer-box .prayer-text { color:#2d3748; font-size: 0.93rem; line-height: 1.7; font-style: italic; }
+.prayer-box .copy-space {
+  display:block; margin-top: 8px; width: 100%;
+  border: 1.5px dashed #cbd5e1; border-radius: 4px;
+  padding: 8px 10px; font-family: inherit; font-size: 0.94rem;
+  min-height: 80px; resize: vertical;
+  background: repeating-linear-gradient(transparent, transparent 22px, #f0eafa 22px, #f0eafa 23px);
+}
+
+.book-box {
+  background:#fef3c7; border-left: 4px solid #d97706;
+  padding: 14px 18px; border-radius: 8px; margin-top: 6px;
+}
+.book-box .book-title { color:#78350f; font-weight: 800; font-style: italic; margin-bottom: 8px; }
+.book-box ol { margin-left: 22px; }
+.book-box li { padding: 6px 0; font-size: 0.94rem; color:#78350f; }
+.book-box li textarea {
+  display:block; margin-top: 4px; width: 96%;
+  border: 1.5px solid #d97706; border-radius: 4px;
+  padding: 6px 8px; font-family: inherit; font-size: 0.94rem;
+  min-height: 44px; resize: vertical; background: #fffbeb;
+}
+
+.name-header {
+  background: #fff; border: 1.5px solid #cbd5e1; border-radius: 8px;
+  padding: 12px 18px; margin-bottom: 20px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  font-size: 0.9rem;
+}
+.name-header label { color:#a21caf; font-weight: 700; }
+.name-header input {
+  display:block; margin-top: 4px; width: 100%;
+  border: none; border-bottom: 1.5px solid #cbd5e1;
+  padding: 4px 4px; font-family: inherit; font-size: 0.94rem;
+}
+
+footer { text-align:center; margin-top: 20px; padding-top: 16px;
+  color:#a21caf; font-style: italic; font-weight: 700; font-size: 0.92rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+@media print {
+  body { background:#fff; padding:0; }
+  .back-btn, .print-btn { display: none; }
+  .section { box-shadow: none; break-inside: avoid; }
+  input, textarea { background: transparent !important; }
+}
+@media (max-width: 640px) {
+  .name-header { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<a href="msos-religion-4.html" class="back-btn">&larr; Back to Units</a>
+<a class="print-btn" href="#" onclick="window.print();return false;">🖨️ Print Worksheet</a>
+
+<div class="container">
+
+  <div class="header">
+    <div class="unit-icon">🕊️</div>
+    <div class="eyebrow">Q4 · Blest Are We Units 3 & 5</div>
+    <h1>Holy Spirit · Living Our Faith · Works of Mercy & Beatitudes</h1>
+    <div class="qtr">Blest Are We Chapters 7, 19, 9, 10, 11 &middot; Grade 4 Religion Worksheet</div>
+  </div>
+
+  <div class="essentialq">
+    <strong>Essential Question:</strong> How am I showing my commitment to faith by living the New Commandment?
+  </div>
+
+  <div class="name-header">
+    <div><label>Name</label><input type="text"></div>
+    <div><label>Date</label><input type="text"></div>
+    <div><label>Class</label><input type="text" value="Grade 4B &middot; Ms. Glavan"></div>
+  </div>
+
+  <div class="section">
+    <h2>📚 Vocabulary</h2>
+    <div class="match-instructions">Read each term and its definition. Highlight or circle any that are new to you.</div>
+    <div class="vocab-grid">
+      <div class="vocab-card"><div class="term">Holy Spirit</div><div class="def">The third Person of the Holy Trinity; God's presence and power in our lives.</div></div>
+      <div class="vocab-card"><div class="term">Pentecost</div><div class="def">The day the Holy Spirit came down on the disciples; the birthday of the Church.</div></div>
+      <div class="vocab-card"><div class="term">Gifts of the Holy Spirit</div><div class="def">Wisdom, Understanding, Counsel, Fortitude, Knowledge, Piety, and Fear of the Lord.</div></div>
+      <div class="vocab-card"><div class="term">New Commandment</div><div class="def">'Love one another as I have loved you' (John 13:34).</div></div>
+      <div class="vocab-card"><div class="term">Corporal Works of Mercy</div><div class="def">Actions we take to care for people's bodies (feed the hungry, shelter the homeless, etc.).</div></div>
+      <div class="vocab-card"><div class="term">Spiritual Works of Mercy</div><div class="def">Actions we take to care for people's spirits (comfort the sorrowful, forgive, etc.).</div></div>
+      <div class="vocab-card"><div class="term">Beatitudes</div><div class="def">Jesus' teachings about who is truly blessed, given in the Sermon on the Mount.</div></div>
+      <div class="vocab-card"><div class="term">Rosary</div><div class="def">A prayer that reflects on the mysteries of Jesus and Mary using beads.</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>❓ Chapter Comprehension</h2>
+    <h3>Chapter 7 — The Holy Spirit</h3>
+    <ol class="qs">
+        <li>Who is the Holy Spirit?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>What happened at Pentecost?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Name three of the seven Gifts of the Holy Spirit.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Which gift do you feel you need most this month?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+    </ol>
+
+    <h3>Chapter 19 — Living Our Faith</h3>
+    <ol class="qs">
+        <li>What is the New Commandment?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Give one example of how you can love a classmate 'as Jesus loves.'<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Why is loving others sometimes hard? How does the Holy Spirit help?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+    </ol>
+
+    <h3>Chapters 9-10 — Works of Mercy</h3>
+    <ol class="qs">
+        <li>Name TWO Corporal Works of Mercy.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Name TWO Spiritual Works of Mercy.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Pick one work of mercy and describe a project or action you can do at MSOS to live it out.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+    </ol>
+
+    <h3>Chapter 11 — The Beatitudes</h3>
+    <ol class="qs">
+        <li>Who taught the Beatitudes and where?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Complete: 'Blessed are the peacemakers, for they shall be called ___________.'<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Choose your favorite Beatitude and explain what it means in your own words.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>📖 Scripture Reflection</h2>
+    <div class="scripture-box">
+      <div class="cite">John 13:34</div>
+      <div class="verse">&ldquo;I give you a new commandment: love one another. As I have loved you, so you also should love one another.&rdquo;</div>
+      <div class="reflect">Write about a time you had to choose to love someone even when it was hard. What did you do — or what will you do next time?</div>
+      <textarea placeholder="Write your reflection here..."></textarea>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🙏 Prayers to Learn</h2>
+    <p style="font-size:0.9rem;color:#4a5568;font-style:italic">Read each prayer aloud. Copy it in the space below to help commit it to memory.</p>
+    <div class="prayer-box">
+      <div class="prayer-title">Rosary — Opening Prayer</div>
+      <div class="prayer-text">In the name of the Father, and of the Son, and of the Holy Spirit. Amen. I believe in God the Father almighty, Creator of heaven and earth, and in Jesus Christ his only Son, our Lord…</div>
+      <label style="font-size:0.82rem;color:#5b21b6;font-weight:700;margin-top:8px;display:block;">Copy this prayer in your best handwriting:</label>
+      <textarea class="copy-space" placeholder="Copy the prayer here..."></textarea>
+    </div>
+    <div class="prayer-box">
+      <div class="prayer-title">Glory Be</div>
+      <div class="prayer-text">Glory be to the Father, and to the Son, and to the Holy Spirit; as it was in the beginning, is now, and ever shall be, world without end. Amen.</div>
+      <label style="font-size:0.82rem;color:#5b21b6;font-weight:700;margin-top:8px;display:block;">Copy this prayer in your best handwriting:</label>
+      <textarea class="copy-space" placeholder="Copy the prayer here..."></textarea>
+    </div>
+    <div class="prayer-box">
+      <div class="prayer-title">Come, Holy Spirit</div>
+      <div class="prayer-text">Come, Holy Spirit, fill the hearts of your faithful and kindle in them the fire of your love. Send forth your Spirit and they shall be created. And you shall renew the face of the earth. Amen.</div>
+      <label style="font-size:0.82rem;color:#5b21b6;font-weight:700;margin-top:8px;display:block;">Copy this prayer in your best handwriting:</label>
+      <textarea class="copy-space" placeholder="Copy the prayer here..."></textarea>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📕 Anchor Book &mdash; <em>The Lorax</em></h2>
+    <div class="book-box">
+      <div class="book-title">Reflect on The Lorax</div>
+      <ol>
+        <li>In <em>The Lorax</em>, who speaks up for the trees and why?<textarea placeholder="Your thoughts..."></textarea></li>
+        <li>The Beatitudes call us to be peacemakers and to care for those who cannot care for themselves. How is the Lorax like a peacemaker?<textarea placeholder="Your thoughts..."></textarea></li>
+        <li>What is one issue in our world today that a Grade 4 disciple of Jesus should 'speak for'? What can you do about it?<textarea placeholder="Your thoughts..."></textarea></li>
+      </ol>
+    </div>
+  </div>
+
+  <footer>Empowered to Succeed, Guided by Faith &nbsp;❤️!</footer>
+</div>
+</body>
+</html>

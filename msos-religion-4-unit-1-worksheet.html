@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 4 Religion &middot; Q1 Worksheet &middot; The Goodness of God & the Ten Commandments</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #faf5ff 0%, #f8f9fa 100%);
+  color: #1F2937; min-height: 100vh; padding: 40px 20px;
+}
+.container { max-width: 1000px; margin: 0 auto; }
+.back-btn, .print-btn {
+  position: fixed; top: 20px; text-decoration: none;
+  padding: 10px 16px; border-radius: 8px;
+  font-size: 14px; font-weight: 700;
+  box-shadow: 0 3px 10px rgba(37,58,119,0.25);
+  transition: all 0.18s; z-index: 10;
+}
+.back-btn { left: 20px; background: #253a77; color: #fff; }
+.back-btn:hover { background:#1a2a4a; }
+.print-btn { right: 20px; background: #0369a1; color: #fff; }
+.print-btn:hover { opacity: 0.9; }
+
+.header {
+  text-align:center; margin-bottom: 24px; padding-bottom: 18px;
+  border-bottom: 3px solid #0369a1;
+}
+.header .unit-icon { font-size: 3rem; line-height:1; }
+.header .eyebrow {
+  display:inline-block; background: #0369a1; color:#fff;
+  padding: 4px 14px; border-radius: 999px; margin-top:6px;
+  font-size: 0.78rem; font-weight: 800; letter-spacing: 0.05em;
+}
+.header h1 { color:#0369a1; font-size: 1.75rem; font-weight: 800; margin: 8px 0 4px; }
+.header .qtr { color:#5B21B6; font-style: italic; font-weight: 700; font-size: 0.95rem; }
+
+.essentialq {
+  background: linear-gradient(135deg, #fff8e1 0%, #fef3c7 100%);
+  border-left: 4px solid #FFD100;
+  padding: 12px 18px; border-radius: 8px;
+  margin: 16px 0 22px; font-size: 0.95rem; color:#1a2a4a; font-style: italic;
+}
+.essentialq strong { color:#7a5f00; font-style: normal; }
+
+.section {
+  background:#fff; border-radius: 12px;
+  padding: 22px 26px; margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(37,58,119,0.07);
+  border-top: 4px solid #0369a1;
+  page-break-inside: avoid;
+}
+.section h2 {
+  color:#0369a1; font-size: 1.2rem; font-weight: 800;
+  margin-bottom: 12px; padding-bottom: 6px;
+  border-bottom: 2px solid #0ea5e9;
+  display:flex; align-items:center; gap:8px;
+}
+.section h3 { color:#0369a1; font-size: 1rem; margin: 14px 0 6px; font-weight: 700; }
+.section p { color:#2d3748; line-height: 1.65; font-size: 0.95rem; margin-bottom: 8px; }
+
+.vocab-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px; margin-top: 8px;
+}
+.vocab-card {
+  background: #faf5ff; border-left: 3px solid #0369a1;
+  padding: 10px 14px; border-radius: 6px;
+}
+.vocab-card .term { color:#0369a1; font-weight: 800; font-size: 0.95rem; }
+.vocab-card .def { color:#2d3748; font-size: 0.88rem; margin-top: 3px; line-height: 1.5; }
+
+.match-instructions {
+  background:#ecfdf5; border-left:4px solid #10b981;
+  padding: 10px 14px; border-radius: 8px; margin-top:6px;
+  font-size: 0.9rem; color:#065f46;
+}
+
+.qs { margin: 6px 0 0 22px; }
+.qs li { padding: 6px 0; font-size: 0.94rem; color:#2d3748; }
+.qs li input.answer {
+  display:block; margin-top: 4px; width: 96%;
+  border: none; border-bottom: 1.5px solid #cbd5e1;
+  padding: 4px 6px; font-family: inherit; font-size: 0.94rem;
+  background: transparent;
+}
+.qs li textarea.answer {
+  display:block; margin-top: 4px; width: 96%;
+  border: 1.5px solid #cbd5e1; border-radius: 4px;
+  padding: 6px 8px; font-family: inherit; font-size: 0.94rem;
+  min-height: 48px; resize: vertical;
+}
+
+.scripture-box {
+  background:#f0f9ff; border-left: 4px solid #0ea5e9;
+  padding: 14px 18px; border-radius: 8px; margin-top: 8px;
+}
+.scripture-box .cite { color:#0369a1; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.scripture-box .verse { color:#0c4a6e; font-size: 1.05rem; font-style: italic; margin: 8px 0 12px; line-height: 1.6; }
+.scripture-box .reflect { color:#2d3748; font-size: 0.93rem; }
+.scripture-box textarea {
+  display:block; margin-top: 8px; width: 100%;
+  border: 1.5px solid #cbd5e1; border-radius: 4px;
+  padding: 8px 10px; font-family: inherit; font-size: 0.94rem;
+  min-height: 100px; resize: vertical;
+}
+
+.prayer-box {
+  background:#fdf4ff; border-left: 4px solid #0369a1;
+  padding: 14px 18px; border-radius: 8px; margin-top: 10px;
+}
+.prayer-box .prayer-title { color:#0369a1; font-weight: 800; font-size: 0.95rem; margin-bottom: 6px; }
+.prayer-box .prayer-text { color:#2d3748; font-size: 0.93rem; line-height: 1.7; font-style: italic; }
+.prayer-box .copy-space {
+  display:block; margin-top: 8px; width: 100%;
+  border: 1.5px dashed #cbd5e1; border-radius: 4px;
+  padding: 8px 10px; font-family: inherit; font-size: 0.94rem;
+  min-height: 80px; resize: vertical;
+  background: repeating-linear-gradient(transparent, transparent 22px, #f0eafa 22px, #f0eafa 23px);
+}
+
+.book-box {
+  background:#fef3c7; border-left: 4px solid #d97706;
+  padding: 14px 18px; border-radius: 8px; margin-top: 6px;
+}
+.book-box .book-title { color:#78350f; font-weight: 800; font-style: italic; margin-bottom: 8px; }
+.book-box ol { margin-left: 22px; }
+.book-box li { padding: 6px 0; font-size: 0.94rem; color:#78350f; }
+.book-box li textarea {
+  display:block; margin-top: 4px; width: 96%;
+  border: 1.5px solid #d97706; border-radius: 4px;
+  padding: 6px 8px; font-family: inherit; font-size: 0.94rem;
+  min-height: 44px; resize: vertical; background: #fffbeb;
+}
+
+.name-header {
+  background: #fff; border: 1.5px solid #cbd5e1; border-radius: 8px;
+  padding: 12px 18px; margin-bottom: 20px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  font-size: 0.9rem;
+}
+.name-header label { color:#0369a1; font-weight: 700; }
+.name-header input {
+  display:block; margin-top: 4px; width: 100%;
+  border: none; border-bottom: 1.5px solid #cbd5e1;
+  padding: 4px 4px; font-family: inherit; font-size: 0.94rem;
+}
+
+footer { text-align:center; margin-top: 20px; padding-top: 16px;
+  color:#0369a1; font-style: italic; font-weight: 700; font-size: 0.92rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+@media print {
+  body { background:#fff; padding:0; }
+  .back-btn, .print-btn { display: none; }
+  .section { box-shadow: none; break-inside: avoid; }
+  input, textarea { background: transparent !important; }
+}
+@media (max-width: 640px) {
+  .name-header { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<a href="msos-religion-4.html" class="back-btn">&larr; Back to Units</a>
+<a class="print-btn" href="#" onclick="window.print();return false;">🖨️ Print Worksheet</a>
+
+<div class="container">
+
+  <div class="header">
+    <div class="unit-icon">🌎</div>
+    <div class="eyebrow">Q1 · Blest Are We Unit 1</div>
+    <h1>The Goodness of God & the Ten Commandments</h1>
+    <div class="qtr">Blest Are We Chapters 1, 3, 4 &middot; Grade 4 Religion Worksheet</div>
+  </div>
+
+  <div class="essentialq">
+    <strong>Essential Question:</strong> In what ways am I a steward of God's creation?
+  </div>
+
+  <div class="name-header">
+    <div><label>Name</label><input type="text"></div>
+    <div><label>Date</label><input type="text"></div>
+    <div><label>Class</label><input type="text" value="Grade 4B &middot; Ms. Glavan"></div>
+  </div>
+
+  <div class="section">
+    <h2>📚 Vocabulary</h2>
+    <div class="match-instructions">Read each term and its definition. Highlight or circle any that are new to you.</div>
+    <div class="vocab-grid">
+      <div class="vocab-card"><div class="term">Steward</div><div class="def">A person who takes care of something entrusted to them. We are stewards of God's creation.</div></div>
+      <div class="vocab-card"><div class="term">Genesis</div><div class="def">The first book of the Bible; it tells us about God creating the world.</div></div>
+      <div class="vocab-card"><div class="term">Creation</div><div class="def">Everything that God made — the sky, sea, land, plants, animals, and people.</div></div>
+      <div class="vocab-card"><div class="term">Ten Commandments</div><div class="def">God's rules for loving him and loving one another, given to Moses on Mount Sinai.</div></div>
+      <div class="vocab-card"><div class="term">Covenant</div><div class="def">A sacred promise between God and his people.</div></div>
+      <div class="vocab-card"><div class="term">Praise</div><div class="def">A prayer that tells God how great and good he is.</div></div>
+      <div class="vocab-card"><div class="term">Thanksgiving</div><div class="def">A prayer that thanks God for his gifts.</div></div>
+      <div class="vocab-card"><div class="term">Mass</div><div class="def">The Catholic celebration of the Eucharist, our greatest prayer.</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>❓ Chapter Comprehension</h2>
+    <h3>Chapter 1 — God Creates the World</h3>
+    <ol class="qs">
+        <li>Who created the world and everything in it?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Name three things God created in the beginning.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>How can we take care of God's creation this week? Give one concrete example.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+    </ol>
+
+    <h3>Chapter 3 — God's Loving Care</h3>
+    <ol class="qs">
+        <li>What is a covenant? Who made the first covenant with God?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>How does God show his loving care for us every day?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Write one prayer of praise to thank God for a specific gift in your life.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+    </ol>
+
+    <h3>Chapter 4 — The Ten Commandments</h3>
+    <ol class="qs">
+        <li>To whom did God give the Ten Commandments?<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>The first three commandments are about our relationship with ___________.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>The other seven commandments are about our relationship with ___________.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+        <li>Choose ONE commandment and describe how a 4th grader can live it out at school.<textarea class="answer" placeholder="Write your answer..."></textarea></li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>📖 Scripture Reflection</h2>
+    <div class="scripture-box">
+      <div class="cite">Genesis 1:31</div>
+      <div class="verse">&ldquo;God looked at everything he had made, and found it very good.&rdquo;</div>
+      <div class="reflect">What is one part of God's creation you are most thankful for? Draw or write about it below.</div>
+      <textarea placeholder="Write your reflection here..."></textarea>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🙏 Prayers to Learn</h2>
+    <p style="font-size:0.9rem;color:#4a5568;font-style:italic">Read each prayer aloud. Copy it in the space below to help commit it to memory.</p>
+    <div class="prayer-box">
+      <div class="prayer-title">Our Father</div>
+      <div class="prayer-text">Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.</div>
+      <label style="font-size:0.82rem;color:#5b21b6;font-weight:700;margin-top:8px;display:block;">Copy this prayer in your best handwriting:</label>
+      <textarea class="copy-space" placeholder="Copy the prayer here..."></textarea>
+    </div>
+    <div class="prayer-box">
+      <div class="prayer-title">Prayer Before Meals</div>
+      <div class="prayer-text">Bless us, O Lord, and these thy gifts, which we are about to receive from thy bounty, through Christ our Lord. Amen.</div>
+      <label style="font-size:0.82rem;color:#5b21b6;font-weight:700;margin-top:8px;display:block;">Copy this prayer in your best handwriting:</label>
+      <textarea class="copy-space" placeholder="Copy the prayer here..."></textarea>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📕 Anchor Book &mdash; <em>Old Turtle</em></h2>
+    <div class="book-box">
+      <div class="book-title">Reflect on Old Turtle</div>
+      <ol>
+        <li>In <em>Old Turtle</em>, the animals argue about who God is. What did Old Turtle teach them?<textarea placeholder="Your thoughts..."></textarea></li>
+        <li>How does Old Turtle's message connect to how we should care for creation and each other?<textarea placeholder="Your thoughts..."></textarea></li>
+        <li>What is one way you can be like Old Turtle — helping others see God's goodness in creation?<textarea placeholder="Your thoughts..."></textarea></li>
+      </ol>
+    </div>
+  </div>
+
+  <footer>Empowered to Succeed, Guided by Faith &nbsp;❤️!</footer>
+</div>
+</body>
+</html>
