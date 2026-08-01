@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Language Arts &mdash; Grade 5 &mdash; Course Syllabus &middot; Ms. Soto</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #eef2fa 0%, #f8f9fa 100%);
+  color: #253a77; min-height: 100vh; padding: 40px 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.back-index-btn { position: fixed; top: 20px; left: 20px; background: #253a77; color: #fff;
+  text-decoration: none; padding: 10px 16px; border-radius: 8px; font-size: 14px; font-weight: 700;
+  box-shadow: 0 3px 10px rgba(37,58,119,0.25); z-index: 10; }
+.back-index-btn:hover { background: #1a2a4a; }
+.print-btn { position: fixed; top: 20px; right: 20px; background: #0c4a6e; color: #FFD100;
+  border: 1.5px solid #FFD100; text-decoration: none; padding: 10px 16px; border-radius: 8px;
+  font-size: 14px; font-weight: 700; box-shadow: 0 3px 10px rgba(12,74,110,0.28); z-index: 10; }
+.print-btn:hover { background: #082f4a; }
+.syllabus-card { background: #fff; border-radius: 14px;
+  box-shadow: 0 6px 28px rgba(37,58,119,0.12); padding: 40px 44px; border-top: 6px solid #FFD100; }
+.header-top { display: flex; gap: 24px; align-items: center;
+  border-bottom: 2px solid #e2e8f0; padding-bottom: 22px; margin-bottom: 24px; flex-wrap: wrap; }
+.header-info { flex: 1 1 260px; }
+.header-info h1 { color: #253a77; font-size: 1.5rem; font-weight: 800; margin-bottom: 4px; }
+.header-info .role { color: #7a5f00; font-style: italic; font-size: 0.95rem; margin-bottom: 6px; }
+.header-info .contact { font-size: 0.88rem; line-height: 1.6; color: #444; }
+.header-info .contact strong { color: #253a77; }
+.header-info .contact a { color: #253a77; text-decoration: none; }
+.header-info .contact a:hover { text-decoration: underline; }
+.subject-banner { background: linear-gradient(135deg, #0ea5e9 0%, #0c4a6e 100%);
+  color: #fff; border-radius: 10px; padding: 20px 24px; margin-bottom: 24px; text-align: center; }
+.subject-banner .eyebrow { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em;
+  font-weight: 700; opacity: 0.88; margin-bottom: 4px; }
+.subject-banner h2 { font-size: 1.55rem; font-weight: 800; margin-bottom: 4px; color: #fff; }
+.subject-banner .sub { font-size: 0.95rem; opacity: 0.92; }
+section { margin-top: 26px; }
+section > h2 { color: #0c4a6e; font-size: 1.2rem; font-weight: 800; margin-bottom: 12px;
+  padding-bottom: 6px; border-bottom: 2px solid #FFD100; display: flex; align-items: center; gap: 8px; }
+section p { color: #2d3748; font-size: 0.96rem; line-height: 1.7; margin-bottom: 10px; }
+section ul, section ol { margin: 8px 0 12px 22px; }
+section li { padding: 3px 0; color: #2d3748; font-size: 0.93rem; line-height: 1.6; }
+section li strong { color: #0c4a6e; }
+.welcome-box { background: #f0f4fc; border-left: 4px solid #253a77;
+  padding: 16px 20px; border-radius: 6px; margin-bottom: 12px; line-height: 1.6; }
+.welcome-box p { font-style: italic; color: #2d3748; margin-bottom: 0; }
+.mission-quote { background: #ecfeff; border-left: 4px solid #0c4a6e;
+  padding: 14px 18px; border-radius: 8px; margin: 12px 0;
+  font-style: italic; color: #0c4a6e; line-height: 1.6; }
+.mission-quote p { color: #0c4a6e; font-style: italic; margin-bottom: 0; }
+.parent-note { background: #fef3c7; border-left: 4px solid #d97706;
+  padding: 14px 18px; border-radius: 6px; margin-top: 12px; font-size: 0.93rem;
+  color: #78350f; line-height: 1.6; }
+.parent-note strong { color: #78350f; }
+.dates-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+.dates-table td { padding: 8px 10px; border-bottom: 1px dashed #d8dee9; font-size: 0.93rem; }
+.dates-table .date-name { font-weight: 700; color: #0c4a6e; width: 60%; }
+.dates-table .date-value { color: #444; }
+.dates-table tr:last-child td { border-bottom: none; }
+.grade-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.grade-pill { background: #f1f5f9; border-radius: 8px; padding: 8px 12px;
+  font-size: 0.82rem; font-weight: 600; color: #374151; text-align: center; flex: 1 1 120px; }
+.grade-pill span { display: block; font-size: 1.3rem; font-weight: 800; color: #0c4a6e; }
+.grade-pill small { display: block; font-size: 0.72rem; font-weight: 500; color: #64748b;
+  margin-top: 4px; line-height: 1.3; }
+.curriculum-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 6px; }
+.q-card { background: #ecfeff; border-left: 4px solid #0ea5e9; padding: 12px 14px; border-radius: 6px; }
+.q-card .q-label { font-size: 0.78rem; font-weight: 800; color: #0ea5e9; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+.q-card .q-title { font-size: 0.95rem; font-weight: 700; color: #253a77; }
+.q-card .q-author { font-size: 0.82rem; font-style: italic; color: #64748b; margin-top: 2px; }
+.two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+.two-col section { margin-top: 0; }
+footer { margin-top: 32px; text-align: center; color: #7a5f00;
+  font-style: italic; font-weight: 700; font-size: 1.05rem;
+  padding: 20px 0 10px; border-top: 2px solid #e2e8f0; }
+@media print {
+  body { background: #fff; padding: 0; }
+  .back-index-btn, .print-btn { display: none; }
+  .syllabus-card { box-shadow: none; border-top: none; padding: 20px; }
+  section { page-break-inside: avoid; }
+}
+@media (max-width: 640px) {
+  .syllabus-card { padding: 24px 20px; }
+  .header-info h1 { font-size: 1.2rem; }
+  .subject-banner h2 { font-size: 1.25rem; }
+}
+</style>
+</head>
+<body>
+<a href="5a-soto-ela.html" class="back-index-btn" title="Back to English Language Arts">&larr; Back to ELA Class</a>
+<a href="5a-soto-ela-syllabus.pdf?v=1" class="print-btn" target="_blank" rel="noopener" title="Open printable syllabus PDF">🖨️ Print Syllabus</a>
+
+<div class="container">
+  <div class="syllabus-card">
+    <div class="header-top">
+      <div class="header-info">
+        <h1>Alyssa Soto-Gelacio, B.A.</h1>
+        <div class="role">Intermediate Team Faculty &middot; Grade 5 &middot; SY 2026&ndash;2027</div>
+        <div class="contact">
+          <strong>Email:</strong> <a href="mailto:asoto-gelacio@starofthesea.org">asoto-gelacio@starofthesea.org</a><br>
+          <strong>All 5th Grade Teachers:</strong> <a href="mailto:5thgradeteachers@starofthesea.org">5thgradeteachers@starofthesea.org</a><br>
+          <strong>Phone:</strong> 808-734-0208 &middot; <strong>Office Hours:</strong> 2:45&ndash;3:15 p.m. (M-F) &middot; Room B25<br>
+          <strong>Address:</strong> 4469 Malia Street, Honolulu, Hawai&rsquo;i 96821
+        </div>
+      </div>
+    </div>
+
+    <div class="subject-banner">
+      <div class="eyebrow">Grade 5 Syllabus &middot; SY 2026&ndash;2027</div>
+      <h2>📖 English Language Arts</h2>
+      <div class="sub">Reading &middot; Writing &middot; Grammar &middot; Vocabulary</div>
+    </div>
+
+    <section>
+      <h2>👋 Welcome</h2>
+      <div class="welcome-box">
+        <p>Welcome to Grade 5! This syllabus is intended to help you, the student, develop a greater understanding of what we will cover, what is expected of you, and what you can expect from me. For English, my primary focus will be to complete this year with all students developing a love for, and a grade-level understanding of, books, writing, language, and grammar.</p>
+      </div>
+      <div class="mission-quote">
+        <p><strong>Mary, Star of the Sea School Mission Statement:</strong> Nurture, Unite, Inspire. We are committed to nurturing each child&rsquo;s curiosity, uniting our classroom in respect and collaboration, and inspiring every student to grow in knowledge, faith, and wonder for the world around them.</p>
+      </div>
+      <div class="mission-quote">
+        <p><strong>2026-2027 Essential Question:</strong> How can I model kindness, fairness, and humility like Jesus?</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🎯 Course Overview</h2>
+      <p>This course focuses on developing <strong>reading, writing, speaking, and listening skills</strong>. Students will engage with classic and modern literature, explore grammar and vocabulary, and practice various forms of writing.</p>
+      <p>Students will complete school-wide <strong>STAR Standardized Testing</strong> at the beginning, middle, and end of the school year to monitor their overall academic progress.</p>
+    </section>
+
+    <section>
+      <h2>📚 Class Novels</h2>
+      <p>This school year, students will read <strong>four core novels</strong> as a class, along with supplemental materials to be provided. Some are classic novels that parents might recognize; others are likely unfamiliar. Novels will be provided by the school unless otherwise specified, and will align with the different literacy lessons taught each quarter.</p>
+      <div class="curriculum-grid">
+        <div class="q-card"><div class="q-label">Quarter 1</div><div class="q-title">The One and Only Ivan</div><div class="q-author">Katherine Applegate</div></div>
+        <div class="q-card"><div class="q-label">Quarter 2</div><div class="q-title">Who Was Series</div><div class="q-author">Various authors (student-assigned)</div></div>
+        <div class="q-card"><div class="q-label">Quarter 3</div><div class="q-title">Tuck Everlasting</div><div class="q-author">Natalie Babbitt</div></div>
+        <div class="q-card"><div class="q-label">Quarter 4</div><div class="q-title">A Wrinkle in Time</div><div class="q-author">Madeleine L&rsquo;Engle</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>📊 Grading Policy</h2>
+      <div class="grade-row">
+        <div class="grade-pill"><span>35%</span>Written Work<small>Journals, reports, projects</small></div>
+        <div class="grade-pill"><span>30%</span>Classwork &amp; Guided Practice</div>
+        <div class="grade-pill"><span>25%</span>Assessments<small>Oral/written tests &amp; quizzes</small></div>
+        <div class="grade-pill"><span>10%</span>Participation &amp; Collaboration</div>
+      </div>
+      <div class="parent-note">
+        <strong>Parents, please note:</strong> You will have access to my electronic grade book via your <strong>Beehively</strong> account, which will be a primary method of communicating your child&rsquo;s academic performance. Beehively will serve as the primary source for monitoring grades, missing assignments, and academic progress throughout the school year.
+      </div>
+    </section>
+
+    <section>
+      <h2>📝 Homework Policy</h2>
+      <p>Students are expected to <strong>read 20 minutes every day</strong>. In addition to the reading, other homework will be assigned. Your child&rsquo;s teachers will work together to ensure that students receive a balanced homework regimen that fosters a positive learning environment and nurtures their intellectual growth.</p>
+      <p>Assignments are expected to be written daily in a student&rsquo;s planner and available on Google Calendar. <strong>Parents are expected to check the student&rsquo;s planner daily, support their child in time management, and follow through.</strong></p>
+      <p>Late work will be accepted; however, <strong>late assignments may negatively affect students&rsquo; participation grades</strong>.</p>
+    </section>
+
+    <section>
+      <h2>🤝 Classroom Expectations</h2>
+      <ul>
+        <li>Students are expected to come to class prepared and ready to learn.</li>
+        <li>Homework should be completed daily and turned in. If there is a reason the homework cannot be completed on time, the teacher should be notified in advance, and a plan should be made to complete the assignment.</li>
+        <li>Students are expected to always try their best and participate in class. Further, they are expected to ask questions, request clarification, and communicate via office hours or email as needed.</li>
+        <li>Students are expected to respect themselves, respect others, and respect all property.</li>
+      </ul>
+      <p style="margin-top:10px"><strong>Class Incentives:</strong> Individual Treasure Box visit &middot; class community rewards.</p>
+      <p><strong>Class Consequences:</strong></p>
+      <ol>
+        <li>Verbal reminder</li>
+        <li>One-on-one discussion, written self-reflection</li>
+        <li>Parent contact</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>🎒 Required Materials</h2>
+      <p><strong>Students should be prepared on a daily basis with the following:</strong></p>
+      <ul>
+        <li>English composition book</li>
+        <li>Core novel</li>
+        <li>Erasable pen, pencil, eraser, and highlighter</li>
+        <li>Glue stick / scissors</li>
+        <li>Sticky notes</li>
+        <li>Index cards</li>
+        <li>Planner</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📅 Important Dates &middot; 2026&ndash;2027</h2>
+      <table class="dates-table">
+        <tr><td class="date-name">Orientation</td><td class="date-value">August 12, 2026</td></tr>
+        <tr><td class="date-name">Parent-Teacher Conferences</td><td class="date-value">Fall &mdash; Sept. 10&ndash;11, 2026 &middot; Spring &mdash; Feb. 19, 2027 (optional)</td></tr>
+        <tr><td class="date-name">Q1 Expedition &mdash; Coconut Island</td><td class="date-value">September 28, 2026</td></tr>
+        <tr><td class="date-name">Q2 Expedition &mdash; Pearl Harbor</td><td class="date-value">November 17, 2026</td></tr>
+        <tr><td class="date-name">Q3 Expedition &mdash; &lsquo;Iolani Palace</td><td class="date-value">March 5, 2027</td></tr>
+        <tr><td class="date-name">Q4 Expedition &mdash; Niu Valley Hike</td><td class="date-value">June 1, 2027</td></tr>
+        <tr><td class="date-name">School Spelling Bee</td><td class="date-value">November 20, 2026</td></tr>
+        <tr><td class="date-name">Christmas Performance</td><td class="date-value">December 18, 2026</td></tr>
+        <tr><td class="date-name">End-of-Year Awards</td><td class="date-value">June 3, 2027</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>📩 Teacher Contact</h2>
+      <p><strong>Ms. Alyssa Soto-Gelacio, B.A.</strong> &mdash; Intermediate Team Faculty</p>
+      <p>📧 <a href="mailto:asoto-gelacio@starofthesea.org">asoto-gelacio@starofthesea.org</a> &mdash; please allow up to 24 hours for a response on school days.</p>
+      <p>📧 5th Grade Team: <a href="mailto:5thgradeteachers@starofthesea.org">5thgradeteachers@starofthesea.org</a></p>
+      <p>📞 Office phone: 808-734-0208</p>
+      <p>🕒 In-person office hours: 2:45&ndash;3:15 p.m. (M-F) &middot; Room B25</p>
+      <p>📍 Mary, Star of the Sea School, 4469 Malia Street, Honolulu, Hawai&rsquo;i 96821</p>
+    </section>
+
+    <footer>Empowered to Succeed, Guided by Faith &nbsp;❤️!</footer>
+  </div>
+</div>
+</body>
+</html>
