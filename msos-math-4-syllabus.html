@@ -3,209 +3,248 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Math 4 &mdash; Course Syllabus &middot; Ms. Glavan</title>
+<title>Grade 4 Math Syllabus &mdash; Ms. Glavan &middot; SY 2026-2027</title>
 <style>
-:root { --hero-light: #3b82f6; --hero-dark: #1B3A8A; }
-.back-index-btn { position: fixed; top: 20px; left: 20px; background: #253a77; color: #fff;
-  text-decoration: none; padding: 10px 16px; border-radius: 8px; font-size: 14px; font-weight: 700;
-  box-shadow: 0 3px 10px rgba(37,58,119,0.25); z-index: 10; }
-.back-index-btn:hover { background: #1a2a4a; }
-.print-btn { position: fixed; top: 20px; right: 20px; background: #1B3A8A; color: #FFD100;
-  border: 1.5px solid #FFD100; text-decoration: none; padding: 10px 16px; border-radius: 8px;
-  font-size: 14px; font-weight: 700; box-shadow: 0 3px 10px rgba(0,0,0,0.28); z-index: 10; }
-.print-btn:hover { background: #1a2a4a; }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; background: #F1F5F9; color: #1F2937; line-height: 1.55; }
-.topbar { border-bottom: 4px solid #FFD100; background: var(--hero-dark); color: white; padding: 15px 30px; font-size: 18px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-.topbar-left { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
-.topbar-right { font-size: 14px; opacity: 0.9; font-weight: 600; }
-.nav-btn { background: #6b7280; color: white; text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 13px; font-weight: 700; transition: all 0.18s; display: inline-block; border: none; cursor: pointer; }
-.nav-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,0.2); }
-.topbar-logos { display: flex; gap: 8px; align-items: center; }
-.logo-circle { width: 44px; height: 44px; border-radius: 50%; background: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.25); overflow: hidden; display: inline-flex; align-items: center; justify-content: flex-start; flex-shrink: 0; }
-.logo-circle img { display: block; }
-.logo-circle.msos img { height: 100%; width: auto; }
-.logo-circle.nui img { width: 100%; height: 100%; object-fit: cover; }
-.logo-circle.msos { background: #1a2a4a; }
-.wrap { max-width: 1000px; margin: 24px auto; padding: 0 20px 40px; }
-.syl-hero { background: linear-gradient(135deg, var(--hero-light) 0%, var(--hero-dark) 100%); color: white; border-radius: 16px; padding: 28px 32px; margin-bottom: 22px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
-.syl-hero .icon { font-size: 2.4rem; margin-bottom: 8px; }
-.syl-hero h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 6px; color: white; }
-.syl-hero p { opacity: 0.92; font-size: 0.95rem; }
-.syl-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 18px; }
-.syl-card { background: white; border-radius: 12px; padding: 20px 22px; box-shadow: 0 2px 10px rgba(0,0,0,0.07); flex: 1 1 300px; border-top: 4px solid var(--hero-dark); }
-.syl-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--hero-dark); margin-bottom: 10px; }
-.syl-card p { font-size: 0.92rem; color: #374151; line-height: 1.6; margin-bottom: 6px; }
-.syl-card ul, .syl-card ol { padding-left: 22px; margin: 6px 0 0; }
-.syl-card li { font-size: 0.9rem; color: #374151; margin-bottom: 4px; line-height: 1.55; }
-.syl-card a { color: var(--hero-dark); }
-.syl-grade-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
-.syl-grade-pill { background: #f1f5f9; border-radius: 8px; padding: 8px 12px; font-size: 0.82rem; font-weight: 600; color: #374151; text-align: center; flex: 1 1 110px; }
-.syl-grade-pill span { display: block; font-size: 1.3rem; font-weight: 800; color: var(--hero-dark); }
-.syl-grade-pill small { display: block; font-size: 0.72rem; font-weight: 500; color: #64748b; margin-top: 4px; line-height: 1.35; }
-.syl-quarter { background: #f8fafc; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; border-left: 4px solid var(--hero-dark); }
-.syl-quarter h4 { font-size: 0.95rem; color: var(--hero-dark); margin-bottom: 6px; }
-.syl-quarter ul { margin: 4px 0 0 22px; }
-.syl-quarter li { font-size: 0.88rem; color: #374151; margin-bottom: 3px; }
-.callout { background: #fff8e1; border-left: 4px solid #FFD100; padding: 14px 18px; border-radius: 8px; margin: 12px 0; font-size: 0.92rem; color: #4a5568; }
-.mission-quote { background: #eef2ff; border-left: 4px solid #4c1d95; padding: 14px 18px; border-radius: 8px; margin: 12px 0; font-style: italic; color: #4c1d95; }
-footer { text-align: center; margin-top: 30px; padding: 20px; color: #64748b; font-size: 0.85rem; }
-@media (max-width: 800px) { .logo-circle { width: 38px; height: 38px; } .topbar { font-size: 15px; padding: 12px 18px; } }
-@media print {
-  body { background: #fff; }
-  .topbar, .no-print, .back-index-btn, .print-btn { display: none !important; }
-  .wrap { margin: 0; padding: 0 12px; max-width: 100%; }
-  .syl-card, .syl-quarter, .callout, .mission-quote { break-inside: avoid; box-shadow: none; }
-}
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Carlito', 'Calibri', 'Arial', sans-serif;
+    background: #e5e7eb;
+    color: #000;
+    padding: 30px 20px 60px;
+    line-height: 1.15;
+  }
+  .back-btn {
+    position: fixed; top: 16px; left: 16px;
+    background: #1B3A8A; color: #fff; text-decoration: none;
+    padding: 8px 14px; border-radius: 6px;
+    font: 700 13px/1 'Segoe UI', system-ui, sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18); z-index: 10;
+  }
+  .back-btn:hover { background: #0f2255; }
+  .print-btn {
+    position: fixed; top: 16px; right: 16px;
+    background: #1B3A8A; color: #FFD100; text-decoration: none;
+    padding: 8px 14px; border-radius: 6px;
+    font: 700 13px/1 'Segoe UI', system-ui, sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18); z-index: 10;
+  }
+  .print-btn:hover { background: #0f2255; }
+
+  .doc {
+    background: #fff;
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 1in;
+    box-shadow: 0 4px 22px rgba(0,0,0,0.14);
+    font-size: 11pt;
+    color: #000;
+  }
+  .doc p { margin: 0 0 8pt; line-height: 1.15; }
+  .doc .contact p { margin: 0; line-height: 1.15; }
+  .doc .contact { margin: 0 0 8pt; }
+  .doc h1 {
+    font-size: 14pt; font-weight: 700; text-align: center;
+    margin: 12pt 0 12pt;
+  }
+  .doc h2 {
+    font-size: 12pt; font-weight: 700; text-transform: none;
+    margin: 14pt 0 4pt;
+  }
+  .doc h2.upper { text-transform: uppercase; }
+  .doc ul, .doc ol { margin: 0 0 8pt 24pt; padding: 0; }
+  .doc li { margin-bottom: 3pt; line-height: 1.2; }
+  .doc ul ul, .doc ol ol, .doc ul ol, .doc ol ul { margin: 3pt 0 3pt 24pt; }
+  .doc .small { font-size: 10pt; font-style: italic; color: #444; }
+  .doc a { color: #1155cc; text-decoration: underline; }
+
+  .banners { max-width: 8.5in; margin: 0 auto 12px; padding: 0 4px; font-family: 'Segoe UI', system-ui, sans-serif; }
+  .banners .b {
+    background: #fffbea; border-left: 4px solid #FFD100;
+    border-radius: 8px; padding: 12px 18px; margin-bottom: 8px;
+  }
+  .banners .b.eq { background: #eef2ff; border-left-color: #4c1d95; }
+  .banners .b h3 { margin: 0 0 4px; font-size: 0.95rem; font-weight: 800; color: #a16207; }
+  .banners .b.eq h3 { color: #4c1d95; }
+  .banners .b p { margin: 0; font-size: 0.9rem; line-height: 1.55; color: #1f2937; }
+  .banners .b.eq p { font-style: italic; }
+
+  .center { text-align: center; }
+  footer { text-align: center; color: #555; font: italic 11px/1.4 'Segoe UI', system-ui, sans-serif;
+           max-width: 8.5in; margin: 16px auto 0; }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .back-btn, .print-btn, .banners { display: none !important; }
+    .doc { box-shadow: none; padding: 0.75in; max-width: none; }
+    footer { display: none; }
+  }
 </style>
 </head>
 <body>
-<a href="msos-math-4.html" class="back-index-btn" title="Back to Units">&larr; Back to Units</a>
-<a href="msos-math-4-syllabus.pdf?v=1" class="print-btn" target="_blank" rel="noopener" title="Open printable syllabus PDF">🖨️ Print Syllabus</a>
+<a href="msos-math-4.html" class="back-btn">&larr; Back to Units</a>
+<a href="msos-math-4-syllabus.pdf?v=2" class="print-btn" target="_blank" rel="noopener">🖨️ Print Syllabus</a>
 
-<div class="wrap">
-  <div style="max-width:820px;margin:20px auto 18px;padding:0 4px;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;">
-    <div style="background:#fffbea;border-left:4px solid #FFD100;border-radius:8px;padding:14px 20px;margin-bottom:10px;">
-      <h3 style="color:#a16207;margin:0 0 6px;font-size:1rem;font-weight:800;">🌟 Mary, Star of the Sea School Mission</h3>
-      <p style="font-size:0.92rem;line-height:1.55;color:#1f2937;margin:0;"><strong>N</strong>urture, <strong>U</strong>nite, <strong>I</strong>nspire. We are committed to nurturing each child&rsquo;s curiosity, uniting our classroom in respect and collaboration, and inspiring every student to grow in knowledge, faith, and wonder for the world around them.</p>
-    </div>
-    <div style="background:#eef2ff;border-left:4px solid #4c1d95;border-radius:8px;padding:14px 20px;">
-      <h3 style="color:#4c1d95;margin:0 0 6px;font-size:1rem;font-weight:800;">💡 Essential Question</h3>
-      <p style="font-size:0.95rem;line-height:1.55;color:#1f2937;margin:0;font-style:italic;">&ldquo;How can I model kindness, fairness, and humility like Jesus?&rdquo;</p>
-    </div>
+<div class="banners">
+  <div class="b">
+    <h3>🌟 Mary, Star of the Sea School Mission</h3>
+    <p><strong>N</strong>urture, <strong>U</strong>nite, <strong>I</strong>nspire. We are committed to nurturing each child&rsquo;s curiosity, uniting our classroom in respect and collaboration, and inspiring every student to grow in knowledge, faith, and wonder for the world around them.</p>
   </div>
-  <div class="syl-hero">
-    <div class="icon">🧮</div>
-    <h2>Math 4 &mdash; Course Syllabus</h2>
-    <p>Mary, Star of the Sea School &middot; Ms. Lori Glavan &middot; SY 2026-2027</p>
+  <div class="b eq">
+    <h3>💡 Essential Question</h3>
+    <p>&ldquo;How can I model kindness, fairness, and humility like Jesus?&rdquo;</p>
   </div>
+</div>
 
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>👋 Welcome</h3>
-    <p>Welcome to Grade 4! I am excited to partner with you this school year. This syllabus provides an outline of what we will learn, classroom expectations, grading policies, and the support you can expect throughout the school year. We will work together to create a class community where every student is encouraged, challenged, and inspired to grow academically and spiritually.</p>
-    <p><strong>Schoolwide Learning Expectations (SLEs):</strong> Self-Aware, Confident Individuals; Teachable Life-Long Learners; Active Christians; Responsible Citizens.</p>
-  </div>
+<div class="doc">
 
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>📋 Math Course Overview</h3>
-    <p>This course focuses on developing number sense through multiplying by 1- and 2-digit numbers, adding/subtracting/multiplying fractions with like denominators, comparing decimals, and contrasting lines, angles, and quadrilaterals. Through partner <em>Number Talks</em> and collaborative problem solving, students will learn to value different mathematical strategies, listen to peers&rsquo; reasoning, and work together to find solutions.</p>
-    <p style="margin-top:8px">Students will complete school-wide <strong>STAR Standardized Testing</strong> at the beginning, middle, and end of the school year to monitor their overall academic progress.</p>
-    <p style="margin-top:8px"><strong>Textbook:</strong> SAVVAS enVision Math</p>
+  <div class="contact">
+    <p><strong>Lori Glavan, B.A.</strong></p>
+    <p>Intermediate Team Faculty</p>
+    <p>Mary, Star of the Sea School</p>
+    <p>4469 Malia Street Honolulu, Hawai&rsquo;i 96821</p>
+    <p>Office Phone: 808-734-0208</p>
+    <p>Office Hours: 2:45&ndash;3:15 p.m. (M&ndash;F) in Room B24</p>
+    <p>Email: <a href="mailto:lglavan@starofthesea.org">lglavan@starofthesea.org</a></p>
+    <p>ALL Teachers: <a href="mailto:4thgradeteachers@starofthesea.org">4thgradeteachers@starofthesea.org</a></p>
   </div>
 
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>📊 Math Grading Policy</h3>
-    <div class="syl-grade-row">
-      <div class="syl-grade-pill"><span>30%</span>Classwork / Participation<small>Daily problem solving &amp; collaborative work</small></div>
-      <div class="syl-grade-pill"><span>30%</span>Assessments<small>Oral / written unit tests</small></div>
-      <div class="syl-grade-pill"><span>15%</span>Quizzes<small>Weekly check-ins</small></div>
-      <div class="syl-grade-pill"><span>15%</span>Homework / Projects</div>
-      <div class="syl-grade-pill"><span>10%</span>Number Talks<small>Number sense activities</small></div>
-    </div>
-    <div class="callout" style="margin-top:12px">
-      <strong>Parents, please note:</strong> You will have access to my electronic grade book, via your Beehively account, which will be the method of communicating your child&rsquo;s academic performance. Beehively will serve as the primary source for monitoring grades, missing assignments, and academic progress throughout the school year.
-    </div>
-  </div>
+  <h1>Syllabus: 2026-2027 Grade 4 Math</h1>
 
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>🎒 Required Materials</h3>
-    <p><strong>Students should bring the following materials to Math each day:</strong></p>
-    <ul>
-      <li>Spiral notebook (used for Math and Social Studies)</li>
-      <li>Erasable pen, pencil, eraser, and highlighter</li>
-      <li>Expo marker(s)</li>
-      <li>School-issued iPad (with access to Google Classroom)</li>
-      <li>School planner</li>
-    </ul>
-    <p style="margin-top:8px"><strong>Supplemental Materials &mdash; Textbook:</strong> SAVVAS enVision Math</p>
-  </div>
+  <p>Welcome to Grade 4! I am excited to partner with you this school year. This syllabus provides an outline of what we will learn, classroom expectations, grading policies, and the support you can expect throughout the school year. We will work together to create a class community where every student is encouraged, challenged, and inspired to grow academically and spiritually.</p>
 
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>🏠 Homework Policy</h3>
-    <p>As per school policy, students are expected to allocate time for a maximum of <strong>40 minutes of homework per night</strong>. Your child&rsquo;s 4th grade teachers will work together to ensure that the students receive a balanced homework regime aimed to create a positive learning environment that nurtures students&rsquo; intellectual growth. Students are expected to record assignments daily in their school planner. Homework and important reminders will also be posted on Google Classroom for students and families. Parents are expected to check the student&rsquo;s planners daily, support their child in time management and follow through.</p>
-    <p style="margin-top:8px">Late work will be accepted; however, submitting assignments on time is an important part of developing responsibility. Late submissions may affect a student&rsquo;s participation grade.</p>
-  </div>
+  <p><strong>Schoolwide Learning Expectations (SLEs):</strong> Self-Aware, Confident Individuals; Teachable Life Long Learners; Active Christians; Responsible Citizens</p>
 
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>🧑‍🏫 Classroom Expectations</h3>
-    <ul>
-      <li>Students come to class prepared and ready to learn each day.</li>
-      <li>Homework should be completed on time. If circumstances prevent completion, students should communicate with the teacher in advance so that an appropriate plan can be made.</li>
-      <li>Everyone is encouraged to participate by asking questions, contributing ideas, and seeking clarification from the teacher when needed.</li>
-      <li>We will treat ourselves, one another, and school property with respect and responsibility.</li>
-    </ul>
-    <p style="margin-top:12px"><strong>Class Incentives:</strong> GOTCHA Tickets, &ldquo;Glow from Glavan&rdquo; slips, class community rewards.</p>
-    <p style="margin-top:6px"><strong>Class Consequences:</strong></p>
-    <ol>
-      <li>Verbal reminder</li>
-      <li>One-on-one &ldquo;Think Paper&rdquo; reflection</li>
-      <li>Parent contact</li>
-    </ol>
-  </div>
+  <h2>Math Course Overview:</h2>
+  <p>This course focuses on developing number sense through multiplying by 1 and 2-digit numbers, adding/subtracting/multiplying fractions with like denominators, comparing decimals, and contrasting lines/angles/quadrilaterals. Through partner <em>Number Talks</em> and collaborative problem solving, students will learn to value different mathematical strategies, listen to peers&rsquo; reasoning, and work together to find solutions.</p>
+  <p>Students will complete school-wide <strong>STAR Standardized Testing</strong> at the beginning, middle, and end of the school year to monitor their overall academic progress.</p>
+  <p>Students will also use the <strong>Freckle</strong> digital platform as a supplemental resource to support individualized learning. Freckle connects with STAR test data to assign tasks at students&rsquo; appropriate math level.</p>
 
-  <div class="syl-card" style="margin-bottom:18px">
-    <h3>📅 Important Dates (SY 2026-2027)</h3>
-    <ul>
-      <li><strong>Parent Orientation Night:</strong> August 12, 2026</li>
-      <li><strong>Parent-Teacher Conferences:</strong> Fall &mdash; September 10&ndash;11, 2026 &middot; Spring &mdash; February 19, 2027 (optional)</li>
-      <li><strong>Expeditions:</strong>
-        <ul>
-          <li>Q1 &mdash; Coconut Island: October 2, 2026</li>
-          <li>Q2 &mdash; Pearl Harbor: November 16, 2026 (pending)</li>
-          <li>Q2 &mdash; Ice Palace: December 14, 2026</li>
-          <li>Q3 &mdash; &lsquo;Iolani Palace: March 5, 2027</li>
-          <li>Q4 &mdash; Sherwood Forest: June 1, 2027</li>
-        </ul>
-      </li>
-      <li><strong>School Spelling Bee:</strong> November 20, 2026</li>
-      <li><strong>Christmas Performance:</strong> December 18, 2026</li>
-      <li><strong>End-of-Year Awards:</strong> June 3, 2027</li>
-    </ul>
-    <p style="margin-top:6px;font-size:0.85rem;color:#6b7280;font-style:italic;">*All expeditions are subject to change at this point in the school year :)</p>
-  </div>
+  <h2 class="upper">Math Grading Policy:</h2>
+  <ul>
+    <li><strong>30%</strong> Classwork / Participation (Daily Problem Solving / Collaborative Work)</li>
+    <li><strong>30%</strong> Assessments (Oral / Written Unit Tests)</li>
+    <li><strong>15%</strong> Quizzes (Weekly Check-ins)</li>
+    <li><strong>15%</strong> Homework / Projects</li>
+    <li><strong>10%</strong> Number Talks (Number Sense Activities)</li>
+  </ul>
+  <p><em>*Parents, please note:</em> You will have access to my electronic grade book, via your <strong>Beehively</strong> account, which will be the method of communicating your child&rsquo;s academic performance. Beehively will serve as the <strong>primary source</strong> for monitoring grades, missing assignments, and academic progress throughout the school year.</p>
 
-  <div class="syl-grid" style="margin-bottom:18px">
-    <div class="syl-card" style="flex:1 1 300px;">
-      <h3>🎓 Academic Integrity</h3>
-      <p><strong>Teachers</strong> have the responsibility to structure conditions during testing to alleviate the possibility of cheating; specify the types of collaboration that are discouraged and those that are encouraged; and teach students summarization of material and the distinction between summarizing and copying straight from the text.</p>
-      <p style="margin-top:6px"><strong>Students</strong> have the responsibility to avoid situations that might contribute to cheating or plagiarizing, avoid unauthorized assistance, and use sources in the prescribed manner outlined by the teacher.</p>
-    </div>
-    <div class="syl-card" style="flex:1 1 300px;">
-      <h3>🕘 Absences &amp; Tardiness</h3>
-      <p>Students may remain at home in the case of illness, accident, quarantine, or a death in the family. The teacher will help the student make up for missing assignments after a short absence. When the absence is expected to be prolonged, families must notify the teacher so a plan can be developed for completing missing work.</p>
-      <p style="margin-top:6px">Students are marked tardy after the 7:45 a.m. bell rings. Explanatory notes from parents and conferences with parents may be advisable.</p>
-    </div>
-    <div class="syl-card" style="flex:1 1 300px;">
-      <h3>🍎 Food &amp; Drink</h3>
+  <h2 class="upper">Required Materials:</h2>
+  <p>Students should bring the following materials to Math each day:</p>
+  <ul>
+    <li>Spiral notebook (used for Math and Social Studies)</li>
+    <li>Erasable pen, pencil, eraser and highlighter</li>
+    <li>Expo marker(s)</li>
+    <li>School-issued iPad (with access to Google Classroom)</li>
+    <li>School planner</li>
+  </ul>
+
+  <h2 class="upper">Supplemental Materials &mdash; Textbook:</h2>
+  <ul><li>SAVVAS enVision Math</li></ul>
+
+  <h2 class="upper">Homework Policy:</h2>
+  <p>As per school policy, students are expected to allocate time for a maximum of <strong>40 minutes of homework per night</strong>. Your child&rsquo;s 4th grade teachers will work together to ensure that the students receive a balanced homework regime aimed to create a positive learning environment that nurtures students&rsquo; intellectual growth. Students are expected to record assignments daily in their school planner. Homework and important reminders will also be posted on Google Classroom for students and families. Parents are expected to check the student&rsquo;s planners daily, support their child in time management and follow through.</p>
+  <p>Late work will be accepted; however, submitting assignments on time is an important part of developing responsibility. Late submissions may affect a student&rsquo;s participation grade.</p>
+
+  <h2 class="upper">Classroom Expectations:</h2>
+  <ul>
+    <li>Students come to class prepared and ready to learn each day.</li>
+    <li>Homework should be completed on time. If circumstances prevent completion, students should communicate with the teacher in advance so that an appropriate plan can be made.</li>
+    <li>Everyone is encouraged to participate by asking questions, contributing ideas, and seeking clarification from the teacher when needed.</li>
+    <li>We will treat ourselves, one another, and school property with respect and responsibility.</li>
+    <li><strong>Class Incentives:</strong> GOTCHA Tickets, &ldquo;Glow from Glavan&rdquo; slips, class community rewards</li>
+    <li><strong>Class Consequences:</strong>
       <ul>
-        <li>Food is prohibited in the classroom unless otherwise specified by the teacher.</li>
-        <li>Drink in the classroom is limited to water in a bottle with a sealed lid.</li>
-        <li>Sharing food is not permitted to ensure adherence to dietary restrictions.</li>
+        <li>Step 1: Verbal reminder</li>
+        <li>Step 2: One-on-one &ldquo;Think Paper&rdquo; reflection</li>
+        <li>Step 3: Parent contact</li>
       </ul>
-    </div>
-    <div class="syl-card" style="flex:1 1 300px;">
-      <h3>📱 Technology</h3>
-      <p>To minimize distractions and maximize learning, communication with students during the school day should be limited to emergencies. Student cell phones must remain off and in backpacks for the duration of a school day (this policy also applies to smart watches).</p>
-      <p style="margin-top:6px"><strong>Violations:</strong> 1st offense &mdash; Warning; 2nd &mdash; Phone sent to office for pickup from Principal; 3rd &mdash; Phone sent to office and parent notified.</p>
-    </div>
-  </div>
+    </li>
+  </ul>
 
-  <div class="syl-card" style="margin-bottom:18px;background:#fffbea;border-top-color:#FFD100;">
-    <h3>📩 Teacher Contact</h3>
-    <p><strong>Ms. Lori Glavan, B.A.</strong> &mdash; Intermediate Team Faculty</p>
-    <p>📧 <a href="mailto:lglavan@starofthesea.org">lglavan@starofthesea.org</a> (please allow up to 24 hours for a response on school days)</p>
-    <p>📧 4th Grade Team: <a href="mailto:4thgradeteachers@starofthesea.org">4thgradeteachers@starofthesea.org</a></p>
-    <p>📞 Office phone: 808-734-0208</p>
-    <p>🕒 In-person office hours: 2:45&ndash;3:15 p.m. (M-F) in Room B24</p>
-    <p style="margin-top:6px">📍 Mary, Star of the Sea School, 4469 Malia Street, Honolulu, Hawai&lsquo;i 96821</p>
-  </div>
+  <h2>Important Dates:</h2>
+  <ul>
+    <li><strong>Parent Orientation Night</strong>
+      <ul><li>August 12, 2026</li></ul>
+    </li>
+    <li><strong>Parent-Teacher Conferences:</strong>
+      <ul>
+        <li>Fall: September 10&ndash;11, 2026</li>
+        <li>Spring: February 19, 2027 (optional)</li>
+      </ul>
+    </li>
+    <li><strong>Expeditions:</strong>
+      <ul>
+        <li>Q1&mdash; Coconut Island: October 2, 2026</li>
+        <li>Q2&mdash; Pearl Harbor: November 16, 2026 (pending)</li>
+        <li>Q2&mdash; Ice Palace: December 14, 2026</li>
+        <li>Q3&mdash; &lsquo;Iolani Palace: March 5, 2027</li>
+        <li>Q4&mdash; Sherwood Forest: June 1, 2027</li>
+      </ul>
+      <p class="small">*All expeditions are subject to change at this point in the school year :)</p>
+    </li>
+    <li><strong>School Spelling Bee</strong>
+      <ul><li>November 20, 2026</li></ul>
+    </li>
+    <li><strong>Christmas Performance</strong>
+      <ul><li>December 18, 2026</li></ul>
+    </li>
+    <li><strong>End-of-Year Awards</strong>
+      <ul><li>June 3, 2027</li></ul>
+    </li>
+  </ul>
 
-  <div class="syl-card" style="background:#eef2ff;border-top-color:#4c1d95;">
-    <h3 style="color:#4c1d95;">💻 Beehively Gradebook</h3>
-    <p>Parents access the electronic gradebook via <strong>Beehively</strong>. Beehively is the primary source for monitoring grades, missing assignments, and academic progress throughout the school year.</p>
-  </div>
+  <h2 class="upper">Academic Integrity:</h2>
+  <p>Honesty and integrity are essential values in our classroom. Teachers have the responsibility to:</p>
+  <ul>
+    <li>Structure conditions during testing to alleviate the possibility of cheating</li>
+    <li>Specify the types of collaboration that are discouraged and those that are encouraged</li>
+    <li>Teach students summarization of material and the distinction between summarizing and copying straight from the text</li>
+  </ul>
+  <p>Students have the responsibility to:</p>
+  <ul>
+    <li>Avoid situations that might contribute to cheating or plagiarizing</li>
+    <li>Avoid unauthorized assistance</li>
+    <li>Use sources in the prescribed manner outlined by the teacher</li>
+  </ul>
 
-  <p style="text-align:center;margin-top:24px;font-size:1.1rem;color:#4c1d95;font-weight:700;">Empowered to Succeed, Guided by Faith ❤!</p>
+  <h2 class="upper">Absences and Tardiness</h2>
+  <p>Students may remain at home in the case of illness, accident, quarantine, or because of a death in the family.</p>
+  <p>The teacher will help the student make up for missing assignments after a short absence. When the absence is expected to be prolonged, families must notify the teacher so that a plan can be developed for completing missing work. Repeated or prolonged absences might work against the student&rsquo;s academic progress and possibly the student&rsquo;s right to continue in attendance.</p>
+  <p>Students are marked tardy after the 7:45 a.m. bell rings. Explanatory notes from parents and conferences with parents may be advisable.</p>
+
+  <h2 class="upper">Food and Drink</h2>
+  <ul>
+    <li>Food is prohibited in the classroom unless otherwise specified by the teacher.</li>
+    <li>Drink in the classroom is limited to water in a bottle with a sealed lid.</li>
+    <li>Sharing food is not permitted to ensure adherence to dietary restrictions.</li>
+  </ul>
+
+  <h2 class="upper">Technology</h2>
+  <ul>
+    <li>To minimize distractions and maximize learning, communication with students during the school day should be limited to emergencies.</li>
+    <li>Student cell phones must remain off and in backpacks for the duration of a school day.
+      <ul><li>This policy also applies to student smart watches (i.e., Apple Watches, Gizmo&rsquo;s, FiLIP&rsquo;s, etc.)</li></ul>
+    </li>
+    <li>If a student is in violation of this policy, the discipline will be as follows:
+      <ul>
+        <li><strong>1st Time Offense</strong> &mdash; Warning</li>
+        <li><strong>2nd Time Offense</strong> &mdash; Phone will be sent to the office for student pick up from the Principal</li>
+        <li><strong>3rd Time Offense</strong> &mdash; Phone will be sent to the office for student pick up from the Principal and parent will be notified</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2 class="upper">Teacher Contact</h2>
+  <ul>
+    <li>Contact me via email: <a href="mailto:lglavan@starofthesea.org"><strong>lglavan@starofthesea.org</strong></a>
+      <ul><li>Please allow up to 24 hours for a response on school days.</li></ul>
+    </li>
+    <li>In-person office hours: 2:45&ndash;3:15 p.m. (M&ndash;F) in Room B24</li>
+  </ul>
+
+  <p class="center" style="margin-top:24pt;font-weight:700;">Empowered to Succeed, Guided by Faith ❤!</p>
+
 </div>
 <footer>Mary, Star of the Sea School &middot; Ms. Glavan &middot; Math &middot; Grade 4 &middot; SY 2026-2027</footer>
 </body>
